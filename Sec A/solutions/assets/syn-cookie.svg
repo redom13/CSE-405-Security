@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="723.4pt" height="291.4pt" viewBox="0 0 723.4 291.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-28T23:36:39.372392</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.6.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 291.4 
+L 723.4 291.4 
+L 723.4 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="line2d_1">
+    <path d="M 106.46 250.96 
+L 106.46 40.44 
+" clip-path="url(#pc2a7636b81)" style="fill: none; stroke: #28557e; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 602.76 250.96 
+L 602.76 40.44 
+" clip-path="url(#pc2a7636b81)" style="fill: none; stroke: #28557e; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="106.46" y="26.59" transform="rotate(-0 106.46 26.59)">Client</text>
+   </g>
+   <g id="text_2">
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="602.76" y="26.59" transform="rotate(-0 602.76 26.59)">Server</text>
+   </g>
+   <g id="patch_2">
+    <path d="M 108.455469 62.711373 
+Q 354.61024 76.450013 598.978937 90.088967 
+" style="fill: none; stroke: #28557e; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 594.708372 87.64719 
+L 598.978937 90.088967 
+L 594.463177 92.040353 
+" style="fill: none; stroke: #28557e; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="text_3">
+    <text style="fill: #28557e; font: 9px 'DejaVu Sans'; text-anchor: middle" x="354.61" y="67.376281" transform="rotate(-0 354.61 67.376281)">SYN, seq = x</text>
+   </g>
+   <g id="patch_3">
+    <path d="M 600.764531 112.571373 
+Q 354.60976 126.310013 110.241063 139.948967 
+" style="fill: none; stroke: #28557e; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 114.756823 141.900353 
+L 110.241063 139.948967 
+L 114.511628 137.50719 
+" style="fill: none; stroke: #28557e; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="fill: #28557e; font: 9px 'DejaVu Sans'; text-anchor: middle" x="354.61" y="117.236281" transform="rotate(-0 354.61 117.236281)">SYN-ACK, seq = cookie, ack = x+1</text>
+   </g>
+   <g id="patch_4">
+    <path d="M 108.455469 162.431373 
+Q 354.61024 176.170013 598.978937 189.808967 
+" style="fill: none; stroke: #28557e; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 594.708372 187.36719 
+L 598.978937 189.808967 
+L 594.463177 191.760353 
+" style="fill: none; stroke: #28557e; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="fill: #28557e; font: 9px 'DejaVu Sans'; text-anchor: middle" x="354.61" y="167.096281" transform="rotate(-0 354.61 167.096281)">ACK, ack = cookie+1</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #35745b; font: 9px 'DejaVu Sans'; text-anchor: middle" x="602.76" y="76.45" transform="rotate(-0 602.76 76.45)">no per-request state</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #35745b; font: 10px 'DejaVu Sans'" transform="translate(564.865469 209.292187)">validate cookie</text>
+    <text style="fill: #35745b; font: 10px 'DejaVu Sans'" transform="translate(555.790469 220.49)">then allocate state</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pc2a7636b81">
+   <rect x="7.2" y="7.2" width="709" height="277"/>
+  </clipPath>
+ </defs>
+</svg>

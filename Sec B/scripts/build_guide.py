@@ -20,8 +20,8 @@ if set(answers)!=expected:raise ValueError({'missing':list(expected-set(answers)
 # The point table is the answer; a finite-field point plot adds a visual companion.
 k='2021–22|2(b)'
 if 'ecc-points.svg' not in answers[k]:answers[k]+='\n\n![Finite-field curve points](assets/ecc-points.svg)'
-topicdeck={'goals':'L2','classical':'L2','otp':'L3','block':'L3','modes':'L4','hash':'L5','mac':'L5','ae':'L5','prng':'L6','dh':'L6','ecc':'L6','rsa':'L7','elgamal':'L7','signature':'L7','keymodels':'L7','cert':'L8','password':'L8','cookies':'L10','session':'L10','csrf':'L10','xss':'L11','sql':'L12','ui':'L11','twofa':'L11'}
-names={'L2':'Lecture 2 — Cryptographic foundations and classical ciphers','L3':'Lecture 3 — One-time pads and block ciphers','L4':'Lecture 4 — Block-cipher modes','L5':'Lecture 5 — Hashes, MACs and authenticated encryption','L6':'Lecture 6 — PRNGs, Diffie–Hellman and ECC','L7':'Lecture 7 — Public-key encryption and signatures','L8':'Lecture 8 — Certificates and password security','L9':'Lecture 9 — Web foundations','L10':'Lecture 10 — Cookies, sessions and CSRF','L11':'Lecture 11 — XSS and UI Attacks','L12':'Lecture 12 — SQL Injection and CAPTCHAs'}
+topicdeck={'principles':'L1','securitygoals':'L1','goals':'L2','classical':'L2','otp':'L3','block':'L3','modes':'L4','hash':'L5','mac':'L5','ae':'L5','prng':'L6','dh':'L6','ecc':'L6','rsa':'L7','elgamal':'L7','signature':'L7','keymodels':'L7','cert':'L8','password':'L8','cookies':'L10','session':'L10','csrf':'L10','xss':'L11','sql':'L12','ui':'L11','twofa':'L11'}
+names={'L1':'Lecture 1 — Introduction and Security Principles','L2':'Lecture 2 — Cryptographic foundations and classical ciphers','L3':'Lecture 3 — One-time pads and block ciphers','L4':'Lecture 4 — Block-cipher modes','L5':'Lecture 5 — Hashes, MACs and authenticated encryption','L6':'Lecture 6 — PRNGs, Diffie–Hellman and ECC','L7':'Lecture 7 — Public-key encryption and signatures','L8':'Lecture 8 — Certificates and password security','L9':'Lecture 9 — Web foundations','L10':'Lecture 10 — Cookies, sessions and CSRF','L11':'Lecture 11 — XSS and UI Attacks','L12':'Lecture 12 — SQL Injection and CAPTCHAs'}
 sourcefiles={d:next((x['file'] for x in json.loads((SECTION/'analysis/inventory.json').read_text()) if x.get('lecture')==int(d[1:])),None) for d in names if d.startswith('L')}
 
 for i,q in enumerate(qs,1):q['solution_id']=f'S{i:02d}'
@@ -30,7 +30,7 @@ front='''# CSE 405 · Worked Final-Exam Solutions
 
 ## How to use this guide
 
-**67 complete worked solutions · six academic sessions · all gathered questions.** Each question appears once with its original index label S01–S67. The topic/deck index also points to mixed questions taught partly elsewhere. The HTML has search, question navigation, scalable diagrams and typeset equations; the PDF is compiled from LaTeX for printing. The Markdown is editable.
+**73 complete worked solutions · six academic sessions · all gathered questions.** Each question appears once with its original index label S01–S73. The topic/deck index also points to mixed questions taught partly elsewhere. The HTML has search, question navigation, scalable diagrams and typeset equations; the PDF is compiled from LaTeX for printing. The Markdown is editable.
 
 Question summaries are paraphrases. The root PDF remains the authority for wording, code and figures. The solution metadata links to its physical page. Each answer includes reasoning and an exam tip; assumptions and defects in printed questions are identified rather than silently repaired. These are independent worked solutions, not an official marking scheme.
 
@@ -38,7 +38,7 @@ Question summaries are paraphrases. The root PDF remains the authority for wordi
 
 **Four corrections to keep in mind:** Cookie 2 in 2020–21 Q7(b) is non-secure; the 2018–19 Hill key is not invertible modulo 26; the full-group ElGamal question needs a valid nonzero-message argument; a visible cookie or freshly transmitted plaintext MAC key cannot authenticate against an eavesdropper. Relevant solutions explain each point.
 
-Lecture 9 has no separate standalone question in the gathered index. Its URL/HTTP/origin foundations are used in the web solutions. Questions listed only as material gaps in the previous report were outside the 67-question collection and are not silently substituted for these solutions.
+Lecture 9 has no separate standalone question in the gathered index. Its URL/HTTP/origin foundations are used in the web solutions. The newly supplied Lecture 1 adds six principle/availability/TOCTOU questions (S68–S73) and gives an explicit source for the existing information-security CIA question. Other Sec A-only material remains in its own guide.
 
 ## Navigation by teaching source
 
@@ -81,11 +81,14 @@ body=render_markdown(md)
 soup=BeautifulSoup(body,'html.parser')
 native_math=render_native_math(soup)
 # Scalable/embedded diagrams make the HTML a standalone offline artifact.
-for img in soup.find_all('img'):
+for img_no,img in enumerate(soup.find_all('img')):
  p=BASE/img['src']
  if not p.exists():raise FileNotFoundError(p)
  if p.suffix=='.svg':
   raw_svg=p.read_text()
+  for old in re.findall(r'\bid="([^"]+)"',raw_svg):
+   new=f'fig-{img_no}-'+old
+   raw_svg=raw_svg.replace('id="'+old+'"','id="'+new+'"').replace('url(#'+old+')','url(#'+new+')').replace('href="#'+old+'"','href="#'+new+'"')
   svg=BeautifulSoup(raw_svg[raw_svg.index('<svg'):],'html.parser').find('svg')
   svg['role']='img';svg['aria-label']=img.get('alt','Diagram');svg['class']='diagram';img.replace_with(svg)
  else:img['src']='data:image/png;base64,'+base64.b64encode(p.read_bytes()).decode()
@@ -104,7 +107,7 @@ css='''
 '''
 navlinks=''.join(f'<a href="#{q["solution_id"].lower()}">{q["solution_id"]} · {q["session"]} Q{q["question"]}<br>{html.escape(q["exact_skill"])}</a>' for q in qs)
 js='''document.querySelector('nav').addEventListener('click',e=>{if(e.target.closest('a')){document.getElementById('search').value='';document.querySelectorAll('section.question').forEach(x=>x.classList.remove('hidden'));}});document.getElementById('search').addEventListener('input',e=>{const term=e.target.value.toLowerCase();document.querySelectorAll('section.question').forEach(x=>x.classList.toggle('hidden',!x.textContent.toLowerCase().includes(term)));});'''
-page='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CSE 405 — 67 Worked Solutions</title><style>'+css+'</style><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]},options:{skipHtmlTags:["script","noscript","style","textarea","pre","code"]}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script></head><body><nav><h2>CSE 405 · Solutions</h2><p class="hint">67 answers · LaTeX math</p><input id="search" aria-label="Search solutions" placeholder="Search answers or topics…"><button onclick="window.print()">Print / save PDF</button>'+navlinks+'</nav><main>'+str(soup)+'<footer>Sources and assumptions are recorded in the individual answers. This is a study guide, not an official marking scheme.</footer></main><script>'+js+'</script></body></html>'
+page='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CSE 405 — 73 Worked Solutions</title><style>'+css+'</style><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]},options:{skipHtmlTags:["script","noscript","style","textarea","pre","code"]}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script></head><body><nav><h2>CSE 405 · Solutions</h2><p class="hint">73 answers · LaTeX math</p><input id="search" aria-label="Search solutions" placeholder="Search answers or topics…"><button onclick="window.print()">Print / save PDF</button>'+navlinks+'</nav><main>'+str(soup)+'<footer>Sources and assumptions are recorded in the individual answers. This is a study guide, not an official marking scheme.</footer></main><script>'+js+'</script></body></html>'
 if native_math:
  page=re.sub(r'<script>window.MathJax=.*?</script><script defer src=.*?</script>','',page,flags=re.S)
  page=page.replace('MathJax equation rendering','native MathML equation rendering')

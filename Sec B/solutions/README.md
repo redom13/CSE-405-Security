@@ -1,6 +1,6 @@
 # Sec B · Worked solutions
 
-All **67 gathered subquestions** have worked answers, including every option in the two “answer any…” questions.
+All **73 gathered subquestions** have worked answers, including every option in the two “answer any…” questions.
 
 - **[PDF](SOLUTIONS.pdf)** — printable guide with LaTeX equations, matrices, derivations and diagrams.
 - **[Markdown](SOLUTIONS.md)** — readable directly on GitHub, which renders the LaTeX math.

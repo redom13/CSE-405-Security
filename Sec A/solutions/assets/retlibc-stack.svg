@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="723.4pt" height="241pt" viewBox="0 0 723.4 241" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-28T23:36:40.681395</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.6.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 241 
+L 723.4 241 
+L 723.4 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 149 76.5396 
+L 574.4 76.5396 
+Q 576.527 76.5396 576.527 75.18 
+L 576.527 43.456 
+Q 576.527 42.0964 574.4 42.0964 
+L 149 42.0964 
+Q 146.873 42.0964 146.873 43.456 
+L 146.873 75.18 
+Q 146.873 76.5396 149 76.5396 
+z
+" clip-path="url(#p5669cbd02c)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 149 112.7956 
+L 574.4 112.7956 
+Q 576.527 112.7956 576.527 111.436 
+L 576.527 79.712 
+Q 576.527 78.3524 574.4 78.3524 
+L 149 78.3524 
+Q 146.873 78.3524 146.873 79.712 
+L 146.873 111.436 
+Q 146.873 112.7956 149 112.7956 
+z
+" clip-path="url(#p5669cbd02c)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 149 149.0516 
+L 574.4 149.0516 
+Q 576.527 149.0516 576.527 147.692 
+L 576.527 115.968 
+Q 576.527 114.6084 574.4 114.6084 
+L 149 114.6084 
+Q 146.873 114.6084 146.873 115.968 
+L 146.873 147.692 
+Q 146.873 149.0516 149 149.0516 
+z
+" clip-path="url(#p5669cbd02c)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 149 203.4356 
+L 574.4 203.4356 
+Q 576.527 203.4356 576.527 202.076 
+L 576.527 170.352 
+Q 576.527 168.9924 574.4 168.9924 
+L 149 168.9924 
+Q 146.873 168.9924 146.873 170.352 
+L 146.873 202.076 
+Q 146.873 203.4356 149 203.4356 
+z
+" clip-path="url(#p5669cbd02c)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="361.7" y="62.077375" transform="rotate(-0 361.7 62.077375)">R+8: pointer to argument string</text>
+   </g>
+   <g id="text_2">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="361.7" y="98.333375" transform="rotate(-0 361.7 98.333375)">R+4: system return / continuation</text>
+   </g>
+   <g id="text_3">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="361.7" y="134.589375" transform="rotate(-0 361.7 134.589375)">R: address of system</text>
+   </g>
+   <g id="text_4">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="361.7" y="188.973375" transform="rotate(-0 361.7 188.973375)">local buffer and padding</text>
+   </g>
+   <g id="text_5">
+    <text style="font: 10px 'DejaVu Sans'" transform="translate(595.67 110.862469)">ESP on entry</text>
+    <text style="font: 10px 'DejaVu Sans'" transform="translate(595.67 122.060281)">to system</text>
+   </g>
+   <g id="text_6">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: start" x="127.73" y="29.86" transform="rotate(-0 127.73 29.86)">Higher addresses ↑</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p5669cbd02c">
+   <rect x="7.2" y="7.2" width="709" height="226.6"/>
+  </clipPath>
+ </defs>
+</svg>

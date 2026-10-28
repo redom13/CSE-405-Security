@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="723.4pt" height="327.4pt" viewBox="0 0 723.4 327.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-28T23:36:40.825303</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.6.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 327.4 
+L 723.4 327.4 
+L 723.4 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 78.1 257.6 
+L 645.3 257.6 
+L 645.3 38.5 
+L 78.1 38.5 
+z
+" clip-path="url(#p367ecb25dd)" style="fill: #f1f3f5; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 78.1 257.6 
+L 645.3 257.6 
+L 645.3 151.18 
+L 78.1 151.18 
+z
+" clip-path="url(#p367ecb25dd)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 129.148 151.18 
+L 168.852 151.18 
+L 168.852 94.84 
+L 129.148 94.84 
+z
+" clip-path="url(#p367ecb25dd)" style="fill: #8eb8d9; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 129.148 213.78 
+L 168.852 213.78 
+L 168.852 151.18 
+L 129.148 151.18 
+z
+" clip-path="url(#p367ecb25dd)" style="fill: #e5c394; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 270.948 151.18 
+L 310.652 151.18 
+L 310.652 94.84 
+L 270.948 94.84 
+z
+" clip-path="url(#p367ecb25dd)" style="fill: #8eb8d9; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 270.948 245.08 
+L 310.652 245.08 
+L 310.652 151.18 
+L 270.948 151.18 
+z
+" clip-path="url(#p367ecb25dd)" style="fill: #e5c394; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 412.748 151.18 
+L 452.452 151.18 
+L 452.452 94.84 
+L 412.748 94.84 
+z
+" clip-path="url(#p367ecb25dd)" style="fill: #8eb8d9; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 412.748 195 
+L 452.452 195 
+L 452.452 151.18 
+L 412.748 151.18 
+z
+" clip-path="url(#p367ecb25dd)" style="fill: #e5c394; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 554.548 151.18 
+L 594.252 151.18 
+L 594.252 94.84 
+L 554.548 94.84 
+z
+" clip-path="url(#p367ecb25dd)" style="fill: #8eb8d9; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 554.548 226.3 
+L 594.252 226.3 
+L 594.252 151.18 
+L 554.548 151.18 
+z
+" clip-path="url(#p367ecb25dd)" style="fill: #e5c394; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 92.28 256.348 
+L 92.28 229.43 
+L 149 213.78 
+L 290.8 245.08 
+L 432.6 195 
+L 574.4 226.3 
+L 616.94 229.43 
+L 616.94 256.348 
+z
+" clip-path="url(#p367ecb25dd)" style="fill: #b8b8b8; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 42.65 151.18 
+L 673.66 151.18 
+" clip-path="url(#p367ecb25dd)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #a83e3e; stroke-width: 1.5"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 134.82 57.28 
+L 163.18 66.67 
+L 134.82 76.06 
+L 163.18 85.45 
+L 149 94.84 
+" clip-path="url(#p367ecb25dd)" style="fill: none; stroke: #28557e; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 276.62 57.28 
+L 304.98 66.67 
+L 276.62 76.06 
+L 304.98 85.45 
+L 290.8 94.84 
+" clip-path="url(#p367ecb25dd)" style="fill: none; stroke: #28557e; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 418.42 57.28 
+L 446.78 66.67 
+L 418.42 76.06 
+L 446.78 85.45 
+L 432.6 94.84 
+" clip-path="url(#p367ecb25dd)" style="fill: none; stroke: #28557e; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 560.22 57.28 
+L 588.58 66.67 
+L 560.22 76.06 
+L 588.58 85.45 
+L 574.4 94.84 
+" clip-path="url(#p367ecb25dd)" style="fill: none; stroke: #28557e; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #a83e3e; font: 11px 'DejaVu Sans'; text-anchor: end" x="670.115" y="141.79" transform="rotate(-0 670.115 141.79)">shear</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #28557e; font: 11px 'DejaVu Sans'; text-anchor: start" x="21.38" y="32.24" transform="rotate(-0 21.38 32.24)">shell / housing</text>
+   </g>
+   <g id="text_3">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: start" x="85.19" y="279.51" transform="rotate(-0 85.19 279.51)">key inside rotating plug</text>
+   </g>
+   <g id="patch_13">
+    <path d="M 627.667472 34.300522 
+Q 601.864415 51.496665 576.991716 68.072782 
+" style="fill: none; stroke: #000000; stroke-linecap: round"/>
+    <path d="M 581.429405 67.518783 
+L 576.991716 68.072782 
+L 579.211131 64.190231 
+" style="fill: none; stroke: #000000; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: start" x="624.03" y="29.11" transform="rotate(-0 624.03 29.11)">spring</text>
+   </g>
+   <g id="patch_14">
+    <path d="M 55.938562 218.402275 
+Q 80.272664 228.236655 103.570184 237.65211 
+" style="fill: none; stroke: #000000; stroke-linecap: round"/>
+    <path d="M 100.906909 234.634335 
+L 103.570184 237.65211 
+L 99.557999 237.972066 
+" style="fill: none; stroke: #000000; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="font: 9px 'DejaVu Sans'; text-anchor: start" x="21.38" y="213.78" transform="rotate(-0 21.38 213.78)">keyway</text>
+   </g>
+   <g id="text_6">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="354.61" y="301.42" transform="rotate(-0 354.61 301.42)">Correct key lifts every pin boundary to the shear line.</text>
+   </g>
+   <g id="patch_15">
+    <path d="M 240.192476 37.918319 
+Q 195.315636 81.333197 151.242347 123.970702 
+" style="fill: none; stroke: #000000; stroke-linecap: round"/>
+    <path d="M 155.934367 122.492546 
+L 151.242347 123.970702 
+L 152.875034 119.330192 
+" style="fill: none; stroke: #000000; stroke-linecap: round"/>
+   </g>
+   <g id="text_7">
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: start" x="219.9" y="32.24" transform="rotate(-0 219.9 32.24)">driver pins</text>
+   </g>
+   <g id="patch_16">
+    <path d="M 550.359494 264.81754 
+Q 492.279353 221.120361 435.092626 178.095352 
+" style="fill: none; stroke: #000000; stroke-linecap: round"/>
+    <path d="M 437.285985 182.498666 
+L 435.092626 178.095352 
+L 439.931293 178.982653 
+" style="fill: none; stroke: #000000; stroke-linecap: round"/>
+   </g>
+   <g id="text_8">
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: start" x="538.95" y="276.38" transform="rotate(-0 538.95 276.38)">key pins</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p367ecb25dd">
+   <rect x="7.2" y="7.2" width="709" height="313"/>
+  </clipPath>
+ </defs>
+</svg>

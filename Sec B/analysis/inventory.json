@@ -39,6 +39,22 @@
     ]
   },
   {
+    "file": "Sec B/slides/lecture-01-introduction-and-security-principles.pdf",
+    "pages": 60,
+    "text_characters": 28781,
+    "text_file": "Sec B/_build/extracted/lecture-01-introduction-and-security-principles.txt",
+    "short_pages": [
+      3,
+      36,
+      37,
+      38,
+      39,
+      43,
+      46
+    ],
+    "lecture": 1
+  },
+  {
     "file": "Sec B/slides/lecture-02-intro-to-cryptography.pdf",
     "pages": 72,
     "text_characters": 52140,

@@ -29,7 +29,7 @@
 \fancyfoot[C]{\thepage}
 \hypersetup{pdftitle={CSE 405 — Sec B Worked Final-Exam Solutions},pdfauthor={Sec B study guide},bookmarksopen=true}
 \title{\sffamily\bfseries CSE 405\\[4pt]Worked Final-Exam Solutions}
-\author{Sec B · 67 questions · six academic sessions}
+\author{Sec B · 73 questions · six academic sessions}
 \date{}
 \begin{document}
 \maketitle
@@ -40,7 +40,7 @@
 \clearpage
 \section{How to use this guide}
 
-\textbf{67 complete worked solutions · six academic sessions · all gathered questions.} Each question appears once with its original index label S01–S67. The topic/\allowbreak{}deck index also points to mixed questions taught partly elsewhere. The HTML has search,\allowbreak{} question navigation,\allowbreak{} scalable diagrams and typeset equations; the PDF is compiled from LaTeX for printing. The Markdown is editable.
+\textbf{73 complete worked solutions · six academic sessions · all gathered questions.} Each question appears once with its original index label S01–S73. The topic/\allowbreak{}deck index also points to mixed questions taught partly elsewhere. The HTML has search,\allowbreak{} question navigation,\allowbreak{} scalable diagrams and typeset equations; the PDF is compiled from LaTeX for printing. The Markdown is editable.
 
 
 Question summaries are paraphrases. The root PDF remains the authority for wording,\allowbreak{} code and figures. The solution metadata links to its physical page. Each answer includes reasoning and an exam tip; assumptions and defects in printed questions are identified rather than silently repaired. These are independent worked solutions,\allowbreak{} not an official marking scheme.
@@ -52,17 +52,23 @@ Question summaries are paraphrases. The root PDF remains the authority for wordi
 \textbf{Four corrections to keep in mind:} Cookie 2 in 2020–21 Q7(b) is non-secure; the 2018–19 Hill key is not invertible modulo 26; the full-group ElGamal question needs a valid nonzero-message argument; a visible cookie or freshly transmitted plaintext MAC key cannot authenticate against an eavesdropper. Relevant solutions explain each point.
 
 
-Lecture 9 has no separate standalone question in the gathered index. Its URL/\allowbreak{}HTTP/\allowbreak{}origin foundations are used in the web solutions. Questions listed only as material gaps in the previous report were outside the 67-question collection and are not silently substituted for these solutions.
+Lecture 9 has no separate standalone question in the gathered index. Its URL/\allowbreak{}HTTP/\allowbreak{}origin foundations are used in the web solutions. The newly supplied Lecture 1 adds six principle/\allowbreak{}availability/\allowbreak{}TOCTOU questions (S68–S73) and gives an explicit source for the existing information-security CIA question. Other Sec A-only material remains in its own guide.
 
 
 
 \clearpage
 \section{Navigation by teaching source}
 
+\textbf{Lecture 1 — Introduction and Security Principles}
+
+
+\hyperref[s28]{S28: 2021–22 Q2(a)}; \hyperref[s68]{S68: 2023–24 Q1(b)}; \hyperref[s69]{S69: 2022–23 Q1(a)}; \hyperref[s70]{S70: 2020–21 Q1(b)}; \hyperref[s71]{S71: 2020–21 Q1(c)}; \hyperref[s72]{S72: 2020–21 Q2(b)}; \hyperref[s73]{S73: 2020–21 Q8(a)}
+
+
 \textbf{Lecture 2 — Cryptographic foundations and classical ciphers}
 
 
-\hyperref[s01]{S01: 2023–24 Q5(a)}; \hyperref[s04]{S04: 2023–24 Q6(b)}; \hyperref[s26]{S26: 2021–22 Q1(c)}; \hyperref[s27]{S27: 2021–22 Q1(d)}; \hyperref[s28]{S28: 2021–22 Q2(a)}; \hyperref[s44]{S44: 2020–21 Q7(a)}; \hyperref[s51]{S51: 2019–20 Q6(a)}; \hyperref[s61]{S61: 2018–19 Q5(a)}
+\hyperref[s01]{S01: 2023–24 Q5(a)}; \hyperref[s04]{S04: 2023–24 Q6(b)}; \hyperref[s26]{S26: 2021–22 Q1(c)}; \hyperref[s27]{S27: 2021–22 Q1(d)}; \hyperref[s44]{S44: 2020–21 Q7(a)}; \hyperref[s51]{S51: 2019–20 Q6(a)}; \hyperref[s61]{S61: 2018–19 Q5(a)}
 
 
 \textbf{Lecture 3 — One-time pads and block ciphers}
@@ -143,6 +149,274 @@ Lecture 9 has no separate standalone question in the gathered index. Its URL/\al
 \bottomrule
 \end{longtable}
 }
+
+
+\clearpage
+\section{Lecture 1 — Introduction and Security Principles}
+
+Primary source: \href{../slides/lecture-01-introduction-and-security-principles.pdf}{lecture-01-introduction-and-security-principles.\allowbreak{}pdf}
+
+
+
+
+\subsection{S28 · 2021–22 · Q2(a)}\label{s28}
+
+\textbf{Attacks versus information-security CIA goals · 5 marks}
+
+
+Original: \href{../../CSE405-Security_Merged.pdf\#page=15}{root question PDF,\allowbreak{} page 15}. Sitting date: 30 October 2023.
+
+
+
+\begin{quote}\small
+
+\textbf{Question summary:} Categorize security attacks with respect to C.\allowbreak{}I.\allowbreak{}A. goals.
+
+
+
+\end{quote}
+
+In this general security question,\allowbreak{} CIA means \textbf{confidentiality,\allowbreak{} integrity and availability}.
+
+
+
+{\small\setlength{\tabcolsep}{3pt}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.20601\linewidth}>{\raggedright\arraybackslash}p{0.32356\linewidth}>{\raggedright\arraybackslash}p{0.42885\linewidth}}
+\toprule
+\textbf{Goal violated} & \textbf{Meaning} & \textbf{Example attacks} \\
+\midrule
+\endhead
+Confidentiality & Unauthorized disclosure & Sniffing plaintext,\allowbreak{} reading stolen files,\allowbreak{} data-extracting SQL injection \\
+Integrity & Unauthorized alteration or false data & Modifying a bank transfer,\allowbreak{} inserting false records,\allowbreak{} undetected message substitution \\
+Availability & Denial of timely legitimate service & DDoS,\allowbreak{} deleting critical files,\allowbreak{} exhausting connections \\
+\bottomrule
+\end{longtable}
+}
+
+Passive eavesdropping primarily threatens confidentiality. Active modification/\allowbreak{}fabrication primarily threatens integrity. Interruption/\allowbreak{}resource exhaustion primarily threatens availability. One attack can affect several goals: ransomware can both deny file access and disclose stolen information.
+
+
+
+\Needspace{4\baselineskip}
+{\color{ForestGreen}\textbf{Exam tip.} Map behaviors to goals instead of treating attack classes as disjoint. Lecture 2’s cryptographic use of A for authenticity is a different convention.}
+
+
+
+
+\clearpage
+\subsection{S68 · 2023–24 · Q1(b)}\label{s68}
+
+\textbf{Match five scenarios to security principles · 10 marks}
+
+
+Original: \href{../../CSE405-Security_Merged.pdf\#page=2}{root question PDF,\allowbreak{} page 2}. Sitting date: 06 September 2025.
+
+
+
+\begin{quote}\small
+
+\textbf{Question summary:} Match principles to a valet key,\allowbreak{} bypassable laptop screen lock,\allowbreak{} irreversible water-damage sticker,\allowbreak{} bank recovery questions overridden by a representative,\allowbreak{} and encryption at rest and in transit.
+
+
+
+\end{quote}
+
+
+{\small\setlength{\tabcolsep}{3pt}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.45121\linewidth}>{\raggedright\arraybackslash}p{0.51968\linewidth}}
+\toprule
+\textbf{Scenario} & \textbf{Principle and explanation} \\
+\midrule
+\endhead
+Valet key opens ignition/\allowbreak{}doors but not trunk & \textbf{Least privilege:} grant the driver the subset of access required for parking. \\
+Specialized equipment bypasses screen lock & \textbf{Threat model and work factor:} a screen lock addresses some casual-access threats; physical/\allowbreak{}offline attackers require stronger protections. Compare attack cost with asset value. Full-disk encryption and boot trust address additional paths. \\
+Sticker remains red after water exposure & \textbf{Compromise recording:} preserve evidence of a violation when prevention is impractical. It detects the condition; it does not prevent liquid damage or prove intent. \\
+Representative waives a strong recovery answer & \textbf{Human factors and complete mediation:} a human fallback becomes the weakest authentication path. A strong secret is ineffective if an unverified story bypasses it. Use a consistent,\allowbreak{} independently verified recovery process. \\
+Encrypt internal/\allowbreak{}external traffic and stored data & \textbf{Defense in depth:} protect different exposure paths and trust boundaries. Access control,\allowbreak{} key separation and monitoring remain necessary if an endpoint is compromised. \\
+\bottomrule
+\end{longtable}
+}
+
+Shannon's maxim means assuming the adversary knows the system; none of these scenarios is primarily solved by hiding its design. Several principles can fit,\allowbreak{} but explain the concrete failure or protection.
+
+
+
+\Needspace{4\baselineskip}
+{\color{ForestGreen}\textbf{Exam tip.} Give the principle followed by the causal link to the example,\allowbreak{} rather than a list of principle names.}
+
+
+
+
+\clearpage
+\subsection{S69 · 2022–23 · Q1(a)}\label{s69}
+
+\textbf{Least privilege versus separation; why record compromise? · 10 marks}
+
+
+Original: \href{../../CSE405-Security_Merged.pdf\#page=11}{root question PDF,\allowbreak{} page 11}. Sitting date: 18 April 2024.
+
+
+
+\begin{quote}\small
+
+\textbf{Question summary:} Differentiate least privilege and separation of privilege,\allowbreak{} and explain the importance of compromise recording with examples.
+
+
+
+\end{quote}
+
+\textbf{Least privilege} minimizes the rights of each subject/\allowbreak{}process. A photo editor receives access to selected pictures rather than every user file; a service runs without administrator rights.
+
+
+\textbf{Separation of privilege/\allowbreak{}responsibility} requires multiple independent conditions or parties for a sensitive operation. Releasing a payment may require approvals from both an initiator and a separate reviewer. Giving one administrator a smaller permission set is least privilege; requiring two approvals is separation.
+
+
+\textbf{Compromise recording} captures evidence of violations: protected authentication/\allowbreak{}access logs,\allowbreak{} change journals,\allowbreak{} IDS events and physical surveillance. Perfect prevention is rarely achievable. Records support timely detection,\allowbreak{} reconstruction,\allowbreak{} containment,\allowbreak{} accountability and recovery. A record is useful only if it has trustworthy timestamps,\allowbreak{} integrity protection,\allowbreak{} appropriate retention and someone responsible for responding. Forwarding logs to a protected collector limits deletion by a compromised host.
+
+
+
+\Needspace{4\baselineskip}
+{\color{ForestGreen}\textbf{Exam tip.} Use two distinct examples; do not describe both principles merely as “restrict access.”}
+
+
+
+
+\clearpage
+\subsection{S70 · 2020–21 · Q1(b)}\label{s70}
+
+\textbf{Selective packet dropping against a competitor · 12 marks}
+
+
+Original: \href{../../CSE405-Security_Merged.pdf\#page=18}{root question PDF,\allowbreak{} page 18}. Sitting date: 25 September 2022.
+
+
+
+\begin{quote}\small
+
+\textbf{Question summary:} An ISP deliberately drops 25\% of a competing provider’s VoIP packets traversing its routers. Identify the attack.
+
+
+
+\end{quote}
+
+This is a \textbf{selective denial-of-service/\allowbreak{}degradation attack} by an on-path network operator. It violates availability by making the competitor's voice calls unreliable even if the service is not completely unavailable. The operator abuses a trusted forwarding position; the attacker need not impersonate an endpoint or decrypt the voice content.
+
+
+Packet loss produces gaps,\allowbreak{} jitter/\allowbreak{}retransmissions where applicable and poor call quality. Encrypting VoIP can protect content and integrity but cannot force a malicious router to forward packets. Detection compares loss/\allowbreak{}quality across paths and traffic classes; mitigation can include independent paths/\allowbreak{}providers and routing around the hostile infrastructure.
+
+
+
+\Needspace{4\baselineskip}
+{\color{ForestGreen}\textbf{Exam tip.} Availability includes timely usable service. A 25\% degradation can be a DoS attack without a total outage.}
+
+
+
+
+\clearpage
+\subsection{S71 · 2020–21 · Q1(c)}\label{s71}
+
+\textbf{Why compromise recording matters and which tools support it · 11 marks}
+
+
+Original: \href{../../CSE405-Security_Merged.pdf\#page=18}{root question PDF,\allowbreak{} page 18}. Sitting date: 25 September 2022.
+
+
+
+\begin{quote}\small
+
+\textbf{Question summary:} Explain the importance of compromise recording and name tools used for it.
+
+
+
+\end{quote}
+
+Prevention can fail,\allowbreak{} so systems need evidence that a violation occurred. Compromise records support detection,\allowbreak{} incident reconstruction,\allowbreak{} identification of affected accounts/\allowbreak{}assets,\allowbreak{} containment and recovery. They can also deter abuse and support accountability.
+
+
+Examples include OS security/\allowbreak{}event logs,\allowbreak{} authentication and privilege-change auditing,\allowbreak{} application/\allowbreak{}database access logs,\allowbreak{} file-integrity monitoring,\allowbreak{} network flow/\allowbreak{}packet metadata,\allowbreak{} IDS alerts and physical surveillance. A protected central log collector helps preserve evidence when an individual host is compromised.
+
+
+Record reliable timestamps,\allowbreak{} actor/\allowbreak{}subject,\allowbreak{} action,\allowbreak{} target,\allowbreak{} result and source context. Protect log integrity/\allowbreak{}access,\allowbreak{} monitor collector health,\allowbreak{} retain relevant records and connect alerts to a response process. Logging everything indiscriminately can create privacy,\allowbreak{} storage and analysis problems; select evidence according to the threat model.
+
+
+
+\Needspace{4\baselineskip}
+{\color{ForestGreen}\textbf{Exam tip.} A log that nobody checks or an attacker can silently erase is weak compromise recording.}
+
+
+
+
+\clearpage
+\subsection{S72 · 2020–21 · Q2(b)}\label{s72}
+
+\textbf{Mismatched boarding-pass and identity checks · 12 marks}
+
+
+Original: \href{../../CSE405-Security_Merged.pdf\#page=18}{root question PDF,\allowbreak{} page 18}. Sitting date: 25 September 2022.
+
+
+
+\begin{quote}\small
+
+\textbf{Question summary:} Explain how online-printable boarding passes permit a no-fly-list bypass in the described airport checks,\allowbreak{} and fix the weakness.
+
+
+
+\end{quote}
+
+The described checks fail to bind \textbf{the same person,\allowbreak{} reservation and boarding pass} across all stages. A listed traveler could book under an unlisted identity. At the ID checkpoint,\allowbreak{} an altered paper pass bearing the traveler's real name might satisfy the local name comparison if the checkpoint does not validate the reservation. At boarding,\allowbreak{} the traveler presents the genuine pass for the unlisted booking if the gate checks the reservation but not the person's ID.
+
+
+This is an illustrative failure of \textbf{complete mediation and consistent identity binding}. It depends on the precise split checks given in the problem; it is not a statement about every airport's procedures.
+
+
+Authenticate the pass/\allowbreak{}barcode against the reservation system; bind it to the verified traveler and current screening result; recheck list eligibility and identity at the stages that authorize travel; prevent substitution/\allowbreak{}reuse after checking. A digital signature on the pass protects its fields only if the scanner verifies it and ties it to the person presenting it.
+
+
+
+\Needspace{4\baselineskip}
+{\color{ForestGreen}\textbf{Exam tip.} Show what each checkpoint sees and why two individually plausible documents are not sufficient together.}
+
+
+
+
+\clearpage
+\subsection{S73 · 2020–21 · Q8(a)}\label{s73}
+
+\textbf{Audit scanf,\allowbreak{} privileged file opening and a name-based access race · 15 marks}
+
+
+Original: \href{../../CSE405-Security_Merged.pdf\#page=20}{root question PDF,\allowbreak{} page 20}. Sitting date: 25 September 2022.
+
+
+
+\begin{quote}\small
+
+\textbf{Question summary:} Analyze attacks on the printed C program (code on p. 21): scanf into buffer[60],\allowbreak{} fopen(fn,\allowbreak{}"a+"),\allowbreak{} access(fn,\allowbreak{}W\_OK),\allowbreak{} fwrite; state environmental assumptions.
+
+
+
+\end{quote}
+
+\textbf{Unbounded input:} \texttt{scanf("\%s",\allowbreak{}buffer)} has no width,\allowbreak{} so an input exceeding the 60-byte array (including its terminator) can corrupt neighboring locals or saved control state. A specific control-flow attack depends on frame layout,\allowbreak{} address knowledge,\allowbreak{} protections and process privileges. Use a bounded read,\allowbreak{} check its result and handle long input deliberately.
+
+
+\textbf{Privilege/\allowbreak{}identity mismatch:} if this is a setuid program,\allowbreak{} \texttt{fopen} uses effective-identity permissions,\allowbreak{} whereas \texttt{access} ordinarily checks the real identity. Opening before the authorization decision may already create a file or otherwise have effects; the program should not acquire unauthorized capabilities and then rely on a later pathname check.
+
+
+\textbf{Name race,\allowbreak{} with the printed order preserved:} the code opens \texttt{fn} \textbf{before} \texttt{access}. In a writable directory an attacker can arrange for the name to resolve to a protected target during \texttt{fopen},\allowbreak{} then replace the name with an allowed file before \texttt{access}. The check succeeds for the new name,\allowbreak{} but \texttt{fp} still refers to the originally opened target,\allowbreak{} so \texttt{fwrite} affects that object. This requires a useful effective privilege and attacker control of the pathname/\allowbreak{}directory (plus applicable symlink protections). A literal fixed relative pathname is not automatically attacker-controlled.
+
+
+Other defects include unchecked \texttt{fopen} failure and insufficient handling of I/\allowbreak{}O errors. \texttt{strlen} also requires a valid terminated input string.
+
+
+\textbf{Repair:} avoid setuid where possible; drop privileges before opening; use a trusted directory/\allowbreak{}descriptor-based access strategy,\allowbreak{} constrain symlink traversal as appropriate,\allowbreak{} and operate on the verified opened object. A separate earlier \texttt{access} followed by \texttt{fopen} would still be race-prone.
+
+
+
+\Needspace{4\baselineskip}
+{\color{ForestGreen}\textbf{Exam tip.} Trace object identity through the descriptor. This example is an open-then-check race,\allowbreak{} not the usual check-then-open ordering.}
+
 
 
 \clearpage
@@ -344,51 +618,6 @@ For example,\allowbreak{} E1(x)=\allowbreak{}5x+8 and E2(y)=\allowbreak{}7y+3 co
 
 \Needspace{4\baselineskip}
 {\color{ForestGreen}\textbf{Exam tip.} Show the equivalent multiplier/\allowbreak{}offset and its invertibility. “Two encryptions must be stronger” fails when the cipher family is closed under composition.}
-
-
-
-
-\clearpage
-\subsection{S28 · 2021–22 · Q2(a)}\label{s28}
-
-\textbf{Attacks versus information-security CIA goals · 5 marks}
-
-
-Original: \href{../../CSE405-Security_Merged.pdf\#page=15}{root question PDF,\allowbreak{} page 15}. Sitting date: 30 October 2023.
-
-
-
-\begin{quote}\small
-
-\textbf{Question summary:} Categorize security attacks with respect to C.\allowbreak{}I.\allowbreak{}A. goals.
-
-
-
-\end{quote}
-
-In this general security question,\allowbreak{} CIA means \textbf{confidentiality,\allowbreak{} integrity and availability}.
-
-
-
-{\small\setlength{\tabcolsep}{3pt}
-\begin{longtable}{>{\raggedright\arraybackslash}p{0.20601\linewidth}>{\raggedright\arraybackslash}p{0.32356\linewidth}>{\raggedright\arraybackslash}p{0.42885\linewidth}}
-\toprule
-\textbf{Goal violated} & \textbf{Meaning} & \textbf{Example attacks} \\
-\midrule
-\endhead
-Confidentiality & Unauthorized disclosure & Sniffing plaintext,\allowbreak{} reading stolen files,\allowbreak{} data-extracting SQL injection \\
-Integrity & Unauthorized alteration or false data & Modifying a bank transfer,\allowbreak{} inserting false records,\allowbreak{} undetected message substitution \\
-Availability & Denial of timely legitimate service & DDoS,\allowbreak{} deleting critical files,\allowbreak{} exhausting connections \\
-\bottomrule
-\end{longtable}
-}
-
-Passive eavesdropping primarily threatens confidentiality. Active modification/\allowbreak{}fabrication primarily threatens integrity. Interruption/\allowbreak{}resource exhaustion primarily threatens availability. One attack can affect several goals: ransomware can both deny file access and disclose stolen information.
-
-
-
-\Needspace{4\baselineskip}
-{\color{ForestGreen}\textbf{Exam tip.} Map behaviors to goals instead of treating attack classes as disjoint. Lecture 2’s cryptographic use of A for authenticity is a different convention.}
 
 
 

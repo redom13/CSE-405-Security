@@ -1,0 +1,370 @@
+[
+  {
+    "topic": "dns",
+    "title": "DNS poisoning, Kaminsky races, pharming and DNSSEC",
+    "deck": "dns",
+    "questions": 7,
+    "papers": 5,
+    "direct": 6
+  },
+  {
+    "topic": "signature",
+    "title": "Digital signatures and signing-key security",
+    "deck": "crypto",
+    "questions": 7,
+    "papers": 5,
+    "direct": 5
+  },
+  {
+    "topic": "hash",
+    "title": "Hash properties, collisions and birthday security",
+    "deck": "crypto",
+    "questions": 7,
+    "papers": 4,
+    "direct": 3
+  },
+  {
+    "topic": "mac",
+    "title": "MAC/HMAC and authenticated data",
+    "deck": "crypto",
+    "questions": 7,
+    "papers": 4,
+    "direct": 1
+  },
+  {
+    "topic": "phishing",
+    "title": "Phishing, homographs and UI deception",
+    "deck": "web",
+    "questions": 7,
+    "papers": 4,
+    "direct": 0
+  },
+  {
+    "topic": "tcp",
+    "title": "TCP hijacking, spoofed segments and optimistic ACKs",
+    "deck": "network",
+    "questions": 7,
+    "papers": 4,
+    "direct": 3
+  },
+  {
+    "topic": "worm",
+    "title": "Worm propagation, epidemic models and case studies",
+    "deck": "malware",
+    "questions": 6,
+    "papers": 5,
+    "direct": 5
+  },
+  {
+    "topic": "buffer",
+    "title": "Stack/heap corruption and buffer-overflow payload reasoning",
+    "deck": "buffer",
+    "questions": 6,
+    "papers": 4,
+    "direct": 1
+  },
+  {
+    "topic": "xss",
+    "title": "Stored/reflected XSS and injected scripts",
+    "deck": "web",
+    "questions": 6,
+    "papers": 4,
+    "direct": 4
+  },
+  {
+    "topic": "os",
+    "title": "OS trust, paging, boot and persistent memory images",
+    "deck": "os",
+    "questions": 6,
+    "papers": 3,
+    "direct": 3
+  },
+  {
+    "topic": "firewall",
+    "title": "Firewall state, evasion and defense limits",
+    "deck": "defense",
+    "questions": 5,
+    "papers": 4,
+    "direct": 3
+  },
+  {
+    "topic": "honey",
+    "title": "Honeypot topology, monitoring and overhead",
+    "deck": "defense",
+    "questions": 5,
+    "papers": 4,
+    "direct": 5
+  },
+  {
+    "topic": "dos",
+    "title": "DoS/DDoS, reflection and resource exhaustion",
+    "deck": "network",
+    "questions": 5,
+    "papers": 3,
+    "direct": 4
+  },
+  {
+    "topic": "ids",
+    "title": "Intrusion detection, base rates and audit data",
+    "deck": "defense",
+    "questions": 5,
+    "papers": 3,
+    "direct": 1
+  },
+  {
+    "topic": "sql",
+    "title": "SQL injection and prepared statements",
+    "deck": "web",
+    "questions": 5,
+    "papers": 3,
+    "direct": 4
+  },
+  {
+    "topic": "principles",
+    "title": "Security principles and scenario analysis",
+    "deck": "intro",
+    "questions": 5,
+    "papers": 3,
+    "direct": 3
+  },
+  {
+    "topic": "adware",
+    "title": "Adware, spyware and malware economics",
+    "deck": "malware",
+    "questions": 4,
+    "papers": 4,
+    "direct": 3
+  },
+  {
+    "topic": "modes",
+    "title": "Block-cipher modes, CBC and ciphertext manipulation",
+    "deck": "crypto",
+    "questions": 4,
+    "papers": 4,
+    "direct": 2
+  },
+  {
+    "topic": "botnet",
+    "title": "Botnet creation, C&C and malicious agents",
+    "deck": "malware",
+    "questions": 4,
+    "papers": 4,
+    "direct": 4
+  },
+  {
+    "topic": "dh",
+    "title": "Diffie\u2013Hellman calculations and authentication",
+    "deck": "crypto",
+    "questions": 4,
+    "papers": 4,
+    "direct": 4
+  },
+  {
+    "topic": "arp",
+    "title": "ARP spoofing, MITM and detection",
+    "deck": "network",
+    "questions": 4,
+    "papers": 3,
+    "direct": 4
+  },
+  {
+    "topic": "auth",
+    "title": "Biometrics, authentication factors, SIM and RFID",
+    "deck": "physical",
+    "questions": 4,
+    "papers": 3,
+    "direct": 2
+  },
+  {
+    "topic": "goals",
+    "title": "CIA, attacker models and security scope",
+    "deck": "intro",
+    "questions": 4,
+    "papers": 3,
+    "direct": 2
+  },
+  {
+    "topic": "cert",
+    "title": "Certificates, CA trust and key binding",
+    "deck": "crypto",
+    "questions": 4,
+    "papers": 3,
+    "direct": 3
+  },
+  {
+    "topic": "canary",
+    "title": "StackGuard, ASLR and memory-corruption defenses",
+    "deck": "buffer",
+    "questions": 4,
+    "papers": 3,
+    "direct": 1
+  },
+  {
+    "topic": "access",
+    "title": "Access matrices, ACLs, capabilities and RBAC",
+    "deck": "intro",
+    "questions": 3,
+    "papers": 3,
+    "direct": 2
+  },
+  {
+    "topic": "stealth",
+    "title": "Encrypted, polymorphic and metamorphic viruses",
+    "deck": "malware",
+    "questions": 3,
+    "papers": 3,
+    "direct": 3
+  },
+  {
+    "topic": "recon",
+    "title": "Reconnaissance, fingerprinting and vulnerability assessment",
+    "deck": "defense",
+    "questions": 3,
+    "papers": 3,
+    "direct": 3
+  },
+  {
+    "topic": "rootkit",
+    "title": "Rootkit cloaking, hooking and DLL injection",
+    "deck": "malware",
+    "questions": 3,
+    "papers": 3,
+    "direct": 2
+  },
+  {
+    "topic": "syn",
+    "title": "SYN flooding and stateless SYN cookies",
+    "deck": "network",
+    "questions": 3,
+    "papers": 3,
+    "direct": 3
+  },
+  {
+    "topic": "csrf",
+    "title": "CSRF and cookie-authenticated requests",
+    "deck": "web",
+    "questions": 3,
+    "papers": 2,
+    "direct": 1
+  },
+  {
+    "topic": "block",
+    "title": "DES/AES internals, P/S boxes and multiple-DES strength",
+    "deck": "crypto",
+    "questions": 3,
+    "papers": 2,
+    "direct": 0
+  },
+  {
+    "topic": "password",
+    "title": "Password guessing, recovery and search-space calculations",
+    "deck": "intro",
+    "questions": 3,
+    "papers": 2,
+    "direct": 0
+  },
+  {
+    "topic": "rsa",
+    "title": "RSA encryption and correctness",
+    "deck": "crypto",
+    "questions": 3,
+    "papers": 2,
+    "direct": 3
+  },
+  {
+    "topic": "physical",
+    "title": "Pin-tumbler locks and master-key extensions",
+    "deck": "physical",
+    "questions": 3,
+    "papers": 1,
+    "direct": 1
+  },
+  {
+    "topic": "dhcp",
+    "title": "DHCP starvation, spoofing and defenses",
+    "deck": "network",
+    "questions": 2,
+    "papers": 2,
+    "direct": 2
+  },
+  {
+    "topic": "web",
+    "title": "HTTP/HTTPS and browser trust",
+    "deck": "web",
+    "questions": 2,
+    "papers": 2,
+    "direct": 0
+  },
+  {
+    "topic": "switch",
+    "title": "Switch MAC-table flooding and port security",
+    "deck": "network",
+    "questions": 2,
+    "papers": 2,
+    "direct": 2
+  },
+  {
+    "topic": "files",
+    "title": "Unix permissions, setuid and filesystem access",
+    "deck": "files",
+    "questions": 2,
+    "papers": 2,
+    "direct": 1
+  },
+  {
+    "topic": "vpn",
+    "title": "VPN and IPsec AH/ESP encapsulation",
+    "deck": "defense",
+    "questions": 2,
+    "papers": 2,
+    "direct": 2
+  },
+  {
+    "topic": "insider",
+    "title": "Backdoors, logic bombs and insider abuse",
+    "deck": "malware",
+    "questions": 2,
+    "papers": 1,
+    "direct": 2
+  },
+  {
+    "topic": "number",
+    "title": "Modular arithmetic, Fermat, Euler and inverses",
+    "deck": "crypto",
+    "questions": 2,
+    "papers": 1,
+    "direct": 1
+  },
+  {
+    "topic": "retlibc",
+    "title": "Return-to-libc and calling conventions",
+    "deck": "buffer",
+    "questions": 2,
+    "papers": 1,
+    "direct": 0
+  },
+  {
+    "topic": "keymodels",
+    "title": "Symmetric/public-key models and Caesar as symmetric encryption",
+    "deck": "crypto",
+    "questions": 2,
+    "papers": 1,
+    "direct": 1
+  },
+  {
+    "topic": "emanations",
+    "title": "Faraday shielding and physical information leakage",
+    "deck": "physical",
+    "questions": 1,
+    "papers": 1,
+    "direct": 0
+  },
+  {
+    "topic": "format",
+    "title": "Format-string reads and writes",
+    "deck": "buffer",
+    "questions": 1,
+    "papers": 1,
+    "direct": 0
+  }
+]

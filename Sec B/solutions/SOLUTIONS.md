@@ -2,7 +2,7 @@
 
 ## How to use this guide
 
-**67 complete worked solutions · six academic sessions · all gathered questions.** Each question appears once with its original index label S01–S67. The topic/deck index also points to mixed questions taught partly elsewhere. The HTML has search, question navigation, scalable diagrams and typeset equations; the PDF is compiled from LaTeX for printing. The Markdown is editable.
+**73 complete worked solutions · six academic sessions · all gathered questions.** Each question appears once with its original index label S01–S73. The topic/deck index also points to mixed questions taught partly elsewhere. The HTML has search, question navigation, scalable diagrams and typeset equations; the PDF is compiled from LaTeX for printing. The Markdown is editable.
 
 Question summaries are paraphrases. The root PDF remains the authority for wording, code and figures. The solution metadata links to its physical page. Each answer includes reasoning and an exam tip; assumptions and defects in printed questions are identified rather than silently repaired. These are independent worked solutions, not an official marking scheme.
 
@@ -10,14 +10,18 @@ Question summaries are paraphrases. The root PDF remains the authority for wordi
 
 **Four corrections to keep in mind:** Cookie 2 in 2020–21 Q7(b) is non-secure; the 2018–19 Hill key is not invertible modulo 26; the full-group ElGamal question needs a valid nonzero-message argument; a visible cookie or freshly transmitted plaintext MAC key cannot authenticate against an eavesdropper. Relevant solutions explain each point.
 
-Lecture 9 has no separate standalone question in the gathered index. Its URL/HTTP/origin foundations are used in the web solutions. Questions listed only as material gaps in the previous report were outside the 67-question collection and are not silently substituted for these solutions.
+Lecture 9 has no separate standalone question in the gathered index. Its URL/HTTP/origin foundations are used in the web solutions. The newly supplied Lecture 1 adds six principle/availability/TOCTOU questions (S68–S73) and gives an explicit source for the existing information-security CIA question. Other Sec A-only material remains in its own guide.
 
 ## Navigation by teaching source
 
 
+**Lecture 1 — Introduction and Security Principles**
+
+[S28: 2021–22 Q2(a)](#s28); [S68: 2023–24 Q1(b)](#s68); [S69: 2022–23 Q1(a)](#s69); [S70: 2020–21 Q1(b)](#s70); [S71: 2020–21 Q1(c)](#s71); [S72: 2020–21 Q2(b)](#s72); [S73: 2020–21 Q8(a)](#s73)
+
 **Lecture 2 — Cryptographic foundations and classical ciphers**
 
-[S01: 2023–24 Q5(a)](#s01); [S04: 2023–24 Q6(b)](#s04); [S26: 2021–22 Q1(c)](#s26); [S27: 2021–22 Q1(d)](#s27); [S28: 2021–22 Q2(a)](#s28); [S44: 2020–21 Q7(a)](#s44); [S51: 2019–20 Q6(a)](#s51); [S61: 2018–19 Q5(a)](#s61)
+[S01: 2023–24 Q5(a)](#s01); [S04: 2023–24 Q6(b)](#s04); [S26: 2021–22 Q1(c)](#s26); [S27: 2021–22 Q1(d)](#s27); [S44: 2020–21 Q7(a)](#s44); [S51: 2019–20 Q6(a)](#s51); [S61: 2018–19 Q5(a)](#s61)
 
 **Lecture 3 — One-time pads and block ciphers**
 
@@ -69,6 +73,139 @@ Lecture 9 has no separate standalone question in the gathered index. Its URL/HTT
 | 2019–20 Q7(c) | Totients A: 8200,3200; B: 160,64; ciphertext 130 |
 | 2018–19 Q5(a) | DITECTIVE → VSBYUVGYZ (printed key is noninvertible) |
 | 2018–19 Q6(a) | P-box labels 36720541; S-box sequence 21560374 |
+
+## Lecture 1 — Introduction and Security Principles
+
+Primary source: [lecture-01-introduction-and-security-principles.pdf](<../slides/lecture-01-introduction-and-security-principles.pdf>)
+
+<a id="s28"></a>
+### S28 · 2021–22 · Q2(a)
+
+**Attacks versus information-security CIA goals · 5 marks**
+
+Original: [root question PDF, page 15](../../CSE405-Security_Merged.pdf#page=15). Sitting date: 30 October 2023.
+
+> **Question summary:** Categorize security attacks with respect to C.I.A. goals.
+
+In this general security question, CIA means **confidentiality, integrity and availability**.
+
+| Goal violated | Meaning | Example attacks |
+|---|---|---|
+| Confidentiality | Unauthorized disclosure | Sniffing plaintext, reading stolen files, data-extracting SQL injection |
+| Integrity | Unauthorized alteration or false data | Modifying a bank transfer, inserting false records, undetected message substitution |
+| Availability | Denial of timely legitimate service | DDoS, deleting critical files, exhausting connections |
+
+Passive eavesdropping primarily threatens confidentiality. Active modification/fabrication primarily threatens integrity. Interruption/resource exhaustion primarily threatens availability. One attack can affect several goals: ransomware can both deny file access and disclose stolen information.
+
+**Exam tip.** Map behaviors to goals instead of treating attack classes as disjoint. Lecture 2’s cryptographic use of A for authenticity is a different convention.
+
+<a id="s68"></a>
+### S68 · 2023–24 · Q1(b)
+
+**Match five scenarios to security principles · 10 marks**
+
+Original: [root question PDF, page 2](../../CSE405-Security_Merged.pdf#page=2). Sitting date: 06 September 2025.
+
+> **Question summary:** Match principles to a valet key, bypassable laptop screen lock, irreversible water-damage sticker, bank recovery questions overridden by a representative, and encryption at rest and in transit.
+
+| Scenario | Principle and explanation |
+|---|---|
+| Valet key opens ignition/doors but not trunk | **Least privilege:** grant the driver the subset of access required for parking. |
+| Specialized equipment bypasses screen lock | **Threat model and work factor:** a screen lock addresses some casual-access threats; physical/offline attackers require stronger protections. Compare attack cost with asset value. Full-disk encryption and boot trust address additional paths. |
+| Sticker remains red after water exposure | **Compromise recording:** preserve evidence of a violation when prevention is impractical. It detects the condition; it does not prevent liquid damage or prove intent. |
+| Representative waives a strong recovery answer | **Human factors and complete mediation:** a human fallback becomes the weakest authentication path. A strong secret is ineffective if an unverified story bypasses it. Use a consistent, independently verified recovery process. |
+| Encrypt internal/external traffic and stored data | **Defense in depth:** protect different exposure paths and trust boundaries. Access control, key separation and monitoring remain necessary if an endpoint is compromised. |
+
+Shannon's maxim means assuming the adversary knows the system; none of these scenarios is primarily solved by hiding its design. Several principles can fit, but explain the concrete failure or protection.
+
+**Exam tip.** Give the principle followed by the causal link to the example, rather than a list of principle names.
+
+<a id="s69"></a>
+### S69 · 2022–23 · Q1(a)
+
+**Least privilege versus separation; why record compromise? · 10 marks**
+
+Original: [root question PDF, page 11](../../CSE405-Security_Merged.pdf#page=11). Sitting date: 18 April 2024.
+
+> **Question summary:** Differentiate least privilege and separation of privilege, and explain the importance of compromise recording with examples.
+
+**Least privilege** minimizes the rights of each subject/process. A photo editor receives access to selected pictures rather than every user file; a service runs without administrator rights.
+
+**Separation of privilege/responsibility** requires multiple independent conditions or parties for a sensitive operation. Releasing a payment may require approvals from both an initiator and a separate reviewer. Giving one administrator a smaller permission set is least privilege; requiring two approvals is separation.
+
+**Compromise recording** captures evidence of violations: protected authentication/access logs, change journals, IDS events and physical surveillance. Perfect prevention is rarely achievable. Records support timely detection, reconstruction, containment, accountability and recovery. A record is useful only if it has trustworthy timestamps, integrity protection, appropriate retention and someone responsible for responding. Forwarding logs to a protected collector limits deletion by a compromised host.
+
+**Exam tip.** Use two distinct examples; do not describe both principles merely as “restrict access.”
+
+<a id="s70"></a>
+### S70 · 2020–21 · Q1(b)
+
+**Selective packet dropping against a competitor · 12 marks**
+
+Original: [root question PDF, page 18](../../CSE405-Security_Merged.pdf#page=18). Sitting date: 25 September 2022.
+
+> **Question summary:** An ISP deliberately drops 25% of a competing provider’s VoIP packets traversing its routers. Identify the attack.
+
+This is a **selective denial-of-service/degradation attack** by an on-path network operator. It violates availability by making the competitor's voice calls unreliable even if the service is not completely unavailable. The operator abuses a trusted forwarding position; the attacker need not impersonate an endpoint or decrypt the voice content.
+
+Packet loss produces gaps, jitter/retransmissions where applicable and poor call quality. Encrypting VoIP can protect content and integrity but cannot force a malicious router to forward packets. Detection compares loss/quality across paths and traffic classes; mitigation can include independent paths/providers and routing around the hostile infrastructure.
+
+**Exam tip.** Availability includes timely usable service. A 25% degradation can be a DoS attack without a total outage.
+
+<a id="s71"></a>
+### S71 · 2020–21 · Q1(c)
+
+**Why compromise recording matters and which tools support it · 11 marks**
+
+Original: [root question PDF, page 18](../../CSE405-Security_Merged.pdf#page=18). Sitting date: 25 September 2022.
+
+> **Question summary:** Explain the importance of compromise recording and name tools used for it.
+
+Prevention can fail, so systems need evidence that a violation occurred. Compromise records support detection, incident reconstruction, identification of affected accounts/assets, containment and recovery. They can also deter abuse and support accountability.
+
+Examples include OS security/event logs, authentication and privilege-change auditing, application/database access logs, file-integrity monitoring, network flow/packet metadata, IDS alerts and physical surveillance. A protected central log collector helps preserve evidence when an individual host is compromised.
+
+Record reliable timestamps, actor/subject, action, target, result and source context. Protect log integrity/access, monitor collector health, retain relevant records and connect alerts to a response process. Logging everything indiscriminately can create privacy, storage and analysis problems; select evidence according to the threat model.
+
+**Exam tip.** A log that nobody checks or an attacker can silently erase is weak compromise recording.
+
+<a id="s72"></a>
+### S72 · 2020–21 · Q2(b)
+
+**Mismatched boarding-pass and identity checks · 12 marks**
+
+Original: [root question PDF, page 18](../../CSE405-Security_Merged.pdf#page=18). Sitting date: 25 September 2022.
+
+> **Question summary:** Explain how online-printable boarding passes permit a no-fly-list bypass in the described airport checks, and fix the weakness.
+
+The described checks fail to bind **the same person, reservation and boarding pass** across all stages. A listed traveler could book under an unlisted identity. At the ID checkpoint, an altered paper pass bearing the traveler's real name might satisfy the local name comparison if the checkpoint does not validate the reservation. At boarding, the traveler presents the genuine pass for the unlisted booking if the gate checks the reservation but not the person's ID.
+
+This is an illustrative failure of **complete mediation and consistent identity binding**. It depends on the precise split checks given in the problem; it is not a statement about every airport's procedures.
+
+Authenticate the pass/barcode against the reservation system; bind it to the verified traveler and current screening result; recheck list eligibility and identity at the stages that authorize travel; prevent substitution/reuse after checking. A digital signature on the pass protects its fields only if the scanner verifies it and ties it to the person presenting it.
+
+**Exam tip.** Show what each checkpoint sees and why two individually plausible documents are not sufficient together.
+
+<a id="s73"></a>
+### S73 · 2020–21 · Q8(a)
+
+**Audit scanf, privileged file opening and a name-based access race · 15 marks**
+
+Original: [root question PDF, page 20](../../CSE405-Security_Merged.pdf#page=20). Sitting date: 25 September 2022.
+
+> **Question summary:** Analyze attacks on the printed C program (code on p. 21): scanf into buffer[60], fopen(fn,"a+"), access(fn,W_OK), fwrite; state environmental assumptions.
+
+**Unbounded input:** `scanf("%s",buffer)` has no width, so an input exceeding the 60-byte array (including its terminator) can corrupt neighboring locals or saved control state. A specific control-flow attack depends on frame layout, address knowledge, protections and process privileges. Use a bounded read, check its result and handle long input deliberately.
+
+**Privilege/identity mismatch:** if this is a setuid program, `fopen` uses effective-identity permissions, whereas `access` ordinarily checks the real identity. Opening before the authorization decision may already create a file or otherwise have effects; the program should not acquire unauthorized capabilities and then rely on a later pathname check.
+
+**Name race, with the printed order preserved:** the code opens `fn` **before** `access`. In a writable directory an attacker can arrange for the name to resolve to a protected target during `fopen`, then replace the name with an allowed file before `access`. The check succeeds for the new name, but `fp` still refers to the originally opened target, so `fwrite` affects that object. This requires a useful effective privilege and attacker control of the pathname/directory (plus applicable symlink protections). A literal fixed relative pathname is not automatically attacker-controlled.
+
+Other defects include unchecked `fopen` failure and insufficient handling of I/O errors. `strlen` also requires a valid terminated input string.
+
+**Repair:** avoid setuid where possible; drop privileges before opening; use a trusted directory/descriptor-based access strategy, constrain symlink traversal as appropriate, and operate on the verified opened object. A separate earlier `access` followed by `fopen` would still be race-prone.
+
+**Exam tip.** Trace object identity through the descriptor. This example is an open-then-check race, not the usual check-then-open ordering.
 
 ## Lecture 2 — Cryptographic foundations and classical ciphers
 
@@ -183,27 +320,6 @@ Define $a=a_2a_1\pmod{26}$, $b=a_2b_1+b_2\pmod{26}$. Since both multipliers are 
 For example, E1(x)=5x+8 and E2(y)=7y+3 compose to $35x+59\equiv9x+7\pmod{26}$. An attacker can recover the equivalent key instead of either original pair. There are only φ(26)·26=12·26=312 affine transformations.
 
 **Exam tip.** Show the equivalent multiplier/offset and its invertibility. “Two encryptions must be stronger” fails when the cipher family is closed under composition.
-
-<a id="s28"></a>
-### S28 · 2021–22 · Q2(a)
-
-**Attacks versus information-security CIA goals · 5 marks**
-
-Original: [root question PDF, page 15](../../CSE405-Security_Merged.pdf#page=15). Sitting date: 30 October 2023.
-
-> **Question summary:** Categorize security attacks with respect to C.I.A. goals.
-
-In this general security question, CIA means **confidentiality, integrity and availability**.
-
-| Goal violated | Meaning | Example attacks |
-|---|---|---|
-| Confidentiality | Unauthorized disclosure | Sniffing plaintext, reading stolen files, data-extracting SQL injection |
-| Integrity | Unauthorized alteration or false data | Modifying a bank transfer, inserting false records, undetected message substitution |
-| Availability | Denial of timely legitimate service | DDoS, deleting critical files, exhausting connections |
-
-Passive eavesdropping primarily threatens confidentiality. Active modification/fabrication primarily threatens integrity. Interruption/resource exhaustion primarily threatens availability. One attack can affect several goals: ransomware can both deny file access and disclose stolen information.
-
-**Exam tip.** Map behaviors to goals instead of treating attack classes as disjoint. Lecture 2’s cryptographic use of A for authenticity is a different convention.
 
 <a id="s44"></a>
 ### S44 · 2020–21 · Q7(a)

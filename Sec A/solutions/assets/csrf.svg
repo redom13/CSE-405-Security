@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="579.892578pt" height="250.128pt" viewBox="0 0 579.892578 250.128" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-26T18:13:20.357305</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.6.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 250.128 
+L 579.892578 250.128 
+L 579.892578 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 294.255251 55.764 
+Q 412.223675 55.764 528.738654 55.764 
+" clip-path="url(#pe743b8a561)" style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 523.538654 53.164 
+L 528.738654 55.764 
+L 523.538654 58.364 
+L 523.538654 53.164 
+z
+" clip-path="url(#pe743b8a561)" style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 54.315251 95.958 
+Q 172.283675 95.958 288.798654 95.958 
+" clip-path="url(#pe743b8a561)" style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 283.598654 93.358 
+L 288.798654 95.958 
+L 283.598654 98.558 
+L 283.598654 93.358 
+z
+" clip-path="url(#pe743b8a561)" style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 294.255251 136.152 
+Q 412.223675 136.152 528.738654 136.152 
+" clip-path="url(#pe743b8a561)" style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 523.538654 133.552 
+L 528.738654 136.152 
+L 523.538654 138.752 
+L 523.538654 133.552 
+z
+" clip-path="url(#pe743b8a561)" style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 530.189905 176.346 
+Q 412.221482 176.346 295.706502 176.346 
+" clip-path="url(#pe743b8a561)" style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 300.906502 178.946 
+L 295.706502 176.346 
+L 300.906502 173.746 
+L 300.906502 178.946 
+z
+" clip-path="url(#pe743b8a561)" style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 52.312578 213.768 
+L 52.312578 39.132 
+" clip-path="url(#pe743b8a561)" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 292.252578 213.768 
+L 292.252578 39.132 
+" clip-path="url(#pe743b8a561)" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 532.192578 213.768 
+L 532.192578 39.132 
+" clip-path="url(#pe743b8a561)" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #172c44; font: 700 11px 'DejaVu Sans'; text-anchor: middle" x="52.312578" y="25.492344" transform="rotate(-0 52.312578 25.492344)">Attacker page</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #172c44; font: 700 11px 'DejaVu Sans'; text-anchor: middle" x="292.252578" y="25.535313" transform="rotate(-0 292.252578 25.535313)">Victim browser</text>
+   </g>
+   <g id="text_3">
+    <text style="fill: #172c44; font: 700 11px 'DejaVu Sans'; text-anchor: middle" x="532.192578" y="25.535313" transform="rotate(-0 532.192578 25.535313)">Bank</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #aa3d46; font: 9px 'DejaVu Sans'; text-anchor: middle" x="412.222578" y="49.457081" transform="rotate(-0 412.222578 49.457081)">earlier login → session cookie</text>
+   </g>
+   <g id="text_5">
+    <text style="fill: #244a75; font: 9px 'DejaVu Sans'; text-anchor: middle" x="172.282578" y="89.651081" transform="rotate(-0 172.282578 89.651081)">load page containing forged request</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #aa3d46; font: 9px 'DejaVu Sans'; text-anchor: middle" x="412.222578" y="129.845081" transform="rotate(-0 412.222578 129.845081)">request + automatically attached bank cookie</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #244a75; font: 9px 'DejaVu Sans'; text-anchor: middle" x="412.222578" y="170.039081" transform="rotate(-0 412.222578 170.039081)">accept only if session AND CSRF token validate</text>
+   </g>
+   <g id="text_8">
+    <text style="fill: #267261; font: 10px 'DejaVu Sans'; text-anchor: middle" x="292.252578" y="233.864313" transform="rotate(-0 292.252578 233.864313)">The remote attacker cannot read the victim’s session-bound form token.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pe743b8a561">
+   <rect x="13.252578" y="8.64" width="558" height="232.848"/>
+  </clipPath>
+ </defs>
+</svg>

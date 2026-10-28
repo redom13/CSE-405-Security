@@ -1,6 +1,6 @@
 # Syllabus derived from the supplied Sec B material
 
-This is a syllabus reconstructed from the files in this repository, not an official instructor-issued syllabus. It includes all eleven lecture decks, the handwritten notes, and the CT 4 revision guide. Read this first, then use [the question-frequency report](FINAL_EXAM_TOPIC_ANALYSIS.md).
+This is a syllabus reconstructed from the files in this repository, not an official instructor-issued syllabus. It includes all twelve lecture decks, the handwritten notes, and the CT 4 revision guide. Read this first, then use [the question-frequency report](FINAL_EXAM_TOPIC_ANALYSIS.md).
 
 PDF page numbers below start at 1 and refer to the physical pages in the named file. Revision sheets and lecture recap slides repeat earlier topics; they do not create additional syllabus units.
 
@@ -10,14 +10,35 @@ PDF page numbers below start at 1 and refer to the physical pages in the named f
 CSE405-Security_Merged.pdf                 shared past finals, at repo root
 Sec B/
   README.md                               section overview
-  slides/                                 Lectures 02–12, in one folder
+  slides/                                 Lectures 01–12, in one folder
   notes/                                  handwritten notes and CT4 revision guide
   analysis/                               syllabus, frequency report, question index
   solutions/                              PDF, LaTeX, Markdown, HTML and figures
   scripts/                                reproducible document builders
 ```
 
-There is no Lecture 1 file. There are **637 lecture pages**, **66 handwritten-note pages**, and **69 supplementary-guide pages**. The root past-paper PDF is separate. The handwritten document complements the decks and includes additional JWT/session-fixation annotations.
+Lecture 1 is now included. There are **697 lecture pages**, **66 handwritten-note pages**, and **69 supplementary-guide pages**. The root past-paper PDF is separate. The handwritten document complements the decks and includes additional JWT/session-fixation annotations.
+
+## Lecture 1 — Introduction and Security Principles (newly supplied)
+
+Source: [slide deck](../slides/lecture-01-introduction-and-security-principles.pdf), 60 physical PDF pages. The existing handwritten Sec B notes begin with cryptography and are not a full companion for this deck. Sec A’s notebook pp. 1–2 and 13–15 provides related annotations.
+
+| Deck PDF pages | Topics |
+|---|---|
+| 1–9 | Adversarial reasoning, desired security properties, safety/privacy/availability, significance of attacks and examples of connected targets |
+| 10–17 | Principles overview, threat models, attacker motives/resources, common adversary assumptions and the trusted computing base (correctness, completeness, tamper resistance, small size) |
+| 18–23 | Human factors, warning fatigue, usability and social engineering |
+| 24–26 | Security economics, work factor and attack/defense cost-benefit analysis |
+| 27–31 | Deterrence/prevention/detection/response; compromise recording; mitigation/recovery and offsite backups |
+| 32–34 | Defense in depth and the costs/interaction of layered defenses |
+| 35–41 | Least privilege, application permissions and limiting compromise impact |
+| 42–44 | Separation of responsibility; multiple-party approval for sensitive actions |
+| 45–49 | Complete mediation, reference monitors, TCB properties and TOCTOU race example |
+| 50–54 | Shannon’s maxim, open design and the limits of security through obscurity |
+| 55–57 | Fail-safe defaults; fail-open versus fail-closed under security and safety goals |
+| 58–60 | Design security from the start and full principles recap |
+
+The frequency report now includes six newly mapped questions and moves the existing general CIA question to this deck. Mixed unsafe-C/Unix race Q8(a), 2020–21, is labeled a partial application rather than fully taught memory security. See the [Sec A guide](../../Sec%20A/README.md) for the supporting OS material.
 
 ## 1. Lecture 2 — Intro to Cryptography
 

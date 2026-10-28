@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="575.28pt" height="216.864pt" viewBox="0 0 575.28 216.864" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-26T18:13:21.121544</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.6.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 216.864 
+L 575.28 216.864 
+L 575.28 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 27.612 193.2552 
+L 397.008 193.2552 
+Q 400.914 193.2552 400.914 189.3744 
+L 400.914 46.8936 
+Q 400.914 43.0128 397.008 43.0128 
+L 27.612 43.0128 
+Q 23.706 43.0128 23.706 46.8936 
+L 23.706 189.3744 
+Q 23.706 193.2552 27.612 193.2552 
+z
+" clip-path="url(#pe4623215e2)" style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 83.412 159.9912 
+L 341.208 159.9912 
+Q 345.114 159.9912 345.114 156.1104 
+L 345.114 102.3336 
+Q 345.114 98.4528 341.208 98.4528 
+L 83.412 98.4528 
+Q 79.506 98.4528 79.506 102.3336 
+L 79.506 156.1104 
+Q 79.506 159.9912 83.412 159.9912 
+z
+" clip-path="url(#pe4623215e2)" style="fill: #267261; fill-opacity: 0.05098; stroke: #267261; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 72.81 166.644 
+L 351.81 166.644 
+L 351.81 91.8 
+L 72.81 91.8 
+z
+" clip-path="url(#pe4623215e2)" style="fill: #aa3d46; opacity: 0.12; stroke: #aa3d46; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 181.062 150.012 
+L 246.348 150.012 
+Q 250.254 150.012 250.254 146.1312 
+L 250.254 125.6184 
+Q 250.254 121.7376 246.348 121.7376 
+L 181.062 121.7376 
+Q 177.156 121.7376 177.156 125.6184 
+L 177.156 146.1312 
+Q 177.156 150.012 181.062 150.012 
+z
+" clip-path="url(#pe4623215e2)" style="fill: #aa3d46; fill-opacity: 0.05098; stroke: #aa3d46; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 497.730287 58.972805 
+Q 357.391946 90.413564 218.471893 121.536577 
+" clip-path="url(#pe4623215e2)" style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 224.114512 122.936881 
+L 218.471893 121.536577 
+L 222.977707 117.862664 
+L 224.114512 122.936881 
+z
+" clip-path="url(#pe4623215e2)" style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #244a75; font: 700 11px 'DejaVu Sans'; text-anchor: middle" x="212.31" y="58.536" transform="rotate(-0 212.31 58.536)">Visible attacker page</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" x="212.31" y="131.981375" transform="rotate(-0 212.31 131.981375)">“Win a free subscription”</text>
+   </g>
+   <g id="text_3">
+    <text style="fill: #aa3d46; font: 9px 'DejaVu Sans'; text-anchor: middle" x="212.31" y="100.116" transform="rotate(-0 212.31 100.116)">Transparent target iframe over the decoy</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" x="213.705" y="138.634175" transform="rotate(-0 213.705 138.634175)">BUY</text>
+   </g>
+   <g id="text_5">
+    <text style="fill: #aa3d46; font: 9px 'DejaVu Sans'; text-anchor: middle" x="357.39" y="84.107081" transform="rotate(-0 357.39 84.107081)">actual click</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #172c44; font: 11px 'DejaVu Sans'" transform="translate(414.188516 157.098406)">User intends decoy;</text>
+    <text style="fill: #172c44; font: 11px 'DejaVu Sans'" transform="translate(411.771094 169.416)">target receives click.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pe4623215e2">
+   <rect x="8.64" y="8.64" width="558" height="199.584"/>
+  </clipPath>
+ </defs>
+</svg>

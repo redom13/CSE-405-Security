@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="723.4pt" height="291.4pt" viewBox="0 0 723.4 291.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-28T23:36:39.636689</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.6.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 291.4 
+L 723.4 291.4 
+L 723.4 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 290.8 175.062 
+L 432.6 175.062 
+Q 434.727 175.062 434.727 173.4 
+L 434.727 118 
+Q 434.727 116.338 432.6 116.338 
+L 290.8 116.338 
+Q 288.673 116.338 288.673 118 
+L 288.673 173.4 
+Q 288.673 175.062 290.8 175.062 
+z
+" clip-path="url(#pff54cf5510)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 35.56 86.422 
+L 177.36 86.422 
+Q 179.487 86.422 179.487 84.76 
+L 179.487 29.36 
+Q 179.487 27.698 177.36 27.698 
+L 35.56 27.698 
+Q 33.433 27.698 33.433 29.36 
+L 33.433 84.76 
+Q 33.433 86.422 35.56 86.422 
+z
+" clip-path="url(#pff54cf5510)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 546.04 86.422 
+L 687.84 86.422 
+Q 689.967 86.422 689.967 84.76 
+L 689.967 29.36 
+Q 689.967 27.698 687.84 27.698 
+L 546.04 27.698 
+Q 543.913 27.698 543.913 29.36 
+L 543.913 84.76 
+Q 543.913 86.422 546.04 86.422 
+z
+" clip-path="url(#pff54cf5510)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 35.56 252.622 
+L 177.36 252.622 
+Q 179.487 252.622 179.487 250.96 
+L 179.487 195.56 
+Q 179.487 193.898 177.36 193.898 
+L 35.56 193.898 
+Q 33.433 193.898 33.433 195.56 
+L 33.433 250.96 
+Q 33.433 252.622 35.56 252.622 
+z
+" clip-path="url(#pff54cf5510)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font: 10px 'DejaVu Sans'" transform="translate(345.169531 142.860469)">Switch</text>
+    <text style="font: 10px 'DejaVu Sans'" transform="translate(337.210938 154.058281)">finite FDB</text>
+   </g>
+   <g id="text_2">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="106.46" y="59.819375" transform="rotate(-0 106.46 59.819375)">Host A</text>
+   </g>
+   <g id="text_3">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="616.94" y="59.819375" transform="rotate(-0 616.94 59.819375)">Host B</text>
+   </g>
+   <g id="text_4">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="106.46" y="226.019375" transform="rotate(-0 106.46 226.019375)">Attacker</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 179.156733 216.84254 
+Q 234.080601 190.019707 287.397056 163.981875 
+" style="fill: none; stroke: #a83e3e; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 282.477922 163.935869 
+L 287.397056 163.981875 
+L 284.408771 167.889579 
+" style="fill: none; stroke: #a83e3e; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="fill: #a83e3e; font: 9px 'DejaVu Sans'; text-anchor: middle" x="234.08" y="180.946281" transform="rotate(-0 234.08 180.946281)">many fake sources</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 179.156733 74.55746 
+Q 234.080601 101.380293 287.397056 127.418125 
+" style="fill: none; stroke: #28557e; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 284.408771 123.510421 
+L 287.397056 127.418125 
+L 282.477922 127.464131 
+" style="fill: none; stroke: #28557e; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 434.396733 128.20254 
+Q 489.320601 101.379707 542.637056 75.341875 
+" style="fill: none; stroke: #28557e; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 537.717922 75.295869 
+L 542.637056 75.341875 
+L 539.648771 79.249579 
+" style="fill: none; stroke: #28557e; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 288.968647 152.04493 
+Q 234.078842 176.170509 180.826686 199.576296 
+" style="fill: none; stroke: #a83e3e; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 185.740001 199.819885 
+L 180.826686 199.576296 
+L 183.969546 195.791797 
+" style="fill: none; stroke: #a83e3e; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="text_6">
+    <text style="fill: #a83e3e; font: 9px 'DejaVu Sans'; text-anchor: middle" x="234.08" y="167.096281" transform="rotate(-0 234.08 167.096281)">unknown unicast</text>
+   </g>
+   <g id="text_7">
+    <text style="font: 10px 'DejaVu Sans'" transform="translate(486.124219 195.206562)">Flooding stays within</text>
+    <text style="font: 10px 'DejaVu Sans'" transform="translate(485.595313 206.404375)">the forwarding VLAN.</text>
+    <text style="font: 10px 'DejaVu Sans'" transform="translate(477.49375 217.602187)">Known destinations may</text>
+    <text style="font: 10px 'DejaVu Sans'" transform="translate(483.240625 228.8)">still use learned ports.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pff54cf5510">
+   <rect x="7.2" y="7.2" width="709" height="277"/>
+  </clipPath>
+ </defs>
+</svg>

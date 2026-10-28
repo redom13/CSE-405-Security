@@ -393,12 +393,12 @@
     "pdf_page": 15,
     "marks": 5,
     "topics": [
-      "goals"
+      "securitygoals"
     ],
     "exact_skill": "Attacks versus information-security CIA goals",
     "question_paraphrase": "Categorize security attacks with respect to C.I.A. goals.",
-    "coverage": "partial",
-    "coverage_note": "Here CIA is the information-security triad, including Availability. Lecture 2 calls its cryptographic goals Confidentiality, Integrity and Authenticity; those are different uses of A."
+    "coverage": "direct",
+    "coverage_note": "Information-security CIA uses Availability; Lecture 1 supplies the general desired-property/threat-model context."
   },
   {
     "session": "2021–22",
@@ -955,5 +955,89 @@
     "question_paraphrase": "As Sammy (id=40), write a script in the guest-book Message field to demonstrate XSS damage. The first paragraph has id p1 and the friend-add action for user id 100 is http://vulnerable.com/action/friend/add?id=100.",
     "coverage": "direct",
     "coverage_note": "The guest-book screenshot is on p. 31; consult it with the prompt on p. 30."
+  },
+  {
+    "session": "2023–24",
+    "sitting_date": "06 September 2025",
+    "question": "1(b)",
+    "pdf_page": 2,
+    "marks": 10,
+    "topics": [
+      "principles"
+    ],
+    "exact_skill": "Match five scenarios to security principles",
+    "question_paraphrase": "Match principles to a valet key, bypassable laptop screen lock, irreversible water-damage sticker, bank recovery questions overridden by a representative, and encryption at rest and in transit.",
+    "coverage": "direct",
+    "coverage_note": ""
+  },
+  {
+    "session": "2022–23",
+    "sitting_date": "18 April 2024",
+    "question": "1(a)",
+    "pdf_page": 11,
+    "marks": 10,
+    "topics": [
+      "principles"
+    ],
+    "exact_skill": "Least privilege versus separation; why record compromise?",
+    "question_paraphrase": "Differentiate least privilege and separation of privilege, and explain the importance of compromise recording with examples.",
+    "coverage": "direct",
+    "coverage_note": ""
+  },
+  {
+    "session": "2020–21",
+    "sitting_date": "25 September 2022",
+    "question": "1(b)",
+    "pdf_page": 18,
+    "marks": 12,
+    "topics": [
+      "securitygoals"
+    ],
+    "exact_skill": "Selective packet dropping against a competitor",
+    "question_paraphrase": "An ISP deliberately drops 25% of a competing provider’s VoIP packets traversing its routers. Identify the attack.",
+    "coverage": "direct",
+    "coverage_note": ""
+  },
+  {
+    "session": "2020–21",
+    "sitting_date": "25 September 2022",
+    "question": "1(c)",
+    "pdf_page": 18,
+    "marks": 11,
+    "topics": [
+      "principles"
+    ],
+    "exact_skill": "Why compromise recording matters and which tools support it",
+    "question_paraphrase": "Explain the importance of compromise recording and name tools used for it.",
+    "coverage": "direct",
+    "coverage_note": ""
+  },
+  {
+    "session": "2020–21",
+    "sitting_date": "25 September 2022",
+    "question": "2(b)",
+    "pdf_page": 18,
+    "marks": 12,
+    "topics": [
+      "principles"
+    ],
+    "exact_skill": "Mismatched boarding-pass and identity checks",
+    "question_paraphrase": "Explain how online-printable boarding passes permit a no-fly-list bypass in the described airport checks, and fix the weakness.",
+    "coverage": "partial",
+    "coverage_note": "An application of complete mediation/authentication; the exact airport workflow is in the paper."
+  },
+  {
+    "session": "2020–21",
+    "sitting_date": "25 September 2022",
+    "question": "8(a)",
+    "pdf_page": 20,
+    "marks": 15,
+    "topics": [
+      "principles"
+    ],
+    "exact_skill": "Audit scanf, privileged file opening and a name-based access race",
+    "question_paraphrase": "Analyze attacks on the printed C program (code on p. 21): scanf into buffer[60], fopen(fn,\"a+\"), access(fn,W_OK), fwrite; state environmental assumptions.",
+    "coverage": "partial",
+    "coverage_note": "Lecture 1 pp. 47–49 supplies complete mediation/TOCTOU; buffer-overflow and Unix setuid details require Sec A. Full mixed answer retained."
   }
 ]

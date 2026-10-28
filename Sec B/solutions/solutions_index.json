@@ -284,9 +284,9 @@
     "question": "2(a)",
     "page_in_original": 15,
     "topics": [
-      "goals"
+      "securitygoals"
     ],
-    "primary_deck": "L2"
+    "primary_deck": "L1"
   },
   {
     "solution_id": "S29",
@@ -687,5 +687,65 @@
       "xss"
     ],
     "primary_deck": "L11"
+  },
+  {
+    "solution_id": "S68",
+    "session": "2023–24",
+    "question": "1(b)",
+    "page_in_original": 2,
+    "topics": [
+      "principles"
+    ],
+    "primary_deck": "L1"
+  },
+  {
+    "solution_id": "S69",
+    "session": "2022–23",
+    "question": "1(a)",
+    "page_in_original": 11,
+    "topics": [
+      "principles"
+    ],
+    "primary_deck": "L1"
+  },
+  {
+    "solution_id": "S70",
+    "session": "2020–21",
+    "question": "1(b)",
+    "page_in_original": 18,
+    "topics": [
+      "securitygoals"
+    ],
+    "primary_deck": "L1"
+  },
+  {
+    "solution_id": "S71",
+    "session": "2020–21",
+    "question": "1(c)",
+    "page_in_original": 18,
+    "topics": [
+      "principles"
+    ],
+    "primary_deck": "L1"
+  },
+  {
+    "solution_id": "S72",
+    "session": "2020–21",
+    "question": "2(b)",
+    "page_in_original": 18,
+    "topics": [
+      "principles"
+    ],
+    "primary_deck": "L1"
+  },
+  {
+    "solution_id": "S73",
+    "session": "2020–21",
+    "question": "8(a)",
+    "page_in_original": 20,
+    "topics": [
+      "principles"
+    ],
+    "primary_deck": "L1"
   }
 ]

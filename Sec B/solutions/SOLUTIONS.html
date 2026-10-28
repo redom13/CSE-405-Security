@@ -1,15 +1,17 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CSE 405 — 67 Worked Solutions</title><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CSE 405 — 73 Worked Solutions</title><style>
 :root{--ink:#1c3047;--blue:#28557e;--muted:#5a6b7c;--line:#dce4eb}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#edf2f6;color:var(--ink);font:16px/1.65 system-ui,sans-serif}nav{position:fixed;inset:0 auto 0 0;width:280px;background:#172c44;color:#fff;padding:24px 18px;overflow:auto}nav h2{font-size:18px;color:white}nav a{color:#d8e8f5;text-decoration:none;display:block;font-size:12px;line-height:1.45;padding:5px 0}nav input{width:100%;padding:10px;border:0;border-radius:5px;margin:8px 0 16px}nav button{border:1px solid #9eb6c8;color:white;background:transparent;padding:7px 10px;border-radius:4px;cursor:pointer}main{max-width:1100px;margin:0 auto 0 300px;padding:42px 48px;background:white;min-height:100vh}h1{font-size:36px;line-height:1.2;letter-spacing:-.8px}h2{margin-top:55px;border-bottom:2px solid var(--line);padding-bottom:10px;color:var(--blue)}h3{margin-top:32px;font-size:23px;line-height:1.35}a{color:#225c8d}p,li{overflow-wrap:anywhere}blockquote{margin:20px 0;padding:14px 18px;border-left:4px solid #87a8c5;background:#f2f6f9;font-size:14px;color:#465b6b}pre{font:13px/1.55 'DejaVu Sans Mono',monospace;background:#f3f6f8;border:1px solid var(--line);padding:15px;border-radius:5px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere}code{font: .88em 'DejaVu Sans Mono',monospace}table{border-collapse:collapse;width:100%;margin:20px 0;font-size:13px}th,td{text-align:left;vertical-align:top;padding:9px;border:1px solid var(--line)}th{background:#eaf1f7}tbody tr:nth-child(even){background:#f9fbfc}.math-display{overflow-x:auto;margin:1.2em 0;padding:.3em 0}.math-inline{white-space:nowrap}svg.diagram,img{display:block;max-width:100%;height:auto;margin:24px auto}section.question{padding-bottom:25px;border-bottom:1px solid var(--line)}.question p:has(>strong:first-child){scroll-margin-top:20px}.hidden{display:none!important}.hint{font-size:12px;color:#adc5d8}footer{margin-top:40px;font-size:12px;color:var(--muted)}@media(max-width:900px){nav{position:static;width:auto;max-height:350px}main{margin:0;padding:24px}h1{font-size:29px}}@media print{@page{size:A4;margin:18mm}nav{display:none}main{margin:0;max-width:none;padding:0}body{background:white;font-size:10.5pt}h2{break-before:page}h3{break-after:avoid}pre,table,svg{break-inside:avoid}a{color:inherit}section.question{border:0}.hidden{display:block!important}}
-</style></head><body><nav><h2>CSE 405 · Solutions</h2><p class="hint">67 answers · LaTeX math</p><input id="search" aria-label="Search solutions" placeholder="Search answers or topics…"><button onclick="window.print()">Print / save PDF</button><a href="#s01">S01 · 2023–24 Q5(a)<br>Short concepts; answer any three of five</a><a href="#s02">S02 · 2023–24 Q5(b)<br>Unfamiliar chaining diagram; equations, parallelism and malleability</a><a href="#s03">S03 · 2023–24 Q6(a)<br>Unauthenticated Diffie–Hellman MITM; defense without a trusted third party</a><a href="#s04">S04 · 2023–24 Q6(b)<br>Recover affine-cipher keys from two mappings</a><a href="#s05">S05 · 2023–24 Q7(a)<br>Numerical ElGamal; IND-CPA and non-malleability</a><a href="#s06">S06 · 2023–24 Q7(b)<br>RSA correctness proof</a><a href="#s07">S07 · 2023–24 Q7(c)<br>RSA signing/verifying; security of separately sending ciphertext and signature</a><a href="#s08">S08 · 2023–24 Q8(a)<br>Encrypt-then-MAC versus MAC-then-encrypt</a><a href="#s09">S09 · 2023–24 Q8(b)<br>Cookie-send matrix</a><a href="#s10">S10 · 2023–24 Q8(c)<br>Login bypass; prepared statements</a><a href="#s11">S11 · 2023–24 Q8(d)<br>Stored versus reflected XSS</a><a href="#s12">S12 · 2023–24 Q1(c)<br>Untrusted key bundled with its own signature; attacker positions</a><a href="#s13">S13 · 2023–24 Q4(c)<br>TLS handshake authentication, directional keys and authenticated records</a><a href="#s14">S14 · 2022–23 Q5(a)<br>ECB/CBC/CTR comparison</a><a href="#s15">S15 · 2022–23 Q5(b)<br>Analyze encryption plus hash, plaintext MAC, or ciphertext MAC</a><a href="#s16">S16 · 2022–23 Q5(c)<br>Limits of cookie policy</a><a href="#s17">S17 · 2022–23 Q6(a)<br>Authenticate Diffie–Hellman with RSA signatures</a><a href="#s18">S18 · 2022–23 Q6(b)<br>INSERT-query injection; bypass a cart quantity restriction</a><a href="#s19">S19 · 2022–23 Q6(c)<br>HMAC-DRBG generation, security and rollback resistance</a><a href="#s20">S20 · 2022–23 Q7(a)<br>CSRF synchronizer token; refreshing only on POST</a><a href="#s21">S21 · 2022–23 Q7(c)<br>Stored versus reflected XSS</a><a href="#s22">S22 · 2022–23 Q8(a)<br>Integrity tags in a file header; hash versus MAC; writable versus read-only storage</a><a href="#s23">S23 · 2022–23 Q8(b)<br>SMS 2FA against phishing</a><a href="#s24">S24 · 2022–23 Q8(c)<br>Clickjacking with iframes; repeated-click redirection</a><a href="#s25">S25 · 2022–23 Q2(a)<br>Brute-force throughput under a password-expiration policy</a><a href="#s26">S26 · 2021–22 Q1(c)<br>Hill encryption and decryption with a 3×3 key</a><a href="#s27">S27 · 2021–22 Q1(d)<br>Caesar as symmetric encryption; composition of affine ciphers</a><a href="#s28">S28 · 2021–22 Q2(a)<br>Attacks versus information-security CIA goals</a><a href="#s29">S29 · 2021–22 Q2(b)<br>Compute an elliptic-curve point group</a><a href="#s30">S30 · 2021–22 Q2(c)<br>Numerical Diffie–Hellman exchange</a><a href="#s31">S31 · 2021–22 Q2(d)<br>Identify ECB-style long-message weakness and replace the mode</a><a href="#s32">S32 · 2021–22 Q3(b)<br>Applications of hashing in authentication, confidentiality and signatures</a><a href="#s33">S33 · 2021–22 Q3(c)<br>Evaluate XOR of fixed-size message blocks as a hash</a><a href="#s34">S34 · 2021–22 Q3(d)<br>Symmetric/public-key comparison; key roles in signing versus encryption</a><a href="#s35">S35 · 2021–22 Q4(b)<br>HMAC construction</a><a href="#s36">S36 · 2021–22 Q4(c)<br>DES attack; meet-in-the-middle strength of fivefold DES</a><a href="#s37">S37 · 2021–22 Q4(d)<br>Compare DES components with AES</a><a href="#s38">S38 · 2021–22 Q7(b)<br>Clickjacking versus phishing</a><a href="#s39">S39 · 2021–22 Q7(c)<br>Self-signed SSL certificate and server authentication</a><a href="#s40">S40 · 2020–21 Q5(a)<br>Authenticate UDP messages with a cookie/token; prevent replay</a><a href="#s41">S41 · 2020–21 Q5(b)<br>Single-statement SQL injection in a password-change form</a><a href="#s42">S42 · 2020–21 Q6(a)<br>CSRF plus stored XSS in a social-network friend request</a><a href="#s43">S43 · 2020–21 Q6(b)<br>ElGamal signature algorithm and reuse of secret k</a><a href="#s44">S44 · 2020–21 Q7(a)<br>Break a Caesar-then-Hill construction</a><a href="#s45">S45 · 2020–21 Q7(b)<br>Cookie-send matrix</a><a href="#s46">S46 · 2020–21 Q8(b)<br>Birthday bound for a b-bit hash</a><a href="#s47">S47 · 2020–21 Q8(c)<br>Invalidate session cookies after password change</a><a href="#s48">S48 · 2019–20 Q1(a)<br>Digital signatures and non-repudiation</a><a href="#s49">S49 · 2019–20 Q1(c)<br>Public security questions and password-reset account takeover</a><a href="#s50">S50 · 2019–20 Q2(b)<br>Password-space size and average brute-force time</a><a href="#s51">S51 · 2019–20 Q6(a)<br>OTP encryption/decryption; transposition as a Hill cipher</a><a href="#s52">S52 · 2019–20 Q6(b)<br>Weak/strong collision resistance; toy hash; Merkle–Damgård</a><a href="#s53">S53 · 2019–20 Q7(a)<br>Euler totient/theorem; modular inverse</a><a href="#s54">S54 · 2019–20 Q7(b)<br>Modular equations and fast exponentiation</a><a href="#s55">S55 · 2019–20 Q7(c)<br>RSA validity, repeated totients and encryption</a><a href="#s56">S56 · 2019–20 Q8(a)<br>ElGamal encryption proof; birthday attack on signatures</a><a href="#s57">S57 · 2019–20 Q8(b)<br>Diffie–Hellman steps and active MITM</a><a href="#s58">S58 · 2018–19 Q1(a)<br>Digital-certificate contents and CA role</a><a href="#s59">S59 · 2018–19 Q1(d)<br>Risks of signing an apparently random string</a><a href="#s60">S60 · 2018–19 Q4(b)<br>Pharming versus phishing</a><a href="#s61">S61 · 2018–19 Q5(a)<br>Hill-cipher numerical encryption</a><a href="#s62">S62 · 2018–19 Q5(b)<br>Inserted ciphertext bit and CBC synchronization</a><a href="#s63">S63 · 2018–19 Q6(a)<br>Trace P-box and S-box diagrams</a><a href="#s64">S64 · 2018–19 Q8(b)<br>Short notes; answer any three of four</a><a href="#s65">S65 · 2018–19 Q11(a)<br>UPDATE injection to change password and salary</a><a href="#s66">S66 · 2018–19 Q11(b)<br>Rewrite vulnerable PHP using prepared statements</a><a href="#s67">S67 · 2018–19 Q12(a)<br>Stored XSS in a guest book; malicious page actions</a></nav><main><h1>CSE 405 · Worked Final-Exam Solutions</h1>
+</style></head><body><nav><h2>CSE 405 · Solutions</h2><p class="hint">73 answers · LaTeX math</p><input id="search" aria-label="Search solutions" placeholder="Search answers or topics…"><button onclick="window.print()">Print / save PDF</button><a href="#s01">S01 · 2023–24 Q5(a)<br>Short concepts; answer any three of five</a><a href="#s02">S02 · 2023–24 Q5(b)<br>Unfamiliar chaining diagram; equations, parallelism and malleability</a><a href="#s03">S03 · 2023–24 Q6(a)<br>Unauthenticated Diffie–Hellman MITM; defense without a trusted third party</a><a href="#s04">S04 · 2023–24 Q6(b)<br>Recover affine-cipher keys from two mappings</a><a href="#s05">S05 · 2023–24 Q7(a)<br>Numerical ElGamal; IND-CPA and non-malleability</a><a href="#s06">S06 · 2023–24 Q7(b)<br>RSA correctness proof</a><a href="#s07">S07 · 2023–24 Q7(c)<br>RSA signing/verifying; security of separately sending ciphertext and signature</a><a href="#s08">S08 · 2023–24 Q8(a)<br>Encrypt-then-MAC versus MAC-then-encrypt</a><a href="#s09">S09 · 2023–24 Q8(b)<br>Cookie-send matrix</a><a href="#s10">S10 · 2023–24 Q8(c)<br>Login bypass; prepared statements</a><a href="#s11">S11 · 2023–24 Q8(d)<br>Stored versus reflected XSS</a><a href="#s12">S12 · 2023–24 Q1(c)<br>Untrusted key bundled with its own signature; attacker positions</a><a href="#s13">S13 · 2023–24 Q4(c)<br>TLS handshake authentication, directional keys and authenticated records</a><a href="#s14">S14 · 2022–23 Q5(a)<br>ECB/CBC/CTR comparison</a><a href="#s15">S15 · 2022–23 Q5(b)<br>Analyze encryption plus hash, plaintext MAC, or ciphertext MAC</a><a href="#s16">S16 · 2022–23 Q5(c)<br>Limits of cookie policy</a><a href="#s17">S17 · 2022–23 Q6(a)<br>Authenticate Diffie–Hellman with RSA signatures</a><a href="#s18">S18 · 2022–23 Q6(b)<br>INSERT-query injection; bypass a cart quantity restriction</a><a href="#s19">S19 · 2022–23 Q6(c)<br>HMAC-DRBG generation, security and rollback resistance</a><a href="#s20">S20 · 2022–23 Q7(a)<br>CSRF synchronizer token; refreshing only on POST</a><a href="#s21">S21 · 2022–23 Q7(c)<br>Stored versus reflected XSS</a><a href="#s22">S22 · 2022–23 Q8(a)<br>Integrity tags in a file header; hash versus MAC; writable versus read-only storage</a><a href="#s23">S23 · 2022–23 Q8(b)<br>SMS 2FA against phishing</a><a href="#s24">S24 · 2022–23 Q8(c)<br>Clickjacking with iframes; repeated-click redirection</a><a href="#s25">S25 · 2022–23 Q2(a)<br>Brute-force throughput under a password-expiration policy</a><a href="#s26">S26 · 2021–22 Q1(c)<br>Hill encryption and decryption with a 3×3 key</a><a href="#s27">S27 · 2021–22 Q1(d)<br>Caesar as symmetric encryption; composition of affine ciphers</a><a href="#s28">S28 · 2021–22 Q2(a)<br>Attacks versus information-security CIA goals</a><a href="#s29">S29 · 2021–22 Q2(b)<br>Compute an elliptic-curve point group</a><a href="#s30">S30 · 2021–22 Q2(c)<br>Numerical Diffie–Hellman exchange</a><a href="#s31">S31 · 2021–22 Q2(d)<br>Identify ECB-style long-message weakness and replace the mode</a><a href="#s32">S32 · 2021–22 Q3(b)<br>Applications of hashing in authentication, confidentiality and signatures</a><a href="#s33">S33 · 2021–22 Q3(c)<br>Evaluate XOR of fixed-size message blocks as a hash</a><a href="#s34">S34 · 2021–22 Q3(d)<br>Symmetric/public-key comparison; key roles in signing versus encryption</a><a href="#s35">S35 · 2021–22 Q4(b)<br>HMAC construction</a><a href="#s36">S36 · 2021–22 Q4(c)<br>DES attack; meet-in-the-middle strength of fivefold DES</a><a href="#s37">S37 · 2021–22 Q4(d)<br>Compare DES components with AES</a><a href="#s38">S38 · 2021–22 Q7(b)<br>Clickjacking versus phishing</a><a href="#s39">S39 · 2021–22 Q7(c)<br>Self-signed SSL certificate and server authentication</a><a href="#s40">S40 · 2020–21 Q5(a)<br>Authenticate UDP messages with a cookie/token; prevent replay</a><a href="#s41">S41 · 2020–21 Q5(b)<br>Single-statement SQL injection in a password-change form</a><a href="#s42">S42 · 2020–21 Q6(a)<br>CSRF plus stored XSS in a social-network friend request</a><a href="#s43">S43 · 2020–21 Q6(b)<br>ElGamal signature algorithm and reuse of secret k</a><a href="#s44">S44 · 2020–21 Q7(a)<br>Break a Caesar-then-Hill construction</a><a href="#s45">S45 · 2020–21 Q7(b)<br>Cookie-send matrix</a><a href="#s46">S46 · 2020–21 Q8(b)<br>Birthday bound for a b-bit hash</a><a href="#s47">S47 · 2020–21 Q8(c)<br>Invalidate session cookies after password change</a><a href="#s48">S48 · 2019–20 Q1(a)<br>Digital signatures and non-repudiation</a><a href="#s49">S49 · 2019–20 Q1(c)<br>Public security questions and password-reset account takeover</a><a href="#s50">S50 · 2019–20 Q2(b)<br>Password-space size and average brute-force time</a><a href="#s51">S51 · 2019–20 Q6(a)<br>OTP encryption/decryption; transposition as a Hill cipher</a><a href="#s52">S52 · 2019–20 Q6(b)<br>Weak/strong collision resistance; toy hash; Merkle–Damgård</a><a href="#s53">S53 · 2019–20 Q7(a)<br>Euler totient/theorem; modular inverse</a><a href="#s54">S54 · 2019–20 Q7(b)<br>Modular equations and fast exponentiation</a><a href="#s55">S55 · 2019–20 Q7(c)<br>RSA validity, repeated totients and encryption</a><a href="#s56">S56 · 2019–20 Q8(a)<br>ElGamal encryption proof; birthday attack on signatures</a><a href="#s57">S57 · 2019–20 Q8(b)<br>Diffie–Hellman steps and active MITM</a><a href="#s58">S58 · 2018–19 Q1(a)<br>Digital-certificate contents and CA role</a><a href="#s59">S59 · 2018–19 Q1(d)<br>Risks of signing an apparently random string</a><a href="#s60">S60 · 2018–19 Q4(b)<br>Pharming versus phishing</a><a href="#s61">S61 · 2018–19 Q5(a)<br>Hill-cipher numerical encryption</a><a href="#s62">S62 · 2018–19 Q5(b)<br>Inserted ciphertext bit and CBC synchronization</a><a href="#s63">S63 · 2018–19 Q6(a)<br>Trace P-box and S-box diagrams</a><a href="#s64">S64 · 2018–19 Q8(b)<br>Short notes; answer any three of four</a><a href="#s65">S65 · 2018–19 Q11(a)<br>UPDATE injection to change password and salary</a><a href="#s66">S66 · 2018–19 Q11(b)<br>Rewrite vulnerable PHP using prepared statements</a><a href="#s67">S67 · 2018–19 Q12(a)<br>Stored XSS in a guest book; malicious page actions</a><a href="#s68">S68 · 2023–24 Q1(b)<br>Match five scenarios to security principles</a><a href="#s69">S69 · 2022–23 Q1(a)<br>Least privilege versus separation; why record compromise?</a><a href="#s70">S70 · 2020–21 Q1(b)<br>Selective packet dropping against a competitor</a><a href="#s71">S71 · 2020–21 Q1(c)<br>Why compromise recording matters and which tools support it</a><a href="#s72">S72 · 2020–21 Q2(b)<br>Mismatched boarding-pass and identity checks</a><a href="#s73">S73 · 2020–21 Q8(a)<br>Audit scanf, privileged file opening and a name-based access race</a></nav><main><h1>CSE 405 · Worked Final-Exam Solutions</h1>
 <h2>How to use this guide</h2>
-<p><strong>67 complete worked solutions · six academic sessions · all gathered questions.</strong> Each question appears once with its original index label S01–S67. The topic/deck index also points to mixed questions taught partly elsewhere. The HTML has search, question navigation, scalable diagrams and typeset equations; the PDF is compiled from LaTeX for printing. The Markdown is editable.</p>
+<p><strong>73 complete worked solutions · six academic sessions · all gathered questions.</strong> Each question appears once with its original index label S01–S73. The topic/deck index also points to mixed questions taught partly elsewhere. The HTML has search, question navigation, scalable diagrams and typeset equations; the PDF is compiled from LaTeX for printing. The Markdown is editable.</p>
 <p>Question summaries are paraphrases. The root PDF remains the authority for wording, code and figures. The solution metadata links to its physical page. Each answer includes reasoning and an exam tip; assumptions and defects in printed questions are identified rather than silently repaired. These are independent worked solutions, not an official marking scheme.</p>
 <p><strong>Conventions:</strong> A=0,…,Z=25; Hill uses column vectors; XOR is bitwise addition modulo 2; || means unambiguous concatenation; exponents, matrices and modular arithmetic use LaTeX notation. Unless stated otherwise, tags/signatures cover the relevant identity, nonce and protocol context. Computational results use the numbers in the paper.</p>
 <p><strong>Four corrections to keep in mind:</strong> Cookie 2 in 2020–21 Q7(b) is non-secure; the 2018–19 Hill key is not invertible modulo 26; the full-group ElGamal question needs a valid nonzero-message argument; a visible cookie or freshly transmitted plaintext MAC key cannot authenticate against an eavesdropper. Relevant solutions explain each point.</p>
-<p>Lecture 9 has no separate standalone question in the gathered index. Its URL/HTTP/origin foundations are used in the web solutions. Questions listed only as material gaps in the previous report were outside the 67-question collection and are not silently substituted for these solutions.</p>
+<p>Lecture 9 has no separate standalone question in the gathered index. Its URL/HTTP/origin foundations are used in the web solutions. The newly supplied Lecture 1 adds six principle/availability/TOCTOU questions (S68–S73) and gives an explicit source for the existing information-security CIA question. Other Sec A-only material remains in its own guide.</p>
 <h2>Navigation by teaching source</h2>
+<p><strong>Lecture 1 — Introduction and Security Principles</strong></p>
+<p><a href="#s28">S28: 2021–22 Q2(a)</a>; <a href="#s68">S68: 2023–24 Q1(b)</a>; <a href="#s69">S69: 2022–23 Q1(a)</a>; <a href="#s70">S70: 2020–21 Q1(b)</a>; <a href="#s71">S71: 2020–21 Q1(c)</a>; <a href="#s72">S72: 2020–21 Q2(b)</a>; <a href="#s73">S73: 2020–21 Q8(a)</a></p>
 <p><strong>Lecture 2 — Cryptographic foundations and classical ciphers</strong></p>
-<p><a href="#s01">S01: 2023–24 Q5(a)</a>; <a href="#s04">S04: 2023–24 Q6(b)</a>; <a href="#s26">S26: 2021–22 Q1(c)</a>; <a href="#s27">S27: 2021–22 Q1(d)</a>; <a href="#s28">S28: 2021–22 Q2(a)</a>; <a href="#s44">S44: 2020–21 Q7(a)</a>; <a href="#s51">S51: 2019–20 Q6(a)</a>; <a href="#s61">S61: 2018–19 Q5(a)</a></p>
+<p><a href="#s01">S01: 2023–24 Q5(a)</a>; <a href="#s04">S04: 2023–24 Q6(b)</a>; <a href="#s26">S26: 2021–22 Q1(c)</a>; <a href="#s27">S27: 2021–22 Q1(d)</a>; <a href="#s44">S44: 2020–21 Q7(a)</a>; <a href="#s51">S51: 2019–20 Q6(a)</a>; <a href="#s61">S61: 2018–19 Q5(a)</a></p>
 <p><strong>Lecture 3 — One-time pads and block ciphers</strong></p>
 <p><a href="#s36">S36: 2021–22 Q4(c)</a>; <a href="#s37">S37: 2021–22 Q4(d)</a>; <a href="#s51">S51: 2019–20 Q6(a)</a>; <a href="#s63">S63: 2018–19 Q6(a)</a></p>
 <p><strong>Lecture 4 — Block-cipher modes</strong></p>
@@ -79,7 +81,140 @@
 </tr>
 </tbody>
 </table>
-<h2>Lecture 2 — Cryptographic foundations and classical ciphers</h2>
+<h2>Lecture 1 — Introduction and Security Principles</h2>
+<p>Primary source: <a href="../slides/lecture-01-introduction-and-security-principles.pdf">lecture-01-introduction-and-security-principles.pdf</a></p>
+<p><a id="s28"></a></p>
+<section class="question"><h3>S28 · 2021–22 · Q2(a)</h3>
+<p><strong>Attacks versus information-security CIA goals · 5 marks</strong></p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=15">root question PDF, page 15</a>. Sitting date: 30 October 2023.</p>
+<blockquote>
+<p><strong>Question summary:</strong> Categorize security attacks with respect to C.I.A. goals.</p>
+</blockquote>
+<p>In this general security question, CIA means <strong>confidentiality, integrity and availability</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Goal violated</th>
+<th>Meaning</th>
+<th>Example attacks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Confidentiality</td>
+<td>Unauthorized disclosure</td>
+<td>Sniffing plaintext, reading stolen files, data-extracting SQL injection</td>
+</tr>
+<tr>
+<td>Integrity</td>
+<td>Unauthorized alteration or false data</td>
+<td>Modifying a bank transfer, inserting false records, undetected message substitution</td>
+</tr>
+<tr>
+<td>Availability</td>
+<td>Denial of timely legitimate service</td>
+<td>DDoS, deleting critical files, exhausting connections</td>
+</tr>
+</tbody>
+</table>
+<p>Passive eavesdropping primarily threatens confidentiality. Active modification/fabrication primarily threatens integrity. Interruption/resource exhaustion primarily threatens availability. One attack can affect several goals: ransomware can both deny file access and disclose stolen information.</p>
+<p><strong>Exam tip.</strong> Map behaviors to goals instead of treating attack classes as disjoint. Lecture 2’s cryptographic use of A for authenticity is a different convention.</p>
+<p><a id="s68"></a></p>
+</section><section class="question"><h3>S68 · 2023–24 · Q1(b)</h3>
+<p><strong>Match five scenarios to security principles · 10 marks</strong></p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=2">root question PDF, page 2</a>. Sitting date: 06 September 2025.</p>
+<blockquote>
+<p><strong>Question summary:</strong> Match principles to a valet key, bypassable laptop screen lock, irreversible water-damage sticker, bank recovery questions overridden by a representative, and encryption at rest and in transit.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Principle and explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Valet key opens ignition/doors but not trunk</td>
+<td><strong>Least privilege:</strong> grant the driver the subset of access required for parking.</td>
+</tr>
+<tr>
+<td>Specialized equipment bypasses screen lock</td>
+<td><strong>Threat model and work factor:</strong> a screen lock addresses some casual-access threats; physical/offline attackers require stronger protections. Compare attack cost with asset value. Full-disk encryption and boot trust address additional paths.</td>
+</tr>
+<tr>
+<td>Sticker remains red after water exposure</td>
+<td><strong>Compromise recording:</strong> preserve evidence of a violation when prevention is impractical. It detects the condition; it does not prevent liquid damage or prove intent.</td>
+</tr>
+<tr>
+<td>Representative waives a strong recovery answer</td>
+<td><strong>Human factors and complete mediation:</strong> a human fallback becomes the weakest authentication path. A strong secret is ineffective if an unverified story bypasses it. Use a consistent, independently verified recovery process.</td>
+</tr>
+<tr>
+<td>Encrypt internal/external traffic and stored data</td>
+<td><strong>Defense in depth:</strong> protect different exposure paths and trust boundaries. Access control, key separation and monitoring remain necessary if an endpoint is compromised.</td>
+</tr>
+</tbody>
+</table>
+<p>Shannon's maxim means assuming the adversary knows the system; none of these scenarios is primarily solved by hiding its design. Several principles can fit, but explain the concrete failure or protection.</p>
+<p><strong>Exam tip.</strong> Give the principle followed by the causal link to the example, rather than a list of principle names.</p>
+<p><a id="s69"></a></p>
+</section><section class="question"><h3>S69 · 2022–23 · Q1(a)</h3>
+<p><strong>Least privilege versus separation; why record compromise? · 10 marks</strong></p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=11">root question PDF, page 11</a>. Sitting date: 18 April 2024.</p>
+<blockquote>
+<p><strong>Question summary:</strong> Differentiate least privilege and separation of privilege, and explain the importance of compromise recording with examples.</p>
+</blockquote>
+<p><strong>Least privilege</strong> minimizes the rights of each subject/process. A photo editor receives access to selected pictures rather than every user file; a service runs without administrator rights.</p>
+<p><strong>Separation of privilege/responsibility</strong> requires multiple independent conditions or parties for a sensitive operation. Releasing a payment may require approvals from both an initiator and a separate reviewer. Giving one administrator a smaller permission set is least privilege; requiring two approvals is separation.</p>
+<p><strong>Compromise recording</strong> captures evidence of violations: protected authentication/access logs, change journals, IDS events and physical surveillance. Perfect prevention is rarely achievable. Records support timely detection, reconstruction, containment, accountability and recovery. A record is useful only if it has trustworthy timestamps, integrity protection, appropriate retention and someone responsible for responding. Forwarding logs to a protected collector limits deletion by a compromised host.</p>
+<p><strong>Exam tip.</strong> Use two distinct examples; do not describe both principles merely as “restrict access.”</p>
+<p><a id="s70"></a></p>
+</section><section class="question"><h3>S70 · 2020–21 · Q1(b)</h3>
+<p><strong>Selective packet dropping against a competitor · 12 marks</strong></p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=18">root question PDF, page 18</a>. Sitting date: 25 September 2022.</p>
+<blockquote>
+<p><strong>Question summary:</strong> An ISP deliberately drops 25% of a competing provider’s VoIP packets traversing its routers. Identify the attack.</p>
+</blockquote>
+<p>This is a <strong>selective denial-of-service/degradation attack</strong> by an on-path network operator. It violates availability by making the competitor's voice calls unreliable even if the service is not completely unavailable. The operator abuses a trusted forwarding position; the attacker need not impersonate an endpoint or decrypt the voice content.</p>
+<p>Packet loss produces gaps, jitter/retransmissions where applicable and poor call quality. Encrypting VoIP can protect content and integrity but cannot force a malicious router to forward packets. Detection compares loss/quality across paths and traffic classes; mitigation can include independent paths/providers and routing around the hostile infrastructure.</p>
+<p><strong>Exam tip.</strong> Availability includes timely usable service. A 25% degradation can be a DoS attack without a total outage.</p>
+<p><a id="s71"></a></p>
+</section><section class="question"><h3>S71 · 2020–21 · Q1(c)</h3>
+<p><strong>Why compromise recording matters and which tools support it · 11 marks</strong></p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=18">root question PDF, page 18</a>. Sitting date: 25 September 2022.</p>
+<blockquote>
+<p><strong>Question summary:</strong> Explain the importance of compromise recording and name tools used for it.</p>
+</blockquote>
+<p>Prevention can fail, so systems need evidence that a violation occurred. Compromise records support detection, incident reconstruction, identification of affected accounts/assets, containment and recovery. They can also deter abuse and support accountability.</p>
+<p>Examples include OS security/event logs, authentication and privilege-change auditing, application/database access logs, file-integrity monitoring, network flow/packet metadata, IDS alerts and physical surveillance. A protected central log collector helps preserve evidence when an individual host is compromised.</p>
+<p>Record reliable timestamps, actor/subject, action, target, result and source context. Protect log integrity/access, monitor collector health, retain relevant records and connect alerts to a response process. Logging everything indiscriminately can create privacy, storage and analysis problems; select evidence according to the threat model.</p>
+<p><strong>Exam tip.</strong> A log that nobody checks or an attacker can silently erase is weak compromise recording.</p>
+<p><a id="s72"></a></p>
+</section><section class="question"><h3>S72 · 2020–21 · Q2(b)</h3>
+<p><strong>Mismatched boarding-pass and identity checks · 12 marks</strong></p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=18">root question PDF, page 18</a>. Sitting date: 25 September 2022.</p>
+<blockquote>
+<p><strong>Question summary:</strong> Explain how online-printable boarding passes permit a no-fly-list bypass in the described airport checks, and fix the weakness.</p>
+</blockquote>
+<p>The described checks fail to bind <strong>the same person, reservation and boarding pass</strong> across all stages. A listed traveler could book under an unlisted identity. At the ID checkpoint, an altered paper pass bearing the traveler's real name might satisfy the local name comparison if the checkpoint does not validate the reservation. At boarding, the traveler presents the genuine pass for the unlisted booking if the gate checks the reservation but not the person's ID.</p>
+<p>This is an illustrative failure of <strong>complete mediation and consistent identity binding</strong>. It depends on the precise split checks given in the problem; it is not a statement about every airport's procedures.</p>
+<p>Authenticate the pass/barcode against the reservation system; bind it to the verified traveler and current screening result; recheck list eligibility and identity at the stages that authorize travel; prevent substitution/reuse after checking. A digital signature on the pass protects its fields only if the scanner verifies it and ties it to the person presenting it.</p>
+<p><strong>Exam tip.</strong> Show what each checkpoint sees and why two individually plausible documents are not sufficient together.</p>
+<p><a id="s73"></a></p>
+</section><section class="question"><h3>S73 · 2020–21 · Q8(a)</h3>
+<p><strong>Audit scanf, privileged file opening and a name-based access race · 15 marks</strong></p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=20">root question PDF, page 20</a>. Sitting date: 25 September 2022.</p>
+<blockquote>
+<p><strong>Question summary:</strong> Analyze attacks on the printed C program (code on p. 21): scanf into buffer[60], fopen(fn,"a+"), access(fn,W_OK), fwrite; state environmental assumptions.</p>
+</blockquote>
+<p><strong>Unbounded input:</strong> <code>scanf("%s",buffer)</code> has no width, so an input exceeding the 60-byte array (including its terminator) can corrupt neighboring locals or saved control state. A specific control-flow attack depends on frame layout, address knowledge, protections and process privileges. Use a bounded read, check its result and handle long input deliberately.</p>
+<p><strong>Privilege/identity mismatch:</strong> if this is a setuid program, <code>fopen</code> uses effective-identity permissions, whereas <code>access</code> ordinarily checks the real identity. Opening before the authorization decision may already create a file or otherwise have effects; the program should not acquire unauthorized capabilities and then rely on a later pathname check.</p>
+<p><strong>Name race, with the printed order preserved:</strong> the code opens <code>fn</code> <strong>before</strong> <code>access</code>. In a writable directory an attacker can arrange for the name to resolve to a protected target during <code>fopen</code>, then replace the name with an allowed file before <code>access</code>. The check succeeds for the new name, but <code>fp</code> still refers to the originally opened target, so <code>fwrite</code> affects that object. This requires a useful effective privilege and attacker control of the pathname/directory (plus applicable symlink protections). A literal fixed relative pathname is not automatically attacker-controlled.</p>
+<p>Other defects include unchecked <code>fopen</code> failure and insufficient handling of I/O errors. <code>strlen</code> also requires a valid terminated input string.</p>
+<p><strong>Repair:</strong> avoid setuid where possible; drop privileges before opening; use a trusted directory/descriptor-based access strategy, constrain symlink traversal as appropriate, and operate on the verified opened object. A separate earlier <code>access</code> followed by <code>fopen</code> would still be race-prone.</p>
+<p><strong>Exam tip.</strong> Trace object identity through the descriptor. This example is an open-then-check race, not the usual check-then-open ordering.</p>
+</section><h2>Lecture 2 — Cryptographic foundations and classical ciphers</h2>
 <p>Primary source: <a href="../slides/lecture-02-intro-to-cryptography.pdf">lecture-02-intro-to-cryptography.pdf</a></p>
 <p><a id="s01"></a></p>
 <section class="question"><h3>S01 · 2023–24 · Q5(a)</h3>
@@ -112,8 +247,8 @@
 <defs>
 <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
 </defs>
-<g id="figure_1">
-<g id="patch_1">
+<g id="fig-0-figure_1">
+<g id="fig-0-patch_1">
 <path d="M 0 216.864 
 L 575.28 216.864 
 L 575.28 0 
@@ -121,9 +256,9 @@ L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
-<g id="axes_1">
-<g id="patch_2">
-<path clip-path="url(#pe4623215e2)" d="M 27.612 193.2552 
+<g id="fig-0-axes_1">
+<g id="fig-0-patch_2">
+<path clip-path="url(#fig-0-pe4623215e2)" d="M 27.612 193.2552 
 L 397.008 193.2552 
 Q 400.914 193.2552 400.914 189.3744 
 L 400.914 46.8936 
@@ -135,8 +270,8 @@ Q 23.706 193.2552 27.612 193.2552
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_3">
-<path clip-path="url(#pe4623215e2)" d="M 83.412 159.9912 
+<g id="fig-0-patch_3">
+<path clip-path="url(#fig-0-pe4623215e2)" d="M 83.412 159.9912 
 L 341.208 159.9912 
 Q 345.114 159.9912 345.114 156.1104 
 L 345.114 102.3336 
@@ -148,16 +283,16 @@ Q 79.506 159.9912 83.412 159.9912
 z
 " style="fill: #267261; fill-opacity: 0.05098; stroke: #267261; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_4">
-<path clip-path="url(#pe4623215e2)" d="M 72.81 166.644 
+<g id="fig-0-patch_4">
+<path clip-path="url(#fig-0-pe4623215e2)" d="M 72.81 166.644 
 L 351.81 166.644 
 L 351.81 91.8 
 L 72.81 91.8 
 z
 " style="fill: #aa3d46; opacity: 0.12; stroke: #aa3d46; stroke-width: 2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_5">
-<path clip-path="url(#pe4623215e2)" d="M 181.062 150.012 
+<g id="fig-0-patch_5">
+<path clip-path="url(#fig-0-pe4623215e2)" d="M 181.062 150.012 
 L 246.348 150.012 
 Q 250.254 150.012 250.254 146.1312 
 L 250.254 125.6184 
@@ -169,40 +304,40 @@ Q 177.156 150.012 181.062 150.012
 z
 " style="fill: #aa3d46; fill-opacity: 0.05098; stroke: #aa3d46; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_6">
-<path clip-path="url(#pe4623215e2)" d="M 497.730287 58.972805 
+<g id="fig-0-patch_6">
+<path clip-path="url(#fig-0-pe4623215e2)" d="M 497.730287 58.972805 
 Q 357.391946 90.413564 218.471893 121.536577 
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pe4623215e2)" d="M 224.114512 122.936881 
+<path clip-path="url(#fig-0-pe4623215e2)" d="M 224.114512 122.936881 
 L 218.471893 121.536577 
 L 222.977707 117.862664 
 L 224.114512 122.936881 
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="text_1">
+<g id="fig-0-text_1">
 <text style="fill: #244a75; font: 700 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 212.31 58.536)" x="212.31" y="58.536">Visible attacker page</text>
 </g>
-<g id="text_2">
+<g id="fig-0-text_2">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 212.31 131.981375)" x="212.31" y="131.981375">“Win a free subscription”</text>
 </g>
-<g id="text_3">
+<g id="fig-0-text_3">
 <text style="fill: #aa3d46; font: 9px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 212.31 100.116)" x="212.31" y="100.116">Transparent target iframe over the decoy</text>
 </g>
-<g id="text_4">
+<g id="fig-0-text_4">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 213.705 138.634175)" x="213.705" y="138.634175">BUY</text>
 </g>
-<g id="text_5">
+<g id="fig-0-text_5">
 <text style="fill: #aa3d46; font: 9px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 357.39 84.107081)" x="357.39" y="84.107081">actual click</text>
 </g>
-<g id="text_6">
+<g id="fig-0-text_6">
 <text style="fill: #172c44; font: 11px 'DejaVu Sans'" transform="translate(414.188516 157.098406)">User intends decoy;</text>
 <text style="fill: #172c44; font: 11px 'DejaVu Sans'" transform="translate(411.771094 169.416)">target receives click.</text>
 </g>
 </g>
 </g>
 <defs>
-<clippath id="pe4623215e2">
+<clippath id="fig-0-pe4623215e2">
 <rect height="199.584" width="558" x="8.64" y="8.64"></rect>
 </clippath>
 </defs>
@@ -265,42 +400,6 @@ K^{-1}=\begin{pmatrix}8&amp;5&amp;10\\21&amp;8&amp;21\\21&amp;12&amp;8\end{pmatr
 <p>Define <span class="math-inline" data-tex="a=a_2a_1\pmod{26}"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><msub><mi>a</mi><mn>2</mn></msub><msub><mi>a</mi><mn>1</mn></msub><mrow><mspace width="0.222em"></mspace><mo form="prefix" stretchy="false">(</mo><mo>mod</mo><mspace width="0.222em"></mspace><mn>26</mn><mo form="postfix" stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">a=a_2a_1\pmod{26}</annotation></semantics></math></span>, <span class="math-inline" data-tex="b=a_2b_1+b_2\pmod{26}"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><msub><mi>a</mi><mn>2</mn></msub><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub><mrow><mspace width="0.222em"></mspace><mo form="prefix" stretchy="false">(</mo><mo>mod</mo><mspace width="0.222em"></mspace><mn>26</mn><mo form="postfix" stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">b=a_2b_1+b_2\pmod{26}</annotation></semantics></math></span>. Since both multipliers are units modulo 26, a is also a unit. The composition is another ordinary affine cipher, with no enlarged family of transformations and no gain over selecting one affine key directly.</p>
 <p>For example, E1(x)=5x+8 and E2(y)=7y+3 compose to <span class="math-inline" data-tex="35x+59\equiv9x+7\pmod{26}"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>35</mn><mi>x</mi><mo>+</mo><mn>59</mn><mo>≡</mo><mn>9</mn><mi>x</mi><mo>+</mo><mn>7</mn><mrow><mspace width="0.222em"></mspace><mo form="prefix" stretchy="false">(</mo><mo>mod</mo><mspace width="0.222em"></mspace><mn>26</mn><mo form="postfix" stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">35x+59\equiv9x+7\pmod{26}</annotation></semantics></math></span>. An attacker can recover the equivalent key instead of either original pair. There are only φ(26)·26=12·26=312 affine transformations.</p>
 <p><strong>Exam tip.</strong> Show the equivalent multiplier/offset and its invertibility. “Two encryptions must be stronger” fails when the cipher family is closed under composition.</p>
-<p><a id="s28"></a></p>
-</section><section class="question"><h3>S28 · 2021–22 · Q2(a)</h3>
-<p><strong>Attacks versus information-security CIA goals · 5 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=15">root question PDF, page 15</a>. Sitting date: 30 October 2023.</p>
-<blockquote>
-<p><strong>Question summary:</strong> Categorize security attacks with respect to C.I.A. goals.</p>
-</blockquote>
-<p>In this general security question, CIA means <strong>confidentiality, integrity and availability</strong>.</p>
-<table>
-<thead>
-<tr>
-<th>Goal violated</th>
-<th>Meaning</th>
-<th>Example attacks</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Confidentiality</td>
-<td>Unauthorized disclosure</td>
-<td>Sniffing plaintext, reading stolen files, data-extracting SQL injection</td>
-</tr>
-<tr>
-<td>Integrity</td>
-<td>Unauthorized alteration or false data</td>
-<td>Modifying a bank transfer, inserting false records, undetected message substitution</td>
-</tr>
-<tr>
-<td>Availability</td>
-<td>Denial of timely legitimate service</td>
-<td>DDoS, deleting critical files, exhausting connections</td>
-</tr>
-</tbody>
-</table>
-<p>Passive eavesdropping primarily threatens confidentiality. Active modification/fabrication primarily threatens integrity. Interruption/resource exhaustion primarily threatens availability. One attack can affect several goals: ransomware can both deny file access and disclose stolen information.</p>
-<p><strong>Exam tip.</strong> Map behaviors to goals instead of treating attack classes as disjoint. Lecture 2’s cryptographic use of A for authenticity is a different convention.</p>
 <p><a id="s44"></a></p>
 </section><section class="question"><h3>S44 · 2020–21 · Q7(a)</h3>
 <p><strong>Break a Caesar-then-Hill construction · 15 marks</strong></p>
@@ -505,8 +604,8 @@ C_3&amp;=E_K(P_3\oplus C_2), &amp; P_3&amp;=D_K(C_3)\oplus C_2.
 <defs>
 <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
 </defs>
-<g id="figure_1">
-<g id="patch_1">
+<g id="fig-2-figure_1">
+<g id="fig-2-patch_1">
 <path d="M 0 189.186281 
 L 575.28 189.186281 
 L 575.28 0 
@@ -514,9 +613,9 @@ L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
-<g id="axes_1">
-<g id="patch_2">
-<path clip-path="url(#pc52c4f43a7)" d="M 24.822 60.241481 
+<g id="fig-2-axes_1">
+<g id="fig-2-patch_2">
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 24.822 60.241481 
 L 176.598 60.241481 
 Q 180.504 60.241481 180.504 56.360681 
 L 180.504 33.075881 
@@ -528,8 +627,8 @@ Q 20.916 60.241481 24.822 60.241481
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_3">
-<path clip-path="url(#pc52c4f43a7)" d="M 55.512 112.909481 
+<g id="fig-2-patch_3">
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 55.512 112.909481 
 L 145.908 112.909481 
 Q 149.814 112.909481 149.814 109.028681 
 L 149.814 82.971881 
@@ -541,19 +640,19 @@ Q 51.606 112.909481 55.512 112.909481
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_4">
-<path clip-path="url(#pc52c4f43a7)" d="M 100.71 63.352131 
+<g id="fig-2-patch_4">
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 100.71 63.352131 
 Q 100.71 69.668884 100.71 74.532193 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pc52c4f43a7)" d="M 103.31 69.332193 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 103.31 69.332193 
 L 100.71 74.532193 
 L 98.11 69.332193 
 L 103.31 69.332193 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_5">
-<path clip-path="url(#pc52c4f43a7)" d="M 24.822 168.349481 
+<g id="fig-2-patch_5">
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 24.822 168.349481 
 L 176.598 168.349481 
 Q 180.504 168.349481 180.504 164.468681 
 L 180.504 138.411881 
@@ -565,19 +664,19 @@ Q 20.916 168.349481 24.822 168.349481
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_6">
-<path clip-path="url(#pc52c4f43a7)" d="M 100.71 116.022161 
+<g id="fig-2-patch_6">
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 100.71 116.022161 
 Q 100.71 123.721799 100.71 129.967993 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pc52c4f43a7)" d="M 103.31 124.767993 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 103.31 124.767993 
 L 100.71 129.967993 
 L 98.11 124.767993 
 L 103.31 124.767993 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_7">
-<path clip-path="url(#pc52c4f43a7)" d="M 211.752 60.241481 
+<g id="fig-2-patch_7">
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 211.752 60.241481 
 L 363.528 60.241481 
 Q 367.434 60.241481 367.434 56.360681 
 L 367.434 33.075881 
@@ -589,8 +688,8 @@ Q 207.846 60.241481 211.752 60.241481
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_8">
-<path clip-path="url(#pc52c4f43a7)" d="M 242.442 112.909481 
+<g id="fig-2-patch_8">
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 242.442 112.909481 
 L 332.838 112.909481 
 Q 336.744 112.909481 336.744 109.028681 
 L 336.744 82.971881 
@@ -602,19 +701,19 @@ Q 238.536 112.909481 242.442 112.909481
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_9">
-<path clip-path="url(#pc52c4f43a7)" d="M 287.64 63.352131 
+<g id="fig-2-patch_9">
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 287.64 63.352131 
 Q 287.64 69.668884 287.64 74.532193 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pc52c4f43a7)" d="M 290.24 69.332193 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 290.24 69.332193 
 L 287.64 74.532193 
 L 285.04 69.332193 
 L 290.24 69.332193 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_10">
-<path clip-path="url(#pc52c4f43a7)" d="M 211.752 168.349481 
+<g id="fig-2-patch_10">
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 211.752 168.349481 
 L 363.528 168.349481 
 Q 367.434 168.349481 367.434 164.468681 
 L 367.434 138.411881 
@@ -626,19 +725,19 @@ Q 207.846 168.349481 211.752 168.349481
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_11">
-<path clip-path="url(#pc52c4f43a7)" d="M 287.64 116.022161 
+<g id="fig-2-patch_11">
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 287.64 116.022161 
 Q 287.64 123.721799 287.64 129.967993 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pc52c4f43a7)" d="M 290.24 124.767993 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 290.24 124.767993 
 L 287.64 129.967993 
 L 285.04 124.767993 
 L 290.24 124.767993 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_12">
-<path clip-path="url(#pc52c4f43a7)" d="M 398.682 60.241481 
+<g id="fig-2-patch_12">
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 398.682 60.241481 
 L 550.458 60.241481 
 Q 554.364 60.241481 554.364 56.360681 
 L 554.364 33.075881 
@@ -650,8 +749,8 @@ Q 394.776 60.241481 398.682 60.241481
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_13">
-<path clip-path="url(#pc52c4f43a7)" d="M 429.372 112.909481 
+<g id="fig-2-patch_13">
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 429.372 112.909481 
 L 519.768 112.909481 
 Q 523.674 112.909481 523.674 109.028681 
 L 523.674 82.971881 
@@ -663,19 +762,19 @@ Q 425.466 112.909481 429.372 112.909481
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_14">
-<path clip-path="url(#pc52c4f43a7)" d="M 474.57 63.352131 
+<g id="fig-2-patch_14">
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 474.57 63.352131 
 Q 474.57 69.668884 474.57 74.532193 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pc52c4f43a7)" d="M 477.17 69.332193 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 477.17 69.332193 
 L 474.57 74.532193 
 L 471.97 69.332193 
 L 477.17 69.332193 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_15">
-<path clip-path="url(#pc52c4f43a7)" d="M 398.682 168.349481 
+<g id="fig-2-patch_15">
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 398.682 168.349481 
 L 550.458 168.349481 
 Q 554.364 168.349481 554.364 164.468681 
 L 554.364 138.411881 
@@ -687,18 +786,18 @@ Q 394.776 168.349481 398.682 168.349481
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_16">
-<path clip-path="url(#pc52c4f43a7)" d="M 474.57 116.022161 
+<g id="fig-2-patch_16">
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 474.57 116.022161 
 Q 474.57 123.721799 474.57 129.967993 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pc52c4f43a7)" d="M 477.17 124.767993 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 477.17 124.767993 
 L 474.57 129.967993 
 L 471.97 124.767993 
 L 477.17 124.767993 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="text_1">
+<g id="fig-2-text_1">
 <!-- $C_1\oplus IV_2$ -->
 <g style="fill: #172c44" transform="translate(82.21 47.477656)">
 <text>
@@ -708,10 +807,10 @@ z
 </text>
 </g>
 </g>
-<g id="text_2">
+<g id="fig-2-text_2">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 100.71 98.759656)" x="100.71" y="98.759656">D under K</text>
 </g>
-<g id="text_3">
+<g id="fig-2-text_3">
 <!-- $\oplus IV_1\;\to P_1$ -->
 <g style="fill: #172c44" transform="translate(78.11 154.199656)">
 <text>
@@ -721,13 +820,13 @@ z
 </text>
 </g>
 </g>
-<g id="text_4">
+<g id="fig-2-text_4">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 287.64 47.477656)" x="287.64" y="47.477656">C2</text>
 </g>
-<g id="text_5">
+<g id="fig-2-text_5">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 287.64 98.759656)" x="287.64" y="98.759656">D under K</text>
 </g>
-<g id="text_6">
+<g id="fig-2-text_6">
 <!-- $\oplus C_1\;\to P_2$ -->
 <g style="fill: #172c44" transform="translate(266.59 154.199656)">
 <text>
@@ -737,13 +836,13 @@ z
 </text>
 </g>
 </g>
-<g id="text_7">
+<g id="fig-2-text_7">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 474.57 47.477656)" x="474.57" y="47.477656">C3</text>
 </g>
-<g id="text_8">
+<g id="fig-2-text_8">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 474.57 98.759656)" x="474.57" y="98.759656">D under K</text>
 </g>
-<g id="text_9">
+<g id="fig-2-text_9">
 <!-- $\oplus C_2\;\to P_3$ -->
 <g style="fill: #172c44" transform="translate(453.52 154.199656)">
 <text>
@@ -753,13 +852,13 @@ z
 </text>
 </g>
 </g>
-<g id="text_10">
+<g id="fig-2-text_10">
 <text style="fill: #172c44; font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 287.64 16.998281)" x="287.64" y="16.998281">Three independent decryption paths: all inputs are already received</text>
 </g>
 </g>
 </g>
 <defs>
-<clippath id="pc52c4f43a7">
+<clippath id="fig-2-pc52c4f43a7">
 <rect height="171.864" width="558" x="8.64" y="8.682281"></rect>
 </clippath>
 </defs>
@@ -816,8 +915,8 @@ IV_2'&amp;=IV_2\oplus\Delta_2, &amp; C_2'&amp;=C_2.
 <defs>
 <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
 </defs>
-<g id="figure_1">
-<g id="patch_1">
+<g id="fig-3-figure_1">
+<g id="fig-3-patch_1">
 <path d="M 0 183.6 
 L 575.28 183.6 
 L 575.28 0 
@@ -825,9 +924,9 @@ L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
-<g id="axes_1">
-<g id="patch_2">
-<path clip-path="url(#p4cde781957)" d="M 19.242 85.1472 
+<g id="fig-3-axes_1">
+<g id="fig-3-patch_2">
+<path clip-path="url(#fig-3-p4cde781957)" d="M 19.242 85.1472 
 L 126.378 85.1472 
 Q 130.284 85.1472 130.284 81.2664 
 L 130.284 52.4376 
@@ -839,8 +938,8 @@ Q 15.336 85.1472 19.242 85.1472
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_3">
-<path clip-path="url(#p4cde781957)" d="M 195.012 85.1472 
+<g id="fig-3-patch_3">
+<path clip-path="url(#fig-3-p4cde781957)" d="M 195.012 85.1472 
 L 290.988 85.1472 
 Q 294.894 85.1472 294.894 81.2664 
 L 294.894 52.4376 
@@ -852,8 +951,8 @@ Q 191.106 85.1472 195.012 85.1472
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_4">
-<path clip-path="url(#p4cde781957)" d="M 367.992 85.1472 
+<g id="fig-3-patch_4">
+<path clip-path="url(#fig-3-p4cde781957)" d="M 367.992 85.1472 
 L 463.968 85.1472 
 Q 467.874 85.1472 467.874 81.2664 
 L 467.874 52.4376 
@@ -865,30 +964,30 @@ Q 364.086 85.1472 367.992 85.1472
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_5">
-<path clip-path="url(#p4cde781957)" d="M 133.399012 66.852 
+<g id="fig-3-patch_5">
+<path clip-path="url(#fig-3-p4cde781957)" d="M 133.399012 66.852 
 Q 160.694561 66.852 186.536667 66.852 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p4cde781957)" d="M 181.336667 64.252 
+<path clip-path="url(#fig-3-p4cde781957)" d="M 181.336667 64.252 
 L 186.536667 66.852 
 L 181.336667 69.452 
 L 181.336667 64.252 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_6">
-<path clip-path="url(#p4cde781957)" d="M 298.008501 66.852 
+<g id="fig-3-patch_6">
+<path clip-path="url(#fig-3-p4cde781957)" d="M 298.008501 66.852 
 Q 329.488104 66.852 359.514264 66.852 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p4cde781957)" d="M 354.314264 64.252 
+<path clip-path="url(#fig-3-p4cde781957)" d="M 354.314264 64.252 
 L 359.514264 66.852 
 L 354.314264 69.452 
 L 354.314264 64.252 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_7">
-<path clip-path="url(#p4cde781957)" d="M 19.242 157.2192 
+<g id="fig-3-patch_7">
+<path clip-path="url(#fig-3-p4cde781957)" d="M 19.242 157.2192 
 L 126.378 157.2192 
 Q 130.284 157.2192 130.284 153.3384 
 L 130.284 124.5096 
@@ -900,8 +999,8 @@ Q 15.336 157.2192 19.242 157.2192
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_8">
-<path clip-path="url(#p4cde781957)" d="M 195.012 157.2192 
+<g id="fig-3-patch_8">
+<path clip-path="url(#fig-3-p4cde781957)" d="M 195.012 157.2192 
 L 290.988 157.2192 
 Q 294.894 157.2192 294.894 153.3384 
 L 294.894 124.5096 
@@ -913,8 +1012,8 @@ Q 191.106 157.2192 195.012 157.2192
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_9">
-<path clip-path="url(#p4cde781957)" d="M 367.992 157.2192 
+<g id="fig-3-patch_9">
+<path clip-path="url(#fig-3-p4cde781957)" d="M 367.992 157.2192 
 L 463.968 157.2192 
 Q 467.874 157.2192 467.874 153.3384 
 L 467.874 124.5096 
@@ -926,29 +1025,29 @@ Q 364.086 157.2192 367.992 157.2192
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_10">
-<path clip-path="url(#p4cde781957)" d="M 133.399012 138.924 
+<g id="fig-3-patch_10">
+<path clip-path="url(#fig-3-p4cde781957)" d="M 133.399012 138.924 
 Q 160.694561 138.924 186.536667 138.924 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p4cde781957)" d="M 181.336667 136.324 
+<path clip-path="url(#fig-3-p4cde781957)" d="M 181.336667 136.324 
 L 186.536667 138.924 
 L 181.336667 141.524 
 L 181.336667 136.324 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_11">
-<path clip-path="url(#p4cde781957)" d="M 298.008501 138.924 
+<g id="fig-3-patch_11">
+<path clip-path="url(#fig-3-p4cde781957)" d="M 298.008501 138.924 
 Q 329.488104 138.924 359.514264 138.924 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p4cde781957)" d="M 354.314264 136.324 
+<path clip-path="url(#fig-3-p4cde781957)" d="M 354.314264 136.324 
 L 359.514264 138.924 
 L 354.314264 141.524 
 L 354.314264 136.324 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="text_1">
+<g id="fig-3-text_1">
 <!-- $P_i\oplus C_{i-1}$ -->
 <g style="fill: #172c44" transform="translate(51.61 69.611375)">
 <text>
@@ -960,22 +1059,22 @@ z
 </text>
 </g>
 </g>
-<g id="text_2">
+<g id="fig-3-text_2">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 243 69.611375)" x="243" y="69.611375">E under K</text>
 </g>
-<g id="text_3">
+<g id="fig-3-text_3">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 415.98 69.611375)" x="415.98" y="69.611375">Ci</text>
 </g>
-<g id="text_4">
+<g id="fig-3-text_4">
 <text style="fill: #244a75; font: 700 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 510.84 66.852)" x="510.84" y="66.852">CBC</text>
 </g>
-<g id="text_5">
+<g id="fig-3-text_5">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 72.81 141.566188)" x="72.81" y="141.566188">nonce || counter_i</text>
 </g>
-<g id="text_6">
+<g id="fig-3-text_6">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 243 141.683375)" x="243" y="141.683375">E under K</text>
 </g>
-<g id="text_7">
+<g id="fig-3-text_7">
 <!-- $Z_i\oplus P_i=C_i$ -->
 <g style="fill: #172c44" transform="translate(389.93 141.683375)">
 <text>
@@ -986,16 +1085,16 @@ z
 </text>
 </g>
 </g>
-<g id="text_8">
+<g id="fig-3-text_8">
 <text style="fill: #267261; font: 700 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 510.84 138.924)" x="510.84" y="138.924">CTR</text>
 </g>
-<g id="text_9">
+<g id="fig-3-text_9">
 <text style="fill: #172c44; font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 287.64 28.044)" x="287.64" y="28.044">CBC chains ciphertext; CTR generates independent keystream blocks</text>
 </g>
 </g>
 </g>
 <defs>
-<clippath id="p4cde781957">
+<clippath id="fig-3-p4cde781957">
 <rect height="166.32" width="558" x="8.64" y="8.64"></rect>
 </clippath>
 </defs>
@@ -1202,8 +1301,8 @@ message + encryption key → secure encryption → ciphertext
 <defs>
 <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
 </defs>
-<g id="figure_1">
-<g id="patch_1">
+<g id="fig-4-figure_1">
+<g id="fig-4-patch_1">
 <path d="M 0 172.512 
 L 575.28 172.512 
 L 575.28 0 
@@ -1211,9 +1310,9 @@ L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
-<g id="axes_1">
-<g id="patch_2">
-<path clip-path="url(#p7365b8f70b)" d="M 22.032 87.9192 
+<g id="fig-4-axes_1">
+<g id="fig-4-patch_2">
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 22.032 87.9192 
 L 157.068 87.9192 
 Q 160.974 87.9192 160.974 84.0384 
 L 160.974 49.6656 
@@ -1225,8 +1324,8 @@ Q 18.126 87.9192 22.032 87.9192
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_3">
-<path clip-path="url(#p7365b8f70b)" d="M 206.172 87.9192 
+<g id="fig-4-patch_3">
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 206.172 87.9192 
 L 268.668 87.9192 
 Q 272.574 87.9192 272.574 84.0384 
 L 272.574 49.6656 
@@ -1238,8 +1337,8 @@ Q 202.266 87.9192 206.172 87.9192
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_4">
-<path clip-path="url(#p7365b8f70b)" d="M 306.612 87.9192 
+<g id="fig-4-patch_4">
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 306.612 87.9192 
 L 542.088 87.9192 
 Q 545.994 87.9192 545.994 84.0384 
 L 545.994 49.6656 
@@ -1251,30 +1350,30 @@ Q 302.706 87.9192 306.612 87.9192
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_5">
-<path clip-path="url(#p7365b8f70b)" d="M 164.08782 66.852 
+<g id="fig-4-patch_5">
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 164.08782 66.852 
 Q 181.616801 66.852 197.692339 66.852 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p7365b8f70b)" d="M 192.492339 64.252 
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 192.492339 64.252 
 L 197.692339 66.852 
 L 192.492339 69.452 
 L 192.492339 64.252 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_6">
-<path clip-path="url(#p7365b8f70b)" d="M 275.689182 66.852 
+<g id="fig-4-patch_6">
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 275.689182 66.852 
 Q 287.638906 66.852 298.135186 66.852 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p7365b8f70b)" d="M 292.935186 64.252 
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 292.935186 64.252 
 L 298.135186 66.852 
 L 292.935186 69.452 
 L 292.935186 64.252 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_7">
-<path clip-path="url(#p7365b8f70b)" d="M 22.032 157.2192 
+<g id="fig-4-patch_7">
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 22.032 157.2192 
 L 285.408 157.2192 
 Q 289.314 157.2192 289.314 153.3384 
 L 289.314 118.9656 
@@ -1286,8 +1385,8 @@ Q 18.126 157.2192 22.032 157.2192
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_8">
-<path clip-path="url(#p7365b8f70b)" d="M 334.512 157.2192 
+<g id="fig-4-patch_8">
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 334.512 157.2192 
 L 397.008 157.2192 
 Q 400.914 157.2192 400.914 153.3384 
 L 400.914 118.9656 
@@ -1299,8 +1398,8 @@ Q 330.606 157.2192 334.512 157.2192
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_9">
-<path clip-path="url(#p7365b8f70b)" d="M 457.272 157.2192 
+<g id="fig-4-patch_9">
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 457.272 157.2192 
 L 542.088 157.2192 
 Q 545.994 157.2192 545.994 153.3384 
 L 545.994 118.9656 
@@ -1312,29 +1411,29 @@ Q 453.366 157.2192 457.272 157.2192
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_10">
-<path clip-path="url(#p7365b8f70b)" d="M 292.42782 136.152 
+<g id="fig-4-patch_10">
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 292.42782 136.152 
 Q 309.956801 136.152 326.032339 136.152 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p7365b8f70b)" d="M 320.832339 133.552 
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 320.832339 133.552 
 L 326.032339 136.152 
 L 320.832339 138.752 
 L 320.832339 133.552 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_11">
-<path clip-path="url(#p7365b8f70b)" d="M 404.031566 136.152 
+<g id="fig-4-patch_11">
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 404.031566 136.152 
 Q 427.141628 136.152 448.798245 136.152 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p7365b8f70b)" d="M 443.598245 133.552 
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 443.598245 133.552 
 L 448.798245 136.152 
 L 443.598245 138.752 
 L 443.598245 133.552 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="text_1">
+<g id="fig-4-text_1">
 <!-- $(K_0\oplus\mathrm{ipad})\parallel M$ -->
 <g style="fill: #172c44" transform="translate(55.05 69.352)">
 <text>
@@ -1346,13 +1445,13 @@ z
 </text>
 </g>
 </g>
-<g id="text_2">
+<g id="fig-4-text_2">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 237.42 69.611375)" x="237.42" y="69.611375">H</text>
 </g>
-<g id="text_3">
+<g id="fig-4-text_3">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 424.35 69.611375)" x="424.35" y="69.611375">inner digest</text>
 </g>
-<g id="text_4">
+<g id="fig-4-text_4">
 <!-- $(K_0\oplus\mathrm{opad})\parallel h_{\mathrm{inner}}$ -->
 <g style="fill: #172c44" transform="translate(111.97 138.652)">
 <text>
@@ -1364,19 +1463,19 @@ z
 </text>
 </g>
 </g>
-<g id="text_5">
+<g id="fig-4-text_5">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 365.76 138.911375)" x="365.76" y="138.911375">H</text>
 </g>
-<g id="text_6">
+<g id="fig-4-text_6">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 499.68 138.911375)" x="499.68" y="138.911375">tag T</text>
 </g>
-<g id="text_7">
+<g id="fig-4-text_7">
 <text style="fill: #172c44; font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 287.64 25.272)" x="287.64" y="25.272">HMAC: inner and outer hashes use distinct pads</text>
 </g>
 </g>
 </g>
 <defs>
-<clippath id="p7365b8f70b">
+<clippath id="fig-4-p7365b8f70b">
 <rect height="155.232" width="558" x="8.64" y="8.64"></rect>
 </clippath>
 </defs>
@@ -1438,8 +1537,8 @@ h_i=f(h_{i-1},m_i),\qquad H(M)=h_t.
 <defs>
 <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
 </defs>
-<g id="figure_1">
-<g id="patch_1">
+<g id="fig-5-figure_1">
+<g id="fig-5-patch_1">
 <path d="M 0 172.512 
 L 575.28 172.512 
 L 575.28 0 
@@ -1447,9 +1546,9 @@ L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
-<g id="axes_1">
-<g id="patch_2">
-<path clip-path="url(#p73df0e33a3)" d="M 16.452 104.5512 
+<g id="fig-5-axes_1">
+<g id="fig-5-patch_2">
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 16.452 104.5512 
 L 84.528 104.5512 
 Q 88.434 104.5512 88.434 100.6704 
 L 88.434 69.0696 
@@ -1461,8 +1560,8 @@ Q 12.546 104.5512 16.452 104.5512
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_3">
-<path clip-path="url(#p73df0e33a3)" d="M 128.052 104.5512 
+<g id="fig-5-patch_3">
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 128.052 104.5512 
 L 193.338 104.5512 
 Q 197.244 104.5512 197.244 100.6704 
 L 197.244 69.0696 
@@ -1474,30 +1573,30 @@ Q 124.146 104.5512 128.052 104.5512
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_4">
-<path clip-path="url(#p73df0e33a3)" d="M 162.09 52.219819 
+<g id="fig-5-patch_4">
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 162.09 52.219819 
 Q 162.09 57.149496 162.09 60.625729 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p73df0e33a3)" d="M 164.69 55.425729 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 164.69 55.425729 
 L 162.09 60.625729 
 L 159.49 55.425729 
 L 164.69 55.425729 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_5">
-<path clip-path="url(#p73df0e33a3)" d="M 91.548501 84.5928 
+<g id="fig-5-patch_5">
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 91.548501 84.5928 
 Q 106.28816 84.5928 119.574376 84.5928 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p73df0e33a3)" d="M 114.374376 81.9928 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 114.374376 81.9928 
 L 119.574376 84.5928 
 L 114.374376 87.1928 
 L 114.374376 81.9928 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_6">
-<path clip-path="url(#p73df0e33a3)" d="M 281.502 104.5512 
+<g id="fig-5-patch_6">
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 281.502 104.5512 
 L 346.788 104.5512 
 Q 350.694 104.5512 350.694 100.6704 
 L 350.694 69.0696 
@@ -1509,30 +1608,30 @@ Q 277.596 104.5512 281.502 104.5512
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_7">
-<path clip-path="url(#p73df0e33a3)" d="M 315.54 52.219819 
+<g id="fig-5-patch_7">
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 315.54 52.219819 
 Q 315.54 57.149496 315.54 60.625729 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p73df0e33a3)" d="M 318.14 55.425729 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 318.14 55.425729 
 L 315.54 60.625729 
 L 312.94 55.425729 
 L 318.14 55.425729 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_8">
-<path clip-path="url(#p73df0e33a3)" d="M 203.150034 84.5928 
+<g id="fig-5-patch_8">
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 203.150034 84.5928 
 Q 238.814697 84.5928 273.025915 84.5928 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p73df0e33a3)" d="M 267.825915 81.9928 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 267.825915 81.9928 
 L 273.025915 84.5928 
 L 267.825915 87.1928 
 L 267.825915 81.9928 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_9">
-<path clip-path="url(#p73df0e33a3)" d="M 434.952 104.5512 
+<g id="fig-5-patch_9">
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 434.952 104.5512 
 L 500.238 104.5512 
 Q 504.144 104.5512 504.144 100.6704 
 L 504.144 69.0696 
@@ -1544,76 +1643,76 @@ Q 431.046 104.5512 434.952 104.5512
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_10">
-<path clip-path="url(#p73df0e33a3)" d="M 468.99 52.219819 
+<g id="fig-5-patch_10">
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 468.99 52.219819 
 Q 468.99 57.149496 468.99 60.625729 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p73df0e33a3)" d="M 471.59 55.425729 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 471.59 55.425729 
 L 468.99 60.625729 
 L 466.39 55.425729 
 L 471.59 55.425729 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_11">
-<path clip-path="url(#p73df0e33a3)" d="M 356.600034 84.5928 
+<g id="fig-5-patch_11">
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 356.600034 84.5928 
 Q 392.264697 84.5928 426.475915 84.5928 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p73df0e33a3)" d="M 421.275915 81.9928 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 421.275915 81.9928 
 L 426.475915 84.5928 
 L 421.275915 87.1928 
 L 421.275915 81.9928 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_12">
-<path clip-path="url(#p73df0e33a3)" d="M 507.261566 84.5928 
+<g id="fig-5-patch_12">
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 507.261566 84.5928 
 Q 530.371628 84.5928 552.028245 84.5928 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p73df0e33a3)" d="M 546.828245 81.9928 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 546.828245 81.9928 
 L 552.028245 84.5928 
 L 546.828245 87.1928 
 L 546.828245 81.9928 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="text_1">
+<g id="fig-5-text_1">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 50.49 87.629375)" x="50.49" y="87.629375">fixed IV</text>
 </g>
-<g id="text_2">
+<g id="fig-5-text_2">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 160.695 87.629375)" x="160.695" y="87.629375">f</text>
 </g>
-<g id="text_3">
+<g id="fig-5-text_3">
 <text style="fill: #172c44; font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 162.09 39.132)" x="162.09" y="39.132">m1</text>
 </g>
-<g id="text_4">
+<g id="fig-5-text_4">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 314.145 87.629375)" x="314.145" y="87.629375">f</text>
 </g>
-<g id="text_5">
+<g id="fig-5-text_5">
 <text style="fill: #172c44; font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 315.54 39.132)" x="315.54" y="39.132">m2</text>
 </g>
-<g id="text_6">
+<g id="fig-5-text_6">
 <text style="fill: #244a75; font: 9px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 238.815 78.285881)" x="238.815" y="78.285881">h1</text>
 </g>
-<g id="text_7">
+<g id="fig-5-text_7">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 467.595 87.629375)" x="467.595" y="87.629375">f</text>
 </g>
-<g id="text_8">
+<g id="fig-5-text_8">
 <text style="fill: #172c44; font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 468.99 39.132)" x="468.99" y="39.132">m3</text>
 </g>
-<g id="text_9">
+<g id="fig-5-text_9">
 <text style="fill: #244a75; font: 9px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 392.265 78.285881)" x="392.265" y="78.285881">h2</text>
 </g>
-<g id="text_10">
+<g id="fig-5-text_10">
 <text style="fill: #244a75; font: 9px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 530.37 78.285881)" x="530.37" y="78.285881">H(M)</text>
 </g>
-<g id="text_11">
+<g id="fig-5-text_11">
 <text style="fill: #267261; font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 287.64 147.24)" x="287.64" y="147.24">Length-strengthened padding → blocks; hi = f(h(i−1), mi)</text>
 </g>
 </g>
 </g>
 <defs>
-<clippath id="p73df0e33a3">
+<clippath id="fig-5-p73df0e33a3">
 <rect height="155.232" width="558" x="8.64" y="8.64"></rect>
 </clippath>
 </defs>
@@ -1652,8 +1751,8 @@ z
 <defs>
 <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
 </defs>
-<g id="figure_1">
-<g id="patch_1">
+<g id="fig-6-figure_1">
+<g id="fig-6-patch_1">
 <path d="M 0 294.48 
 L 575.28 294.48 
 L 575.28 0 
@@ -1661,98 +1760,98 @@ L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
-<g id="axes_1">
-<g id="patch_2">
-<path clip-path="url(#pba7d367ae1)" d="M 49.702673 55.764 
+<g id="fig-6-axes_1">
+<g id="fig-6-patch_2">
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 49.702673 55.764 
 Q 167.671096 55.764 284.186076 55.764 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pba7d367ae1)" d="M 278.986076 53.164 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 278.986076 53.164 
 L 284.186076 55.764 
 L 278.986076 58.364 
 L 278.986076 53.164 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_3">
-<path clip-path="url(#pba7d367ae1)" d="M 289.642673 89.952 
+<g id="fig-6-patch_3">
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 289.642673 89.952 
 Q 407.611096 89.952 524.126076 89.952 
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pba7d367ae1)" d="M 518.926076 87.352 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 518.926076 87.352 
 L 524.126076 89.952 
 L 518.926076 92.552 
 L 518.926076 87.352 
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_4">
-<path clip-path="url(#pba7d367ae1)" d="M 525.577327 124.14 
+<g id="fig-6-patch_4">
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 525.577327 124.14 
 Q 407.608904 124.14 291.093924 124.14 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pba7d367ae1)" d="M 296.293924 126.74 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 296.293924 126.74 
 L 291.093924 124.14 
 L 296.293924 121.54 
 L 296.293924 126.74 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_5">
-<path clip-path="url(#pba7d367ae1)" d="M 285.637327 158.328 
+<g id="fig-6-patch_5">
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 285.637327 158.328 
 Q 167.668904 158.328 51.153924 158.328 
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pba7d367ae1)" d="M 56.353924 160.928 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 56.353924 160.928 
 L 51.153924 158.328 
 L 56.353924 155.728 
 L 56.353924 160.928 
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_6">
-<path clip-path="url(#pba7d367ae1)" d="M 49.702673 192.516 
+<g id="fig-6-patch_6">
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 49.702673 192.516 
 Q 167.671096 192.516 284.186076 192.516 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pba7d367ae1)" d="M 278.986076 189.916 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 278.986076 189.916 
 L 284.186076 192.516 
 L 278.986076 195.116 
 L 278.986076 189.916 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_7">
-<path clip-path="url(#pba7d367ae1)" d="M 289.642673 226.704 
+<g id="fig-6-patch_7">
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 289.642673 226.704 
 Q 407.611096 226.704 524.126076 226.704 
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pba7d367ae1)" d="M 518.926076 224.104 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 518.926076 224.104 
 L 524.126076 226.704 
 L 518.926076 229.304 
 L 518.926076 224.104 
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="line2d_1">
-<path clip-path="url(#pba7d367ae1)" d="M 47.7 258.12 
+<g id="fig-6-line2d_1">
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 47.7 258.12 
 L 47.7 39.132 
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
-<g id="line2d_2">
-<path clip-path="url(#pba7d367ae1)" d="M 287.64 258.12 
+<g id="fig-6-line2d_2">
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 287.64 258.12 
 L 287.64 39.132 
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
-<g id="line2d_3">
-<path clip-path="url(#pba7d367ae1)" d="M 527.58 258.12 
+<g id="fig-6-line2d_3">
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 527.58 258.12 
 L 527.58 39.132 
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
-<g id="text_1">
+<g id="fig-6-text_1">
 <text style="fill: #172c44; font: 700 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 47.7 25.535313)" x="47.7" y="25.535313">Alice</text>
 </g>
-<g id="text_2">
+<g id="fig-6-text_2">
 <text style="fill: #172c44; font: 700 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 287.64 25.492344)" x="287.64" y="25.492344">Mallory</text>
 </g>
-<g id="text_3">
+<g id="fig-6-text_3">
 <text style="fill: #172c44; font: 700 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 527.58 25.535313)" x="527.58" y="25.535313">Bob</text>
 </g>
-<g id="text_4">
+<g id="fig-6-text_4">
 <!-- $A=g^a$ -->
 <g style="fill: #244a75" transform="translate(154.8 49.4388)">
 <text>
@@ -1762,7 +1861,7 @@ L 527.58 39.132
 </text>
 </g>
 </g>
-<g id="text_5">
+<g id="fig-6-text_5">
 <!-- $X=g^x$ (substituted) -->
 <g style="fill: #aa3d46" transform="translate(363.915 83.6268)">
 <text>
@@ -1773,7 +1872,7 @@ L 527.58 39.132
 </text>
 </g>
 </g>
-<g id="text_6">
+<g id="fig-6-text_6">
 <!-- $B=g^b$ -->
 <g style="fill: #244a75" transform="translate(395.01 117.8148)">
 <text>
@@ -1783,7 +1882,7 @@ L 527.58 39.132
 </text>
 </g>
 </g>
-<g id="text_7">
+<g id="fig-6-text_7">
 <!-- $Y=g^y$ (substituted) -->
 <g style="fill: #aa3d46" transform="translate(125.325 152.0028)">
 <text>
@@ -1794,7 +1893,7 @@ L 527.58 39.132
 </text>
 </g>
 </g>
-<g id="text_8">
+<g id="fig-6-text_8">
 <!-- traffic under $K_A=g^{ay}$ -->
 <g style="fill: #244a75" transform="translate(120.87 186.1908)">
 <text>
@@ -1805,7 +1904,7 @@ L 527.58 39.132
 </text>
 </g>
 </g>
-<g id="text_9">
+<g id="fig-6-text_9">
 <!-- re-encrypted traffic under $K_B=g^{bx}$ -->
 <g style="fill: #aa3d46" transform="translate(330.3 220.3788)">
 <text>
@@ -1816,7 +1915,7 @@ L 527.58 39.132
 </text>
 </g>
 </g>
-<g id="text_10">
+<g id="fig-6-text_10">
 <!-- Mallory knows $K_A=A^y$ and $K_B=B^x$; Alice and Bob do not share one authenticated key. -->
 <g style="fill: #267261" transform="translate(68.79 278.196)">
 <text>
@@ -1830,7 +1929,7 @@ L 527.58 39.132
 </g>
 </g>
 <defs>
-<clippath id="pba7d367ae1">
+<clippath id="fig-6-pba7d367ae1">
 <rect height="277.2" width="558" x="8.64" y="8.64"></rect>
 </clippath>
 </defs>
@@ -1864,8 +1963,8 @@ L 527.58 39.132
 <defs>
 <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
 </defs>
-<g id="figure_1">
-<g id="patch_1">
+<g id="fig-7-figure_1">
+<g id="fig-7-patch_1">
 <path d="M 0 294.48 
 L 575.28 294.48 
 L 575.28 0 
@@ -1873,98 +1972,98 @@ L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
-<g id="axes_1">
-<g id="patch_2">
-<path clip-path="url(#pba7d367ae1)" d="M 49.702673 55.764 
+<g id="fig-7-axes_1">
+<g id="fig-7-patch_2">
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 49.702673 55.764 
 Q 167.671096 55.764 284.186076 55.764 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pba7d367ae1)" d="M 278.986076 53.164 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 278.986076 53.164 
 L 284.186076 55.764 
 L 278.986076 58.364 
 L 278.986076 53.164 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_3">
-<path clip-path="url(#pba7d367ae1)" d="M 289.642673 89.952 
+<g id="fig-7-patch_3">
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 289.642673 89.952 
 Q 407.611096 89.952 524.126076 89.952 
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pba7d367ae1)" d="M 518.926076 87.352 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 518.926076 87.352 
 L 524.126076 89.952 
 L 518.926076 92.552 
 L 518.926076 87.352 
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_4">
-<path clip-path="url(#pba7d367ae1)" d="M 525.577327 124.14 
+<g id="fig-7-patch_4">
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 525.577327 124.14 
 Q 407.608904 124.14 291.093924 124.14 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pba7d367ae1)" d="M 296.293924 126.74 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 296.293924 126.74 
 L 291.093924 124.14 
 L 296.293924 121.54 
 L 296.293924 126.74 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_5">
-<path clip-path="url(#pba7d367ae1)" d="M 285.637327 158.328 
+<g id="fig-7-patch_5">
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 285.637327 158.328 
 Q 167.668904 158.328 51.153924 158.328 
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pba7d367ae1)" d="M 56.353924 160.928 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 56.353924 160.928 
 L 51.153924 158.328 
 L 56.353924 155.728 
 L 56.353924 160.928 
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_6">
-<path clip-path="url(#pba7d367ae1)" d="M 49.702673 192.516 
+<g id="fig-7-patch_6">
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 49.702673 192.516 
 Q 167.671096 192.516 284.186076 192.516 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pba7d367ae1)" d="M 278.986076 189.916 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 278.986076 189.916 
 L 284.186076 192.516 
 L 278.986076 195.116 
 L 278.986076 189.916 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_7">
-<path clip-path="url(#pba7d367ae1)" d="M 289.642673 226.704 
+<g id="fig-7-patch_7">
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 289.642673 226.704 
 Q 407.611096 226.704 524.126076 226.704 
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pba7d367ae1)" d="M 518.926076 224.104 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 518.926076 224.104 
 L 524.126076 226.704 
 L 518.926076 229.304 
 L 518.926076 224.104 
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="line2d_1">
-<path clip-path="url(#pba7d367ae1)" d="M 47.7 258.12 
+<g id="fig-7-line2d_1">
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 47.7 258.12 
 L 47.7 39.132 
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
-<g id="line2d_2">
-<path clip-path="url(#pba7d367ae1)" d="M 287.64 258.12 
+<g id="fig-7-line2d_2">
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 287.64 258.12 
 L 287.64 39.132 
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
-<g id="line2d_3">
-<path clip-path="url(#pba7d367ae1)" d="M 527.58 258.12 
+<g id="fig-7-line2d_3">
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 527.58 258.12 
 L 527.58 39.132 
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
-<g id="text_1">
+<g id="fig-7-text_1">
 <text style="fill: #172c44; font: 700 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 47.7 25.535313)" x="47.7" y="25.535313">Alice</text>
 </g>
-<g id="text_2">
+<g id="fig-7-text_2">
 <text style="fill: #172c44; font: 700 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 287.64 25.492344)" x="287.64" y="25.492344">Mallory</text>
 </g>
-<g id="text_3">
+<g id="fig-7-text_3">
 <text style="fill: #172c44; font: 700 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 527.58 25.535313)" x="527.58" y="25.535313">Bob</text>
 </g>
-<g id="text_4">
+<g id="fig-7-text_4">
 <!-- $A=g^a$ -->
 <g style="fill: #244a75" transform="translate(154.8 49.4388)">
 <text>
@@ -1974,7 +2073,7 @@ L 527.58 39.132
 </text>
 </g>
 </g>
-<g id="text_5">
+<g id="fig-7-text_5">
 <!-- $X=g^x$ (substituted) -->
 <g style="fill: #aa3d46" transform="translate(363.915 83.6268)">
 <text>
@@ -1985,7 +2084,7 @@ L 527.58 39.132
 </text>
 </g>
 </g>
-<g id="text_6">
+<g id="fig-7-text_6">
 <!-- $B=g^b$ -->
 <g style="fill: #244a75" transform="translate(395.01 117.8148)">
 <text>
@@ -1995,7 +2094,7 @@ L 527.58 39.132
 </text>
 </g>
 </g>
-<g id="text_7">
+<g id="fig-7-text_7">
 <!-- $Y=g^y$ (substituted) -->
 <g style="fill: #aa3d46" transform="translate(125.325 152.0028)">
 <text>
@@ -2006,7 +2105,7 @@ L 527.58 39.132
 </text>
 </g>
 </g>
-<g id="text_8">
+<g id="fig-7-text_8">
 <!-- traffic under $K_A=g^{ay}$ -->
 <g style="fill: #244a75" transform="translate(120.87 186.1908)">
 <text>
@@ -2017,7 +2116,7 @@ L 527.58 39.132
 </text>
 </g>
 </g>
-<g id="text_9">
+<g id="fig-7-text_9">
 <!-- re-encrypted traffic under $K_B=g^{bx}$ -->
 <g style="fill: #aa3d46" transform="translate(330.3 220.3788)">
 <text>
@@ -2028,7 +2127,7 @@ L 527.58 39.132
 </text>
 </g>
 </g>
-<g id="text_10">
+<g id="fig-7-text_10">
 <!-- Mallory knows $K_A=A^y$ and $K_B=B^x$; Alice and Bob do not share one authenticated key. -->
 <g style="fill: #267261" transform="translate(68.79 278.196)">
 <text>
@@ -2042,7 +2141,7 @@ L 527.58 39.132
 </g>
 </g>
 <defs>
-<clippath id="pba7d367ae1">
+<clippath id="fig-7-pba7d367ae1">
 <rect height="277.2" width="558" x="8.64" y="8.64"></rect>
 </clippath>
 </defs>
@@ -2184,8 +2283,8 @@ Generate(n):
 <defs>
 <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
 </defs>
-<g id="figure_1">
-<g id="patch_1">
+<g id="fig-8-figure_1">
+<g id="fig-8-patch_1">
 <path d="M 0 276.273812 
 L 370.983438 276.273812 
 L 370.983438 0 
@@ -2193,8 +2292,8 @@ L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
-<g id="axes_1">
-<g id="patch_2">
+<g id="fig-8-axes_1">
+<g id="fig-8-patch_2">
 <path d="M 44.283438 235.341937 
 L 362.343437 235.341937 
 L 362.343437 24.669937 
@@ -2202,7 +2301,7 @@ L 44.283438 24.669937
 z
 " style="fill: #ffffff"></path>
 </g>
-<g id="PathCollection_1">
+<g id="fig-8-PathCollection_1">
 <defs>
 <path d="M 0 3.872983 
 C 1.027127 3.872983 2.012324 3.464901 2.738613 2.738613 
@@ -2214,400 +2313,400 @@ C -3.464901 -2.012324 -3.872983 -1.027127 -3.872983 0
 C -3.872983 1.027127 -3.464901 2.012324 -2.738613 2.738613 
 C -2.012324 3.464901 -1.027127 3.872983 0 3.872983 
 z
-" id="me4491f9a0c" style="stroke: #244a75"></path>
+" id="fig-8-me4491f9a0c" style="stroke: #244a75"></path>
 </defs>
-<g clip-path="url(#p60020a5427)">
-<use style="fill: #244a75; stroke: #244a75" x="105.448822" xlink:href="#me4491f9a0c" y="151.073137"></use>
-<use style="fill: #244a75; stroke: #244a75" x="105.448822" xlink:href="#me4491f9a0c" y="87.871537"></use>
-<use style="fill: #244a75; stroke: #244a75" x="136.031514" xlink:href="#me4491f9a0c" y="130.005937"></use>
-<use style="fill: #244a75; stroke: #244a75" x="136.031514" xlink:href="#me4491f9a0c" y="108.938737"></use>
-<use style="fill: #244a75; stroke: #244a75" x="197.196899" xlink:href="#me4491f9a0c" y="193.207537"></use>
-<use style="fill: #244a75; stroke: #244a75" x="197.196899" xlink:href="#me4491f9a0c" y="45.737137"></use>
-<use style="fill: #244a75; stroke: #244a75" x="258.362284" xlink:href="#me4491f9a0c" y="193.207537"></use>
-<use style="fill: #244a75; stroke: #244a75" x="258.362284" xlink:href="#me4491f9a0c" y="45.737137"></use>
-<use style="fill: #244a75; stroke: #244a75" x="288.944976" xlink:href="#me4491f9a0c" y="172.140337"></use>
-<use style="fill: #244a75; stroke: #244a75" x="288.944976" xlink:href="#me4491f9a0c" y="66.804337"></use>
-<use style="fill: #244a75; stroke: #244a75" x="350.110361" xlink:href="#me4491f9a0c" y="193.207537"></use>
-<use style="fill: #244a75; stroke: #244a75" x="350.110361" xlink:href="#me4491f9a0c" y="45.737137"></use>
+<g clip-path="url(#fig-8-p60020a5427)">
+<use style="fill: #244a75; stroke: #244a75" x="105.448822" xlink:href="#fig-8-me4491f9a0c" y="151.073137"></use>
+<use style="fill: #244a75; stroke: #244a75" x="105.448822" xlink:href="#fig-8-me4491f9a0c" y="87.871537"></use>
+<use style="fill: #244a75; stroke: #244a75" x="136.031514" xlink:href="#fig-8-me4491f9a0c" y="130.005937"></use>
+<use style="fill: #244a75; stroke: #244a75" x="136.031514" xlink:href="#fig-8-me4491f9a0c" y="108.938737"></use>
+<use style="fill: #244a75; stroke: #244a75" x="197.196899" xlink:href="#fig-8-me4491f9a0c" y="193.207537"></use>
+<use style="fill: #244a75; stroke: #244a75" x="197.196899" xlink:href="#fig-8-me4491f9a0c" y="45.737137"></use>
+<use style="fill: #244a75; stroke: #244a75" x="258.362284" xlink:href="#fig-8-me4491f9a0c" y="193.207537"></use>
+<use style="fill: #244a75; stroke: #244a75" x="258.362284" xlink:href="#fig-8-me4491f9a0c" y="45.737137"></use>
+<use style="fill: #244a75; stroke: #244a75" x="288.944976" xlink:href="#fig-8-me4491f9a0c" y="172.140337"></use>
+<use style="fill: #244a75; stroke: #244a75" x="288.944976" xlink:href="#fig-8-me4491f9a0c" y="66.804337"></use>
+<use style="fill: #244a75; stroke: #244a75" x="350.110361" xlink:href="#fig-8-me4491f9a0c" y="193.207537"></use>
+<use style="fill: #244a75; stroke: #244a75" x="350.110361" xlink:href="#fig-8-me4491f9a0c" y="45.737137"></use>
 </g>
 </g>
-<g id="matplotlib.axis_1">
-<g id="xtick_1">
-<g id="line2d_1">
-<path clip-path="url(#p60020a5427)" d="M 44.283438 235.341937 
+<g id="fig-8-matplotlib.axis_1">
+<g id="fig-8-xtick_1">
+<g id="fig-8-line2d_1">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 235.341937 
 L 44.283438 24.669937 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_2">
+<g id="fig-8-line2d_2">
 <defs>
 <path d="M 0 0 
 L 0 3.5 
-" id="m17418859be" style="stroke: #000000; stroke-width: 0.8"></path>
+" id="fig-8-m17418859be" style="stroke: #000000; stroke-width: 0.8"></path>
 </defs>
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#m17418859be" y="235.341937"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#fig-8-m17418859be" y="235.341937"></use>
 </g>
 </g>
-<g id="text_1">
+<g id="fig-8-text_1">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 44.283438 250.700219)" x="44.283438" y="250.700219">0</text>
 </g>
 </g>
-<g id="xtick_2">
-<g id="line2d_3">
-<path clip-path="url(#p60020a5427)" d="M 74.86613 235.341937 
+<g id="fig-8-xtick_2">
+<g id="fig-8-line2d_3">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 74.86613 235.341937 
 L 74.86613 24.669937 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_4">
+<g id="fig-8-line2d_4">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="74.86613" xlink:href="#m17418859be" y="235.341937"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="74.86613" xlink:href="#fig-8-m17418859be" y="235.341937"></use>
 </g>
 </g>
-<g id="text_2">
+<g id="fig-8-text_2">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 74.86613 250.700219)" x="74.86613" y="250.700219">1</text>
 </g>
 </g>
-<g id="xtick_3">
-<g id="line2d_5">
-<path clip-path="url(#p60020a5427)" d="M 105.448822 235.341937 
+<g id="fig-8-xtick_3">
+<g id="fig-8-line2d_5">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 105.448822 235.341937 
 L 105.448822 24.669937 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_6">
+<g id="fig-8-line2d_6">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="105.448822" xlink:href="#m17418859be" y="235.341937"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="105.448822" xlink:href="#fig-8-m17418859be" y="235.341937"></use>
 </g>
 </g>
-<g id="text_3">
+<g id="fig-8-text_3">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 105.448822 250.700219)" x="105.448822" y="250.700219">2</text>
 </g>
 </g>
-<g id="xtick_4">
-<g id="line2d_7">
-<path clip-path="url(#p60020a5427)" d="M 136.031514 235.341937 
+<g id="fig-8-xtick_4">
+<g id="fig-8-line2d_7">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 136.031514 235.341937 
 L 136.031514 24.669937 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_8">
+<g id="fig-8-line2d_8">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="136.031514" xlink:href="#m17418859be" y="235.341937"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="136.031514" xlink:href="#fig-8-m17418859be" y="235.341937"></use>
 </g>
 </g>
-<g id="text_4">
+<g id="fig-8-text_4">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 136.031514 250.700219)" x="136.031514" y="250.700219">3</text>
 </g>
 </g>
-<g id="xtick_5">
-<g id="line2d_9">
-<path clip-path="url(#p60020a5427)" d="M 166.614207 235.341937 
+<g id="fig-8-xtick_5">
+<g id="fig-8-line2d_9">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 166.614207 235.341937 
 L 166.614207 24.669937 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_10">
+<g id="fig-8-line2d_10">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="166.614207" xlink:href="#m17418859be" y="235.341937"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="166.614207" xlink:href="#fig-8-m17418859be" y="235.341937"></use>
 </g>
 </g>
-<g id="text_5">
+<g id="fig-8-text_5">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 166.614207 250.700219)" x="166.614207" y="250.700219">4</text>
 </g>
 </g>
-<g id="xtick_6">
-<g id="line2d_11">
-<path clip-path="url(#p60020a5427)" d="M 197.196899 235.341937 
+<g id="fig-8-xtick_6">
+<g id="fig-8-line2d_11">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 197.196899 235.341937 
 L 197.196899 24.669937 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_12">
+<g id="fig-8-line2d_12">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="197.196899" xlink:href="#m17418859be" y="235.341937"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="197.196899" xlink:href="#fig-8-m17418859be" y="235.341937"></use>
 </g>
 </g>
-<g id="text_6">
+<g id="fig-8-text_6">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 197.196899 250.700219)" x="197.196899" y="250.700219">5</text>
 </g>
 </g>
-<g id="xtick_7">
-<g id="line2d_13">
-<path clip-path="url(#p60020a5427)" d="M 227.779591 235.341937 
+<g id="fig-8-xtick_7">
+<g id="fig-8-line2d_13">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 227.779591 235.341937 
 L 227.779591 24.669937 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_14">
+<g id="fig-8-line2d_14">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="227.779591" xlink:href="#m17418859be" y="235.341937"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="227.779591" xlink:href="#fig-8-m17418859be" y="235.341937"></use>
 </g>
 </g>
-<g id="text_7">
+<g id="fig-8-text_7">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 227.779591 250.700219)" x="227.779591" y="250.700219">6</text>
 </g>
 </g>
-<g id="xtick_8">
-<g id="line2d_15">
-<path clip-path="url(#p60020a5427)" d="M 258.362284 235.341937 
+<g id="fig-8-xtick_8">
+<g id="fig-8-line2d_15">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 258.362284 235.341937 
 L 258.362284 24.669937 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_16">
+<g id="fig-8-line2d_16">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="258.362284" xlink:href="#m17418859be" y="235.341937"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="258.362284" xlink:href="#fig-8-m17418859be" y="235.341937"></use>
 </g>
 </g>
-<g id="text_8">
+<g id="fig-8-text_8">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 258.362284 250.700219)" x="258.362284" y="250.700219">7</text>
 </g>
 </g>
-<g id="xtick_9">
-<g id="line2d_17">
-<path clip-path="url(#p60020a5427)" d="M 288.944976 235.341937 
+<g id="fig-8-xtick_9">
+<g id="fig-8-line2d_17">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 288.944976 235.341937 
 L 288.944976 24.669937 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_18">
+<g id="fig-8-line2d_18">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="288.944976" xlink:href="#m17418859be" y="235.341937"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="288.944976" xlink:href="#fig-8-m17418859be" y="235.341937"></use>
 </g>
 </g>
-<g id="text_9">
+<g id="fig-8-text_9">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 288.944976 250.700219)" x="288.944976" y="250.700219">8</text>
 </g>
 </g>
-<g id="xtick_10">
-<g id="line2d_19">
-<path clip-path="url(#p60020a5427)" d="M 319.527668 235.341937 
+<g id="fig-8-xtick_10">
+<g id="fig-8-line2d_19">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 319.527668 235.341937 
 L 319.527668 24.669937 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_20">
+<g id="fig-8-line2d_20">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="319.527668" xlink:href="#m17418859be" y="235.341937"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="319.527668" xlink:href="#fig-8-m17418859be" y="235.341937"></use>
 </g>
 </g>
-<g id="text_10">
+<g id="fig-8-text_10">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 319.527668 250.700219)" x="319.527668" y="250.700219">9</text>
 </g>
 </g>
-<g id="xtick_11">
-<g id="line2d_21">
-<path clip-path="url(#p60020a5427)" d="M 350.110361 235.341937 
+<g id="fig-8-xtick_11">
+<g id="fig-8-line2d_21">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 350.110361 235.341937 
 L 350.110361 24.669937 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_22">
+<g id="fig-8-line2d_22">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="350.110361" xlink:href="#m17418859be" y="235.341937"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="350.110361" xlink:href="#fig-8-m17418859be" y="235.341937"></use>
 </g>
 </g>
-<g id="text_11">
+<g id="fig-8-text_11">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 350.110361 250.700219)" x="350.110361" y="250.700219">10</text>
 </g>
 </g>
-<g id="text_12">
+<g id="fig-8-text_12">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 203.313438 265.346156)" x="203.313438" y="265.346156">x modulo 11</text>
 </g>
 </g>
-<g id="matplotlib.axis_2">
-<g id="ytick_1">
-<g id="line2d_23">
-<path clip-path="url(#p60020a5427)" d="M 44.283438 235.341937 
+<g id="fig-8-matplotlib.axis_2">
+<g id="fig-8-ytick_1">
+<g id="fig-8-line2d_23">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 235.341937 
 L 362.343437 235.341937 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_24">
+<g id="fig-8-line2d_24">
 <defs>
 <path d="M 0 0 
 L -3.5 0 
-" id="m9840e076e8" style="stroke: #000000; stroke-width: 0.8"></path>
+" id="fig-8-m9840e076e8" style="stroke: #000000; stroke-width: 0.8"></path>
 </defs>
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#m9840e076e8" y="235.341937"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#fig-8-m9840e076e8" y="235.341937"></use>
 </g>
 </g>
-<g id="text_13">
+<g id="fig-8-text_13">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: end" transform="rotate(-0 37.283438 239.521078)" x="37.283438" y="239.521078">0</text>
 </g>
 </g>
-<g id="ytick_2">
-<g id="line2d_25">
-<path clip-path="url(#p60020a5427)" d="M 44.283438 214.274737 
+<g id="fig-8-ytick_2">
+<g id="fig-8-line2d_25">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 214.274737 
 L 362.343437 214.274737 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_26">
+<g id="fig-8-line2d_26">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#m9840e076e8" y="214.274737"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#fig-8-m9840e076e8" y="214.274737"></use>
 </g>
 </g>
-<g id="text_14">
+<g id="fig-8-text_14">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: end" transform="rotate(-0 37.283438 218.453878)" x="37.283438" y="218.453878">1</text>
 </g>
 </g>
-<g id="ytick_3">
-<g id="line2d_27">
-<path clip-path="url(#p60020a5427)" d="M 44.283438 193.207537 
+<g id="fig-8-ytick_3">
+<g id="fig-8-line2d_27">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 193.207537 
 L 362.343437 193.207537 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_28">
+<g id="fig-8-line2d_28">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#m9840e076e8" y="193.207537"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#fig-8-m9840e076e8" y="193.207537"></use>
 </g>
 </g>
-<g id="text_15">
+<g id="fig-8-text_15">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: end" transform="rotate(-0 37.283438 197.386678)" x="37.283438" y="197.386678">2</text>
 </g>
 </g>
-<g id="ytick_4">
-<g id="line2d_29">
-<path clip-path="url(#p60020a5427)" d="M 44.283438 172.140337 
+<g id="fig-8-ytick_4">
+<g id="fig-8-line2d_29">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 172.140337 
 L 362.343437 172.140337 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_30">
+<g id="fig-8-line2d_30">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#m9840e076e8" y="172.140337"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#fig-8-m9840e076e8" y="172.140337"></use>
 </g>
 </g>
-<g id="text_16">
+<g id="fig-8-text_16">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: end" transform="rotate(-0 37.283438 176.319478)" x="37.283438" y="176.319478">3</text>
 </g>
 </g>
-<g id="ytick_5">
-<g id="line2d_31">
-<path clip-path="url(#p60020a5427)" d="M 44.283438 151.073137 
+<g id="fig-8-ytick_5">
+<g id="fig-8-line2d_31">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 151.073137 
 L 362.343437 151.073137 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_32">
+<g id="fig-8-line2d_32">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#m9840e076e8" y="151.073137"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#fig-8-m9840e076e8" y="151.073137"></use>
 </g>
 </g>
-<g id="text_17">
+<g id="fig-8-text_17">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: end" transform="rotate(-0 37.283438 155.252278)" x="37.283438" y="155.252278">4</text>
 </g>
 </g>
-<g id="ytick_6">
-<g id="line2d_33">
-<path clip-path="url(#p60020a5427)" d="M 44.283438 130.005937 
+<g id="fig-8-ytick_6">
+<g id="fig-8-line2d_33">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 130.005937 
 L 362.343437 130.005937 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_34">
+<g id="fig-8-line2d_34">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#m9840e076e8" y="130.005937"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#fig-8-m9840e076e8" y="130.005937"></use>
 </g>
 </g>
-<g id="text_18">
+<g id="fig-8-text_18">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: end" transform="rotate(-0 37.283438 134.185078)" x="37.283438" y="134.185078">5</text>
 </g>
 </g>
-<g id="ytick_7">
-<g id="line2d_35">
-<path clip-path="url(#p60020a5427)" d="M 44.283438 108.938737 
+<g id="fig-8-ytick_7">
+<g id="fig-8-line2d_35">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 108.938737 
 L 362.343437 108.938737 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_36">
+<g id="fig-8-line2d_36">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#m9840e076e8" y="108.938737"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#fig-8-m9840e076e8" y="108.938737"></use>
 </g>
 </g>
-<g id="text_19">
+<g id="fig-8-text_19">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: end" transform="rotate(-0 37.283438 113.117878)" x="37.283438" y="113.117878">6</text>
 </g>
 </g>
-<g id="ytick_8">
-<g id="line2d_37">
-<path clip-path="url(#p60020a5427)" d="M 44.283438 87.871537 
+<g id="fig-8-ytick_8">
+<g id="fig-8-line2d_37">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 87.871537 
 L 362.343437 87.871537 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_38">
+<g id="fig-8-line2d_38">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#m9840e076e8" y="87.871537"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#fig-8-m9840e076e8" y="87.871537"></use>
 </g>
 </g>
-<g id="text_20">
+<g id="fig-8-text_20">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: end" transform="rotate(-0 37.283438 92.050678)" x="37.283438" y="92.050678">7</text>
 </g>
 </g>
-<g id="ytick_9">
-<g id="line2d_39">
-<path clip-path="url(#p60020a5427)" d="M 44.283438 66.804337 
+<g id="fig-8-ytick_9">
+<g id="fig-8-line2d_39">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 66.804337 
 L 362.343437 66.804337 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_40">
+<g id="fig-8-line2d_40">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#m9840e076e8" y="66.804337"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#fig-8-m9840e076e8" y="66.804337"></use>
 </g>
 </g>
-<g id="text_21">
+<g id="fig-8-text_21">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: end" transform="rotate(-0 37.283438 70.983478)" x="37.283438" y="70.983478">8</text>
 </g>
 </g>
-<g id="ytick_10">
-<g id="line2d_41">
-<path clip-path="url(#p60020a5427)" d="M 44.283438 45.737137 
+<g id="fig-8-ytick_10">
+<g id="fig-8-line2d_41">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 45.737137 
 L 362.343437 45.737137 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_42">
+<g id="fig-8-line2d_42">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#m9840e076e8" y="45.737137"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#fig-8-m9840e076e8" y="45.737137"></use>
 </g>
 </g>
-<g id="text_22">
+<g id="fig-8-text_22">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: end" transform="rotate(-0 37.283438 49.916278)" x="37.283438" y="49.916278">9</text>
 </g>
 </g>
-<g id="ytick_11">
-<g id="line2d_43">
-<path clip-path="url(#p60020a5427)" d="M 44.283438 24.669937 
+<g id="fig-8-ytick_11">
+<g id="fig-8-line2d_43">
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 24.669937 
 L 362.343437 24.669937 
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
-<g id="line2d_44">
+<g id="fig-8-line2d_44">
 <g>
-<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#m9840e076e8" y="24.669937"></use>
+<use style="stroke: #000000; stroke-width: 0.8" x="44.283438" xlink:href="#fig-8-m9840e076e8" y="24.669937"></use>
 </g>
 </g>
-<g id="text_23">
+<g id="fig-8-text_23">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: end" transform="rotate(-0 37.283438 28.849078)" x="37.283438" y="28.849078">10</text>
 </g>
 </g>
-<g id="text_24">
+<g id="fig-8-text_24">
 <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-90 16.998281 130.005937)" x="16.998281" y="130.005937">y modulo 11</text>
 </g>
 </g>
-<g id="patch_3">
+<g id="fig-8-patch_3">
 <path d="M 44.283438 235.341937 
 L 44.283438 24.669937 
 " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path>
 </g>
-<g id="patch_4">
+<g id="fig-8-patch_4">
 <path d="M 362.343437 235.341937 
 L 362.343437 24.669937 
 " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path>
 </g>
-<g id="patch_5">
+<g id="fig-8-patch_5">
 <path d="M 44.283438 235.341937 
 L 362.343437 235.341937 
 " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path>
 </g>
-<g id="patch_6">
+<g id="fig-8-patch_6">
 <path d="M 44.283438 24.669937 
 L 362.343437 24.669937 
 " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path>
 </g>
-<g id="text_25">
+<g id="fig-8-text_25">
 <text style="font: 13.2px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 203.313438 18.669937)" x="203.313438" y="18.669937">y² = x³ + x + 6 over F₁₁: 12 finite points + O</text>
 </g>
 </g>
 </g>
 <defs>
-<clippath id="p60020a5427">
+<clippath id="fig-8-p60020a5427">
 <rect height="210.672" width="318.06" x="44.283438" y="24.669937"></rect>
 </clippath>
 </defs>
@@ -2683,8 +2782,8 @@ L 362.343437 24.669937
 <defs>
 <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
 </defs>
-<g id="figure_1">
-<g id="patch_1">
+<g id="fig-9-figure_1">
+<g id="fig-9-patch_1">
 <path d="M 0 294.48 
 L 575.28 294.48 
 L 575.28 0 
@@ -2692,98 +2791,98 @@ L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
-<g id="axes_1">
-<g id="patch_2">
-<path clip-path="url(#pba7d367ae1)" d="M 49.702673 55.764 
+<g id="fig-9-axes_1">
+<g id="fig-9-patch_2">
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 49.702673 55.764 
 Q 167.671096 55.764 284.186076 55.764 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pba7d367ae1)" d="M 278.986076 53.164 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 278.986076 53.164 
 L 284.186076 55.764 
 L 278.986076 58.364 
 L 278.986076 53.164 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_3">
-<path clip-path="url(#pba7d367ae1)" d="M 289.642673 89.952 
+<g id="fig-9-patch_3">
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 289.642673 89.952 
 Q 407.611096 89.952 524.126076 89.952 
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pba7d367ae1)" d="M 518.926076 87.352 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 518.926076 87.352 
 L 524.126076 89.952 
 L 518.926076 92.552 
 L 518.926076 87.352 
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_4">
-<path clip-path="url(#pba7d367ae1)" d="M 525.577327 124.14 
+<g id="fig-9-patch_4">
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 525.577327 124.14 
 Q 407.608904 124.14 291.093924 124.14 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pba7d367ae1)" d="M 296.293924 126.74 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 296.293924 126.74 
 L 291.093924 124.14 
 L 296.293924 121.54 
 L 296.293924 126.74 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_5">
-<path clip-path="url(#pba7d367ae1)" d="M 285.637327 158.328 
+<g id="fig-9-patch_5">
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 285.637327 158.328 
 Q 167.668904 158.328 51.153924 158.328 
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pba7d367ae1)" d="M 56.353924 160.928 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 56.353924 160.928 
 L 51.153924 158.328 
 L 56.353924 155.728 
 L 56.353924 160.928 
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_6">
-<path clip-path="url(#pba7d367ae1)" d="M 49.702673 192.516 
+<g id="fig-9-patch_6">
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 49.702673 192.516 
 Q 167.671096 192.516 284.186076 192.516 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pba7d367ae1)" d="M 278.986076 189.916 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 278.986076 189.916 
 L 284.186076 192.516 
 L 278.986076 195.116 
 L 278.986076 189.916 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_7">
-<path clip-path="url(#pba7d367ae1)" d="M 289.642673 226.704 
+<g id="fig-9-patch_7">
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 289.642673 226.704 
 Q 407.611096 226.704 524.126076 226.704 
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pba7d367ae1)" d="M 518.926076 224.104 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 518.926076 224.104 
 L 524.126076 226.704 
 L 518.926076 229.304 
 L 518.926076 224.104 
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="line2d_1">
-<path clip-path="url(#pba7d367ae1)" d="M 47.7 258.12 
+<g id="fig-9-line2d_1">
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 47.7 258.12 
 L 47.7 39.132 
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
-<g id="line2d_2">
-<path clip-path="url(#pba7d367ae1)" d="M 287.64 258.12 
+<g id="fig-9-line2d_2">
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 287.64 258.12 
 L 287.64 39.132 
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
-<g id="line2d_3">
-<path clip-path="url(#pba7d367ae1)" d="M 527.58 258.12 
+<g id="fig-9-line2d_3">
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 527.58 258.12 
 L 527.58 39.132 
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
-<g id="text_1">
+<g id="fig-9-text_1">
 <text style="fill: #172c44; font: 700 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 47.7 25.535313)" x="47.7" y="25.535313">Alice</text>
 </g>
-<g id="text_2">
+<g id="fig-9-text_2">
 <text style="fill: #172c44; font: 700 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 287.64 25.492344)" x="287.64" y="25.492344">Mallory</text>
 </g>
-<g id="text_3">
+<g id="fig-9-text_3">
 <text style="fill: #172c44; font: 700 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 527.58 25.535313)" x="527.58" y="25.535313">Bob</text>
 </g>
-<g id="text_4">
+<g id="fig-9-text_4">
 <!-- $A=g^a$ -->
 <g style="fill: #244a75" transform="translate(154.8 49.4388)">
 <text>
@@ -2793,7 +2892,7 @@ L 527.58 39.132
 </text>
 </g>
 </g>
-<g id="text_5">
+<g id="fig-9-text_5">
 <!-- $X=g^x$ (substituted) -->
 <g style="fill: #aa3d46" transform="translate(363.915 83.6268)">
 <text>
@@ -2804,7 +2903,7 @@ L 527.58 39.132
 </text>
 </g>
 </g>
-<g id="text_6">
+<g id="fig-9-text_6">
 <!-- $B=g^b$ -->
 <g style="fill: #244a75" transform="translate(395.01 117.8148)">
 <text>
@@ -2814,7 +2913,7 @@ L 527.58 39.132
 </text>
 </g>
 </g>
-<g id="text_7">
+<g id="fig-9-text_7">
 <!-- $Y=g^y$ (substituted) -->
 <g style="fill: #aa3d46" transform="translate(125.325 152.0028)">
 <text>
@@ -2825,7 +2924,7 @@ L 527.58 39.132
 </text>
 </g>
 </g>
-<g id="text_8">
+<g id="fig-9-text_8">
 <!-- traffic under $K_A=g^{ay}$ -->
 <g style="fill: #244a75" transform="translate(120.87 186.1908)">
 <text>
@@ -2836,7 +2935,7 @@ L 527.58 39.132
 </text>
 </g>
 </g>
-<g id="text_9">
+<g id="fig-9-text_9">
 <!-- re-encrypted traffic under $K_B=g^{bx}$ -->
 <g style="fill: #aa3d46" transform="translate(330.3 220.3788)">
 <text>
@@ -2847,7 +2946,7 @@ L 527.58 39.132
 </text>
 </g>
 </g>
-<g id="text_10">
+<g id="fig-9-text_10">
 <!-- Mallory knows $K_A=A^y$ and $K_B=B^x$; Alice and Bob do not share one authenticated key. -->
 <g style="fill: #267261" transform="translate(68.79 278.196)">
 <text>
@@ -2861,7 +2960,7 @@ L 527.58 39.132
 </g>
 </g>
 <defs>
-<clippath id="pba7d367ae1">
+<clippath id="fig-9-pba7d367ae1">
 <rect height="277.2" width="558" x="8.64" y="8.64"></rect>
 </clippath>
 </defs>
@@ -2944,8 +3043,8 @@ M^{ed}=M\left(M^{p-1}\right)^{t(q-1)}\equiv M\pmod p.
 <defs>
 <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
 </defs>
-<g id="figure_1">
-<g id="patch_1">
+<g id="fig-10-figure_1">
+<g id="fig-10-patch_1">
 <path d="M 0 155.88 
 L 575.28 155.88 
 L 575.28 0 
@@ -2953,9 +3052,9 @@ L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
-<g id="axes_1">
-<g id="patch_2">
-<path clip-path="url(#p49a5b14950)" d="M 10.872 96.2352 
+<g id="fig-10-axes_1">
+<g id="fig-10-patch_2">
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 10.872 96.2352 
 L 126.378 96.2352 
 Q 130.284 96.2352 130.284 92.3544 
 L 130.284 60.7536 
@@ -2967,8 +3066,8 @@ Q 6.966 96.2352 10.872 96.2352
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_3">
-<path clip-path="url(#p49a5b14950)" d="M 150.372 96.2352 
+<g id="fig-10-patch_3">
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 150.372 96.2352 
 L 265.878 96.2352 
 Q 269.784 96.2352 269.784 92.3544 
 L 269.784 60.7536 
@@ -2980,8 +3079,8 @@ Q 146.466 96.2352 150.372 96.2352
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_4">
-<path clip-path="url(#p49a5b14950)" d="M 289.872 96.2352 
+<g id="fig-10-patch_4">
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 289.872 96.2352 
 L 405.378 96.2352 
 Q 409.284 96.2352 409.284 92.3544 
 L 409.284 60.7536 
@@ -2993,8 +3092,8 @@ Q 285.966 96.2352 289.872 96.2352
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_5">
-<path clip-path="url(#p49a5b14950)" d="M 429.372 96.2352 
+<g id="fig-10-patch_5">
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 429.372 96.2352 
 L 544.878 96.2352 
 Q 548.784 96.2352 548.784 92.3544 
 L 548.784 60.7536 
@@ -3006,58 +3105,58 @@ Q 425.466 96.2352 429.372 96.2352
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_6">
-<path clip-path="url(#p49a5b14950)" d="M 133.399182 76.2768 
+<g id="fig-10-patch_6">
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 133.399182 76.2768 
 Q 138.375286 76.2768 141.897945 76.2768 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p49a5b14950)" d="M 136.697945 73.6768 
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 136.697945 73.6768 
 L 141.897945 76.2768 
 L 136.697945 78.8768 
 L 136.697945 73.6768 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_7">
-<path clip-path="url(#p49a5b14950)" d="M 272.899182 76.2768 
+<g id="fig-10-patch_7">
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 272.899182 76.2768 
 Q 277.875286 76.2768 281.397945 76.2768 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p49a5b14950)" d="M 276.197945 73.6768 
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 276.197945 73.6768 
 L 281.397945 76.2768 
 L 276.197945 78.8768 
 L 276.197945 73.6768 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_8">
-<path clip-path="url(#p49a5b14950)" d="M 412.399182 76.2768 
+<g id="fig-10-patch_8">
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 412.399182 76.2768 
 Q 417.375286 76.2768 420.897945 76.2768 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p49a5b14950)" d="M 415.697945 73.6768 
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 415.697945 73.6768 
 L 420.897945 76.2768 
 L 415.697945 78.8768 
 L 415.697945 73.6768 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="text_1">
+<g id="fig-10-text_1">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 68.625 79.313375)" x="68.625" y="79.313375">Message M</text>
 </g>
-<g id="text_2">
+<g id="fig-10-text_2">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 208.125 79.313375)" x="208.125" y="79.313375">Hash H(M)</text>
 </g>
-<g id="text_3">
+<g id="fig-10-text_3">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 347.625 79.313375)" x="347.625" y="79.313375">Sign with SK</text>
 </g>
-<g id="text_4">
+<g id="fig-10-text_4">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 487.125 79.313375)" x="487.125" y="79.313375">Signature s</text>
 </g>
-<g id="text_5">
+<g id="fig-10-text_5">
 <text style="fill: #267261; font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 287.64 122.292)" x="287.64" y="122.292">Verifier: authentic PK + M + s → verify exact content and context</text>
 </g>
 </g>
 </g>
 <defs>
-<clippath id="p49a5b14950">
+<clippath id="fig-10-p49a5b14950">
 <rect height="138.6" width="558" x="8.64" y="8.64"></rect>
 </clippath>
 </defs>
@@ -3185,8 +3284,8 @@ Verifier:   validate identity/key binding; Verify(PKA,context||M,s)
 <defs>
 <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
 </defs>
-<g id="figure_1">
-<g id="patch_1">
+<g id="fig-11-figure_1">
+<g id="fig-11-patch_1">
 <path d="M 0 155.88 
 L 575.28 155.88 
 L 575.28 0 
@@ -3194,9 +3293,9 @@ L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
-<g id="axes_1">
-<g id="patch_2">
-<path clip-path="url(#p49a5b14950)" d="M 10.872 96.2352 
+<g id="fig-11-axes_1">
+<g id="fig-11-patch_2">
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 10.872 96.2352 
 L 126.378 96.2352 
 Q 130.284 96.2352 130.284 92.3544 
 L 130.284 60.7536 
@@ -3208,8 +3307,8 @@ Q 6.966 96.2352 10.872 96.2352
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_3">
-<path clip-path="url(#p49a5b14950)" d="M 150.372 96.2352 
+<g id="fig-11-patch_3">
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 150.372 96.2352 
 L 265.878 96.2352 
 Q 269.784 96.2352 269.784 92.3544 
 L 269.784 60.7536 
@@ -3221,8 +3320,8 @@ Q 146.466 96.2352 150.372 96.2352
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_4">
-<path clip-path="url(#p49a5b14950)" d="M 289.872 96.2352 
+<g id="fig-11-patch_4">
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 289.872 96.2352 
 L 405.378 96.2352 
 Q 409.284 96.2352 409.284 92.3544 
 L 409.284 60.7536 
@@ -3234,8 +3333,8 @@ Q 285.966 96.2352 289.872 96.2352
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_5">
-<path clip-path="url(#p49a5b14950)" d="M 429.372 96.2352 
+<g id="fig-11-patch_5">
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 429.372 96.2352 
 L 544.878 96.2352 
 Q 548.784 96.2352 548.784 92.3544 
 L 548.784 60.7536 
@@ -3247,58 +3346,58 @@ Q 425.466 96.2352 429.372 96.2352
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_6">
-<path clip-path="url(#p49a5b14950)" d="M 133.399182 76.2768 
+<g id="fig-11-patch_6">
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 133.399182 76.2768 
 Q 138.375286 76.2768 141.897945 76.2768 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p49a5b14950)" d="M 136.697945 73.6768 
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 136.697945 73.6768 
 L 141.897945 76.2768 
 L 136.697945 78.8768 
 L 136.697945 73.6768 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_7">
-<path clip-path="url(#p49a5b14950)" d="M 272.899182 76.2768 
+<g id="fig-11-patch_7">
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 272.899182 76.2768 
 Q 277.875286 76.2768 281.397945 76.2768 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p49a5b14950)" d="M 276.197945 73.6768 
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 276.197945 73.6768 
 L 281.397945 76.2768 
 L 276.197945 78.8768 
 L 276.197945 73.6768 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_8">
-<path clip-path="url(#p49a5b14950)" d="M 412.399182 76.2768 
+<g id="fig-11-patch_8">
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 412.399182 76.2768 
 Q 417.375286 76.2768 420.897945 76.2768 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p49a5b14950)" d="M 415.697945 73.6768 
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 415.697945 73.6768 
 L 420.897945 76.2768 
 L 415.697945 78.8768 
 L 415.697945 73.6768 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="text_1">
+<g id="fig-11-text_1">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 68.625 79.313375)" x="68.625" y="79.313375">Message M</text>
 </g>
-<g id="text_2">
+<g id="fig-11-text_2">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 208.125 79.313375)" x="208.125" y="79.313375">Hash H(M)</text>
 </g>
-<g id="text_3">
+<g id="fig-11-text_3">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 347.625 79.313375)" x="347.625" y="79.313375">Sign with SK</text>
 </g>
-<g id="text_4">
+<g id="fig-11-text_4">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 487.125 79.313375)" x="487.125" y="79.313375">Signature s</text>
 </g>
-<g id="text_5">
+<g id="fig-11-text_5">
 <text style="fill: #267261; font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 287.64 122.292)" x="287.64" y="122.292">Verifier: authentic PK + M + s → verify exact content and context</text>
 </g>
 </g>
 </g>
 <defs>
-<clippath id="p49a5b14950">
+<clippath id="fig-11-p49a5b14950">
 <rect height="138.6" width="558" x="8.64" y="8.64"></rect>
 </clippath>
 </defs>
@@ -3563,8 +3662,8 @@ C_2(C_1^x)^{-1}=Mg^{xr}g^{-rx}=M.
 <defs>
 <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
 </defs>
-<g id="figure_1">
-<g id="patch_1">
+<g id="fig-12-figure_1">
+<g id="fig-12-patch_1">
 <path d="M 0 172.512 
 L 575.28 172.512 
 L 575.28 0 
@@ -3572,9 +3671,9 @@ L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
-<g id="axes_1">
-<g id="patch_2">
-<path clip-path="url(#p66da2aba36)" d="M 22.032 104.5512 
+<g id="fig-12-axes_1">
+<g id="fig-12-patch_2">
+<path clip-path="url(#fig-12-p66da2aba36)" d="M 22.032 104.5512 
 L 168.228 104.5512 
 Q 172.134 104.5512 172.134 100.6704 
 L 172.134 57.9816 
@@ -3586,8 +3685,8 @@ Q 18.126 104.5512 22.032 104.5512
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_3">
-<path clip-path="url(#p66da2aba36)" d="M 214.542 104.5512 
+<g id="fig-12-patch_3">
+<path clip-path="url(#fig-12-p66da2aba36)" d="M 214.542 104.5512 
 L 360.738 104.5512 
 Q 364.644 104.5512 364.644 100.6704 
 L 364.644 57.9816 
@@ -3599,8 +3698,8 @@ Q 210.636 104.5512 214.542 104.5512
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_4">
-<path clip-path="url(#p66da2aba36)" d="M 407.052 104.5512 
+<g id="fig-12-patch_4">
+<path clip-path="url(#fig-12-p66da2aba36)" d="M 407.052 104.5512 
 L 553.248 104.5512 
 Q 557.154 104.5512 557.154 100.6704 
 L 557.154 57.9816 
@@ -3612,53 +3711,53 @@ Q 403.146 104.5512 407.052 104.5512
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_5">
-<path clip-path="url(#p66da2aba36)" d="M 175.246798 77.94 
+<g id="fig-12-patch_5">
+<path clip-path="url(#fig-12-p66da2aba36)" d="M 175.246798 77.94 
 Q 191.381393 77.94 206.062544 77.94 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p66da2aba36)" d="M 200.862544 75.34 
+<path clip-path="url(#fig-12-p66da2aba36)" d="M 200.862544 75.34 
 L 206.062544 77.94 
 L 200.862544 80.54 
 L 200.862544 75.34 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_6">
-<path clip-path="url(#p66da2aba36)" d="M 367.756798 77.94 
+<g id="fig-12-patch_6">
+<path clip-path="url(#fig-12-p66da2aba36)" d="M 367.756798 77.94 
 Q 383.891393 77.94 398.572544 77.94 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#p66da2aba36)" d="M 393.372544 75.34 
+<path clip-path="url(#fig-12-p66da2aba36)" d="M 393.372544 75.34 
 L 398.572544 77.94 
 L 393.372544 80.54 
 L 393.372544 75.34 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="text_1">
+<g id="fig-12-text_1">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'" transform="translate(56.662031 76.486469)">Trusted root CA</text>
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'" transform="translate(46.941719 87.684281)">public key installed</text>
 </g>
-<g id="text_2">
+<g id="fig-12-text_2">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'" transform="translate(246.879844 76.486469)">Intermediate CA</text>
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'" transform="translate(262.410312 87.684281)">certificate</text>
 </g>
-<g id="text_3">
+<g id="fig-12-text_3">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'" transform="translate(436.933594 76.486469)">Server certificate</text>
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'" transform="translate(433.21875 87.684281)">name + public key</text>
 </g>
-<g id="text_4">
+<g id="fig-12-text_4">
 <text style="fill: #244a75; font: 9px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 191.385 71.633081)" x="191.385" y="71.633081">signs</text>
 </g>
-<g id="text_5">
+<g id="fig-12-text_5">
 <text style="fill: #244a75; font: 9px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 383.895 71.633081)" x="383.895" y="71.633081">signs</text>
 </g>
-<g id="text_6">
+<g id="fig-12-text_6">
 <text style="fill: #267261; font: 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 287.64 144.468)" x="287.64" y="144.468">Trust starts at a configured anchor; validate the entire chain and hostname.</text>
 </g>
 </g>
 </g>
 <defs>
-<clippath id="p66da2aba36">
+<clippath id="fig-12-p66da2aba36">
 <rect height="155.232" width="558" x="8.64" y="8.64"></rect>
 </clippath>
 </defs>
@@ -3757,8 +3856,8 @@ z
 <defs>
 <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
 </defs>
-<g id="figure_1">
-<g id="patch_1">
+<g id="fig-13-figure_1">
+<g id="fig-13-patch_1">
 <path d="M 0 250.128 
 L 579.892578 250.128 
 L 579.892578 0 
@@ -3766,94 +3865,94 @@ L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
-<g id="axes_1">
-<g id="patch_2">
-<path clip-path="url(#pe743b8a561)" d="M 294.255251 55.764 
+<g id="fig-13-axes_1">
+<g id="fig-13-patch_2">
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 294.255251 55.764 
 Q 412.223675 55.764 528.738654 55.764 
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pe743b8a561)" d="M 523.538654 53.164 
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 523.538654 53.164 
 L 528.738654 55.764 
 L 523.538654 58.364 
 L 523.538654 53.164 
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_3">
-<path clip-path="url(#pe743b8a561)" d="M 54.315251 95.958 
+<g id="fig-13-patch_3">
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 54.315251 95.958 
 Q 172.283675 95.958 288.798654 95.958 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pe743b8a561)" d="M 283.598654 93.358 
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 283.598654 93.358 
 L 288.798654 95.958 
 L 283.598654 98.558 
 L 283.598654 93.358 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_4">
-<path clip-path="url(#pe743b8a561)" d="M 294.255251 136.152 
+<g id="fig-13-patch_4">
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 294.255251 136.152 
 Q 412.223675 136.152 528.738654 136.152 
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pe743b8a561)" d="M 523.538654 133.552 
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 523.538654 133.552 
 L 528.738654 136.152 
 L 523.538654 138.752 
 L 523.538654 133.552 
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_5">
-<path clip-path="url(#pe743b8a561)" d="M 530.189905 176.346 
+<g id="fig-13-patch_5">
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 530.189905 176.346 
 Q 412.221482 176.346 295.706502 176.346 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pe743b8a561)" d="M 300.906502 178.946 
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 300.906502 178.946 
 L 295.706502 176.346 
 L 300.906502 173.746 
 L 300.906502 178.946 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="line2d_1">
-<path clip-path="url(#pe743b8a561)" d="M 52.312578 213.768 
+<g id="fig-13-line2d_1">
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 52.312578 213.768 
 L 52.312578 39.132 
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
-<g id="line2d_2">
-<path clip-path="url(#pe743b8a561)" d="M 292.252578 213.768 
+<g id="fig-13-line2d_2">
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 292.252578 213.768 
 L 292.252578 39.132 
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
-<g id="line2d_3">
-<path clip-path="url(#pe743b8a561)" d="M 532.192578 213.768 
+<g id="fig-13-line2d_3">
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 532.192578 213.768 
 L 532.192578 39.132 
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
-<g id="text_1">
+<g id="fig-13-text_1">
 <text style="fill: #172c44; font: 700 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 52.312578 25.492344)" x="52.312578" y="25.492344">Attacker page</text>
 </g>
-<g id="text_2">
+<g id="fig-13-text_2">
 <text style="fill: #172c44; font: 700 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 292.252578 25.535313)" x="292.252578" y="25.535313">Victim browser</text>
 </g>
-<g id="text_3">
+<g id="fig-13-text_3">
 <text style="fill: #172c44; font: 700 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 532.192578 25.535313)" x="532.192578" y="25.535313">Bank</text>
 </g>
-<g id="text_4">
+<g id="fig-13-text_4">
 <text style="fill: #aa3d46; font: 9px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 412.222578 49.457081)" x="412.222578" y="49.457081">earlier login → session cookie</text>
 </g>
-<g id="text_5">
+<g id="fig-13-text_5">
 <text style="fill: #244a75; font: 9px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 172.282578 89.651081)" x="172.282578" y="89.651081">load page containing forged request</text>
 </g>
-<g id="text_6">
+<g id="fig-13-text_6">
 <text style="fill: #aa3d46; font: 9px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 412.222578 129.845081)" x="412.222578" y="129.845081">request + automatically attached bank cookie</text>
 </g>
-<g id="text_7">
+<g id="fig-13-text_7">
 <text style="fill: #244a75; font: 9px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 412.222578 170.039081)" x="412.222578" y="170.039081">accept only if session AND CSRF token validate</text>
 </g>
-<g id="text_8">
+<g id="fig-13-text_8">
 <text style="fill: #267261; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 292.252578 233.864313)" x="292.252578" y="233.864313">The remote attacker cannot read the victim’s session-bound form token.</text>
 </g>
 </g>
 </g>
 <defs>
-<clippath id="pe743b8a561">
+<clippath id="fig-13-pe743b8a561">
 <rect height="232.848" width="558" x="13.252578" y="8.64"></rect>
 </clippath>
 </defs>
@@ -3923,8 +4022,8 @@ tag = HMAC(Kcs, encode(sid,direction,seq,payload))
 <defs>
 <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
 </defs>
-<g id="figure_1">
-<g id="patch_1">
+<g id="fig-14-figure_1">
+<g id="fig-14-patch_1">
 <path d="M 0 194.688 
 L 575.28 194.688 
 L 575.28 -0 
@@ -3932,9 +4031,9 @@ L 0 -0
 z
 " style="fill: #ffffff"></path>
 </g>
-<g id="axes_1">
-<g id="patch_2">
-<path clip-path="url(#pa79c8006b0)" d="M 22.032 85.1472 
+<g id="fig-14-axes_1">
+<g id="fig-14-patch_2">
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 22.032 85.1472 
 L 162.648 85.1472 
 Q 166.554 85.1472 166.554 81.2664 
 L 166.554 52.4376 
@@ -3946,8 +4045,8 @@ Q 18.126 85.1472 22.032 85.1472
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_3">
-<path clip-path="url(#pa79c8006b0)" d="M 214.542 85.1472 
+<g id="fig-14-patch_3">
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 214.542 85.1472 
 L 355.158 85.1472 
 Q 359.064 85.1472 359.064 81.2664 
 L 359.064 52.4376 
@@ -3959,8 +4058,8 @@ Q 210.636 85.1472 214.542 85.1472
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_4">
-<path clip-path="url(#pa79c8006b0)" d="M 407.052 85.1472 
+<g id="fig-14-patch_4">
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 407.052 85.1472 
 L 547.668 85.1472 
 Q 551.574 85.1472 551.574 81.2664 
 L 551.574 52.4376 
@@ -3972,30 +4071,30 @@ Q 403.146 85.1472 407.052 85.1472
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_5">
-<path clip-path="url(#pa79c8006b0)" d="M 169.670034 66.852 
+<g id="fig-14-patch_5">
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 169.670034 66.852 
 Q 188.595362 66.852 206.067247 66.852 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pa79c8006b0)" d="M 200.867247 64.252 
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 200.867247 64.252 
 L 206.067247 66.852 
 L 200.867247 69.452 
 L 200.867247 64.252 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_6">
-<path clip-path="url(#pa79c8006b0)" d="M 362.180034 66.852 
+<g id="fig-14-patch_6">
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 362.180034 66.852 
 Q 381.105362 66.852 398.577247 66.852 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pa79c8006b0)" d="M 393.377247 64.252 
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 393.377247 64.252 
 L 398.577247 66.852 
 L 393.377247 69.452 
 L 393.377247 64.252 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_7">
-<path clip-path="url(#pa79c8006b0)" d="M 22.032 168.3072 
+<g id="fig-14-patch_7">
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 22.032 168.3072 
 L 162.648 168.3072 
 Q 166.554 168.3072 166.554 164.4264 
 L 166.554 135.5976 
@@ -4007,8 +4106,8 @@ Q 18.126 168.3072 22.032 168.3072
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_8">
-<path clip-path="url(#pa79c8006b0)" d="M 214.542 168.3072 
+<g id="fig-14-patch_8">
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 214.542 168.3072 
 L 355.158 168.3072 
 Q 359.064 168.3072 359.064 164.4264 
 L 359.064 135.5976 
@@ -4020,8 +4119,8 @@ Q 210.636 168.3072 214.542 168.3072
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_9">
-<path clip-path="url(#pa79c8006b0)" d="M 407.052 168.3072 
+<g id="fig-14-patch_9">
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 407.052 168.3072 
 L 547.668 168.3072 
 Q 551.574 168.3072 551.574 164.4264 
 L 551.574 135.5976 
@@ -4033,56 +4132,56 @@ Q 403.146 168.3072 407.052 168.3072
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_10">
-<path clip-path="url(#pa79c8006b0)" d="M 169.670034 150.012 
+<g id="fig-14-patch_10">
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 169.670034 150.012 
 Q 188.595362 150.012 206.067247 150.012 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pa79c8006b0)" d="M 200.867247 147.412 
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 200.867247 147.412 
 L 206.067247 150.012 
 L 200.867247 152.612 
 L 200.867247 147.412 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_11">
-<path clip-path="url(#pa79c8006b0)" d="M 362.180034 150.012 
+<g id="fig-14-patch_11">
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 362.180034 150.012 
 Q 381.105362 150.012 398.577247 150.012 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pa79c8006b0)" d="M 393.377247 147.412 
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 393.377247 147.412 
 L 398.577247 150.012 
 L 393.377247 152.612 
 L 393.377247 147.412 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="text_1">
+<g id="fig-14-text_1">
 <text style="fill: #244a75; font: 700 11px 'DejaVu Sans'; text-anchor: start" transform="rotate(-0 14.22 36.36)" x="14.22" y="36.36">Stored</text>
 </g>
-<g id="text_2">
+<g id="fig-14-text_2">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 92.34 69.611375)" x="92.34" y="69.611375">Attacker entry</text>
 </g>
-<g id="text_3">
+<g id="fig-14-text_3">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 284.85 69.611375)" x="284.85" y="69.611375">Database / page</text>
 </g>
-<g id="text_4">
+<g id="fig-14-text_4">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 477.36 69.611375)" x="477.36" y="69.611375">Victim executes</text>
 </g>
-<g id="text_5">
+<g id="fig-14-text_5">
 <text style="fill: #244a75; font: 700 11px 'DejaVu Sans'; text-anchor: start" transform="rotate(-0 14.22 119.52)" x="14.22" y="119.52">Reflected</text>
 </g>
-<g id="text_6">
+<g id="fig-14-text_6">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 92.34 152.771375)" x="92.34" y="152.771375">Crafted link</text>
 </g>
-<g id="text_7">
+<g id="fig-14-text_7">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 284.85 152.771375)" x="284.85" y="152.771375">Request / echo</text>
 </g>
-<g id="text_8">
+<g id="fig-14-text_8">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 477.36 152.771375)" x="477.36" y="152.771375">Victim executes</text>
 </g>
 </g>
 </g>
 <defs>
-<clippath id="pa79c8006b0">
+<clippath id="fig-14-pa79c8006b0">
 <rect height="177.408" width="558" x="8.64" y="8.64"></rect>
 </clippath>
 </defs>
@@ -4214,8 +4313,8 @@ z
 <defs>
 <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
 </defs>
-<g id="figure_1">
-<g id="patch_1">
+<g id="fig-15-figure_1">
+<g id="fig-15-patch_1">
 <path d="M 0 194.688 
 L 575.28 194.688 
 L 575.28 -0 
@@ -4223,9 +4322,9 @@ L 0 -0
 z
 " style="fill: #ffffff"></path>
 </g>
-<g id="axes_1">
-<g id="patch_2">
-<path clip-path="url(#pa79c8006b0)" d="M 22.032 85.1472 
+<g id="fig-15-axes_1">
+<g id="fig-15-patch_2">
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 22.032 85.1472 
 L 162.648 85.1472 
 Q 166.554 85.1472 166.554 81.2664 
 L 166.554 52.4376 
@@ -4237,8 +4336,8 @@ Q 18.126 85.1472 22.032 85.1472
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_3">
-<path clip-path="url(#pa79c8006b0)" d="M 214.542 85.1472 
+<g id="fig-15-patch_3">
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 214.542 85.1472 
 L 355.158 85.1472 
 Q 359.064 85.1472 359.064 81.2664 
 L 359.064 52.4376 
@@ -4250,8 +4349,8 @@ Q 210.636 85.1472 214.542 85.1472
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_4">
-<path clip-path="url(#pa79c8006b0)" d="M 407.052 85.1472 
+<g id="fig-15-patch_4">
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 407.052 85.1472 
 L 547.668 85.1472 
 Q 551.574 85.1472 551.574 81.2664 
 L 551.574 52.4376 
@@ -4263,30 +4362,30 @@ Q 403.146 85.1472 407.052 85.1472
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_5">
-<path clip-path="url(#pa79c8006b0)" d="M 169.670034 66.852 
+<g id="fig-15-patch_5">
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 169.670034 66.852 
 Q 188.595362 66.852 206.067247 66.852 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pa79c8006b0)" d="M 200.867247 64.252 
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 200.867247 64.252 
 L 206.067247 66.852 
 L 200.867247 69.452 
 L 200.867247 64.252 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_6">
-<path clip-path="url(#pa79c8006b0)" d="M 362.180034 66.852 
+<g id="fig-15-patch_6">
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 362.180034 66.852 
 Q 381.105362 66.852 398.577247 66.852 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pa79c8006b0)" d="M 393.377247 64.252 
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 393.377247 64.252 
 L 398.577247 66.852 
 L 393.377247 69.452 
 L 393.377247 64.252 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_7">
-<path clip-path="url(#pa79c8006b0)" d="M 22.032 168.3072 
+<g id="fig-15-patch_7">
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 22.032 168.3072 
 L 162.648 168.3072 
 Q 166.554 168.3072 166.554 164.4264 
 L 166.554 135.5976 
@@ -4298,8 +4397,8 @@ Q 18.126 168.3072 22.032 168.3072
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_8">
-<path clip-path="url(#pa79c8006b0)" d="M 214.542 168.3072 
+<g id="fig-15-patch_8">
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 214.542 168.3072 
 L 355.158 168.3072 
 Q 359.064 168.3072 359.064 164.4264 
 L 359.064 135.5976 
@@ -4311,8 +4410,8 @@ Q 210.636 168.3072 214.542 168.3072
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_9">
-<path clip-path="url(#pa79c8006b0)" d="M 407.052 168.3072 
+<g id="fig-15-patch_9">
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 407.052 168.3072 
 L 547.668 168.3072 
 Q 551.574 168.3072 551.574 164.4264 
 L 551.574 135.5976 
@@ -4324,56 +4423,56 @@ Q 403.146 168.3072 407.052 168.3072
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_10">
-<path clip-path="url(#pa79c8006b0)" d="M 169.670034 150.012 
+<g id="fig-15-patch_10">
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 169.670034 150.012 
 Q 188.595362 150.012 206.067247 150.012 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pa79c8006b0)" d="M 200.867247 147.412 
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 200.867247 147.412 
 L 206.067247 150.012 
 L 200.867247 152.612 
 L 200.867247 147.412 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_11">
-<path clip-path="url(#pa79c8006b0)" d="M 362.180034 150.012 
+<g id="fig-15-patch_11">
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 362.180034 150.012 
 Q 381.105362 150.012 398.577247 150.012 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pa79c8006b0)" d="M 393.377247 147.412 
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 393.377247 147.412 
 L 398.577247 150.012 
 L 393.377247 152.612 
 L 393.377247 147.412 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="text_1">
+<g id="fig-15-text_1">
 <text style="fill: #244a75; font: 700 11px 'DejaVu Sans'; text-anchor: start" transform="rotate(-0 14.22 36.36)" x="14.22" y="36.36">Stored</text>
 </g>
-<g id="text_2">
+<g id="fig-15-text_2">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 92.34 69.611375)" x="92.34" y="69.611375">Attacker entry</text>
 </g>
-<g id="text_3">
+<g id="fig-15-text_3">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 284.85 69.611375)" x="284.85" y="69.611375">Database / page</text>
 </g>
-<g id="text_4">
+<g id="fig-15-text_4">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 477.36 69.611375)" x="477.36" y="69.611375">Victim executes</text>
 </g>
-<g id="text_5">
+<g id="fig-15-text_5">
 <text style="fill: #244a75; font: 700 11px 'DejaVu Sans'; text-anchor: start" transform="rotate(-0 14.22 119.52)" x="14.22" y="119.52">Reflected</text>
 </g>
-<g id="text_6">
+<g id="fig-15-text_6">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 92.34 152.771375)" x="92.34" y="152.771375">Crafted link</text>
 </g>
-<g id="text_7">
+<g id="fig-15-text_7">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 284.85 152.771375)" x="284.85" y="152.771375">Request / echo</text>
 </g>
-<g id="text_8">
+<g id="fig-15-text_8">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 477.36 152.771375)" x="477.36" y="152.771375">Victim executes</text>
 </g>
 </g>
 </g>
 <defs>
-<clippath id="pa79c8006b0">
+<clippath id="fig-15-pa79c8006b0">
 <rect height="177.408" width="558" x="8.64" y="8.64"></rect>
 </clippath>
 </defs>
@@ -4421,8 +4520,8 @@ Reflected: crafted link → victim request → echoed response → victim execut
 <defs>
 <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
 </defs>
-<g id="figure_1">
-<g id="patch_1">
+<g id="fig-16-figure_1">
+<g id="fig-16-patch_1">
 <path d="M 0 277.848 
 L 575.28 277.848 
 L 575.28 0 
@@ -4430,108 +4529,108 @@ L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
-<g id="axes_1">
-<g id="patch_2">
-<path clip-path="url(#pee3946a4ce)" d="M 49.702673 55.764 
+<g id="fig-16-axes_1">
+<g id="fig-16-patch_2">
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 49.702673 55.764 
 Q 167.671096 55.764 284.186076 55.764 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pee3946a4ce)" d="M 278.986076 53.164 
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 278.986076 53.164 
 L 284.186076 55.764 
 L 278.986076 58.364 
 L 278.986076 53.164 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_3">
-<path clip-path="url(#pee3946a4ce)" d="M 289.642673 93.4632 
+<g id="fig-16-patch_3">
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 289.642673 93.4632 
 Q 407.611096 93.4632 524.126076 93.4632 
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pee3946a4ce)" d="M 518.926076 90.8632 
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 518.926076 90.8632 
 L 524.126076 93.4632 
 L 518.926076 96.0632 
 L 518.926076 90.8632 
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_4">
-<path clip-path="url(#pee3946a4ce)" d="M 525.577327 131.1624 
+<g id="fig-16-patch_4">
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 525.577327 131.1624 
 Q 287.639467 131.1624 51.155051 131.1624 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pee3946a4ce)" d="M 56.355051 133.7624 
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 56.355051 133.7624 
 L 51.155051 131.1624 
 L 56.355051 128.5624 
 L 56.355051 133.7624 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_5">
-<path clip-path="url(#pee3946a4ce)" d="M 49.702673 168.8616 
+<g id="fig-16-patch_5">
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 49.702673 168.8616 
 Q 167.671096 168.8616 284.186076 168.8616 
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pee3946a4ce)" d="M 278.986076 166.2616 
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 278.986076 166.2616 
 L 284.186076 168.8616 
 L 278.986076 171.4616 
 L 278.986076 166.2616 
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="patch_6">
-<path clip-path="url(#pee3946a4ce)" d="M 289.642673 206.5608 
+<g id="fig-16-patch_6">
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 289.642673 206.5608 
 Q 407.611096 206.5608 524.126076 206.5608 
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pee3946a4ce)" d="M 518.926076 203.9608 
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 518.926076 203.9608 
 L 524.126076 206.5608 
 L 518.926076 209.1608 
 L 518.926076 203.9608 
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="line2d_1">
-<path clip-path="url(#pee3946a4ce)" d="M 47.7 241.488 
+<g id="fig-16-line2d_1">
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 47.7 241.488 
 L 47.7 39.132 
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
-<g id="line2d_2">
-<path clip-path="url(#pee3946a4ce)" d="M 287.64 241.488 
+<g id="fig-16-line2d_2">
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 287.64 241.488 
 L 287.64 39.132 
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
-<g id="line2d_3">
-<path clip-path="url(#pee3946a4ce)" d="M 527.58 241.488 
+<g id="fig-16-line2d_3">
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 527.58 241.488 
 L 527.58 39.132 
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
-<g id="text_1">
+<g id="fig-16-text_1">
 <text style="fill: #172c44; font: 700 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 47.7 25.535312)" x="47.7" y="25.535312">Victim</text>
 </g>
-<g id="text_2">
+<g id="fig-16-text_2">
 <text style="fill: #172c44; font: 700 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 287.64 25.492344)" x="287.64" y="25.492344">Phishing relay</text>
 </g>
-<g id="text_3">
+<g id="fig-16-text_3">
 <text style="fill: #172c44; font: 700 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 527.58 25.535312)" x="527.58" y="25.535312">Real service</text>
 </g>
-<g id="text_4">
+<g id="fig-16-text_4">
 <text style="fill: #244a75; font: 9px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 167.67 49.457081)" x="167.67" y="49.457081">password</text>
 </g>
-<g id="text_5">
+<g id="fig-16-text_5">
 <text style="fill: #aa3d46; font: 9px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 407.61 87.156281)" x="407.61" y="87.156281">forward password</text>
 </g>
-<g id="text_6">
+<g id="fig-16-text_6">
 <text style="fill: #244a75; font: 9px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 287.64 124.855481)" x="287.64" y="124.855481">SMS code arrives</text>
 </g>
-<g id="text_7">
+<g id="fig-16-text_7">
 <text style="fill: #244a75; font: 9px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 167.67 162.554681)" x="167.67" y="162.554681">user enters code</text>
 </g>
-<g id="text_8">
+<g id="fig-16-text_8">
 <text style="fill: #aa3d46; font: 9px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 407.61 200.253881)" x="407.61" y="200.253881">forward code before expiry</text>
 </g>
-<g id="text_9">
+<g id="fig-16-text_9">
 <text style="fill: #267261; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 287.64 261.584313)" x="287.64" y="261.584313">A one-time code can still be relayed live unless authentication is bound to the real origin.</text>
 </g>
 </g>
 </g>
 <defs>
-<clippath id="pee3946a4ce">
+<clippath id="fig-16-pee3946a4ce">
 <rect height="260.568" width="558" x="8.64" y="8.64"></rect>
 </clippath>
 </defs>
@@ -4565,8 +4664,8 @@ L 527.58 39.132
 <defs>
 <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
 </defs>
-<g id="figure_1">
-<g id="patch_1">
+<g id="fig-17-figure_1">
+<g id="fig-17-patch_1">
 <path d="M 0 216.864 
 L 575.28 216.864 
 L 575.28 0 
@@ -4574,9 +4673,9 @@ L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
-<g id="axes_1">
-<g id="patch_2">
-<path clip-path="url(#pe4623215e2)" d="M 27.612 193.2552 
+<g id="fig-17-axes_1">
+<g id="fig-17-patch_2">
+<path clip-path="url(#fig-17-pe4623215e2)" d="M 27.612 193.2552 
 L 397.008 193.2552 
 Q 400.914 193.2552 400.914 189.3744 
 L 400.914 46.8936 
@@ -4588,8 +4687,8 @@ Q 23.706 193.2552 27.612 193.2552
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_3">
-<path clip-path="url(#pe4623215e2)" d="M 83.412 159.9912 
+<g id="fig-17-patch_3">
+<path clip-path="url(#fig-17-pe4623215e2)" d="M 83.412 159.9912 
 L 341.208 159.9912 
 Q 345.114 159.9912 345.114 156.1104 
 L 345.114 102.3336 
@@ -4601,16 +4700,16 @@ Q 79.506 159.9912 83.412 159.9912
 z
 " style="fill: #267261; fill-opacity: 0.05098; stroke: #267261; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_4">
-<path clip-path="url(#pe4623215e2)" d="M 72.81 166.644 
+<g id="fig-17-patch_4">
+<path clip-path="url(#fig-17-pe4623215e2)" d="M 72.81 166.644 
 L 351.81 166.644 
 L 351.81 91.8 
 L 72.81 91.8 
 z
 " style="fill: #aa3d46; opacity: 0.12; stroke: #aa3d46; stroke-width: 2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_5">
-<path clip-path="url(#pe4623215e2)" d="M 181.062 150.012 
+<g id="fig-17-patch_5">
+<path clip-path="url(#fig-17-pe4623215e2)" d="M 181.062 150.012 
 L 246.348 150.012 
 Q 250.254 150.012 250.254 146.1312 
 L 250.254 125.6184 
@@ -4622,40 +4721,40 @@ Q 177.156 150.012 181.062 150.012
 z
 " style="fill: #aa3d46; fill-opacity: 0.05098; stroke: #aa3d46; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
-<g id="patch_6">
-<path clip-path="url(#pe4623215e2)" d="M 497.730287 58.972805 
+<g id="fig-17-patch_6">
+<path clip-path="url(#fig-17-pe4623215e2)" d="M 497.730287 58.972805 
 Q 357.391946 90.413564 218.471893 121.536577 
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#pe4623215e2)" d="M 224.114512 122.936881 
+<path clip-path="url(#fig-17-pe4623215e2)" d="M 224.114512 122.936881 
 L 218.471893 121.536577 
 L 222.977707 117.862664 
 L 224.114512 122.936881 
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
-<g id="text_1">
+<g id="fig-17-text_1">
 <text style="fill: #244a75; font: 700 11px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 212.31 58.536)" x="212.31" y="58.536">Visible attacker page</text>
 </g>
-<g id="text_2">
+<g id="fig-17-text_2">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 212.31 131.981375)" x="212.31" y="131.981375">“Win a free subscription”</text>
 </g>
-<g id="text_3">
+<g id="fig-17-text_3">
 <text style="fill: #aa3d46; font: 9px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 212.31 100.116)" x="212.31" y="100.116">Transparent target iframe over the decoy</text>
 </g>
-<g id="text_4">
+<g id="fig-17-text_4">
 <text style="fill: #172c44; font: 10px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 213.705 138.634175)" x="213.705" y="138.634175">BUY</text>
 </g>
-<g id="text_5">
+<g id="fig-17-text_5">
 <text style="fill: #aa3d46; font: 9px 'DejaVu Sans'; text-anchor: middle" transform="rotate(-0 357.39 84.107081)" x="357.39" y="84.107081">actual click</text>
 </g>
-<g id="text_6">
+<g id="fig-17-text_6">
 <text style="fill: #172c44; font: 11px 'DejaVu Sans'" transform="translate(414.188516 157.098406)">User intends decoy;</text>
 <text style="fill: #172c44; font: 11px 'DejaVu Sans'" transform="translate(411.771094 169.416)">target receives click.</text>
 </g>
 </g>
 </g>
 <defs>
-<clippath id="pe4623215e2">
+<clippath id="fig-17-pe4623215e2">
 <rect height="199.584" width="558" x="8.64" y="8.64"></rect>
 </clippath>
 </defs>

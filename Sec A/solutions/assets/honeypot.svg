@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="723.4pt" height="291.4pt" viewBox="0 0 723.4 291.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-28T23:36:40.030643</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.6.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 291.4 
+L 723.4 291.4 
+L 723.4 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 28.47 175.062 
+L 134.82 175.062 
+Q 136.947 175.062 136.947 173.4 
+L 136.947 118 
+Q 136.947 116.338 134.82 116.338 
+L 28.47 116.338 
+Q 26.343 116.338 26.343 118 
+L 26.343 173.4 
+Q 26.343 175.062 28.47 175.062 
+z
+" clip-path="url(#p515223188c)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 219.9 175.062 
+L 340.43 175.062 
+Q 342.557 175.062 342.557 173.4 
+L 342.557 118 
+Q 342.557 116.338 340.43 116.338 
+L 219.9 116.338 
+Q 217.773 116.338 217.773 118 
+L 217.773 173.4 
+Q 217.773 175.062 219.9 175.062 
+z
+" clip-path="url(#p515223188c)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 503.5 97.502 
+L 666.57 97.502 
+Q 668.697 97.502 668.697 95.84 
+L 668.697 40.44 
+Q 668.697 38.778 666.57 38.778 
+L 503.5 38.778 
+Q 501.373 38.778 501.373 40.44 
+L 501.373 95.84 
+Q 501.373 97.502 503.5 97.502 
+z
+" clip-path="url(#p515223188c)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 503.5 213.842 
+L 666.57 213.842 
+Q 668.697 213.842 668.697 212.18 
+L 668.697 156.78 
+Q 668.697 155.118 666.57 155.118 
+L 503.5 155.118 
+Q 501.373 155.118 501.373 156.78 
+L 501.373 212.18 
+Q 501.373 213.842 503.5 213.842 
+z
+" clip-path="url(#p515223188c)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 234.08 280.322 
+L 425.51 280.322 
+Q 427.637 280.322 427.637 278.66 
+L 427.637 223.26 
+Q 427.637 221.598 425.51 221.598 
+L 234.08 221.598 
+Q 231.953 221.598 231.953 223.26 
+L 231.953 278.66 
+Q 231.953 280.322 234.08 280.322 
+z
+" clip-path="url(#p515223188c)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="81.645" y="148.459375" transform="rotate(-0 81.645 148.459375)">Internet</text>
+   </g>
+   <g id="text_2">
+    <text style="font: 10px 'DejaVu Sans'" transform="translate(258.038438 142.860469)">Firewall /</text>
+    <text style="font: 10px 'DejaVu Sans'" transform="translate(245.592344 154.058281)">segmentation</text>
+   </g>
+   <g id="text_3">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="585.035" y="70.899375" transform="rotate(-0 585.035 70.899375)">Production</text>
+   </g>
+   <g id="text_4">
+    <text style="font: 10px 'DejaVu Sans'" transform="translate(560.817031 181.640469)">Honeypot</text>
+    <text style="font: 10px 'DejaVu Sans'" transform="translate(548.71 192.838281)">isolated decoy</text>
+   </g>
+   <g id="text_5">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="329.795" y="253.719375" transform="rotate(-0 329.795 253.719375)">Protected collector</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 136.821852 145.7 
+Q 177.360733 145.7 216.110759 145.7 
+" style="fill: none; stroke: #28557e; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 211.710759 143.5 
+L 216.110759 145.7 
+L 211.710759 147.9 
+" style="fill: none; stroke: #28557e; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 342.303653 128.379807 
+Q 421.965925 98.609654 499.952529 69.465706 
+" style="fill: none; stroke: #28557e; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 495.060797 68.945167 
+L 499.952529 69.465706 
+L 496.601058 73.066768 
+" style="fill: none; stroke: #28557e; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 342.413136 162.589493 
+Q 421.965998 173.400136 499.746297 183.9699 
+" style="fill: none; stroke: #28557e; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 495.682611 181.197454 
+L 499.746297 183.9699 
+L 495.090129 185.557382 
+" style="fill: none; stroke: #28557e; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 501.505505 240.021678 
+Q 464.507327 242.649835 429.293507 245.151239 
+" style="fill: none; stroke: #28557e; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 433.838332 247.033943 
+L 429.293507 245.151239 
+L 433.526565 242.645002 
+" style="fill: none; stroke: #28557e; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="text_6">
+    <text style="fill: #28557e; font: 9px 'DejaVu Sans'; text-anchor: middle" x="464.505" y="233.576281" transform="rotate(-0 464.505 233.576281)">logs</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #a83e3e; font: 9px 'DejaVu Sans'; text-anchor: middle" x="553.13" y="270.35" transform="rotate(-0 553.13 270.35)">Restrict decoy egress</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p515223188c">
+   <rect x="7.2" y="7.2" width="709" height="277"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -6,15 +6,17 @@ ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'Sec B'/'analysis'
 inv=json.loads((OUT/'inventory.json').read_text())
 files={}
-for n in range(2,13): files[f'L{n}']=next(x['file'] for x in inv if x.get('lecture')==n)
+for n in range(1,13): files[f'L{n}']=next(x['file'] for x in inv if x.get('lecture')==n)
 files['Notes']='Sec B/notes/handwritten-notes.pdf'
 files['Guide']='Sec B/notes/ct4-revision-guide.pdf'
-names={'L2':'Lecture 2 — Intro to Cryptography','L3':'Lecture 3 — One-Time Pads and Block Ciphers','L4':'Lecture 4 — Block Cipher Modes of Operation','L5':'Lecture 5 — Cryptographic Hashes and MACs','L6':'Lecture 6 — PRNGs and Diffie-Hellman Key Exchange','L7':'Lecture 7 — Public-Key Encryption and Digital Signatures','L8':'Lecture 8 — Certificates, Password Hashing, and Case Studies','L9':'Lecture 9 — Introduction to the Web','L10':'Lecture 10 — Cookies and CSRF','L11':'Lecture 11 — XSS and UI Attacks','L12':'Lecture 12 — SQL Injection and CAPTCHAs','Notes':'Handwritten Sec B notes','Guide':'CT4 Complete Revision Guide'}
+names={'L1':'Lecture 1 — Introduction and Security Principles','L2':'Lecture 2 — Intro to Cryptography','L3':'Lecture 3 — One-Time Pads and Block Ciphers','L4':'Lecture 4 — Block Cipher Modes of Operation','L5':'Lecture 5 — Cryptographic Hashes and MACs','L6':'Lecture 6 — PRNGs and Diffie-Hellman Key Exchange','L7':'Lecture 7 — Public-Key Encryption and Digital Signatures','L8':'Lecture 8 — Certificates, Password Hashing, and Case Studies','L9':'Lecture 9 — Introduction to the Web','L10':'Lecture 10 — Cookies and CSRF','L11':'Lecture 11 — XSS and UI Attacks','L12':'Lecture 12 — SQL Injection and CAPTCHAs','Notes':'Handwritten Sec B notes','Guide':'CT4 Complete Revision Guide'}
 def link(file,page=None,label=None):
  return f'[{label or file}](<{quote(os.path.relpath(ROOT/file,OUT))}'+(f'#page={page}' if page else '')+'>)'
 def src(key,pages):return f"{link(files[key],int(str(pages).split('–')[0].split(',')[0]),names[key])}, PDF pp. {pages}"
 # Every topic has its principal teaching source. Recap slides do not receive duplicate attribution.
 topics={
+ 'principles':('Security principles: least privilege, mediation, human factors, economics and recording','L1','11–60','not developed; use Lecture 1'),
+ 'securitygoals':('Information-security CIA goals and availability attacks','L1','4–5, 12–17','not developed; use Lecture 1'),
  'classical':('Classical ciphers: Caesar, affine, Hill and transposition','L2','43–68','5–11'),
  'goals':('Cryptographic goals, confusion and diffusion','L2','7–21, 69–70','1–2, 12'),
  'otp':('One-time pads: XOR, correctness and security','L3','6–22','12–14'),
@@ -122,16 +124,27 @@ qs[-1]['topics'].remove('session')
 add('2018–19','11(a)',29,5,'sql','UPDATE injection to change password and salary','Use the displayed employee-password-change form and PHP code to set employee EID100’s password to you_are_hacked and salary to 10$, without knowing the old password.',note='The PHP query/code appears on p. 30.')
 add('2018–19','11(b)',30,10,'sql','Rewrite vulnerable PHP using prepared statements','Change changepasswd.php to use a prepared statement so the SQL injection in Q11(a) is prevented.')
 add('2018–19','12(a)',30,15,'xss','Stored XSS in a guest book; malicious page actions','As Sammy (id=40), write a script in the guest-book Message field to demonstrate XSS damage. The first paragraph has id p1 and the friend-add action for user id 100 is http://vulnerable.com/action/friend/add?id=100.',note='The guest-book screenshot is on p. 31; consult it with the prompt on p. 30.')
+
+# Lecture 1 adds explicit principle applications; retain every original S01–S67 entry.
+for item in qs:
+ if item['session']=='2021–22' and item['question']=='2(a)':
+  item['topics']=['securitygoals'];item['coverage']='direct';item['coverage_note']='Information-security CIA uses Availability; Lecture 1 supplies the general desired-property/threat-model context.'
+add('2023–24','1(b)',2,10,'principles','Match five scenarios to security principles','Match principles to a valet key, bypassable laptop screen lock, irreversible water-damage sticker, bank recovery questions overridden by a representative, and encryption at rest and in transit.','direct','')
+add('2022–23','1(a)',11,10,'principles','Least privilege versus separation; why record compromise?','Differentiate least privilege and separation of privilege, and explain the importance of compromise recording with examples.','direct','')
+add('2020–21','1(b)',18,12,'securitygoals','Selective packet dropping against a competitor','An ISP deliberately drops 25% of a competing provider’s VoIP packets traversing its routers. Identify the attack.','direct','')
+add('2020–21','1(c)',18,11,'principles','Why compromise recording matters and which tools support it','Explain the importance of compromise recording and name tools used for it.','direct','')
+add('2020–21','2(b)',18,12,'principles','Mismatched boarding-pass and identity checks','Explain how online-printable boarding passes permit a no-fly-list bypass in the described airport checks, and fix the weakness.','partial','An application of complete mediation/authentication; the exact airport workflow is in the paper.')
+add('2020–21','8(a)',20,15,'principles','Audit scanf, privileged file opening and a name-based access race','Analyze attacks on the printed C program (code on p. 21): scanf into buffer[60], fopen(fn,"a+"), access(fn,W_OK), fwrite; state environmental assumptions.','partial','Lecture 1 pp. 47–49 supplies complete mediation/TOCTOU; buffer-overflow and Unix setuid details require Sec A. Full mixed answer retained.')
+
 # Topics asked in older papers but not taught adequately by the supplied Sec B files.
 gaps=[
  ('2023–24','1(a), 2(b)', '1, 3','Buffer-overflow payloads and defenses'),
- ('2023–24','1(b)','2','General security principles: least privilege, threat models, economics and defense in depth'),
  ('2023–24','2(a), 2(c), 3(a)–(c), 4(a)–(b)','3–5','DHCP spoofing, TCP attacks, network defenses, worms, DNS/Kaminsky, DoS and firewall evasion'),
- ('2022–23','1–4','11–12','General/system/network security, malware, access control, reconnaissance, honeypots and firewalls; password Q2(a) is included above'),
+ ('2022–23','1(b)–(c), 2(b)–(c), 3–4','11–12','System/network security, malware, access control, reconnaissance, honeypots and firewalls; principle Q1(a) and password Q2(a) are included above'),
  ('2022–23','7(b)','13','Tor anonymity and onion-routing cryptography'),
  ('2021–22','1(a)–(b), 3(a), 4(a), 5–6, 7(a), 8','15–17','Biometrics, memory/system security, DLL injection, malware, IPsec, botnets, intrusion detection, TCP/DNS defenses, access-control delegation and spam'),
- ('2020–21','1–4','18–19','General/system/network security, access control, forensics, worms, ARP and incident response'),
- ('2020–21','5(c), 6(c), 7(c), 8(a)','19–21','Return-to-libc, stack-argument layout, StackGuard, unsafe C, and file-access race conditions'),
+ ('2020–21','1(a), 2(a), 2(c), 3–4','18–19','System/network security, access control, forensics, worms, ARP and incident response; Q1(b), Q1(c) and Q2(b) now map to Lecture 1'),
+ ('2020–21','5(c), 6(c), 7(c)','19–21','Return-to-libc, stack-argument layout and StackGuard; Q8(a) is now included as a partial TOCTOU application with Sec A prerequisites'),
  ('2019–20','1(b), 2(a), 2(c), 3–5','22–24','Heartbleed, botnets, malware, Unix permissions, DNS/TCP/switch attacks, IDS/base-rate fallacy and honeypots'),
  ('2018–19','1(b)–(c), 2, 3, 4(a), 4(c)–(d)','26','IPsec, malware, rootkits, network attacks, botnets, DNS poisoning and intrusion detection'),
  ('2018–19','6(b), 7, 8(a), 8(b)(i), 9, 10, 13','27–31','Physical locks, biometrics, Faraday cage, format-string/stack exploits and quantum key distribution'),
@@ -159,7 +172,7 @@ def ranktable():
 
 report=['# Final exam topic analysis — all supplied Sec B material','',
 '## Scope and how the counts work','',
-'This report maps questions in the root past-paper PDF to the actual contents of Lectures 2–12 and the handwritten Sec B notes, including the former CT 4 material. The existing CT4 revision guide is supplementary; its frequency table is not treated as the source of truth.','',
+'This report maps questions in the root past-paper PDF to the actual contents of Lectures 1–12 and the handwritten Sec B notes, including the former CT 4 material. The existing CT4 revision guide is supplementary; its frequency table is not treated as the source of truth.','',
 '**Question text below is a faithful paraphrase, not a verbatim transcription.** Open the linked paper page for exact wording, code, figures and layout. Page numbers are physical PDF pages, starting at 1. Academic sessions label questions; sitting years are shown separately.','',
 '**Counting unit:** one printed lettered subquestion, e.g. Q7(c). Its internal tasks remain together. A mixed question can count once under each topic it explicitly examines, but only once in a given deck total. Therefore topic totals and deck totals cannot be added to get a number of distinct questions. Optional short-note/concept choices are included and clearly identified. Marks shown belong to the whole subquestion; they are not marks attributable to every linked topic.','',
 '**Attribution:** use the deck that teaches the topic, not decks that merely repeat it in a recap. Questions requiring applications beyond the slides are marked by coverage notes. Unrelated system/network-security questions are not ranked as if they were taught by these Sec B files.','',
@@ -175,7 +188,7 @@ for d in sorted(bydeck,key=lambda d:(-len(bydeck[d]),names[d])):
 report += ['', 'Lectures 11–12 now provide the primary sources for XSS, UI attacks, 2FA and SQL injection. The handwritten notes remain companion material; repeated coverage does not create additional question occurrences.', '',
 '## Questions under slide deck → exact topic','',
 'Within each teaching source, topics are ordered by frequency. The task line identifies the particular subtopic examined. Cross-topic questions may appear more than once so each topic has a complete list.','']
-for d in ['L2','L3','L4','L5','L6','L7','L8','L9','L10','L11','L12']:
+for d in ['L1','L2','L3','L4','L5','L6','L7','L8','L9','L10','L11','L12']:
  report += [f'## {names[d]}','',link(files[d],label='Open source material'), '']
  dt=[t for t in rank if topics[t][1]==d]
  if not dt:
@@ -183,12 +196,12 @@ for d in ['L2','L3','L4','L5','L6','L7','L8','L9','L10','L11','L12']:
  for t in dt:
   title,_,p,np=topics[t];arr=bytopic[t]
   report += [f'<a id="{t}"></a>',f'### {title} — {len(arr)} questions across {len(set(q["session"] for q in arr))}/6 papers','',
-   (f'**Study:** handwritten notes PDF pp. {np}.' if d=='Notes' else f'**Study:** deck PDF pp. {p}; handwritten notes PDF pp. {np}.'),'']
+   (f'**Study:** deck PDF pp. {p}. Lecture 1 is the primary source; Sec B handwritten notes do not develop this unit.' if d=='L1' else f'**Study:** deck PDF pp. {p}; handwritten notes PDF pp. {np}.'),'']
   for q in arr:report += [questionblock(q),'']
 report += ['## Syllabus topics with no standalone mapped questions','',
-'- Lecture 2: Kerckhoff’s principle and key-management rules; a standalone IND-CPA game definition; Enigma history. IND-CPA is explicitly examined through mode and ElGamal questions. General security-principle Q1(b) in 2023–24 needs broader material.','- Lecture 3: OTP key reuse/two-time pads as a standalone question; AES round tracing as a standalone numerical exercise.','- Lecture 4: standalone CFB analysis.','- Lecture 5: standalone length-extension attack and NMAC construction; the underlying Merkle–Damgård construction is examined.','- Lecture 6: standalone entropy, seeding/reseeding, CTR-DRBG, UUID, stream-cipher seeking and the PRNG case studies. HMAC-DRBG is examined once.','- Lecture 8: a direct salted-password/PBKDF2 construction question; certificate revocation/CRLs as a standalone question; traffic analysis, side channels and transparent public parameters. Password-guessing questions are related but are not direct password-hashing questions.','- Lecture 9: all topics as standalone questions.','- Lecture 10: cookie ambiguity, Spectre/site isolation and detailed Referer-header tradeoffs as standalone questions.','- Lecture 12: command injection and CAPTCHA as standalone questions. Handwritten-note extensions: JWT format/verification and session fixation as standalone questions.','',
+'- Lecture 1: trusted-computing-base details, fail-safe examples and security-by-design as standalone questions. Its principle applications and CIA/availability questions are now mapped.\n- Lecture 2: Kerckhoff’s principle and key-management rules; a standalone IND-CPA game definition; Enigma history. IND-CPA is explicitly examined through mode and ElGamal questions.','- Lecture 3: OTP key reuse/two-time pads as a standalone question; AES round tracing as a standalone numerical exercise.','- Lecture 4: standalone CFB analysis.','- Lecture 5: standalone length-extension attack and NMAC construction; the underlying Merkle–Damgård construction is examined.','- Lecture 6: standalone entropy, seeding/reseeding, CTR-DRBG, UUID, stream-cipher seeking and the PRNG case studies. HMAC-DRBG is examined once.','- Lecture 8: a direct salted-password/PBKDF2 construction question; certificate revocation/CRLs as a standalone question; traffic analysis, side channels and transparent public parameters. Password-guessing questions are related but are not direct password-hashing questions.','- Lecture 9: all topics as standalone questions.','- Lecture 10: cookie ambiguity, Spectre/site isolation and detailed Referer-header tradeoffs as standalone questions.','- Lecture 12: command injection and CAPTCHA as standalone questions. Handwritten-note extensions: JWT format/verification and session fixation as standalone questions.','',
 '## Material gaps that matter when practicing past papers','',
-'These questions belong to the broader course, but complete teaching material is not present in the supplied Sec B files. This is a coverage checklist, not a second frequency ranking.','',
+'These questions need material beyond Sec B; many are now covered by the [Sec A study guide](../../Sec%20A/README.md). This is a coverage checklist, not a second frequency ranking.','',
 '| Session | Questions | Root PDF pages | Additional material needed |','|---|---|---|---|']
 for y,q,p,desc in gaps: report.append(f'| {y} | {q} | {p} | {desc} |')
 report += ['', '## Source-reading cautions','',

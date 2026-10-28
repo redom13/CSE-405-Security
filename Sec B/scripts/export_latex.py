@@ -35,7 +35,7 @@ PREAMBLE=r'''\documentclass[11pt,a4paper]{article}
 \fancyfoot[C]{\thepage}
 \hypersetup{pdftitle={CSE 405 — Sec B Worked Final-Exam Solutions},pdfauthor={Sec B study guide},bookmarksopen=true}
 \title{\sffamily\bfseries CSE 405\\[4pt]Worked Final-Exam Solutions}
-\author{Sec B · 67 questions · six academic sessions}
+\author{Sec B · 73 questions · six academic sessions}
 \date{}
 \begin{document}
 \maketitle

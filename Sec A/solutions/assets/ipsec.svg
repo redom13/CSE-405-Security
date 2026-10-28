@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="723.4pt" height="241pt" viewBox="0 0 723.4 241" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-28T23:36:40.332975</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.6.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 241 
+L 723.4 241 
+L 723.4 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 14.29 85.6036 
+L 113.55 85.6036 
+Q 115.677 85.6036 115.677 84.244 
+L 115.677 52.52 
+Q 115.677 51.1604 113.55 51.1604 
+L 14.29 51.1604 
+Q 12.163 51.1604 12.163 52.52 
+L 12.163 84.244 
+Q 12.163 85.6036 14.29 85.6036 
+z
+" clip-path="url(#pfddab84cce)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 113.55 85.6036 
+L 212.81 85.6036 
+Q 214.937 85.6036 214.937 84.244 
+L 214.937 52.52 
+Q 214.937 51.1604 212.81 51.1604 
+L 113.55 51.1604 
+Q 111.423 51.1604 111.423 52.52 
+L 111.423 84.244 
+Q 111.423 85.6036 113.55 85.6036 
+z
+" clip-path="url(#pfddab84cce)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 212.81 85.6036 
+L 602.76 85.6036 
+Q 604.887 85.6036 604.887 84.244 
+L 604.887 52.52 
+Q 604.887 51.1604 602.76 51.1604 
+L 212.81 51.1604 
+Q 210.683 51.1604 210.683 52.52 
+L 210.683 84.244 
+Q 210.683 85.6036 212.81 85.6036 
+z
+" clip-path="url(#pfddab84cce)" style="fill: #cce5d8; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 602.76 85.6036 
+L 694.93 85.6036 
+Q 697.057 85.6036 697.057 84.244 
+L 697.057 52.52 
+Q 697.057 51.1604 694.93 51.1604 
+L 602.76 51.1604 
+Q 600.633 51.1604 600.633 52.52 
+L 600.633 84.244 
+Q 600.633 85.6036 602.76 85.6036 
+z
+" clip-path="url(#pfddab84cce)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 14.29 167.1796 
+L 113.55 167.1796 
+Q 115.677 167.1796 115.677 165.82 
+L 115.677 134.096 
+Q 115.677 132.7364 113.55 132.7364 
+L 14.29 132.7364 
+Q 12.163 132.7364 12.163 134.096 
+L 12.163 165.82 
+Q 12.163 167.1796 14.29 167.1796 
+z
+" clip-path="url(#pfddab84cce)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 113.55 167.1796 
+L 212.81 167.1796 
+Q 214.937 167.1796 214.937 165.82 
+L 214.937 134.096 
+Q 214.937 132.7364 212.81 132.7364 
+L 113.55 132.7364 
+Q 111.423 132.7364 111.423 134.096 
+L 111.423 165.82 
+Q 111.423 167.1796 113.55 167.1796 
+z
+" clip-path="url(#pfddab84cce)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 212.81 167.1796 
+L 602.76 167.1796 
+Q 604.887 167.1796 604.887 165.82 
+L 604.887 134.096 
+Q 604.887 132.7364 602.76 132.7364 
+L 212.81 132.7364 
+Q 210.683 132.7364 210.683 134.096 
+L 210.683 165.82 
+Q 210.683 167.1796 212.81 167.1796 
+z
+" clip-path="url(#pfddab84cce)" style="fill: #cce5d8; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 602.76 167.1796 
+L 694.93 167.1796 
+Q 697.057 167.1796 697.057 165.82 
+L 697.057 134.096 
+Q 697.057 132.7364 694.93 132.7364 
+L 602.76 132.7364 
+Q 600.633 132.7364 600.633 134.096 
+L 600.633 165.82 
+Q 600.633 167.1796 602.76 167.1796 
+z
+" clip-path="url(#pfddab84cce)" style="fill: #e8f0f7; stroke: #28557e; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #28557e; font: 11px 'DejaVu Sans'; text-anchor: start" x="14.29" y="43.456" transform="rotate(-0 14.29 43.456)">ESP transport</text>
+   </g>
+   <g id="text_2">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="63.92" y="71.141375" transform="rotate(-0 63.92 71.141375)">Outer IP</text>
+   </g>
+   <g id="text_3">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="163.18" y="71.141375" transform="rotate(-0 163.18 71.141375)">ESP hdr</text>
+   </g>
+   <g id="text_4">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="407.785" y="71.141375" transform="rotate(-0 407.785 71.141375)">TCP / data / trailer</text>
+   </g>
+   <g id="text_5">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="648.845" y="71.141375" transform="rotate(-0 648.845 71.141375)">Tag</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #28557e; font: 11px 'DejaVu Sans'; text-anchor: start" x="14.29" y="125.032" transform="rotate(-0 14.29 125.032)">ESP tunnel</text>
+   </g>
+   <g id="text_7">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="63.92" y="152.717375" transform="rotate(-0 63.92 152.717375)">New IP</text>
+   </g>
+   <g id="text_8">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="163.18" y="152.717375" transform="rotate(-0 163.18 152.717375)">ESP hdr</text>
+   </g>
+   <g id="text_9">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="407.785" y="152.717375" transform="rotate(-0 407.785 152.717375)">Original IP / TCP / data / trailer</text>
+   </g>
+   <g id="text_10">
+    <text style="font: 10px 'DejaVu Sans'; text-anchor: middle" x="648.845" y="152.717375" transform="rotate(-0 648.845 152.717375)">Tag</text>
+   </g>
+   <g id="text_11">
+    <text style="font: 10px 'DejaVu Sans'" transform="translate(238.639062 204.474187)">Green region encrypted; outer IP remains visible.</text>
+    <text style="font: 10px 'DejaVu Sans'" transform="translate(213.704687 215.672)">Integrity coverage depends on the selected ESP transform.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pfddab84cce">
+   <rect x="7.2" y="7.2" width="709" height="226.6"/>
+  </clipPath>
+ </defs>
+</svg>

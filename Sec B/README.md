@@ -1,6 +1,6 @@
 # Sec B · Computer Security
 
-The section contains **eleven slide decks (Lectures 2–12)**, handwritten notes, a supplementary revision guide, analysis of six final exams and **67 worked solutions**.
+The section contains **twelve slide decks (Lectures 1–12)**, handwritten notes, a supplementary revision guide, analysis of six final exams and **73 worked solutions**.
 
 ## Read
 
@@ -17,7 +17,7 @@ The section contains **eleven slide decks (Lectures 2–12)**, handwritten notes
 - [Handwritten notes](notes/handwritten-notes.pdf).
 - [Supplementary CT4 revision guide](notes/ct4-revision-guide.pdf).
 
-Lectures 11–12 supply the previously missing primary decks for XSS, UI attacks, 2FA, SQL injection, command injection and CAPTCHAs. The question frequencies are unchanged; attribution now points to these decks.
+Lectures 11–12 supply the previously missing primary decks for XSS, UI attacks, 2FA, SQL injection, command injection and CAPTCHAs. Lecture 1 now adds security principles, CIA/availability context and six newly solved questions. The updated frequencies include those questions; existing S01–S67 labels are preserved.
 
 ## Highest-frequency topic groups
 
@@ -30,6 +30,7 @@ Lectures 11–12 supply the previously missing primary decks for XSS, UI attacks
 | XSS | 5 | 4/6 |
 | UI attacks | 5 | 4/6 |
 | MAC/HMAC | 5 | 4/6 |
+| Security-principle applications (Lecture 1) | 5 | 3/6 |
 | Block-cipher modes | 4 | 4/6 |
 | Diffie–Hellman/MITM | 4 | 4/6 |
 

@@ -1,0 +1,241 @@
+[
+  {
+    "file": "Sec A/slides/Ch01-Introduction.pdf",
+    "pages": 30,
+    "text_characters": 33011,
+    "text_file": "Sec A/_build/extracted/Ch01-Introduction.txt",
+    "short_pages": []
+  },
+  {
+    "file": "Sec A/slides/Ch02-Physical-Security.pdf",
+    "pages": 32,
+    "text_characters": 15744,
+    "text_file": "Sec A/_build/extracted/Ch02-Physical-Security.txt",
+    "short_pages": [
+      1,
+      13,
+      17
+    ]
+  },
+  {
+    "file": "Sec A/slides/Ch03-BufferOverflow.pdf",
+    "pages": 8,
+    "text_characters": 12505,
+    "text_file": "Sec A/_build/extracted/Ch03-BufferOverflow.txt",
+    "short_pages": []
+  },
+  {
+    "file": "Sec A/slides/Ch03-FilesystemSecurity.pdf",
+    "pages": 28,
+    "text_characters": 30842,
+    "text_file": "Sec A/_build/extracted/Ch03-FilesystemSecurity.txt",
+    "short_pages": [
+      27
+    ]
+  },
+  {
+    "file": "Sec A/slides/Ch03-OS-Security.pdf",
+    "pages": 37,
+    "text_characters": 15995,
+    "text_file": "Sec A/_build/extracted/Ch03-OS-Security.txt",
+    "short_pages": [
+      1,
+      2,
+      15,
+      21,
+      27,
+      33
+    ]
+  },
+  {
+    "file": "Sec A/slides/Ch04-Malware.pdf",
+    "pages": 67,
+    "text_characters": 29903,
+    "text_file": "Sec A/_build/extracted/Ch04-Malware.txt",
+    "short_pages": [
+      1,
+      11,
+      14,
+      30,
+      31,
+      40,
+      46,
+      61
+    ]
+  },
+  {
+    "file": "Sec A/slides/Ch05-NetworkSecurity.pdf",
+    "pages": 36,
+    "text_characters": 17571,
+    "text_file": "Sec A/_build/extracted/Ch05-NetworkSecurity.txt",
+    "short_pages": [
+      1,
+      2,
+      13,
+      22,
+      25
+    ]
+  },
+  {
+    "file": "Sec A/slides/Ch06-1-NetworkDNS.pdf",
+    "pages": 43,
+    "text_characters": 17603,
+    "text_file": "Sec A/_build/extracted/Ch06-1-NetworkDNS.txt",
+    "short_pages": [
+      1,
+      14,
+      18,
+      20,
+      25,
+      27,
+      34,
+      42
+    ]
+  },
+  {
+    "file": "Sec A/slides/Ch06-2-FW-Tunneling-IDS-REDUCED.pdf",
+    "pages": 34,
+    "text_characters": 13817,
+    "text_file": "Sec A/_build/extracted/Ch06-2-FW-Tunneling-IDS-REDUCED.txt",
+    "short_pages": [
+      1,
+      2,
+      12,
+      19,
+      21,
+      23,
+      27,
+      30,
+      31,
+      33
+    ]
+  },
+  {
+    "file": "Sec A/slides/Crypto-Hash-DigSign.pdf",
+    "pages": 69,
+    "text_characters": 32176,
+    "text_file": "Sec A/_build/extracted/Crypto-Hash-DigSign.txt",
+    "short_pages": [
+      1,
+      11,
+      14,
+      15,
+      17,
+      21,
+      23,
+      24,
+      27,
+      29,
+      48,
+      55,
+      56,
+      59,
+      60,
+      61
+    ]
+  },
+  {
+    "file": "Sec A/slides/WebDB-security.pdf",
+    "pages": 40,
+    "text_characters": 12406,
+    "text_file": "Sec A/_build/extracted/WebDB-security.txt",
+    "short_pages": [
+      1,
+      2,
+      5,
+      7,
+      14,
+      19,
+      20,
+      31
+    ]
+  },
+  {
+    "file": "Sec A/notes/CSE-405-Till-Mid.pdf",
+    "pages": 80,
+    "text_characters": 80,
+    "text_file": "Sec A/_build/extracted/CSE-405-Till-Mid.txt",
+    "short_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80
+    ]
+  }
+]

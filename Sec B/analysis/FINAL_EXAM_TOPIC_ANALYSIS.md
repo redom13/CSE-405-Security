@@ -2,7 +2,7 @@
 
 ## Scope and how the counts work
 
-This report maps questions in the root past-paper PDF to the actual contents of Lectures 2–12 and the handwritten Sec B notes, including the former CT 4 material. The existing CT4 revision guide is supplementary; its frequency table is not treated as the source of truth.
+This report maps questions in the root past-paper PDF to the actual contents of Lectures 1–12 and the handwritten Sec B notes, including the former CT 4 material. The existing CT4 revision guide is supplementary; its frequency table is not treated as the source of truth.
 
 **Question text below is a faithful paraphrase, not a verbatim transcription.** Open the linked paper page for exact wording, code, figures and layout. Page numbers are physical PDF pages, starting at 1. Academic sessions label questions; sitting years are shown separately.
 
@@ -19,7 +19,7 @@ This report maps questions in the root past-paper PDF to the actual contents of 
 | 2019–20 | 07 September 2021 | 22–25 |
 | 2018–19 | 24 October 2019 | 26–31 |
 
-**Mapped question index:** 67 distinct lettered subquestions; machine-readable versions: [CSV](question_index.csv) and [JSON](question_index.json).
+**Mapped question index:** 73 distinct lettered subquestions; machine-readable versions: [CSV](question_index.csv) and [JSON](question_index.json).
 
 ## Topics ranked by question frequency
 
@@ -32,23 +32,25 @@ This report maps questions in the root past-paper PDF to the actual contents of 
 | 5 | [Clickjacking, phishing, homographs and UI attacks](#ui) | 5 | 4/6 | Lecture 11 — XSS and UI Attacks |
 | 6 | [Cross-site scripting: stored/reflected XSS and malicious scripts](#xss) | 5 | 4/6 | Lecture 11 — XSS and UI Attacks |
 | 7 | [MACs, HMAC and file/message integrity](#mac) | 5 | 4/6 | Lecture 5 — Cryptographic Hashes and MACs |
-| 8 | [Block-cipher modes: ECB, CBC, CTR and ciphertext modification](#modes) | 4 | 4/6 | Lecture 4 — Block Cipher Modes of Operation |
-| 9 | [Diffie–Hellman: calculation, MITM and authentication](#dh) | 4 | 4/6 | Lecture 6 — PRNGs and Diffie-Hellman Key Exchange |
-| 10 | [Certificates, certificate authorities and trusted public keys](#cert) | 4 | 3/6 | Lecture 8 — Certificates, Password Hashing, and Case Studies |
-| 11 | [RSA encryption and its number-theory prerequisites](#rsa) | 4 | 2/6 | Lecture 7 — Public-Key Encryption and Digital Signatures |
-| 12 | [Cookie policy, attributes and URL/cookie matching](#cookies) | 3 | 3/6 | Lecture 10 — Cookies and CSRF |
-| 13 | [Cryptographic goals, confusion and diffusion](#goals) | 3 | 3/6 | Lecture 2 — Intro to Cryptography |
+| 8 | [Security principles: least privilege, mediation, human factors, economics and recording](#principles) | 5 | 3/6 | Lecture 1 — Introduction and Security Principles |
+| 9 | [Block-cipher modes: ECB, CBC, CTR and ciphertext modification](#modes) | 4 | 4/6 | Lecture 4 — Block Cipher Modes of Operation |
+| 10 | [Diffie–Hellman: calculation, MITM and authentication](#dh) | 4 | 4/6 | Lecture 6 — PRNGs and Diffie-Hellman Key Exchange |
+| 11 | [Certificates, certificate authorities and trusted public keys](#cert) | 4 | 3/6 | Lecture 8 — Certificates, Password Hashing, and Case Studies |
+| 12 | [RSA encryption and its number-theory prerequisites](#rsa) | 4 | 2/6 | Lecture 7 — Public-Key Encryption and Digital Signatures |
+| 13 | [Cookie policy, attributes and URL/cookie matching](#cookies) | 3 | 3/6 | Lecture 10 — Cookies and CSRF |
 | 14 | [Authenticated encryption and encryption/MAC composition](#ae) | 3 | 2/6 | Lecture 5 — Cryptographic Hashes and MACs |
 | 15 | [Block-cipher internals: DES, AES, S-boxes and P-boxes](#block) | 3 | 2/6 | Lecture 3 — One-Time Pads and Block Ciphers |
 | 16 | [CSRF attack construction and defenses](#csrf) | 3 | 2/6 | Lecture 10 — Cookies and CSRF |
 | 17 | [Password guessing, brute-force calculations and account recovery](#password) | 3 | 2/6 | Lecture 8 — Certificates, Password Hashing, and Case Studies |
 | 18 | [Symmetric versus public-key cryptography and hybrid encryption](#keymodels) | 3 | 2/6 | Lecture 7 — Public-Key Encryption and Digital Signatures |
-| 19 | [ElGamal encryption: calculation, correctness and malleability](#elgamal) | 2 | 2/6 | Lecture 7 — Public-Key Encryption and Digital Signatures |
-| 20 | [Session authentication, cookie credentials and revocation](#session) | 2 | 1/6 | Lecture 10 — Cookies and CSRF |
-| 21 | [Elliptic-curve cryptography and ECDH](#ecc) | 1 | 1/6 | Lecture 6 — PRNGs and Diffie-Hellman Key Exchange |
-| 22 | [One-time pads: XOR, correctness and security](#otp) | 1 | 1/6 | Lecture 3 — One-Time Pads and Block Ciphers |
-| 23 | [PRNGs, HMAC-DRBG and rollback resistance](#prng) | 1 | 1/6 | Lecture 6 — PRNGs and Diffie-Hellman Key Exchange |
-| 24 | [SMS two-factor authentication and phishing relay attacks](#twofa) | 1 | 1/6 | Lecture 11 — XSS and UI Attacks |
+| 19 | [Cryptographic goals, confusion and diffusion](#goals) | 2 | 2/6 | Lecture 2 — Intro to Cryptography |
+| 20 | [ElGamal encryption: calculation, correctness and malleability](#elgamal) | 2 | 2/6 | Lecture 7 — Public-Key Encryption and Digital Signatures |
+| 21 | [Information-security CIA goals and availability attacks](#securitygoals) | 2 | 2/6 | Lecture 1 — Introduction and Security Principles |
+| 22 | [Session authentication, cookie credentials and revocation](#session) | 2 | 1/6 | Lecture 10 — Cookies and CSRF |
+| 23 | [Elliptic-curve cryptography and ECDH](#ecc) | 1 | 1/6 | Lecture 6 — PRNGs and Diffie-Hellman Key Exchange |
+| 24 | [One-time pads: XOR, correctness and security](#otp) | 1 | 1/6 | Lecture 3 — One-Time Pads and Block Ciphers |
+| 25 | [PRNGs, HMAC-DRBG and rollback resistance](#prng) | 1 | 1/6 | Lecture 6 — PRNGs and Diffie-Hellman Key Exchange |
+| 26 | [SMS two-factor authentication and phishing relay attacks](#twofa) | 1 | 1/6 | Lecture 11 — XSS and UI Attacks |
 
 Frequency measures what was asked in these six papers. It does not establish future exam probability. Paper coverage helps distinguish repeated yearly appearances from several questions concentrated in one paper.
 
@@ -59,8 +61,9 @@ Frequency measures what was asked in these six papers. It does not establish fut
 | Lecture 7 — Public-Key Encryption and Digital Signatures | 15 | 6/6 |
 | Lecture 5 — Cryptographic Hashes and MACs | 12 | 5/6 |
 | Lecture 11 — XSS and UI Attacks | 11 | 5/6 |
-| Lecture 2 — Intro to Cryptography | 8 | 5/6 |
+| Lecture 1 — Introduction and Security Principles | 7 | 4/6 |
 | Lecture 10 — Cookies and CSRF | 7 | 3/6 |
+| Lecture 2 — Intro to Cryptography | 7 | 5/6 |
 | Lecture 8 — Certificates, Password Hashing, and Case Studies | 7 | 5/6 |
 | Lecture 12 — SQL Injection and CAPTCHAs | 6 | 4/6 |
 | Lecture 6 — PRNGs and Diffie-Hellman Key Exchange | 6 | 4/6 |
@@ -73,6 +76,51 @@ Lectures 11–12 now provide the primary sources for XSS, UI attacks, 2FA and SQ
 ## Questions under slide deck → exact topic
 
 Within each teaching source, topics are ordered by frequency. The task line identifies the particular subtopic examined. Cross-topic questions may appear more than once so each topic has a complete list.
+
+## Lecture 1 — Introduction and Security Principles
+
+[Open source material](<../slides/lecture-01-introduction-and-security-principles.pdf>)
+
+<a id="principles"></a>
+### Security principles: least privilege, mediation, human factors, economics and recording — 5 questions across 3/6 papers
+
+**Study:** deck PDF pp. 11–60. Lecture 1 is the primary source; Sec B handwritten notes do not develop this unit.
+
+- **2023–24 · Q1(b) · 10 marks** · [root PDF p. 2](<../../CSE405-Security_Merged.pdf#page=2>)
+  - **Task:** Match five scenarios to security principles.
+  - Match principles to a valet key, bypassable laptop screen lock, irreversible water-damage sticker, bank recovery questions overridden by a representative, and encryption at rest and in transit.
+
+- **2022–23 · Q1(a) · 10 marks** · [root PDF p. 11](<../../CSE405-Security_Merged.pdf#page=11>)
+  - **Task:** Least privilege versus separation; why record compromise?.
+  - Differentiate least privilege and separation of privilege, and explain the importance of compromise recording with examples.
+
+- **2020–21 · Q1(c) · 11 marks** · [root PDF p. 18](<../../CSE405-Security_Merged.pdf#page=18>)
+  - **Task:** Why compromise recording matters and which tools support it.
+  - Explain the importance of compromise recording and name tools used for it.
+
+- **2020–21 · Q2(b) · 12 marks** · [root PDF p. 18](<../../CSE405-Security_Merged.pdf#page=18>)
+  - **Task:** Mismatched boarding-pass and identity checks.
+  - Explain how online-printable boarding passes permit a no-fly-list bypass in the described airport checks, and fix the weakness.
+  - **Coverage note:** An application of complete mediation/authentication; the exact airport workflow is in the paper.
+
+- **2020–21 · Q8(a) · 15 marks** · [root PDF p. 20](<../../CSE405-Security_Merged.pdf#page=20>)
+  - **Task:** Audit scanf, privileged file opening and a name-based access race.
+  - Analyze attacks on the printed C program (code on p. 21): scanf into buffer[60], fopen(fn,"a+"), access(fn,W_OK), fwrite; state environmental assumptions.
+  - **Coverage note:** Lecture 1 pp. 47–49 supplies complete mediation/TOCTOU; buffer-overflow and Unix setuid details require Sec A. Full mixed answer retained.
+
+<a id="securitygoals"></a>
+### Information-security CIA goals and availability attacks — 2 questions across 2/6 papers
+
+**Study:** deck PDF pp. 4–5, 12–17. Lecture 1 is the primary source; Sec B handwritten notes do not develop this unit.
+
+- **2021–22 · Q2(a) · 5 marks** · [root PDF p. 15](<../../CSE405-Security_Merged.pdf#page=15>)
+  - **Task:** Attacks versus information-security CIA goals.
+  - Categorize security attacks with respect to C.I.A. goals.
+  - **Coverage note:** Information-security CIA uses Availability; Lecture 1 supplies the general desired-property/threat-model context.
+
+- **2020–21 · Q1(b) · 12 marks** · [root PDF p. 18](<../../CSE405-Security_Merged.pdf#page=18>)
+  - **Task:** Selective packet dropping against a competitor.
+  - An ISP deliberately drops 25% of a competing provider’s VoIP packets traversing its routers. Identify the attack.
 
 ## Lecture 2 — Intro to Cryptography
 
@@ -110,7 +158,7 @@ Within each teaching source, topics are ordered by frequency. The task line iden
   - **Coverage note:** DITECTIVE is the spelling printed in the paper; do not silently replace it with DETECTIVE.
 
 <a id="goals"></a>
-### Cryptographic goals, confusion and diffusion — 3 questions across 3/6 papers
+### Cryptographic goals, confusion and diffusion — 2 questions across 2/6 papers
 
 **Study:** deck PDF pp. 7–21, 69–70; handwritten notes PDF pp. 1–2, 12.
 
@@ -118,11 +166,6 @@ Within each teaching source, topics are ordered by frequency. The task line iden
   - **Task:** Short concepts; answer any three of five.
   - Briefly explain any three, with diagrams where appropriate: (i) the CIA properties of cryptography, (ii) confusion and diffusion, (iii) message authentication code, (iv) homograph phishing attack, (v) clickjacking.
   - **Coverage note:** Each concept is optional. The 15 marks belong to the whole subquestion; each selected concept is worth 5. This is one question occurrence per relevant topic, not five compulsory questions.
-
-- **2021–22 · Q2(a) · 5 marks** · [root PDF p. 15](<../../CSE405-Security_Merged.pdf#page=15>)
-  - **Task:** Attacks versus information-security CIA goals.
-  - Categorize security attacks with respect to C.I.A. goals.
-  - **Coverage note:** Here CIA is the information-security triad, including Availability. Lecture 2 calls its cryptographic goals Confidentiality, Integrity and Authenticity; those are different uses of A.
 
 - **2020–21 · Q7(a) · 15 marks** · [root PDF p. 20](<../../CSE405-Security_Merged.pdf#page=20>)
   - **Task:** Break a Caesar-then-Hill construction.
@@ -636,7 +679,8 @@ Within each teaching source, topics are ordered by frequency. The task line iden
 
 ## Syllabus topics with no standalone mapped questions
 
-- Lecture 2: Kerckhoff’s principle and key-management rules; a standalone IND-CPA game definition; Enigma history. IND-CPA is explicitly examined through mode and ElGamal questions. General security-principle Q1(b) in 2023–24 needs broader material.
+- Lecture 1: trusted-computing-base details, fail-safe examples and security-by-design as standalone questions. Its principle applications and CIA/availability questions are now mapped.
+- Lecture 2: Kerckhoff’s principle and key-management rules; a standalone IND-CPA game definition; Enigma history. IND-CPA is explicitly examined through mode and ElGamal questions.
 - Lecture 3: OTP key reuse/two-time pads as a standalone question; AES round tracing as a standalone numerical exercise.
 - Lecture 4: standalone CFB analysis.
 - Lecture 5: standalone length-extension attack and NMAC construction; the underlying Merkle–Damgård construction is examined.
@@ -648,18 +692,17 @@ Within each teaching source, topics are ordered by frequency. The task line iden
 
 ## Material gaps that matter when practicing past papers
 
-These questions belong to the broader course, but complete teaching material is not present in the supplied Sec B files. This is a coverage checklist, not a second frequency ranking.
+These questions need material beyond Sec B; many are now covered by the [Sec A study guide](../../Sec%20A/README.md). This is a coverage checklist, not a second frequency ranking.
 
 | Session | Questions | Root PDF pages | Additional material needed |
 |---|---|---|---|
 | 2023–24 | 1(a), 2(b) | 1, 3 | Buffer-overflow payloads and defenses |
-| 2023–24 | 1(b) | 2 | General security principles: least privilege, threat models, economics and defense in depth |
 | 2023–24 | 2(a), 2(c), 3(a)–(c), 4(a)–(b) | 3–5 | DHCP spoofing, TCP attacks, network defenses, worms, DNS/Kaminsky, DoS and firewall evasion |
-| 2022–23 | 1–4 | 11–12 | General/system/network security, malware, access control, reconnaissance, honeypots and firewalls; password Q2(a) is included above |
+| 2022–23 | 1(b)–(c), 2(b)–(c), 3–4 | 11–12 | System/network security, malware, access control, reconnaissance, honeypots and firewalls; principle Q1(a) and password Q2(a) are included above |
 | 2022–23 | 7(b) | 13 | Tor anonymity and onion-routing cryptography |
 | 2021–22 | 1(a)–(b), 3(a), 4(a), 5–6, 7(a), 8 | 15–17 | Biometrics, memory/system security, DLL injection, malware, IPsec, botnets, intrusion detection, TCP/DNS defenses, access-control delegation and spam |
-| 2020–21 | 1–4 | 18–19 | General/system/network security, access control, forensics, worms, ARP and incident response |
-| 2020–21 | 5(c), 6(c), 7(c), 8(a) | 19–21 | Return-to-libc, stack-argument layout, StackGuard, unsafe C, and file-access race conditions |
+| 2020–21 | 1(a), 2(a), 2(c), 3–4 | 18–19 | System/network security, access control, forensics, worms, ARP and incident response; Q1(b), Q1(c) and Q2(b) now map to Lecture 1 |
+| 2020–21 | 5(c), 6(c), 7(c) | 19–21 | Return-to-libc, stack-argument layout and StackGuard; Q8(a) is now included as a partial TOCTOU application with Sec A prerequisites |
 | 2019–20 | 1(b), 2(a), 2(c), 3–5 | 22–24 | Heartbleed, botnets, malware, Unix permissions, DNS/TCP/switch attacks, IDS/base-rate fallacy and honeypots |
 | 2018–19 | 1(b)–(c), 2, 3, 4(a), 4(c)–(d) | 26 | IPsec, malware, rootkits, network attacks, botnets, DNS poisoning and intrusion detection |
 | 2018–19 | 6(b), 7, 8(a), 8(b)(i), 9, 10, 13 | 27–31 | Physical locks, biometrics, Faraday cage, format-string/stack exploits and quantum key distribution |
