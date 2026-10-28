@@ -1,0 +1,691 @@
+[
+  {
+    "solution_id": "S01",
+    "session": "2023–24",
+    "question": "5(a)",
+    "page_in_original": 7,
+    "topics": [
+      "goals",
+      "mac",
+      "ui"
+    ],
+    "primary_deck": "L2"
+  },
+  {
+    "solution_id": "S02",
+    "session": "2023–24",
+    "question": "5(b)",
+    "page_in_original": 7,
+    "topics": [
+      "modes"
+    ],
+    "primary_deck": "L4"
+  },
+  {
+    "solution_id": "S03",
+    "session": "2023–24",
+    "question": "6(a)",
+    "page_in_original": 8,
+    "topics": [
+      "dh"
+    ],
+    "primary_deck": "L6"
+  },
+  {
+    "solution_id": "S04",
+    "session": "2023–24",
+    "question": "6(b)",
+    "page_in_original": 8,
+    "topics": [
+      "classical"
+    ],
+    "primary_deck": "L2"
+  },
+  {
+    "solution_id": "S05",
+    "session": "2023–24",
+    "question": "7(a)",
+    "page_in_original": 9,
+    "topics": [
+      "elgamal"
+    ],
+    "primary_deck": "L7"
+  },
+  {
+    "solution_id": "S06",
+    "session": "2023–24",
+    "question": "7(b)",
+    "page_in_original": 9,
+    "topics": [
+      "rsa"
+    ],
+    "primary_deck": "L7"
+  },
+  {
+    "solution_id": "S07",
+    "session": "2023–24",
+    "question": "7(c)",
+    "page_in_original": 9,
+    "topics": [
+      "signature"
+    ],
+    "primary_deck": "L7"
+  },
+  {
+    "solution_id": "S08",
+    "session": "2023–24",
+    "question": "8(a)",
+    "page_in_original": 9,
+    "topics": [
+      "ae"
+    ],
+    "primary_deck": "L5"
+  },
+  {
+    "solution_id": "S09",
+    "session": "2023–24",
+    "question": "8(b)",
+    "page_in_original": 9,
+    "topics": [
+      "cookies"
+    ],
+    "primary_deck": "L10"
+  },
+  {
+    "solution_id": "S10",
+    "session": "2023–24",
+    "question": "8(c)",
+    "page_in_original": 10,
+    "topics": [
+      "sql"
+    ],
+    "primary_deck": "L12"
+  },
+  {
+    "solution_id": "S11",
+    "session": "2023–24",
+    "question": "8(d)",
+    "page_in_original": 10,
+    "topics": [
+      "xss"
+    ],
+    "primary_deck": "L11"
+  },
+  {
+    "solution_id": "S12",
+    "session": "2023–24",
+    "question": "1(c)",
+    "page_in_original": 2,
+    "topics": [
+      "cert"
+    ],
+    "primary_deck": "L8"
+  },
+  {
+    "solution_id": "S13",
+    "session": "2023–24",
+    "question": "4(c)",
+    "page_in_original": 6,
+    "topics": [
+      "keymodels",
+      "ae",
+      "cert"
+    ],
+    "primary_deck": "L7"
+  },
+  {
+    "solution_id": "S14",
+    "session": "2022–23",
+    "question": "5(a)",
+    "page_in_original": 12,
+    "topics": [
+      "modes"
+    ],
+    "primary_deck": "L4"
+  },
+  {
+    "solution_id": "S15",
+    "session": "2022–23",
+    "question": "5(b)",
+    "page_in_original": 12,
+    "topics": [
+      "ae"
+    ],
+    "primary_deck": "L5"
+  },
+  {
+    "solution_id": "S16",
+    "session": "2022–23",
+    "question": "5(c)",
+    "page_in_original": 12,
+    "topics": [
+      "cookies",
+      "csrf",
+      "xss"
+    ],
+    "primary_deck": "L10"
+  },
+  {
+    "solution_id": "S17",
+    "session": "2022–23",
+    "question": "6(a)",
+    "page_in_original": 13,
+    "topics": [
+      "dh",
+      "signature"
+    ],
+    "primary_deck": "L6"
+  },
+  {
+    "solution_id": "S18",
+    "session": "2022–23",
+    "question": "6(b)",
+    "page_in_original": 13,
+    "topics": [
+      "sql"
+    ],
+    "primary_deck": "L12"
+  },
+  {
+    "solution_id": "S19",
+    "session": "2022–23",
+    "question": "6(c)",
+    "page_in_original": 13,
+    "topics": [
+      "prng"
+    ],
+    "primary_deck": "L6"
+  },
+  {
+    "solution_id": "S20",
+    "session": "2022–23",
+    "question": "7(a)",
+    "page_in_original": 13,
+    "topics": [
+      "csrf"
+    ],
+    "primary_deck": "L10"
+  },
+  {
+    "solution_id": "S21",
+    "session": "2022–23",
+    "question": "7(c)",
+    "page_in_original": 13,
+    "topics": [
+      "xss"
+    ],
+    "primary_deck": "L11"
+  },
+  {
+    "solution_id": "S22",
+    "session": "2022–23",
+    "question": "8(a)",
+    "page_in_original": 14,
+    "topics": [
+      "mac",
+      "hash"
+    ],
+    "primary_deck": "L5"
+  },
+  {
+    "solution_id": "S23",
+    "session": "2022–23",
+    "question": "8(b)",
+    "page_in_original": 14,
+    "topics": [
+      "twofa"
+    ],
+    "primary_deck": "L11"
+  },
+  {
+    "solution_id": "S24",
+    "session": "2022–23",
+    "question": "8(c)",
+    "page_in_original": 14,
+    "topics": [
+      "ui"
+    ],
+    "primary_deck": "L11"
+  },
+  {
+    "solution_id": "S25",
+    "session": "2022–23",
+    "question": "2(a)",
+    "page_in_original": 11,
+    "topics": [
+      "password"
+    ],
+    "primary_deck": "L8"
+  },
+  {
+    "solution_id": "S26",
+    "session": "2021–22",
+    "question": "1(c)",
+    "page_in_original": 15,
+    "topics": [
+      "classical"
+    ],
+    "primary_deck": "L2"
+  },
+  {
+    "solution_id": "S27",
+    "session": "2021–22",
+    "question": "1(d)",
+    "page_in_original": 15,
+    "topics": [
+      "classical",
+      "keymodels"
+    ],
+    "primary_deck": "L2"
+  },
+  {
+    "solution_id": "S28",
+    "session": "2021–22",
+    "question": "2(a)",
+    "page_in_original": 15,
+    "topics": [
+      "goals"
+    ],
+    "primary_deck": "L2"
+  },
+  {
+    "solution_id": "S29",
+    "session": "2021–22",
+    "question": "2(b)",
+    "page_in_original": 15,
+    "topics": [
+      "ecc"
+    ],
+    "primary_deck": "L6"
+  },
+  {
+    "solution_id": "S30",
+    "session": "2021–22",
+    "question": "2(c)",
+    "page_in_original": 15,
+    "topics": [
+      "dh"
+    ],
+    "primary_deck": "L6"
+  },
+  {
+    "solution_id": "S31",
+    "session": "2021–22",
+    "question": "2(d)",
+    "page_in_original": 15,
+    "topics": [
+      "modes"
+    ],
+    "primary_deck": "L4"
+  },
+  {
+    "solution_id": "S32",
+    "session": "2021–22",
+    "question": "3(b)",
+    "page_in_original": 15,
+    "topics": [
+      "hash",
+      "mac",
+      "signature"
+    ],
+    "primary_deck": "L5"
+  },
+  {
+    "solution_id": "S33",
+    "session": "2021–22",
+    "question": "3(c)",
+    "page_in_original": 16,
+    "topics": [
+      "hash"
+    ],
+    "primary_deck": "L5"
+  },
+  {
+    "solution_id": "S34",
+    "session": "2021–22",
+    "question": "3(d)",
+    "page_in_original": 16,
+    "topics": [
+      "keymodels",
+      "signature"
+    ],
+    "primary_deck": "L7"
+  },
+  {
+    "solution_id": "S35",
+    "session": "2021–22",
+    "question": "4(b)",
+    "page_in_original": 16,
+    "topics": [
+      "mac"
+    ],
+    "primary_deck": "L5"
+  },
+  {
+    "solution_id": "S36",
+    "session": "2021–22",
+    "question": "4(c)",
+    "page_in_original": 16,
+    "topics": [
+      "block"
+    ],
+    "primary_deck": "L3"
+  },
+  {
+    "solution_id": "S37",
+    "session": "2021–22",
+    "question": "4(d)",
+    "page_in_original": 16,
+    "topics": [
+      "block"
+    ],
+    "primary_deck": "L3"
+  },
+  {
+    "solution_id": "S38",
+    "session": "2021–22",
+    "question": "7(b)",
+    "page_in_original": 17,
+    "topics": [
+      "ui"
+    ],
+    "primary_deck": "L11"
+  },
+  {
+    "solution_id": "S39",
+    "session": "2021–22",
+    "question": "7(c)",
+    "page_in_original": 17,
+    "topics": [
+      "cert"
+    ],
+    "primary_deck": "L8"
+  },
+  {
+    "solution_id": "S40",
+    "session": "2020–21",
+    "question": "5(a)",
+    "page_in_original": 19,
+    "topics": [
+      "session",
+      "mac"
+    ],
+    "primary_deck": "L10"
+  },
+  {
+    "solution_id": "S41",
+    "session": "2020–21",
+    "question": "5(b)",
+    "page_in_original": 19,
+    "topics": [
+      "sql"
+    ],
+    "primary_deck": "L12"
+  },
+  {
+    "solution_id": "S42",
+    "session": "2020–21",
+    "question": "6(a)",
+    "page_in_original": 19,
+    "topics": [
+      "csrf",
+      "xss"
+    ],
+    "primary_deck": "L10"
+  },
+  {
+    "solution_id": "S43",
+    "session": "2020–21",
+    "question": "6(b)",
+    "page_in_original": 20,
+    "topics": [
+      "signature"
+    ],
+    "primary_deck": "L7"
+  },
+  {
+    "solution_id": "S44",
+    "session": "2020–21",
+    "question": "7(a)",
+    "page_in_original": 20,
+    "topics": [
+      "classical",
+      "goals"
+    ],
+    "primary_deck": "L2"
+  },
+  {
+    "solution_id": "S45",
+    "session": "2020–21",
+    "question": "7(b)",
+    "page_in_original": 20,
+    "topics": [
+      "cookies"
+    ],
+    "primary_deck": "L10"
+  },
+  {
+    "solution_id": "S46",
+    "session": "2020–21",
+    "question": "8(b)",
+    "page_in_original": 21,
+    "topics": [
+      "hash"
+    ],
+    "primary_deck": "L5"
+  },
+  {
+    "solution_id": "S47",
+    "session": "2020–21",
+    "question": "8(c)",
+    "page_in_original": 21,
+    "topics": [
+      "session"
+    ],
+    "primary_deck": "L10"
+  },
+  {
+    "solution_id": "S48",
+    "session": "2019–20",
+    "question": "1(a)",
+    "page_in_original": 22,
+    "topics": [
+      "signature"
+    ],
+    "primary_deck": "L7"
+  },
+  {
+    "solution_id": "S49",
+    "session": "2019–20",
+    "question": "1(c)",
+    "page_in_original": 22,
+    "topics": [
+      "password"
+    ],
+    "primary_deck": "L8"
+  },
+  {
+    "solution_id": "S50",
+    "session": "2019–20",
+    "question": "2(b)",
+    "page_in_original": 22,
+    "topics": [
+      "password"
+    ],
+    "primary_deck": "L8"
+  },
+  {
+    "solution_id": "S51",
+    "session": "2019–20",
+    "question": "6(a)",
+    "page_in_original": 24,
+    "topics": [
+      "otp",
+      "classical"
+    ],
+    "primary_deck": "L3"
+  },
+  {
+    "solution_id": "S52",
+    "session": "2019–20",
+    "question": "6(b)",
+    "page_in_original": 24,
+    "topics": [
+      "hash"
+    ],
+    "primary_deck": "L5"
+  },
+  {
+    "solution_id": "S53",
+    "session": "2019–20",
+    "question": "7(a)",
+    "page_in_original": 24,
+    "topics": [
+      "rsa"
+    ],
+    "primary_deck": "L7"
+  },
+  {
+    "solution_id": "S54",
+    "session": "2019–20",
+    "question": "7(b)",
+    "page_in_original": 24,
+    "topics": [
+      "rsa"
+    ],
+    "primary_deck": "L7"
+  },
+  {
+    "solution_id": "S55",
+    "session": "2019–20",
+    "question": "7(c)",
+    "page_in_original": 24,
+    "topics": [
+      "rsa"
+    ],
+    "primary_deck": "L7"
+  },
+  {
+    "solution_id": "S56",
+    "session": "2019–20",
+    "question": "8(a)",
+    "page_in_original": 24,
+    "topics": [
+      "elgamal",
+      "signature",
+      "hash"
+    ],
+    "primary_deck": "L7"
+  },
+  {
+    "solution_id": "S57",
+    "session": "2019–20",
+    "question": "8(b)",
+    "page_in_original": 24,
+    "topics": [
+      "dh"
+    ],
+    "primary_deck": "L6"
+  },
+  {
+    "solution_id": "S58",
+    "session": "2018–19",
+    "question": "1(a)",
+    "page_in_original": 26,
+    "topics": [
+      "cert"
+    ],
+    "primary_deck": "L8"
+  },
+  {
+    "solution_id": "S59",
+    "session": "2018–19",
+    "question": "1(d)",
+    "page_in_original": 26,
+    "topics": [
+      "signature"
+    ],
+    "primary_deck": "L7"
+  },
+  {
+    "solution_id": "S60",
+    "session": "2018–19",
+    "question": "4(b)",
+    "page_in_original": 26,
+    "topics": [
+      "ui"
+    ],
+    "primary_deck": "L11"
+  },
+  {
+    "solution_id": "S61",
+    "session": "2018–19",
+    "question": "5(a)",
+    "page_in_original": 27,
+    "topics": [
+      "classical"
+    ],
+    "primary_deck": "L2"
+  },
+  {
+    "solution_id": "S62",
+    "session": "2018–19",
+    "question": "5(b)",
+    "page_in_original": 27,
+    "topics": [
+      "modes"
+    ],
+    "primary_deck": "L4"
+  },
+  {
+    "solution_id": "S63",
+    "session": "2018–19",
+    "question": "6(a)",
+    "page_in_original": 27,
+    "topics": [
+      "block"
+    ],
+    "primary_deck": "L3"
+  },
+  {
+    "solution_id": "S64",
+    "session": "2018–19",
+    "question": "8(b)",
+    "page_in_original": 28,
+    "topics": [
+      "sql",
+      "ui"
+    ],
+    "primary_deck": "L12"
+  },
+  {
+    "solution_id": "S65",
+    "session": "2018–19",
+    "question": "11(a)",
+    "page_in_original": 29,
+    "topics": [
+      "sql"
+    ],
+    "primary_deck": "L12"
+  },
+  {
+    "solution_id": "S66",
+    "session": "2018–19",
+    "question": "11(b)",
+    "page_in_original": 30,
+    "topics": [
+      "sql"
+    ],
+    "primary_deck": "L12"
+  },
+  {
+    "solution_id": "S67",
+    "session": "2018–19",
+    "question": "12(a)",
+    "page_in_original": 30,
+    "topics": [
+      "xss"
+    ],
+    "primary_deck": "L11"
+  }
+]

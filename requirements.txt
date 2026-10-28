@@ -1,0 +1,4 @@
+Markdown>=3.5,<4
+beautifulsoup4>=4.12,<5
+matplotlib>=3.6,<4
+Pillow>=10,<12
