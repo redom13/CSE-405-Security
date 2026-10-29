@@ -97,14 +97,13 @@ Thus no reliable replacement-connection attack follows from the stated off-path 
 **Exam tip.** Separate “can spoof a packet,” “TCP accepts it,” and “application accepts the identity.” They are three different claims.
 ''','partial','The network deck covers TCP state/hijacking; the modern blind-reset and ISN details extend it.')
 
-add('2023–24','3(a)',4,10,'firewall tcp syn dns dos xss','Can NIDS/firewall plus HTTPS always stop five attacks?',
-'An HTTPS-only server farm has a NIDS and firewall processing incoming requests. With an on-path attacker, assess RST injection, reflected XSS, SYN flooding, DNS spoofing and DDoS.',r'''
+add('2023–24','3(a)',4,10,'firewall tcp syn dns dos','Can NIDS/firewall plus HTTPS always stop the network attacks?',
+'An HTTPS-only server farm has a NIDS and firewall processing incoming requests. With an on-path attacker, assess the Sec A cases: RST injection, SYN flooding, DNS spoofing and DDoS.',r'''
 **No blanket guarantee follows from this setup.** A NIDS may only alert; a firewall's effectiveness depends on its policy, visibility and resources.
 
 | Attack | Reason and relevant defense |
 |---|---|
 | RST injection | TLS authenticates records, not ordinary TCP headers. An on-path adversary can observe sequence state and attempt a valid reset. State checks/TCP-level authentication can help; HTTPS alone does not authenticate RSTs. |
-| Reflected XSS | TLS faithfully carries a vulnerable application's response. A NIDS outside TLS termination cannot inspect plaintext. Context-aware output encoding and safe templating are the primary fixes; an inspecting WAF is supplementary. |
 | SYN flooding | SYNs reach the server before TLS. SYN cookies/proxies and upstream limits reduce backlog exhaustion, but not all link saturation. |
 | DNS spoofing | HTTPS certificate validation can stop successful server impersonation when DNS redirects to an unauthenticated server. It does not prevent poisoning itself or resulting denial of service. DNSSEC validation addresses signed DNS data. |
 | DDoS | A firewall may filter attack traffic but cannot recover bandwidth already exhausted upstream. Distributed mitigation, capacity and application limits are needed. |
@@ -502,7 +501,7 @@ Revocation cannot erase previously copied data. Minimize exposure in advance: av
 add('2021–22','8(b)',17,12,'recon','OS fingerprinting to validated vulnerability finding',
 'Formulate the steps for exploiting a target after scanning its OS version.',answers['2022–23|2(c)'])
 
-add('2021–22','8(c)',17,11,'firewall phishing','Address-book allowlist as a spam policy',
+add('2021–22','8(c)',17,11,'firewall','Address-book allowlist as a spam policy',
 'Alice rejects all email except senders in her address book. Is this an effective spam defense?',r'''
 It reduces mail from unknown addresses but is neither complete spam prevention nor an acceptable policy for every user. An address-book entry is usually an **address string**, not a cryptographic authentication of the sender. Attackers can forge visible From fields, exploit look-alike addresses or send from an actually compromised contact account.
 
@@ -511,7 +510,7 @@ Conversely, legitimate first-time senders, new staff, receipts and changed addre
 Use authenticated domain/message evidence, reputation/content controls and a quarantine/review path appropriate to the user's needs. SPF/DKIM/DMARC provide useful domain-level signals but do not prove a contact's account is uncompromised or every message benign. Strong allowlisting should use the intended authenticated identity rather than trusting a display name.
 
 **Exam tip.** Discuss both false negatives (spam from “allowed” identities) and false positives (new legitimate contacts).
-''','partial','Applies allowlist policy and phishing concepts; email-specific authentication is supplementary.')
+''','partial','Applies allowlist policy and sender-identity validation; email-specific authentication is supplementary.')
 
 add('2020–21','1(a)',18,12,'worm','WannaCry vulnerability, success and zero-day status',
 'Identify WannaCry’s main vulnerability, why it succeeded and whether it was a zero-day attack.',r'''
@@ -732,7 +731,7 @@ Other defects include unchecked `fopen` failure and insufficient handling of I/O
 **Exam tip.** Trace object identity through the descriptor. This example is an open-then-check race, not the usual check-then-open ordering.
 ''','partial','Unsafe C, Unix privileges and complete-mediation principles support the answer; the exact race analysis is an application.')
 
-add('2019–20','1(b)',22,12,'buffer web','Heartbleed as an out-of-bounds read',
+add('2019–20','1(b)',22,12,'buffer','Heartbleed as an out-of-bounds read',
 'Define Heartbleed and explain its major consequences.',r'''
 Heartbleed (CVE-2014-0160) was a missing-bounds-check bug in affected OpenSSL TLS/DTLS heartbeat handling. A peer supplied a small payload but claimed a larger length; the implementation copied the claimed number of bytes from process memory into its reply without checking that those bytes belonged to the received payload.
 
@@ -1097,3 +1096,48 @@ sample = b'A'*10 + b'BBBB' + b'ICBA'
 
 **Exam tip.** Show both the alphabetic return address and the invalid restored-frame caveat. A control transfer is weaker than clean continued execution.
 ''','partial','Stack reasoning is taught, but this question imposes artificial instruction sizes/frame addresses and leaves the file-read body unspecified.')
+
+# Sec A tasks previously obscured by importing the whole mixed Sec B collection.
+add('2021–22','2(a)',15,5,'goals','Classify attacks by the information-security CIA triad',
+'Categorize security attacks with respect to confidentiality, integrity and availability.',r'''
+Use the **information-security** CIA triad:
+
+| Goal | Violation | Example |
+|---|---|---|
+| Confidentiality | Unauthorized disclosure | Eavesdropping on a private conversation or reading a protected file. |
+| Integrity | Unauthorized modification or fabrication | Altering a transaction, corrupting a file or injecting forged records. |
+| Availability | Denial or degradation of timely authorized service | Flooding a server, exhausting its connection state or deliberately dropping traffic. |
+
+One attack can violate several goals: malware can steal documents, change them and disable access. Classify its particular effects rather than assuming every attack has exactly one category. Authentication helps establish who is acting, but **A here means availability**, as in Sec A's Introduction PDF p. 2.
+
+**Exam tip.** Give a concrete attack for each goal and identify the property it violates.
+''')
+
+add('2018–19','4(b)',26,8,'dns','DNS redirection in a pharming-versus-phishing comparison',
+'Explain the DNS-redirection (pharming) side of the printed comparison, with an example.',r'''
+**Pharming** redirects a legitimate hostname to an attacker-controlled destination by changing a trusted-looking name-resolution path. For example, a poisoned resolver cache maps `bank.example` to the attacker's address. A user can type the correct hostname and still reach that address; this distinguishes DNS redirection from a lure persuading the user to visit a deceptive hostname.
+
+Trace the Sec A mechanism:
+
+```text
+user requests correct hostname -> resolver returns poisoned mapping
+                              -> client connects to attacker address
+```
+
+A poisoned hosts file, rogue resolver configuration or compromised router can produce a similar redirection. Use protected resolver configuration, validated DNS responses/DNSSEC where applicable and correctly authenticated endpoint connections. A DNS change alone does not supply the trusted server's private key or defeat proper certificate validation; denial of service may still occur.
+
+**Exam tip.** Locate the altered mapping or resolver configuration. A fake-looking URL alone is not evidence of DNS poisoning.
+''','partial','Only the Sec A DNS/pharming component is developed here; the standalone phishing topic remains in Sec B.')
+
+add('2018–19','8(b)',28,9,'emanations os','Faraday cage and OS impersonation-token short notes',
+'From the printed “any three” short notes, cover the Sec A options: (i) Faraday cage and (iii) impersonation token.',r'''
+**(i) Faraday cage.** A conductive enclosure attenuates electromagnetic coupling between its interior and exterior. Charge redistribution and induced currents help shield against external fields and reduce information leakage from electronic emanations. In computer security, shielding can protect equipment or reduce unintended radio emissions. Its effectiveness depends on frequency, material, seams, openings and construction; it does not guarantee perfect isolation at every frequency or block unrelated acoustic leakage.
+
+**(iii) Impersonation token.** In an operating-system security context, a token represents a principal's security context, such as identity, groups and privileges. A server thread can temporarily impersonate a client so that access checks use the client's rights rather than the server's broader authority. This supports least privilege when the token and permitted impersonation level are properly checked. Token theft or excessive impersonation rights can permit unauthorized access. Limit the scope, protect token handles and reliably restore the original context after the operation.
+
+[Microsoft access-token documentation](https://learn.microsoft.com/en-us/windows/win32/secauthz/access-tokens) describes these identity and privilege contexts.
+
+The OS-token explanation extends the supplied process-privilege material. It is distinct from a web session cookie and is not a SQL-injection mechanism.
+
+**Exam tip.** Keep shielding under physical security and impersonation under OS identity/privilege. The printed question's remaining two options belong to Sec B and are excluded from this answer.
+''','partial','The printed subquestion is 9 marks for any three choices. This guide covers only two Sec A choices (3 marks each); it is not a full 9-mark answer. OS impersonation-token mechanics extend the supplied privilege material.')

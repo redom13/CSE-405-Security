@@ -1,6 +1,6 @@
 # Sec B · Computer Security
 
-The section contains **twelve slide decks (Lectures 1–12)**, handwritten notes, a supplementary revision guide, analysis of six final exams and **73 worked solutions**.
+The section contains **twelve slide decks (Lectures 1–12)**, handwritten notes, a supplementary revision guide, analysis of six final exams and **74 worked entries**.
 
 ## Read
 
@@ -27,7 +27,7 @@ Lectures 11–12 supply the previously missing primary decks for XSS, UI attacks
 | Classical ciphers | 6 | 5/6 |
 | Hashes and collision/birthday attacks | 6 | 4/6 |
 | SQL injection | 6 | 4/6 |
-| XSS | 5 | 4/6 |
+| XSS | 6 | 4/6 |
 | UI attacks | 5 | 4/6 |
 | MAC/HMAC | 5 | 4/6 |
 | Security-principle applications (Lecture 1) | 5 | 3/6 |
@@ -37,3 +37,5 @@ Lectures 11–12 supply the previously missing primary decks for XSS, UI attacks
 A mixed subquestion can appear under multiple topics. Optional short-note choices and incomplete source coverage are labeled in the detailed analysis.
 
 Build instructions are in the [repository README](../README.md). Editable answer text is in [solutions/src](solutions/src/); generation tools are in [scripts](scripts/).
+
+Both printed sections of every yearly paper are checked by topic; see the [yearly audit](analysis/EXAM_SECTION_AUDIT.csv). The added S74 covers the reflected-XSS case in 2023–24 Q3(a), printed in Section A. Its four network cases belong to the current Sec A guide; the full printed 10 marks are not allocated to the XSS case alone.

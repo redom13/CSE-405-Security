@@ -30,7 +30,7 @@ front='''# CSE 405 · Worked Final-Exam Solutions
 
 ## How to use this guide
 
-**73 complete worked solutions · six academic sessions · all gathered questions.** Each question appears once with its original index label S01–S73. The topic/deck index also points to mixed questions taught partly elsewhere. The HTML has search, question navigation, scalable diagrams and typeset equations; the PDF is compiled from LaTeX for printing. The Markdown is editable.
+**74 worked entries · six academic sessions · 73 whole-question entries and one Sec B component of a mixed question.** Each question appears once with its original index label S01–S74. The topic/deck index also points to mixed questions taught partly elsewhere. The HTML has search, question navigation, scalable diagrams and typeset equations; the PDF is compiled from LaTeX for printing. The Markdown is editable.
 
 Question summaries are paraphrases. The root PDF remains the authority for wording, code and figures. The solution metadata links to its physical page. Each answer includes reasoning and an exam tip; assumptions and defects in printed questions are identified rather than silently repaired. These are independent worked solutions, not an official marking scheme.
 
@@ -38,7 +38,7 @@ Question summaries are paraphrases. The root PDF remains the authority for wordi
 
 **Four corrections to keep in mind:** Cookie 2 in 2020–21 Q7(b) is non-secure; the 2018–19 Hill key is not invertible modulo 26; the full-group ElGamal question needs a valid nonzero-message argument; a visible cookie or freshly transmitted plaintext MAC key cannot authenticate against an eavesdropper. Relevant solutions explain each point.
 
-Lecture 9 has no separate standalone question in the gathered index. Its URL/HTTP/origin foundations are used in the web solutions. The newly supplied Lecture 1 adds six principle/availability/TOCTOU questions (S68–S73) and gives an explicit source for the existing information-security CIA question. Other Sec A-only material remains in its own guide.
+Lecture 9 has no separate standalone question in the gathered index. Its URL/HTTP/origin foundations are used in the web solutions. The newly supplied Lecture 1 adds six principle/availability/TOCTOU questions (S68–S73) and gives an explicit source for the existing information-security CIA question. Other Sec A-only material remains in its own guide. S74 covers only the reflected-XSS case of 2023–24 Q3(a); the four network cases are in Sec A. Both printed exam sections are checked for current Sec B topics.
 
 ## Navigation by teaching source
 
@@ -67,9 +67,12 @@ for d in names:
  lines += [f'## {names[d]}','',f'Primary source: [{Path(sourcefiles[d]).name}](<{quote(os.path.relpath(ROOT/sourcefiles[d],BASE))}>)','']
  for q in arr:
   sid=q['solution_id'];key=q['session']+'|'+q['question']
-  lines += [f'<a id="{sid.lower()}"></a>',f'### {sid} · {q["session"]} · Q{q["question"]}','',f'**{q["exact_skill"]} · {q["marks"]} marks**','',
-  f'Original: [root question PDF, page {q["pdf_page"]}](../../CSE405-Security_Merged.pdf#page={q["pdf_page"]}). Sitting date: {q["sitting_date"]}.','',
-  '> **Question summary:** '+q['question_paraphrase'],'',answers[key],'']
+  marks_label='printed marks (mixed question)' if q.get('scope')=='sec_b_component' else 'marks'
+  lines += [f'<a id="{sid.lower()}"></a>',f'### {sid} · {q["session"]} · Q{q["question"]}','',f'**{q["exact_skill"]} · {q["marks"]} {marks_label}**','',
+  f'Original: [root question PDF, page {q["pdf_page"]}](../../CSE405-Security_Merged.pdf#page={q["pdf_page"]}). Sitting date: {q["sitting_date"]}. Printed Section {q["printed_section"]}.','',
+  '> **Question summary:** '+q['question_paraphrase'],'']
+  if q.get('scope_note'):lines += ['**Sec B scope:** '+q['scope_note'],'']
+  lines += [answers[key],'']
 lines += ['## Review checklist','',
 '- For a numerical answer: declare conventions, show intermediate steps, reduce modulo the right modulus, then check by inversion/substitution.','- For a security claim: identify what the attacker knows/can change, what is trusted, the exact guarantee, and any freshness requirement.','- For SQL injection: expand the final statement; quote termination and comments must match the given query.','- For a browser attack: label the script origin, destination server, victim cookie and action; do not assume SOP blocks every cross-origin request.','- For a fix: explain the mechanism. “Use encryption” does not repair identity trust, and “use a MAC” does not automatically prevent replay.','',
 '## Further primary references','',
@@ -107,10 +110,12 @@ css='''
 '''
 navlinks=''.join(f'<a href="#{q["solution_id"].lower()}">{q["solution_id"]} · {q["session"]} Q{q["question"]}<br>{html.escape(q["exact_skill"])}</a>' for q in qs)
 js='''document.querySelector('nav').addEventListener('click',e=>{if(e.target.closest('a')){document.getElementById('search').value='';document.querySelectorAll('section.question').forEach(x=>x.classList.remove('hidden'));}});document.getElementById('search').addEventListener('input',e=>{const term=e.target.value.toLowerCase();document.querySelectorAll('section.question').forEach(x=>x.classList.toggle('hidden',!x.textContent.toLowerCase().includes(term)));});'''
-page='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CSE 405 — 73 Worked Solutions</title><style>'+css+'</style><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]},options:{skipHtmlTags:["script","noscript","style","textarea","pre","code"]}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script></head><body><nav><h2>CSE 405 · Solutions</h2><p class="hint">73 answers · LaTeX math</p><input id="search" aria-label="Search solutions" placeholder="Search answers or topics…"><button onclick="window.print()">Print / save PDF</button>'+navlinks+'</nav><main>'+str(soup)+'<footer>Sources and assumptions are recorded in the individual answers. This is a study guide, not an official marking scheme.</footer></main><script>'+js+'</script></body></html>'
+page='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CSE 405 — 74 Worked Solutions</title><style>'+css+'</style><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]},options:{skipHtmlTags:["script","noscript","style","textarea","pre","code"]}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script></head><body><nav><h2>CSE 405 · Solutions</h2><p class="hint">74 entries · LaTeX math</p><input id="search" aria-label="Search solutions" placeholder="Search answers or topics…"><button onclick="window.print()">Print / save PDF</button>'+navlinks+'</nav><main>'+str(soup)+'<footer>Sources and assumptions are recorded in the individual answers. This is a study guide, not an official marking scheme.</footer></main><script>'+js+'</script></body></html>'
 if native_math:
  page=re.sub(r'<script>window.MathJax=.*?</script><script defer src=.*?</script>','',page,flags=re.S)
  page=page.replace('MathJax equation rendering','native MathML equation rendering')
+# Keep embedded SVG line formatting clean in generated repository artifacts.
+page=re.sub(r'[ \t]+(?=\n)','',page)
 (BASE/'SOLUTIONS.html').write_text(page)
 (BASE/'solutions_index.json').write_text(json.dumps([dict(solution_id=q['solution_id'],session=q['session'],question=q['question'],page_in_original=q['pdf_page'],topics=q['topics'],primary_deck=topicdeck[q['topics'][0]]) for q in qs],indent=2,ensure_ascii=False))
 # Clean HTML for the ODT exporter; all content remains present and no scripts run.

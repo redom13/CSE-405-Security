@@ -8,36 +8,12 @@
     "direct": 6
   },
   {
-    "topic": "signature",
-    "title": "Digital signatures and signing-key security",
-    "deck": "crypto",
-    "questions": 7,
-    "papers": 5,
-    "direct": 5
-  },
-  {
-    "topic": "hash",
-    "title": "Hash properties, collisions and birthday security",
-    "deck": "crypto",
+    "topic": "os",
+    "title": "OS trust, paging, boot and persistent memory images",
+    "deck": "os",
     "questions": 7,
     "papers": 4,
     "direct": 3
-  },
-  {
-    "topic": "mac",
-    "title": "MAC/HMAC and authenticated data",
-    "deck": "crypto",
-    "questions": 7,
-    "papers": 4,
-    "direct": 1
-  },
-  {
-    "topic": "phishing",
-    "title": "Phishing, homographs and UI deception",
-    "deck": "web",
-    "questions": 7,
-    "papers": 4,
-    "direct": 0
   },
   {
     "topic": "tcp",
@@ -62,22 +38,6 @@
     "questions": 6,
     "papers": 4,
     "direct": 1
-  },
-  {
-    "topic": "xss",
-    "title": "Stored/reflected XSS and injected scripts",
-    "deck": "web",
-    "questions": 6,
-    "papers": 4,
-    "direct": 4
-  },
-  {
-    "topic": "os",
-    "title": "OS trust, paging, boot and persistent memory images",
-    "deck": "os",
-    "questions": 6,
-    "papers": 3,
-    "direct": 3
   },
   {
     "topic": "firewall",
@@ -112,14 +72,6 @@
     "direct": 1
   },
   {
-    "topic": "sql",
-    "title": "SQL injection and prepared statements",
-    "deck": "web",
-    "questions": 5,
-    "papers": 3,
-    "direct": 4
-  },
-  {
     "topic": "principles",
     "title": "Security principles and scenario analysis",
     "deck": "intro",
@@ -136,25 +88,9 @@
     "direct": 3
   },
   {
-    "topic": "modes",
-    "title": "Block-cipher modes, CBC and ciphertext manipulation",
-    "deck": "crypto",
-    "questions": 4,
-    "papers": 4,
-    "direct": 2
-  },
-  {
     "topic": "botnet",
     "title": "Botnet creation, C&C and malicious agents",
     "deck": "malware",
-    "questions": 4,
-    "papers": 4,
-    "direct": 4
-  },
-  {
-    "topic": "dh",
-    "title": "Diffie\u2013Hellman calculations and authentication",
-    "deck": "crypto",
     "questions": 4,
     "papers": 4,
     "direct": 4
@@ -174,22 +110,6 @@
     "questions": 4,
     "papers": 3,
     "direct": 2
-  },
-  {
-    "topic": "goals",
-    "title": "CIA, attacker models and security scope",
-    "deck": "intro",
-    "questions": 4,
-    "papers": 3,
-    "direct": 2
-  },
-  {
-    "topic": "cert",
-    "title": "Certificates, CA trust and key binding",
-    "deck": "crypto",
-    "questions": 4,
-    "papers": 3,
-    "direct": 3
   },
   {
     "topic": "canary",
@@ -240,36 +160,12 @@
     "direct": 3
   },
   {
-    "topic": "csrf",
-    "title": "CSRF and cookie-authenticated requests",
-    "deck": "web",
-    "questions": 3,
-    "papers": 2,
-    "direct": 1
-  },
-  {
-    "topic": "block",
-    "title": "DES/AES internals, P/S boxes and multiple-DES strength",
-    "deck": "crypto",
-    "questions": 3,
-    "papers": 2,
-    "direct": 0
-  },
-  {
-    "topic": "password",
-    "title": "Password guessing, recovery and search-space calculations",
+    "topic": "goals",
+    "title": "CIA, attacker models and security scope",
     "deck": "intro",
     "questions": 3,
     "papers": 2,
-    "direct": 0
-  },
-  {
-    "topic": "rsa",
-    "title": "RSA encryption and correctness",
-    "deck": "crypto",
-    "questions": 3,
-    "papers": 2,
-    "direct": 3
+    "direct": 2
   },
   {
     "topic": "physical",
@@ -286,14 +182,6 @@
     "questions": 2,
     "papers": 2,
     "direct": 2
-  },
-  {
-    "topic": "web",
-    "title": "HTTP/HTTPS and browser trust",
-    "deck": "web",
-    "questions": 2,
-    "papers": 2,
-    "direct": 0
   },
   {
     "topic": "switch",
@@ -328,28 +216,12 @@
     "direct": 2
   },
   {
-    "topic": "number",
-    "title": "Modular arithmetic, Fermat, Euler and inverses",
-    "deck": "crypto",
-    "questions": 2,
-    "papers": 1,
-    "direct": 1
-  },
-  {
     "topic": "retlibc",
     "title": "Return-to-libc and calling conventions",
     "deck": "buffer",
     "questions": 2,
     "papers": 1,
     "direct": 0
-  },
-  {
-    "topic": "keymodels",
-    "title": "Symmetric/public-key models and Caesar as symmetric encryption",
-    "deck": "crypto",
-    "questions": 2,
-    "papers": 1,
-    "direct": 1
   },
   {
     "topic": "emanations",

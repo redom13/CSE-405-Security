@@ -1,17 +1,35 @@
 """Audit question completeness, portable links, offline HTML and compiled PDF labels."""
 from pathlib import Path
-import json,re,collections,subprocess,sys
+import json,re,collections,subprocess,sys,csv
 from urllib.parse import urlsplit,unquote
 from bs4 import BeautifulSoup
 from math_markup import render_markdown
 ROOT=Path(__file__).resolve().parents[2]
 errors=[]
+from catalog import TOPICS,DECKS,EXCLUDED_TOPIC_KEYS
+from questions import questions as scoped_questions
+active=json.loads((ROOT/'Sec A/analysis/question_index.json').read_text())
+if {q['session']+'|'+q['question'] for q in active}!={q['session']+'|'+q['question'] for q in scoped_questions}:
+ errors.append(('Sec A','generated index differs from scoped source'))
+if {'crypto','web'} & set(DECKS):errors.append(('Sec A','excluded source deck is active'))
+for q in active:
+ if set(q['topics'])-set(TOPICS) or set(q['topics']) & set(EXCLUDED_TOPIC_KEYS):
+  errors.append(('Sec A','excluded topic in question',q['session'],q['question']))
+ if q['scope']=='sec_a_components' and not q['scope_note']:errors.append(('Sec A','missing component boundary'))
+
 for sec in ['Sec A','Sec B']:
  section=ROOT/sec;sol=section/'solutions'
  qs=json.loads((section/'analysis/question_index.json').read_text())
  index=json.loads((sol/'solutions_index.json').read_text())
  labels=json.loads((sol/'pdf_page_map.json').read_text())['solutions']
  expected={(q['session'],q['question']) for q in qs}
+ audit=list(csv.DictReader((section/'analysis/EXAM_SECTION_AUDIT.csv').open()))
+ if len(audit)!=6:errors.append((sec,'yearly audit must include all six exams'))
+ for row in audit:
+  arr=[q for q in qs if q['session']==row['session']]
+  for printed in ['A','B']:
+   if sum(q['printed_section']==printed for q in arr)!=int(row['printed_'+printed]):errors.append((sec,'printed-section audit mismatch',row['session']))
+  if len(arr)!=int(row['total']):errors.append((sec,'yearly total mismatch',row['session']))
  found={(q['session'],q['question']) for q in index}
  if found!=expected:errors.append((sec,'index mismatch'))
  if len(expected)!=len(qs):errors.append((sec,'duplicate questions'))

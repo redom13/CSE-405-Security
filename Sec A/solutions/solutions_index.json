@@ -7,7 +7,9 @@
     "topics": [
       "buffer"
     ],
-    "primary_deck": "buffer"
+    "primary_deck": "buffer",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A002",
@@ -17,17 +19,9 @@
     "topics": [
       "principles"
     ],
-    "primary_deck": "intro"
-  },
-  {
-    "solution_id": "A003",
-    "session": "2023–24",
-    "question": "1(c)",
-    "page_in_original": 2,
-    "topics": [
-      "cert"
-    ],
-    "primary_deck": "crypto"
+    "primary_deck": "intro",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A004",
@@ -38,7 +32,9 @@
       "dhcp",
       "arp"
     ],
-    "primary_deck": "network"
+    "primary_deck": "network",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A005",
@@ -49,7 +45,9 @@
       "buffer",
       "canary"
     ],
-    "primary_deck": "buffer"
+    "primary_deck": "buffer",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A006",
@@ -59,7 +57,9 @@
     "topics": [
       "tcp"
     ],
-    "primary_deck": "network"
+    "primary_deck": "network",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A007",
@@ -71,10 +71,11 @@
       "tcp",
       "syn",
       "dns",
-      "dos",
-      "xss"
+      "dos"
     ],
-    "primary_deck": "defense"
+    "primary_deck": "defense",
+    "printed_section": "A",
+    "scope": "sec_a_components"
   },
   {
     "solution_id": "A008",
@@ -84,7 +85,9 @@
     "topics": [
       "worm"
     ],
-    "primary_deck": "malware"
+    "primary_deck": "malware",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A009",
@@ -94,7 +97,9 @@
     "topics": [
       "dns"
     ],
-    "primary_deck": "dns"
+    "primary_deck": "dns",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A010",
@@ -105,7 +110,9 @@
       "dos",
       "tcp"
     ],
-    "primary_deck": "network"
+    "primary_deck": "network",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A011",
@@ -115,101 +122,9 @@
     "topics": [
       "firewall"
     ],
-    "primary_deck": "defense"
-  },
-  {
-    "solution_id": "A012",
-    "session": "2023–24",
-    "question": "4(c)",
-    "page_in_original": 6,
-    "topics": [
-      "web",
-      "cert"
-    ],
-    "primary_deck": "web"
-  },
-  {
-    "solution_id": "A013",
-    "session": "2023–24",
-    "question": "5(a)",
-    "page_in_original": 7,
-    "topics": [
-      "goals",
-      "mac",
-      "phishing"
-    ],
-    "primary_deck": "intro"
-  },
-  {
-    "solution_id": "A014",
-    "session": "2023–24",
-    "question": "5(b)",
-    "page_in_original": 7,
-    "topics": [
-      "modes"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A015",
-    "session": "2023–24",
-    "question": "6(a)",
-    "page_in_original": 8,
-    "topics": [
-      "dh"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A016",
-    "session": "2023–24",
-    "question": "7(b)",
-    "page_in_original": 9,
-    "topics": [
-      "rsa"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A017",
-    "session": "2023–24",
-    "question": "7(c)",
-    "page_in_original": 9,
-    "topics": [
-      "signature",
-      "rsa"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A018",
-    "session": "2023–24",
-    "question": "8(a)",
-    "page_in_original": 9,
-    "topics": [
-      "mac"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A019",
-    "session": "2023–24",
-    "question": "8(c)",
-    "page_in_original": 10,
-    "topics": [
-      "sql"
-    ],
-    "primary_deck": "web"
-  },
-  {
-    "solution_id": "A020",
-    "session": "2023–24",
-    "question": "8(d)",
-    "page_in_original": 10,
-    "topics": [
-      "xss"
-    ],
-    "primary_deck": "web"
+    "primary_deck": "defense",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A021",
@@ -219,7 +134,9 @@
     "topics": [
       "principles"
     ],
-    "primary_deck": "intro"
+    "primary_deck": "intro",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A022",
@@ -229,7 +146,9 @@
     "topics": [
       "syn"
     ],
-    "primary_deck": "network"
+    "primary_deck": "network",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A023",
@@ -239,17 +158,9 @@
     "topics": [
       "dhcp"
     ],
-    "primary_deck": "network"
-  },
-  {
-    "solution_id": "A024",
-    "session": "2022–23",
-    "question": "2(a)",
-    "page_in_original": 11,
-    "topics": [
-      "password"
-    ],
-    "primary_deck": "intro"
+    "primary_deck": "network",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A025",
@@ -259,7 +170,9 @@
     "topics": [
       "access"
     ],
-    "primary_deck": "intro"
+    "primary_deck": "intro",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A026",
@@ -269,7 +182,9 @@
     "topics": [
       "recon"
     ],
-    "primary_deck": "defense"
+    "primary_deck": "defense",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A027",
@@ -279,7 +194,9 @@
     "topics": [
       "switch"
     ],
-    "primary_deck": "network"
+    "primary_deck": "network",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A028",
@@ -289,7 +206,9 @@
     "topics": [
       "rootkit"
     ],
-    "primary_deck": "malware"
+    "primary_deck": "malware",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A029",
@@ -299,7 +218,9 @@
     "topics": [
       "adware"
     ],
-    "primary_deck": "malware"
+    "primary_deck": "malware",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A030",
@@ -309,7 +230,9 @@
     "topics": [
       "dns"
     ],
-    "primary_deck": "dns"
+    "primary_deck": "dns",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A031",
@@ -319,7 +242,9 @@
     "topics": [
       "honey"
     ],
-    "primary_deck": "defense"
+    "primary_deck": "defense",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A032",
@@ -329,7 +254,9 @@
     "topics": [
       "firewall"
     ],
-    "primary_deck": "defense"
+    "primary_deck": "defense",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A033",
@@ -339,101 +266,9 @@
     "topics": [
       "worm"
     ],
-    "primary_deck": "malware"
-  },
-  {
-    "solution_id": "A034",
-    "session": "2022–23",
-    "question": "5(a)",
-    "page_in_original": 12,
-    "topics": [
-      "modes"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A035",
-    "session": "2022–23",
-    "question": "5(b)",
-    "page_in_original": 12,
-    "topics": [
-      "mac",
-      "hash"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A036",
-    "session": "2022–23",
-    "question": "5(c)",
-    "page_in_original": 12,
-    "topics": [
-      "csrf",
-      "xss"
-    ],
-    "primary_deck": "web"
-  },
-  {
-    "solution_id": "A037",
-    "session": "2022–23",
-    "question": "6(a)",
-    "page_in_original": 13,
-    "topics": [
-      "dh",
-      "signature"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A038",
-    "session": "2022–23",
-    "question": "7(a)",
-    "page_in_original": 13,
-    "topics": [
-      "csrf"
-    ],
-    "primary_deck": "web"
-  },
-  {
-    "solution_id": "A039",
-    "session": "2022–23",
-    "question": "7(c)",
-    "page_in_original": 13,
-    "topics": [
-      "xss"
-    ],
-    "primary_deck": "web"
-  },
-  {
-    "solution_id": "A040",
-    "session": "2022–23",
-    "question": "8(a)",
-    "page_in_original": 14,
-    "topics": [
-      "mac",
-      "hash"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A041",
-    "session": "2022–23",
-    "question": "8(b)",
-    "page_in_original": 14,
-    "topics": [
-      "phishing"
-    ],
-    "primary_deck": "web"
-  },
-  {
-    "solution_id": "A042",
-    "session": "2022–23",
-    "question": "8(c)",
-    "page_in_original": 14,
-    "topics": [
-      "phishing"
-    ],
-    "primary_deck": "web"
+    "primary_deck": "malware",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A043",
@@ -443,7 +278,9 @@
     "topics": [
       "goals"
     ],
-    "primary_deck": "intro"
+    "primary_deck": "intro",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A044",
@@ -453,17 +290,9 @@
     "topics": [
       "auth"
     ],
-    "primary_deck": "physical"
-  },
-  {
-    "solution_id": "A045",
-    "session": "2021–22",
-    "question": "1(d)",
-    "page_in_original": 15,
-    "topics": [
-      "keymodels"
-    ],
-    "primary_deck": "crypto"
+    "primary_deck": "physical",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A046",
@@ -473,27 +302,9 @@
     "topics": [
       "goals"
     ],
-    "primary_deck": "intro"
-  },
-  {
-    "solution_id": "A047",
-    "session": "2021–22",
-    "question": "2(c)",
-    "page_in_original": 15,
-    "topics": [
-      "dh"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A048",
-    "session": "2021–22",
-    "question": "2(d)",
-    "page_in_original": 15,
-    "topics": [
-      "modes"
-    ],
-    "primary_deck": "crypto"
+    "primary_deck": "intro",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A049",
@@ -503,40 +314,9 @@
     "topics": [
       "rootkit"
     ],
-    "primary_deck": "malware"
-  },
-  {
-    "solution_id": "A050",
-    "session": "2021–22",
-    "question": "3(b)",
-    "page_in_original": 15,
-    "topics": [
-      "hash",
-      "mac",
-      "signature"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A051",
-    "session": "2021–22",
-    "question": "3(c)",
-    "page_in_original": 16,
-    "topics": [
-      "hash"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A052",
-    "session": "2021–22",
-    "question": "3(d)",
-    "page_in_original": 16,
-    "topics": [
-      "keymodels",
-      "signature"
-    ],
-    "primary_deck": "crypto"
+    "primary_deck": "malware",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A053",
@@ -546,37 +326,9 @@
     "topics": [
       "os"
     ],
-    "primary_deck": "os"
-  },
-  {
-    "solution_id": "A054",
-    "session": "2021–22",
-    "question": "4(b)",
-    "page_in_original": 16,
-    "topics": [
-      "mac"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A055",
-    "session": "2021–22",
-    "question": "4(c)",
-    "page_in_original": 16,
-    "topics": [
-      "block"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A056",
-    "session": "2021–22",
-    "question": "4(d)",
-    "page_in_original": 16,
-    "topics": [
-      "block"
-    ],
-    "primary_deck": "crypto"
+    "primary_deck": "os",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A057",
@@ -587,7 +339,9 @@
       "stealth",
       "adware"
     ],
-    "primary_deck": "malware"
+    "primary_deck": "malware",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A058",
@@ -597,7 +351,9 @@
     "topics": [
       "vpn"
     ],
-    "primary_deck": "defense"
+    "primary_deck": "defense",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A059",
@@ -608,7 +364,9 @@
       "botnet",
       "honey"
     ],
-    "primary_deck": "malware"
+    "primary_deck": "malware",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A060",
@@ -618,7 +376,9 @@
     "topics": [
       "tcp"
     ],
-    "primary_deck": "network"
+    "primary_deck": "network",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A061",
@@ -628,7 +388,9 @@
     "topics": [
       "dns"
     ],
-    "primary_deck": "dns"
+    "primary_deck": "dns",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A062",
@@ -638,7 +400,9 @@
     "topics": [
       "honey"
     ],
-    "primary_deck": "defense"
+    "primary_deck": "defense",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A063",
@@ -648,27 +412,9 @@
     "topics": [
       "syn"
     ],
-    "primary_deck": "network"
-  },
-  {
-    "solution_id": "A064",
-    "session": "2021–22",
-    "question": "7(b)",
-    "page_in_original": 17,
-    "topics": [
-      "phishing"
-    ],
-    "primary_deck": "web"
-  },
-  {
-    "solution_id": "A065",
-    "session": "2021–22",
-    "question": "7(c)",
-    "page_in_original": 17,
-    "topics": [
-      "cert"
-    ],
-    "primary_deck": "crypto"
+    "primary_deck": "network",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A066",
@@ -678,7 +424,9 @@
     "topics": [
       "access"
     ],
-    "primary_deck": "intro"
+    "primary_deck": "intro",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A067",
@@ -688,7 +436,9 @@
     "topics": [
       "recon"
     ],
-    "primary_deck": "defense"
+    "primary_deck": "defense",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A068",
@@ -696,10 +446,11 @@
     "question": "8(c)",
     "page_in_original": 17,
     "topics": [
-      "firewall",
-      "phishing"
+      "firewall"
     ],
-    "primary_deck": "defense"
+    "primary_deck": "defense",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A069",
@@ -709,7 +460,9 @@
     "topics": [
       "worm"
     ],
-    "primary_deck": "malware"
+    "primary_deck": "malware",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A070",
@@ -720,7 +473,9 @@
       "goals",
       "dos"
     ],
-    "primary_deck": "intro"
+    "primary_deck": "intro",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A071",
@@ -731,7 +486,9 @@
       "principles",
       "os"
     ],
-    "primary_deck": "intro"
+    "primary_deck": "intro",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A072",
@@ -741,7 +498,9 @@
     "topics": [
       "access"
     ],
-    "primary_deck": "intro"
+    "primary_deck": "intro",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A073",
@@ -752,7 +511,9 @@
       "principles",
       "auth"
     ],
-    "primary_deck": "intro"
+    "primary_deck": "intro",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A074",
@@ -762,7 +523,9 @@
     "topics": [
       "os"
     ],
-    "primary_deck": "os"
+    "primary_deck": "os",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A075",
@@ -773,7 +536,9 @@
       "os",
       "buffer"
     ],
-    "primary_deck": "os"
+    "primary_deck": "os",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A076",
@@ -783,7 +548,9 @@
     "topics": [
       "recon"
     ],
-    "primary_deck": "defense"
+    "primary_deck": "defense",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A077",
@@ -793,7 +560,9 @@
     "topics": [
       "worm"
     ],
-    "primary_deck": "malware"
+    "primary_deck": "malware",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A078",
@@ -803,7 +572,9 @@
     "topics": [
       "arp"
     ],
-    "primary_deck": "network"
+    "primary_deck": "network",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A079",
@@ -814,7 +585,9 @@
       "botnet",
       "firewall"
     ],
-    "primary_deck": "malware"
+    "primary_deck": "malware",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A080",
@@ -824,27 +597,9 @@
     "topics": [
       "ids"
     ],
-    "primary_deck": "defense"
-  },
-  {
-    "solution_id": "A081",
-    "session": "2020–21",
-    "question": "5(a)",
-    "page_in_original": 19,
-    "topics": [
-      "mac"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A082",
-    "session": "2020–21",
-    "question": "5(b)",
-    "page_in_original": 19,
-    "topics": [
-      "sql"
-    ],
-    "primary_deck": "web"
+    "primary_deck": "defense",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A083",
@@ -855,18 +610,9 @@
       "retlibc",
       "canary"
     ],
-    "primary_deck": "buffer"
-  },
-  {
-    "solution_id": "A084",
-    "session": "2020–21",
-    "question": "6(a)",
-    "page_in_original": 19,
-    "topics": [
-      "csrf",
-      "xss"
-    ],
-    "primary_deck": "web"
+    "primary_deck": "buffer",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A085",
@@ -876,7 +622,9 @@
     "topics": [
       "retlibc"
     ],
-    "primary_deck": "buffer"
+    "primary_deck": "buffer",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A086",
@@ -886,7 +634,9 @@
     "topics": [
       "canary"
     ],
-    "primary_deck": "buffer"
+    "primary_deck": "buffer",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A087",
@@ -898,27 +648,9 @@
       "files",
       "principles"
     ],
-    "primary_deck": "buffer"
-  },
-  {
-    "solution_id": "A088",
-    "session": "2020–21",
-    "question": "8(b)",
-    "page_in_original": 21,
-    "topics": [
-      "hash"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A089",
-    "session": "2019–20",
-    "question": "1(a)",
-    "page_in_original": 22,
-    "topics": [
-      "signature"
-    ],
-    "primary_deck": "crypto"
+    "primary_deck": "buffer",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A090",
@@ -926,20 +658,11 @@
     "question": "1(b)",
     "page_in_original": 22,
     "topics": [
-      "buffer",
-      "web"
+      "buffer"
     ],
-    "primary_deck": "buffer"
-  },
-  {
-    "solution_id": "A091",
-    "session": "2019–20",
-    "question": "1(c)",
-    "page_in_original": 22,
-    "topics": [
-      "password"
-    ],
-    "primary_deck": "intro"
+    "primary_deck": "buffer",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A092",
@@ -950,17 +673,9 @@
       "botnet",
       "dos"
     ],
-    "primary_deck": "malware"
-  },
-  {
-    "solution_id": "A093",
-    "session": "2019–20",
-    "question": "2(b)",
-    "page_in_original": 22,
-    "topics": [
-      "password"
-    ],
-    "primary_deck": "intro"
+    "primary_deck": "malware",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A094",
@@ -972,7 +687,9 @@
       "os",
       "dos"
     ],
-    "primary_deck": "defense"
+    "primary_deck": "defense",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A095",
@@ -983,7 +700,9 @@
       "adware",
       "worm"
     ],
-    "primary_deck": "malware"
+    "primary_deck": "malware",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A096",
@@ -993,7 +712,9 @@
     "topics": [
       "stealth"
     ],
-    "primary_deck": "malware"
+    "primary_deck": "malware",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A097",
@@ -1003,7 +724,9 @@
     "topics": [
       "files"
     ],
-    "primary_deck": "files"
+    "primary_deck": "files",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A098",
@@ -1013,7 +736,9 @@
     "topics": [
       "dns"
     ],
-    "primary_deck": "dns"
+    "primary_deck": "dns",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A099",
@@ -1023,7 +748,9 @@
     "topics": [
       "switch"
     ],
-    "primary_deck": "network"
+    "primary_deck": "network",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A100",
@@ -1033,7 +760,9 @@
     "topics": [
       "tcp"
     ],
-    "primary_deck": "network"
+    "primary_deck": "network",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A101",
@@ -1043,7 +772,9 @@
     "topics": [
       "ids"
     ],
-    "primary_deck": "defense"
+    "primary_deck": "defense",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A102",
@@ -1054,7 +785,9 @@
       "ids",
       "os"
     ],
-    "primary_deck": "defense"
+    "primary_deck": "defense",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A103",
@@ -1064,78 +797,9 @@
     "topics": [
       "honey"
     ],
-    "primary_deck": "defense"
-  },
-  {
-    "solution_id": "A104",
-    "session": "2019–20",
-    "question": "6(b)",
-    "page_in_original": 24,
-    "topics": [
-      "hash"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A105",
-    "session": "2019–20",
-    "question": "7(a)",
-    "page_in_original": 24,
-    "topics": [
-      "number"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A106",
-    "session": "2019–20",
-    "question": "7(b)",
-    "page_in_original": 24,
-    "topics": [
-      "number"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A107",
-    "session": "2019–20",
-    "question": "7(c)",
-    "page_in_original": 24,
-    "topics": [
-      "rsa"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A108",
-    "session": "2019–20",
-    "question": "8(a)",
-    "page_in_original": 24,
-    "topics": [
-      "signature",
-      "hash"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A109",
-    "session": "2019–20",
-    "question": "8(b)",
-    "page_in_original": 24,
-    "topics": [
-      "dh"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A110",
-    "session": "2018–19",
-    "question": "1(a)",
-    "page_in_original": 26,
-    "topics": [
-      "cert"
-    ],
-    "primary_deck": "crypto"
+    "primary_deck": "defense",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A111",
@@ -1145,7 +809,9 @@
     "topics": [
       "vpn"
     ],
-    "primary_deck": "defense"
+    "primary_deck": "defense",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A112",
@@ -1155,17 +821,9 @@
     "topics": [
       "insider"
     ],
-    "primary_deck": "malware"
-  },
-  {
-    "solution_id": "A113",
-    "session": "2018–19",
-    "question": "1(d)",
-    "page_in_original": 26,
-    "topics": [
-      "signature"
-    ],
-    "primary_deck": "crypto"
+    "primary_deck": "malware",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A114",
@@ -1175,7 +833,9 @@
     "topics": [
       "stealth"
     ],
-    "primary_deck": "malware"
+    "primary_deck": "malware",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A115",
@@ -1185,7 +845,9 @@
     "topics": [
       "adware"
     ],
-    "primary_deck": "malware"
+    "primary_deck": "malware",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A116",
@@ -1195,7 +857,9 @@
     "topics": [
       "rootkit"
     ],
-    "primary_deck": "malware"
+    "primary_deck": "malware",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A117",
@@ -1205,7 +869,9 @@
     "topics": [
       "worm"
     ],
-    "primary_deck": "malware"
+    "primary_deck": "malware",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A118",
@@ -1215,7 +881,9 @@
     "topics": [
       "insider"
     ],
-    "primary_deck": "malware"
+    "primary_deck": "malware",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A119",
@@ -1226,7 +894,9 @@
       "tcp",
       "arp"
     ],
-    "primary_deck": "network"
+    "primary_deck": "network",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A120",
@@ -1236,7 +906,9 @@
     "topics": [
       "tcp"
     ],
-    "primary_deck": "network"
+    "primary_deck": "network",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A121",
@@ -1246,7 +918,9 @@
     "topics": [
       "botnet"
     ],
-    "primary_deck": "malware"
+    "primary_deck": "malware",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A122",
@@ -1256,7 +930,9 @@
     "topics": [
       "dns"
     ],
-    "primary_deck": "dns"
+    "primary_deck": "dns",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A123",
@@ -1264,10 +940,11 @@
     "question": "4(b)",
     "page_in_original": 26,
     "topics": [
-      "dns",
-      "phishing"
+      "dns"
     ],
-    "primary_deck": "dns"
+    "primary_deck": "dns",
+    "printed_section": "A",
+    "scope": "sec_a_components"
   },
   {
     "solution_id": "A124",
@@ -1278,7 +955,9 @@
       "ids",
       "arp"
     ],
-    "primary_deck": "defense"
+    "primary_deck": "defense",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A125",
@@ -1288,27 +967,9 @@
     "topics": [
       "honey"
     ],
-    "primary_deck": "defense"
-  },
-  {
-    "solution_id": "A126",
-    "session": "2018–19",
-    "question": "5(b)",
-    "page_in_original": 27,
-    "topics": [
-      "modes"
-    ],
-    "primary_deck": "crypto"
-  },
-  {
-    "solution_id": "A127",
-    "session": "2018–19",
-    "question": "6(a)",
-    "page_in_original": 27,
-    "topics": [
-      "block"
-    ],
-    "primary_deck": "crypto"
+    "primary_deck": "defense",
+    "printed_section": "A",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A128",
@@ -1318,7 +979,9 @@
     "topics": [
       "physical"
     ],
-    "primary_deck": "physical"
+    "primary_deck": "physical",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A129",
@@ -1328,7 +991,9 @@
     "topics": [
       "physical"
     ],
-    "primary_deck": "physical"
+    "primary_deck": "physical",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A130",
@@ -1338,7 +1003,9 @@
     "topics": [
       "physical"
     ],
-    "primary_deck": "physical"
+    "primary_deck": "physical",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A131",
@@ -1348,7 +1015,9 @@
     "topics": [
       "auth"
     ],
-    "primary_deck": "physical"
+    "primary_deck": "physical",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A132",
@@ -1357,10 +1026,11 @@
     "page_in_original": 28,
     "topics": [
       "emanations",
-      "sql",
-      "phishing"
+      "os"
     ],
-    "primary_deck": "physical"
+    "primary_deck": "physical",
+    "printed_section": "B",
+    "scope": "sec_a_components"
   },
   {
     "solution_id": "A133",
@@ -1370,7 +1040,9 @@
     "topics": [
       "format"
     ],
-    "primary_deck": "buffer"
+    "primary_deck": "buffer",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A134",
@@ -1381,7 +1053,9 @@
       "auth",
       "canary"
     ],
-    "primary_deck": "physical"
+    "primary_deck": "physical",
+    "printed_section": "B",
+    "scope": "sec_a"
   },
   {
     "solution_id": "A135",
@@ -1391,36 +1065,8 @@
     "topics": [
       "buffer"
     ],
-    "primary_deck": "buffer"
-  },
-  {
-    "solution_id": "A136",
-    "session": "2018–19",
-    "question": "11(a)",
-    "page_in_original": 29,
-    "topics": [
-      "sql"
-    ],
-    "primary_deck": "web"
-  },
-  {
-    "solution_id": "A137",
-    "session": "2018–19",
-    "question": "11(b)",
-    "page_in_original": 30,
-    "topics": [
-      "sql"
-    ],
-    "primary_deck": "web"
-  },
-  {
-    "solution_id": "A138",
-    "session": "2018–19",
-    "question": "12(a)",
-    "page_in_original": 30,
-    "topics": [
-      "xss"
-    ],
-    "primary_deck": "web"
+    "primary_deck": "buffer",
+    "printed_section": "B",
+    "scope": "sec_a"
   }
 ]

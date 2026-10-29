@@ -13,7 +13,10 @@
     "exact_skill": "Short concepts; answer any three of five",
     "question_paraphrase": "Briefly explain any three, with diagrams where appropriate: (i) the CIA properties of cryptography, (ii) confusion and diffusion, (iii) message authentication code, (iv) homograph phishing attack, (v) clickjacking.",
     "coverage": "direct",
-    "coverage_note": "Each concept is optional. The 15 marks belong to the whole subquestion; each selected concept is worth 5. This is one question occurrence per relevant topic, not five compulsory questions."
+    "coverage_note": "Each concept is optional. The 15 marks belong to the whole subquestion; each selected concept is worth 5. This is one question occurrence per relevant topic, not five compulsory questions.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2023–24",
@@ -27,7 +30,10 @@
     "exact_skill": "Unfamiliar chaining diagram; equations, parallelism and malleability",
     "question_paraphrase": "For the supplied block-cipher diagram with IV1 and IV2, derive encryption/decryption equations for the first three blocks; draw the decryption diagram; determine which operations parallelize. Given two known plaintext/ciphertext pairs and intercepted IV1, IV2, C1, C2, modify the transmitted values so Bob obtains chosen P1′ and P2′ without learning the key.",
     "coverage": "direct",
-    "coverage_note": "The diagram is a custom construction, not plain CBC. The original figure is essential. The handwritten notes p. 66 discuss this construction."
+    "coverage_note": "The diagram is a custom construction, not plain CBC. The original figure is essential. The handwritten notes p. 66 discuss this construction.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2023–24",
@@ -41,7 +47,10 @@
     "exact_skill": "Unauthenticated Diffie–Hellman MITM; defense without a trusted third party",
     "question_paraphrase": "Given the stated Diffie–Hellman protocol, act as Mallory when no trusted third parties can verify Alice or Bob. Explain and diagram a successful MITM attack, then briefly explain a defense.",
     "coverage": "direct",
-    "coverage_note": "The question explicitly rules out an available trusted third party. A defense must state another authenticated trust mechanism, such as a previously authenticated key or an out-of-band fingerprint check."
+    "coverage_note": "The question explicitly rules out an available trusted third party. A defense must state another authenticated trust mechanism, such as a previously authenticated key or an out-of-band fingerprint check.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2023–24",
@@ -55,7 +64,10 @@
     "exact_skill": "Recover affine-cipher keys from two mappings",
     "question_paraphrase": "The diagram implements T = P×K1 mod 26 and C = T+K2 mod 26, with K1 coprime to 26. Given B→E and E→P, set up and solve simultaneous congruences to determine K1 and K2.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2023–24",
@@ -69,7 +81,10 @@
     "exact_skill": "Numerical ElGamal; IND-CPA and non-malleability",
     "question_paraphrase": "For ElGamal with p=353, g=3, Bob’s private key b=233, Alice’s message M=123 and random r=97, compute Bob’s public key and the ciphertext, and show decryption step by step. Is the scheme IND-CPA secure and non-malleable? Justify.",
     "coverage": "direct",
-    "coverage_note": "The exam writes Z*353. The lecture’s zero-message IND-CPA counterexample does not apply to that message space; see the coverage notes in the report."
+    "coverage_note": "The exam writes Z*353. The lecture’s zero-message IND-CPA counterexample does not apply to that message space; see the coverage notes in the report.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2023–24",
@@ -83,7 +98,10 @@
     "exact_skill": "RSA correctness proof",
     "question_paraphrase": "Prove mathematically that RSA decryption recovers the original message, using the necessary number-theory results.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2023–24",
@@ -97,7 +115,10 @@
     "exact_skill": "RSA signing/verifying; security of separately sending ciphertext and signature",
     "question_paraphrase": "Define RSA signature creation and verification using Sign(d,M) and Verify(e,N,M,sig). Alice encrypts M with Bob’s RSA public key and signs M with her own private key. Can she securely send both ciphertext and signature together? Justify cryptographically.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2023–24",
@@ -111,7 +132,10 @@
     "exact_skill": "Encrypt-then-MAC versus MAC-then-encrypt",
     "question_paraphrase": "What is authenticated encryption? Which of MAC-then-encrypt and encrypt-then-MAC is preferable, and why?",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2023–24",
@@ -125,7 +149,10 @@
     "exact_skill": "Cookie-send matrix",
     "question_paraphrase": "Three cookies are set by long.moodle.com: theme=dark, Domain=moodle.com, Path=/, Secure=true; auth=ok, Domain=long.moodle.com, Path=/test, Secure=false; file=secret, Domain=moodle.com, Path=/print, Secure=true. Fill the send/not-send matrix for (i) http://print.moodle.com/print, (ii) http://login.moodle.com/, (iii) http://moodle.com/test, (iv) https://moodle.com/print/test, (v) https://login.moodle.com/test/print.",
     "coverage": "direct",
-    "coverage_note": "The URL list continues on root PDF p. 10."
+    "coverage_note": "The URL list continues on root PDF p. 10.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2023–24",
@@ -139,7 +166,10 @@
     "exact_skill": "Login bypass; prepared statements",
     "question_paraphrase": "The backend concatenates username and password into SELECT * FROM users WHERE username=... AND password=.... The table includes Alice with password password123. Determine whether SQL injection is possible; give concrete login inputs to log in as Alice without her password; explain how prepared statements prevent it.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2023–24",
@@ -153,7 +183,10 @@
     "exact_skill": "Stored versus reflected XSS",
     "question_paraphrase": "Define XSS and explain the difference between stored and reflected XSS using diagrams.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2023–24",
@@ -167,7 +200,10 @@
     "exact_skill": "Untrusted key bundled with its own signature; attacker positions",
     "question_paraphrase": "ARTBot broadcasts to learn CSBot’s phone number. CSBot replies with its number, public key, and a signature on the number. ARTBot verifies using that supplied key and caches the result. Explain how to poison the cached number as (i) an on-path attacker, (ii) a MITM attacker and (iii) an off-path attacker. Analyze a possible defense.",
     "coverage": "direct",
-    "coverage_note": "Cross-topic use of signatures, but the failure being examined is the absence of an authenticated public-key binding."
+    "coverage_note": "Cross-topic use of signatures, but the failure being examined is the absence of an authenticated public-key binding.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2023–24",
@@ -183,7 +219,10 @@
     "exact_skill": "TLS handshake authentication, directional keys and authenticated records",
     "question_paraphrase": "For the supplied TLS handshake: (i) why can a MITM not exploit unencrypted/unauthenticated ClientHello and ServerHello, in both the DH and RSA cases? (ii) Why is using one shared encryption key and one shared integrity key for both directions a bad idea? (iii) After ChangeCipherSpec, what vulnerability remains in the simplified protocol, and how would you fix it?",
     "coverage": "partial",
-    "coverage_note": "The decks supply the cryptographic building blocks, not a full TLS handshake or record-protocol treatment. All 15 marks cover the combined subquestion."
+    "coverage_note": "The decks supply the cryptographic building blocks, not a full TLS handshake or record-protocol treatment. All 15 marks cover the combined subquestion.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2022–23",
@@ -197,7 +236,10 @@
     "exact_skill": "ECB/CBC/CTR comparison",
     "question_paraphrase": "Compare ECB, CBC and CTR, with diagrams, for (i) IND-CPA security, (ii) encryption/decryption parallelism and (iii) robustness to incorrect IV/nonce usage.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2022–23",
@@ -211,7 +253,10 @@
     "exact_skill": "Analyze encryption plus hash, plaintext MAC, or ciphertext MAC",
     "question_paraphrase": "Alice sends (1) Enc(K,m) with Hash(ciphertext), (2) Enc(K,m) with MAC(K,m), or (3) Enc(K,m) with MAC(K,ciphertext). Assume no harmful interactions from the shared key. For each, evaluate confidentiality against passive Eve and integrity against modifying MITM Mallory.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2022–23",
@@ -227,7 +272,10 @@
     "exact_skill": "Limits of cookie policy",
     "question_paraphrase": "Analyze how effective cookie policies are at (i) preventing CSRF, (ii) preventing session hijacking through XSS and (iii) preserving confidentiality of stored cookies.",
     "coverage": "direct",
-    "coverage_note": "A single lettered subquestion intentionally covers three issues. It is counted once in each relevant topic and once in the Lecture 10 total; its marks are not tripled."
+    "coverage_note": "A single lettered subquestion intentionally covers three issues. It is counted once in each relevant topic and once in the Lecture 10 total; its marks are not tripled.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2022–23",
@@ -242,7 +290,10 @@
     "exact_skill": "Authenticate Diffie–Hellman with RSA signatures",
     "question_paraphrase": "Explain Diffie–Hellman and its MITM security flaw with figures. Modify the algorithm using RSA digital signatures to remove that flaw.",
     "coverage": "direct",
-    "coverage_note": "The signing keys must themselves be authenticated; merely attaching an untrusted public key does not fix MITM."
+    "coverage_note": "The signing keys must themselves be authenticated; merely attaching an untrusted public key does not fix MITM.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2022–23",
@@ -256,7 +307,10 @@
     "exact_skill": "INSERT-query injection; bypass a cart quantity restriction",
     "question_paraphrase": "WorstBUY executes a formatted INSERT INTO cart(session,item) statement for each POST request. Alice cannot add more than three items through the website. Construct a POST request that inserts 100 pens, then give a preventive measure against SQL injection.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2022–23",
@@ -270,7 +324,10 @@
     "exact_skill": "HMAC-DRBG generation, security and rollback resistance",
     "question_paraphrase": "Describe how HMAC-DRBG generates pseudorandom numbers and why it is secure and rollback resistant, assuming secure HMAC.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2022–23",
@@ -284,7 +341,10 @@
     "exact_skill": "CSRF synchronizer token; refreshing only on POST",
     "question_paraphrase": "The server puts a random CSRF token in each page’s DOM/hidden form field, and accepts a request only with a valid cookie and POST token. Tokens are refreshed on POST. Explain protection without special browser support; evaluate refreshing only on POST instead of on both GET and POST.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2022–23",
@@ -298,7 +358,10 @@
     "exact_skill": "Stored versus reflected XSS",
     "question_paraphrase": "Briefly explain how reflected XSS differs from stored XSS.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2022–23",
@@ -313,7 +376,10 @@
     "exact_skill": "Integrity tags in a file header; hash versus MAC; writable versus read-only storage",
     "question_paraphrase": "A file’s integrity tag is stored in its header and checked when opened. An attacker must not modify the file undetected. Compare (i) an unkeyed collision-resistant hash, (ii) a MAC under the owner’s secret key and (iii) the MAC scheme when the tag is in read-only memory. Decide whether each system is secure.",
     "coverage": "direct",
-    "coverage_note": "The final case puts the integrity tag in read-only memory; preserve the wording of the original when working the problem."
+    "coverage_note": "The final case puts the integrity tag in read-only memory; preserve the wording of the original when working the problem.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2022–23",
@@ -327,7 +393,10 @@
     "exact_skill": "SMS 2FA against phishing",
     "question_paraphrase": "Is SMS-based two-factor authentication an effective defense against phishing? Justify.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2022–23",
@@ -341,7 +410,10 @@
     "exact_skill": "Clickjacking with iframes; repeated-click redirection",
     "question_paraphrase": "Describe clickjacking in two cases: (i) overlay a fake free-subscription button on an iframe advertisement so a visitor unknowingly clicks a paid buy button; (ii) an embedded public-exam result form whose first click goes to Twitter, second to Facebook, and third finally fetches the result.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2022–23",
@@ -355,7 +427,10 @@
     "exact_skill": "Brute-force throughput under a password-expiration policy",
     "question_paraphrase": "A password policy requires uppercase, lowercase, numeric and special characters, minimum length 10, with monthly password changes. Estimate the minimum guesses per second needed to crack a credential, showing the calculations.",
     "coverage": "partial",
-    "coverage_note": "The question does not specify the exact special-character alphabet or a precise success probability. State assumptions. Lecture 8 covers guessing attacks but not this exact counting problem."
+    "coverage_note": "The question does not specify the exact special-character alphabet or a precise success probability. State assumptions. Lecture 8 covers guessing attacks but not this exact counting problem.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2021–22",
@@ -369,7 +444,10 @@
     "exact_skill": "Hill encryption and decryption with a 3×3 key",
     "question_paraphrase": "Given Hill-cipher key GYBNQKURP and plaintext ACT, demonstrate encryption and decryption to judge correctness.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2021–22",
@@ -384,7 +462,10 @@
     "exact_skill": "Caesar as symmetric encryption; composition of affine ciphers",
     "question_paraphrase": "Why is Caesar a symmetric encryption algorithm? If you encrypt using one affine cipher and then a second affine cipher, both modulo 26, is there any advantage over one affine cipher? Derive the result.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2021–22",
@@ -398,7 +479,10 @@
     "exact_skill": "Attacks versus information-security CIA goals",
     "question_paraphrase": "Categorize security attacks with respect to C.I.A. goals.",
     "coverage": "direct",
-    "coverage_note": "Information-security CIA uses Availability; Lecture 1 supplies the general desired-property/threat-model context."
+    "coverage_note": "Information-security CIA uses Availability; Lecture 1 supplies the general desired-property/threat-model context.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2021–22",
@@ -412,7 +496,10 @@
     "exact_skill": "Compute an elliptic-curve point group",
     "question_paraphrase": "Explain elliptic-curve cryptographic applications. Find the group of points E11(1,6), with y²=x³+x+6 mod 11.",
     "coverage": "partial",
-    "coverage_note": "Lecture 6 p. 57 gives ECDH intuition and explicitly does not require curve arithmetic; full point enumeration needs material beyond this deck."
+    "coverage_note": "Lecture 6 p. 57 gives ECDH intuition and explicitly does not require curve arithmetic; full point enumeration needs material beyond this deck.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2021–22",
@@ -426,7 +513,10 @@
     "exact_skill": "Numerical Diffie–Hellman exchange",
     "question_paraphrase": "Explain Diffie–Hellman. Given p=353, primitive root g=3, and private exponents 97 and 233, calculate both public keys and the shared secret.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2021–22",
@@ -440,7 +530,10 @@
     "exact_skill": "Identify ECB-style long-message weakness and replace the mode",
     "question_paraphrase": "A cryptanalyst says the system is secure for short messages but vulnerable for long messages because of its mode of operation. Identify and describe the mode and explain how to overcome the problem.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2021–22",
@@ -456,7 +549,10 @@
     "exact_skill": "Applications of hashing in authentication, confidentiality and signatures",
     "question_paraphrase": "Demonstrate uses of a hash function for authentication, confidentiality and digital signatures.",
     "coverage": "partial",
-    "coverage_note": "The decks cover hashing, MACs and hash-then-sign; a bare hash does not provide confidentiality. Explain a suitable construction rather than attributing encryption properties to hashing."
+    "coverage_note": "The decks cover hashing, MACs and hash-then-sign; a bare hash does not provide confidentiality. Explain a suitable construction rather than attributing encryption properties to hashing.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2021–22",
@@ -470,7 +566,10 @@
     "exact_skill": "Evaluate XOR of fixed-size message blocks as a hash",
     "question_paraphrase": "Explain the desired properties of a cryptographic hash. A message consists of l blocks M1,…,Ml of 160 bits and h(x)=M1 XOR … XOR Ml. Evaluate this function against those properties.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2021–22",
@@ -485,7 +584,10 @@
     "exact_skill": "Symmetric/public-key comparison; key roles in signing versus encryption",
     "question_paraphrase": "Compare symmetric and public-key cryptography. Explain how the roles of public and private keys in signatures differ from their roles in public-key encryption.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2021–22",
@@ -499,7 +601,10 @@
     "exact_skill": "HMAC construction",
     "question_paraphrase": "Describe how a message authentication code is created by HMAC.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2021–22",
@@ -513,7 +618,10 @@
     "exact_skill": "DES attack; meet-in-the-middle strength of fivefold DES",
     "question_paraphrase": "Explain an attack on DES. A proposed 5DES alternates five DES encryptions/decryptions using independent keys and claims 280-bit strength, exceeding AES-256. Compute the effective key strength and assess the claim.",
     "coverage": "partial",
-    "coverage_note": "The deck introduces DES and its short key; multiple-DES meet-in-the-middle analysis is not developed."
+    "coverage_note": "The deck introduces DES and its short key; multiple-DES meet-in-the-middle analysis is not developed.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2021–22",
@@ -527,7 +635,10 @@
     "exact_skill": "Compare DES components with AES",
     "question_paraphrase": "For each DES component, identify its AES counterpart or explain why none is needed: (i) XOR of subkey with the f-function input, (ii) XOR of f output with the left half, (iii) f itself, (iv) permutation P, (v) swapping block halves.",
     "coverage": "partial",
-    "coverage_note": "AES round operations appear in Lecture 3; detailed DES round structure is not supplied."
+    "coverage_note": "AES round operations appear in Lecture 3; detailed DES round structure is not supplied.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2021–22",
@@ -541,7 +652,10 @@
     "exact_skill": "Clickjacking versus phishing",
     "question_paraphrase": "Differentiate clickjacking and phishing with examples.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2021–22",
@@ -555,7 +669,10 @@
     "exact_skill": "Self-signed SSL certificate and server authentication",
     "question_paraphrase": "Why is buying from a shopping website that uses a self-signed SSL certificate a bad idea?",
     "coverage": "direct",
-    "coverage_note": "The issue is whether the server key is authenticated by a trust anchor, not whether a self-signed certificate can encrypt."
+    "coverage_note": "The issue is whether the server key is authenticated by a trust anchor, not whether a self-signed certificate can encrypt.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2020–21",
@@ -570,7 +687,10 @@
     "exact_skill": "Authenticate UDP messages with a cookie/token; prevent replay",
     "question_paraphrase": "Bob uses UDP for a streaming service because confidentiality is unnecessary and he cannot use TLS/HTTPS. He needs integrity so attackers cannot impersonate the sender or alter or replay messages. Explain how to achieve this using cookies.",
     "coverage": "partial",
-    "coverage_note": "Lecture 10 covers session cookies and Lecture 5 MACs. A complete application protocol also needs authenticated key/bootstrap delivery and freshness or replay tracking. Raw UDP does not carry HTTP cookies automatically."
+    "coverage_note": "Lecture 10 covers session cookies and Lecture 5 MACs. A complete application protocol also needs authenticated key/bootstrap delivery and freshness or replay tracking. Raw UDP does not carry HTTP cookies automatically.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2020–21",
@@ -584,7 +704,10 @@
     "exact_skill": "Single-statement SQL injection in a password-change form",
     "question_paraphrase": "A C++ web server allows only one SQL statement per database call. Show how SQL injection in the displayed old-password/new-password login form can still change everyone’s password.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2020–21",
@@ -599,7 +722,10 @@
     "exact_skill": "CSRF plus stored XSS in a social-network friend request",
     "question_paraphrase": "Trudy builds trudymalicious.com. On a visitor A’s arrival, make A send Trudy a friend request and change A’s homepage so anyone visiting it sends Trudy a friend request. No CSRF/XSS defenses exist. The supplied GET is http://www.networksocial.com/action/friends/add?friend=20. Explain the malicious site.",
     "coverage": "partial",
-    "coverage_note": "CSRF is taught directly in Lecture 10; the stored-XSS part is taught in Lecture 11 pp. 15–19 and handwritten notes pp. 62–63. The question continues on p. 20."
+    "coverage_note": "CSRF is taught directly in Lecture 10; the stored-XSS part is taught in Lecture 11 pp. 15–19 and handwritten notes pp. 62–63. The question continues on p. 20.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2020–21",
@@ -613,7 +739,10 @@
     "exact_skill": "ElGamal signature algorithm and reuse of secret k",
     "question_paraphrase": "Explain the ElGamal signature scheme. Why must the same random k not be used for two signatures?",
     "coverage": "partial",
-    "coverage_note": "Lecture 7 pp. 38–41 gives the nonce-reuse principle for DSA/ECDSA, not the full ElGamal signature algorithm. The CT4 revision guide pp. 26–27 supplies the latter, with algebraic caveats noted in the report."
+    "coverage_note": "Lecture 7 pp. 38–41 gives the nonce-reuse principle for DSA/ECDSA, not the full ElGamal signature algorithm. The CT4 revision guide pp. 26–27 supplies the latter, with algebraic caveats noted in the report.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2020–21",
@@ -628,7 +757,10 @@
     "exact_skill": "Break a Caesar-then-Hill construction",
     "question_paraphrase": "Bob applies Caesar followed by Hill, calling it a CH network. He claims it meets Shannon confusion and diffusion because it is a substitution-permutation network. Alice says it is easy to break. Explain an attack.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2020–21",
@@ -642,7 +774,10 @@
     "exact_skill": "Cookie-send matrix",
     "question_paraphrase": "Cookies set by docs.example.com: file=main, Domain=example.com, Path=/, Secure=true; file=test, Domain=docs.example.com, Path=/test, Secure=false; file=print, Domain=example.com, Path=/print, Secure=true. Determine which are sent to (i) http://print.example.com/print, (ii) https://docs.example.com/, (iii) http://example.com/test, (iv) https://example.com/print/test, (v) https://docs.example.com/test/print.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2020–21",
@@ -656,7 +791,10 @@
     "exact_skill": "Birthday bound for a b-bit hash",
     "question_paraphrase": "Prove that a b-bit hash function provides b/2-bit security.",
     "coverage": "direct",
-    "coverage_note": "This is the collision-search security bound, not a universal bound on preimage resistance."
+    "coverage_note": "This is the collision-search security bound, not a universal bound on preimage resistance.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2020–21",
@@ -670,7 +808,10 @@
     "exact_skill": "Invalidate session cookies after password change",
     "question_paraphrase": "Bob’s authentication cookie expires after one year. Changing a password only updates the database. Explain Alice’s advice that resetting the password must also reset the authentication cookie.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2019–20",
@@ -684,7 +825,10 @@
     "exact_skill": "Digital signatures and non-repudiation",
     "question_paraphrase": "Explain, with a figure, how digital signatures ensure non-repudiation.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2019–20",
@@ -698,7 +842,10 @@
     "exact_skill": "Public security questions and password-reset account takeover",
     "question_paraphrase": "Attackers reset Sarah Palin’s email password using publicly available personal information such as birthday, ZIP code and security-question answers. Identify the attack and evaluate the security of this password-reset feature.",
     "coverage": "partial",
-    "coverage_note": "Account-recovery security is related to Lecture 8 password guessing; the specific recovery scenario is not taught in the deck. The CT4 guide pp. 52–53 discusses it."
+    "coverage_note": "Account-recovery security is related to Lecture 8 password guessing; the specific recovery scenario is not taught in the deck. The CT4 guide pp. 52–53 discusses it.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2019–20",
@@ -712,7 +859,10 @@
     "exact_skill": "Password-space size and average brute-force time",
     "question_paraphrase": "How many 10-character passwords can be made from all 128 ASCII characters? If an attacker tests one candidate per microsecond, how long does guessing take on average?",
     "coverage": "partial",
-    "coverage_note": "Lecture 8 gives the guessing-attack background; the numerical model is specified by the paper."
+    "coverage_note": "Lecture 8 gives the guessing-attack background; the numerical model is specified by the paper.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2019–20",
@@ -727,7 +877,10 @@
     "exact_skill": "OTP encryption/decryption; transposition as a Hill cipher",
     "question_paraphrase": "Explain how the pad P is used directly for both encryption and decryption in a binary OTP. Define transposition cipher and explain why it is a special case of Hill cipher.",
     "coverage": "partial",
-    "coverage_note": "OTP and Hill are taught; the permutation-matrix connection is an application rather than a separately developed slide topic."
+    "coverage_note": "OTP and Hill are taught; the permutation-matrix connection is an application rather than a separately developed slide topic.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2019–20",
@@ -741,7 +894,10 @@
     "exact_skill": "Weak/strong collision resistance; toy hash; Merkle–Damgård",
     "question_paraphrase": "State ideal hash properties and distinguish weak and strong collision resistance. Show H(x)=(5x+11) mod 19 is not weakly collision resistant for H(4). Draw Merkle–Damgård and explain why its compression function needs strong collision resistance.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2019–20",
@@ -755,7 +911,10 @@
     "exact_skill": "Euler totient/theorem; modular inverse",
     "question_paraphrase": "Define Euler’s totient function and Euler’s theorem, and explain computing a modular inverse using Euler’s theorem.",
     "coverage": "direct",
-    "coverage_note": "Lecture 7 pp. 20–23 uses these prerequisites; handwritten notes p. 35 and CT4 guide pp. 19–20 expand them."
+    "coverage_note": "Lecture 7 pp. 20–23 uses these prerequisites; handwritten notes p. 35 and CT4 guide pp. 19–20 expand them.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2019–20",
@@ -769,7 +928,10 @@
     "exact_skill": "Modular equations and fast exponentiation",
     "question_paraphrase": "Solve (i) x^8 ≡ 9 (mod 13), (ii) x² ≡ 2 (mod 13), and compute 3^128 mod 7. A modular-exponentiation table modulo 13 is supplied.",
     "coverage": "partial",
-    "coverage_note": "These number-theory exercises support RSA/DH. The current slides do not develop modular-root solving; the CT4 guide pp. 20–21 works this question."
+    "coverage_note": "These number-theory exercises support RSA/DH. The current slides do not develop modular-root solving; the CT4 guide pp. 20–21 works this question.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2019–20",
@@ -783,7 +945,10 @@
     "exact_skill": "RSA validity, repeated totients and encryption",
     "question_paraphrase": "System A: p=83, q=101, e=3, d=5467. System B: p=17, q=11, e=7, d=23. For both compute φ(n) and φ(φ(n)), and explain validity. For system B encrypt plaintext M=3.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2019–20",
@@ -799,7 +964,10 @@
     "exact_skill": "ElGamal encryption proof; birthday attack on signatures",
     "question_paraphrase": "Describe ElGamal encryption/decryption and prove decryption correctness. Give an illustrative example showing that digital signatures can be vulnerable to a birthday attack.",
     "coverage": "direct",
-    "coverage_note": "One lettered subquestion, shared by ElGamal and signature/hash topics. The printed 20 marks are not allocated between its tasks."
+    "coverage_note": "One lettered subquestion, shared by ElGamal and signature/hash topics. The printed 20 marks are not allocated between its tasks.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2019–20",
@@ -813,7 +981,10 @@
     "exact_skill": "Diffie–Hellman steps and active MITM",
     "question_paraphrase": "Write the Diffie–Hellman key-exchange steps and show the MITM attack when an adversary can intercept and modify messages.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2018–19",
@@ -827,7 +998,10 @@
     "exact_skill": "Digital-certificate contents and CA role",
     "question_paraphrase": "What key information is kept in a digital certificate? Explain the certification authority’s role with a figure.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2018–19",
@@ -841,7 +1015,10 @@
     "exact_skill": "Risks of signing an apparently random string",
     "question_paraphrase": "Explain the risks if Bob agrees to sign a seemingly random string with his private key.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2018–19",
@@ -855,7 +1032,10 @@
     "exact_skill": "Pharming versus phishing",
     "question_paraphrase": "Distinguish pharming and phishing, with examples.",
     "coverage": "partial",
-    "coverage_note": "Handwritten notes p. 63 teaches phishing; pharming and DNS redirection are not developed there."
+    "coverage_note": "Handwritten notes p. 63 teaches phishing; pharming and DNS redirection are not developed there.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2018–19",
@@ -869,7 +1049,10 @@
     "exact_skill": "Hill-cipher numerical encryption",
     "question_paraphrase": "Encrypt plaintext DITECTIVE using Hill cipher, block size m=3 and K=[[3,0,2],[2,0,2],[0,1,1]].",
     "coverage": "direct",
-    "coverage_note": "DITECTIVE is the spelling printed in the paper; do not silently replace it with DETECTIVE."
+    "coverage_note": "DITECTIVE is the spelling printed in the paper; do not silently replace it with DETECTIVE.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2018–19",
@@ -883,7 +1066,10 @@
     "exact_skill": "Inserted ciphertext bit and CBC synchronization",
     "question_paraphrase": "A message is encrypted with DES-CBC. An extra 0 bit is inserted into the ciphertext stream after block C_i. How much plaintext is garbled?",
     "coverage": "direct",
-    "coverage_note": "This is insertion of a bit, not flipping a bit or replacing a whole block. Preserve that distinction."
+    "coverage_note": "This is insertion of a bit, not flipping a bit or replacing a whole block. Preserve that distinction.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2018–19",
@@ -897,7 +1083,10 @@
     "exact_skill": "Trace P-box and S-box diagrams",
     "question_paraphrase": "For the supplied P-box, find the output for input bits designated top-to-bottom 01234567. For the supplied S-box, find the output sequence for successive input octal numbers 76543210.",
     "coverage": "partial",
-    "coverage_note": "The original diagrams are essential. Lecture 3 has AES SubBytes and ShiftRows, but not this specific P-box/S-box exercise."
+    "coverage_note": "The original diagrams are essential. Lecture 3 has AES SubBytes and ShiftRows, but not this specific P-box/S-box exercise.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2018–19",
@@ -912,7 +1101,10 @@
     "exact_skill": "Short notes; answer any three of four",
     "question_paraphrase": "Write short notes on any three: (i) Faraday cage, (ii) blind SQL injection, (iii) impersonation token, (iv) homograph attack.",
     "coverage": "partial",
-    "coverage_note": "Each choice is 3 marks within the 9-mark subquestion. Blind SQL injection is in Lecture 12 pp. 36–37; homographs are in Lecture 11 pp. 62–64 (also handwritten notes pp. 63–64). The meaning of impersonation token is not established as web-session authentication in the supplied sources, so this choice is not counted under session frequency."
+    "coverage_note": "Each choice is 3 marks within the 9-mark subquestion. Blind SQL injection is in Lecture 12 pp. 36–37; homographs are in Lecture 11 pp. 62–64 (also handwritten notes pp. 63–64). The meaning of impersonation token is not established as web-session authentication in the supplied sources, so this choice is not counted under session frequency.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2018–19",
@@ -926,7 +1118,10 @@
     "exact_skill": "UPDATE injection to change password and salary",
     "question_paraphrase": "Use the displayed employee-password-change form and PHP code to set employee EID100’s password to you_are_hacked and salary to 10$, without knowing the old password.",
     "coverage": "direct",
-    "coverage_note": "The PHP query/code appears on p. 30."
+    "coverage_note": "The PHP query/code appears on p. 30.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2018–19",
@@ -940,7 +1135,10 @@
     "exact_skill": "Rewrite vulnerable PHP using prepared statements",
     "question_paraphrase": "Change changepasswd.php to use a prepared statement so the SQL injection in Q11(a) is prevented.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2018–19",
@@ -954,7 +1152,10 @@
     "exact_skill": "Stored XSS in a guest book; malicious page actions",
     "question_paraphrase": "As Sammy (id=40), write a script in the guest-book Message field to demonstrate XSS damage. The first paragraph has id p1 and the friend-add action for user id 100 is http://vulnerable.com/action/friend/add?id=100.",
     "coverage": "direct",
-    "coverage_note": "The guest-book screenshot is on p. 31; consult it with the prompt on p. 30."
+    "coverage_note": "The guest-book screenshot is on p. 31; consult it with the prompt on p. 30.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
   },
   {
     "session": "2023–24",
@@ -968,7 +1169,10 @@
     "exact_skill": "Match five scenarios to security principles",
     "question_paraphrase": "Match principles to a valet key, bypassable laptop screen lock, irreversible water-damage sticker, bank recovery questions overridden by a representative, and encryption at rest and in transit.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2022–23",
@@ -982,7 +1186,10 @@
     "exact_skill": "Least privilege versus separation; why record compromise?",
     "question_paraphrase": "Differentiate least privilege and separation of privilege, and explain the importance of compromise recording with examples.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2020–21",
@@ -996,7 +1203,10 @@
     "exact_skill": "Selective packet dropping against a competitor",
     "question_paraphrase": "An ISP deliberately drops 25% of a competing provider’s VoIP packets traversing its routers. Identify the attack.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2020–21",
@@ -1010,7 +1220,10 @@
     "exact_skill": "Why compromise recording matters and which tools support it",
     "question_paraphrase": "Explain the importance of compromise recording and name tools used for it.",
     "coverage": "direct",
-    "coverage_note": ""
+    "coverage_note": "",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2020–21",
@@ -1024,7 +1237,10 @@
     "exact_skill": "Mismatched boarding-pass and identity checks",
     "question_paraphrase": "Explain how online-printable boarding passes permit a no-fly-list bypass in the described airport checks, and fix the weakness.",
     "coverage": "partial",
-    "coverage_note": "An application of complete mediation/authentication; the exact airport workflow is in the paper."
+    "coverage_note": "An application of complete mediation/authentication; the exact airport workflow is in the paper.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "A"
   },
   {
     "session": "2020–21",
@@ -1038,6 +1254,26 @@
     "exact_skill": "Audit scanf, privileged file opening and a name-based access race",
     "question_paraphrase": "Analyze attacks on the printed C program (code on p. 21): scanf into buffer[60], fopen(fn,\"a+\"), access(fn,W_OK), fwrite; state environmental assumptions.",
     "coverage": "partial",
-    "coverage_note": "Lecture 1 pp. 47–49 supplies complete mediation/TOCTOU; buffer-overflow and Unix setuid details require Sec A. Full mixed answer retained."
+    "coverage_note": "Lecture 1 pp. 47–49 supplies complete mediation/TOCTOU; buffer-overflow and Unix setuid details require Sec A. Full mixed answer retained.",
+    "scope": "sec_b",
+    "scope_note": "",
+    "printed_section": "B"
+  },
+  {
+    "session": "2023–24",
+    "sitting_date": "06 September 2025",
+    "question": "3(a)",
+    "pdf_page": 4,
+    "marks": 10,
+    "topics": [
+      "xss"
+    ],
+    "exact_skill": "Limits of HTTPS/firewall/NIDS protection against reflected XSS",
+    "question_paraphrase": "For the HTTPS-only server farm protected by a firewall and NIDS, assess whether reflected XSS can always be prevented when the attacker is on path.",
+    "coverage": "direct",
+    "coverage_note": "Only case (2), reflected XSS, is in Sec B scope. The other four network-defense cases are covered in Sec A. The printed 10 marks cover all five cases; no per-case mark allocation is given.",
+    "scope": "sec_b_component",
+    "scope_note": "Only case (2), reflected XSS, is in Sec B scope. The other four network-defense cases are covered in Sec A. The printed 10 marks cover all five cases; no per-case mark allocation is given.",
+    "printed_section": "A"
   }
 ]

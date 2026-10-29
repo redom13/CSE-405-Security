@@ -29,7 +29,7 @@
 \fancyfoot[C]{\thepage}
 \hypersetup{pdftitle={CSE 405 — Sec B Worked Final-Exam Solutions},pdfauthor={Sec B study guide},bookmarksopen=true}
 \title{\sffamily\bfseries CSE 405\\[4pt]Worked Final-Exam Solutions}
-\author{Sec B · 73 questions · six academic sessions}
+\author{Sec B · 74 worked entries · six academic sessions}
 \date{}
 \begin{document}
 \maketitle
@@ -40,7 +40,7 @@
 \clearpage
 \section{How to use this guide}
 
-\textbf{73 complete worked solutions · six academic sessions · all gathered questions.} Each question appears once with its original index label S01–S73. The topic/\allowbreak{}deck index also points to mixed questions taught partly elsewhere. The HTML has search,\allowbreak{} question navigation,\allowbreak{} scalable diagrams and typeset equations; the PDF is compiled from LaTeX for printing. The Markdown is editable.
+\textbf{74 worked entries · six academic sessions · 73 whole-question entries and one Sec B component of a mixed question.} Each question appears once with its original index label S01–S74. The topic/\allowbreak{}deck index also points to mixed questions taught partly elsewhere. The HTML has search,\allowbreak{} question navigation,\allowbreak{} scalable diagrams and typeset equations; the PDF is compiled from LaTeX for printing. The Markdown is editable.
 
 
 Question summaries are paraphrases. The root PDF remains the authority for wording,\allowbreak{} code and figures. The solution metadata links to its physical page. Each answer includes reasoning and an exam tip; assumptions and defects in printed questions are identified rather than silently repaired. These are independent worked solutions,\allowbreak{} not an official marking scheme.
@@ -52,7 +52,7 @@ Question summaries are paraphrases. The root PDF remains the authority for wordi
 \textbf{Four corrections to keep in mind:} Cookie 2 in 2020–21 Q7(b) is non-secure; the 2018–19 Hill key is not invertible modulo 26; the full-group ElGamal question needs a valid nonzero-message argument; a visible cookie or freshly transmitted plaintext MAC key cannot authenticate against an eavesdropper. Relevant solutions explain each point.
 
 
-Lecture 9 has no separate standalone question in the gathered index. Its URL/\allowbreak{}HTTP/\allowbreak{}origin foundations are used in the web solutions. The newly supplied Lecture 1 adds six principle/\allowbreak{}availability/\allowbreak{}TOCTOU questions (S68–S73) and gives an explicit source for the existing information-security CIA question. Other Sec A-only material remains in its own guide.
+Lecture 9 has no separate standalone question in the gathered index. Its URL/\allowbreak{}HTTP/\allowbreak{}origin foundations are used in the web solutions. The newly supplied Lecture 1 adds six principle/\allowbreak{}availability/\allowbreak{}TOCTOU questions (S68–S73) and gives an explicit source for the existing information-security CIA question. Other Sec A-only material remains in its own guide. S74 covers only the reflected-XSS case of 2023–24 Q3(a); the four network cases are in Sec A. Both printed exam sections are checked for current Sec B topics.
 
 
 
@@ -116,7 +116,7 @@ Lecture 9 has no separate standalone question in the gathered index. Its URL/\al
 \textbf{Lecture 11 — XSS and UI Attacks}
 
 
-\hyperref[s01]{S01: 2023–24 Q5(a)}; \hyperref[s11]{S11: 2023–24 Q8(d)}; \hyperref[s16]{S16: 2022–23 Q5(c)}; \hyperref[s21]{S21: 2022–23 Q7(c)}; \hyperref[s23]{S23: 2022–23 Q8(b)}; \hyperref[s24]{S24: 2022–23 Q8(c)}; \hyperref[s38]{S38: 2021–22 Q7(b)}; \hyperref[s42]{S42: 2020–21 Q6(a)}; \hyperref[s60]{S60: 2018–19 Q4(b)}; \hyperref[s64]{S64: 2018–19 Q8(b)}; \hyperref[s67]{S67: 2018–19 Q12(a)}
+\hyperref[s01]{S01: 2023–24 Q5(a)}; \hyperref[s11]{S11: 2023–24 Q8(d)}; \hyperref[s16]{S16: 2022–23 Q5(c)}; \hyperref[s21]{S21: 2022–23 Q7(c)}; \hyperref[s23]{S23: 2022–23 Q8(b)}; \hyperref[s24]{S24: 2022–23 Q8(c)}; \hyperref[s38]{S38: 2021–22 Q7(b)}; \hyperref[s42]{S42: 2020–21 Q6(a)}; \hyperref[s60]{S60: 2018–19 Q4(b)}; \hyperref[s64]{S64: 2018–19 Q8(b)}; \hyperref[s67]{S67: 2018–19 Q12(a)}; \hyperref[s74]{S74: 2023–24 Q3(a)}
 
 
 \textbf{Lecture 12 — SQL Injection and CAPTCHAs}
@@ -164,7 +164,7 @@ Primary source: \href{../slides/lecture-01-introduction-and-security-principles.
 \textbf{Attacks versus information-security CIA goals · 5 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=15}{root question PDF,\allowbreak{} page 15}. Sitting date: 30 October 2023.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=15}{root question PDF,\allowbreak{} page 15}. Sitting date: 30 October 2023. Printed Section A.
 
 
 
@@ -209,7 +209,7 @@ Passive eavesdropping primarily threatens confidentiality. Active modification/\
 \textbf{Match five scenarios to security principles · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=2}{root question PDF,\allowbreak{} page 2}. Sitting date: 06 September 2025.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=2}{root question PDF,\allowbreak{} page 2}. Sitting date: 06 September 2025. Printed Section A.
 
 
 
@@ -253,7 +253,7 @@ Shannon's maxim means assuming the adversary knows the system; none of these sce
 \textbf{Least privilege versus separation; why record compromise? · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=11}{root question PDF,\allowbreak{} page 11}. Sitting date: 18 April 2024.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=11}{root question PDF,\allowbreak{} page 11}. Sitting date: 18 April 2024. Printed Section A.
 
 
 
@@ -287,7 +287,7 @@ Original: \href{../../CSE405-Security_Merged.pdf\#page=11}{root question PDF,\al
 \textbf{Selective packet dropping against a competitor · 12 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=18}{root question PDF,\allowbreak{} page 18}. Sitting date: 25 September 2022.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=18}{root question PDF,\allowbreak{} page 18}. Sitting date: 25 September 2022. Printed Section A.
 
 
 
@@ -318,7 +318,7 @@ Packet loss produces gaps,\allowbreak{} jitter/\allowbreak{}retransmissions wher
 \textbf{Why compromise recording matters and which tools support it · 11 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=18}{root question PDF,\allowbreak{} page 18}. Sitting date: 25 September 2022.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=18}{root question PDF,\allowbreak{} page 18}. Sitting date: 25 September 2022. Printed Section A.
 
 
 
@@ -352,7 +352,7 @@ Record reliable timestamps,\allowbreak{} actor/\allowbreak{}subject,\allowbreak{
 \textbf{Mismatched boarding-pass and identity checks · 12 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=18}{root question PDF,\allowbreak{} page 18}. Sitting date: 25 September 2022.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=18}{root question PDF,\allowbreak{} page 18}. Sitting date: 25 September 2022. Printed Section A.
 
 
 
@@ -386,7 +386,7 @@ Authenticate the pass/\allowbreak{}barcode against the reservation system; bind 
 \textbf{Audit scanf,\allowbreak{} privileged file opening and a name-based access race · 15 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=20}{root question PDF,\allowbreak{} page 20}. Sitting date: 25 September 2022.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=20}{root question PDF,\allowbreak{} page 20}. Sitting date: 25 September 2022. Printed Section B.
 
 
 
@@ -432,7 +432,7 @@ Primary source: \href{../slides/lecture-02-intro-to-cryptography.pdf}{lecture-02
 \textbf{Short concepts; answer any three of five · 15 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=7}{root question PDF,\allowbreak{} page 7}. Sitting date: 06 September 2025.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=7}{root question PDF,\allowbreak{} page 7}. Sitting date: 06 September 2025. Printed Section B.
 
 
 
@@ -482,7 +482,7 @@ Original: \href{../../CSE405-Security_Merged.pdf\#page=7}{root question PDF,\all
 \textbf{Recover affine-cipher keys from two mappings · 20 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=8}{root question PDF,\allowbreak{} page 8}. Sitting date: 06 September 2025.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=8}{root question PDF,\allowbreak{} page 8}. Sitting date: 06 September 2025. Printed Section B.
 
 
 
@@ -526,7 +526,7 @@ Since 3·9=\allowbreak{}27≡1 mod 26,\allowbreak{} multiply by 9:
 \textbf{Hill encryption and decryption with a 3×3 key · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=15}{root question PDF,\allowbreak{} page 15}. Sitting date: 30 October 2023.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=15}{root question PDF,\allowbreak{} page 15}. Sitting date: 30 October 2023. Printed Section A.
 
 
 
@@ -586,7 +586,7 @@ This recovers ACT and demonstrates correctness for the example. The inverse is c
 \textbf{Caesar as symmetric encryption; composition of affine ciphers · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=15}{root question PDF,\allowbreak{} page 15}. Sitting date: 30 October 2023.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=15}{root question PDF,\allowbreak{} page 15}. Sitting date: 30 October 2023. Printed Section A.
 
 
 
@@ -628,7 +628,7 @@ For example,\allowbreak{} E1(x)=\allowbreak{}5x+8 and E2(y)=\allowbreak{}7y+3 co
 \textbf{Break a Caesar-then-Hill construction · 15 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=20}{root question PDF,\allowbreak{} page 20}. Sitting date: 25 September 2022.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=20}{root question PDF,\allowbreak{} page 20}. Sitting date: 25 September 2022. Printed Section B.
 
 
 
@@ -678,7 +678,7 @@ After n+1 chosen blocks the attacker knows K and b,\allowbreak{} computes \(K^{-
 \textbf{Hill-cipher numerical encryption · 12 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=27}{root question PDF,\allowbreak{} page 27}. Sitting date: 24 October 2019.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=27}{root question PDF,\allowbreak{} page 27}. Sitting date: 24 October 2019. Printed Section B.
 
 
 
@@ -723,7 +723,7 @@ Primary source: \href{../slides/lecture-03-one-time-pads-and-block-ciphers.pdf}{
 \textbf{DES attack; meet-in-the-middle strength of fivefold DES · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=16}{root question PDF,\allowbreak{} page 16}. Sitting date: 30 October 2023.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=16}{root question PDF,\allowbreak{} page 16}. Sitting date: 30 October 2023. Printed Section A.
 
 
 
@@ -776,7 +776,7 @@ The 64-bit block size also remains unchanged,\allowbreak{} bringing block-collis
 \textbf{Compare DES components with AES · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=16}{root question PDF,\allowbreak{} page 16}. Sitting date: 30 October 2023.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=16}{root question PDF,\allowbreak{} page 16}. Sitting date: 30 October 2023. Printed Section A.
 
 
 
@@ -823,7 +823,7 @@ DES’s f need not be invertible because Feistel structure recovers the previous
 \textbf{OTP encryption/\allowbreak{}decryption; transposition as a Hill cipher · 14 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=24}{root question PDF,\allowbreak{} page 24}. Sitting date: 07 September 2021.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=24}{root question PDF,\allowbreak{} page 24}. Sitting date: 07 September 2021. Printed Section B.
 
 
 
@@ -873,7 +873,7 @@ Example,\allowbreak{} swap the first two symbols of a three-symbol block:
 \textbf{Trace P-box and S-box diagrams · 8 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=27}{root question PDF,\allowbreak{} page 27}. Sitting date: 24 October 2019.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=27}{root question PDF,\allowbreak{} page 27}. Sitting date: 24 October 2019. Printed Section B.
 
 
 
@@ -953,7 +953,7 @@ Primary source: \href{../slides/lecture-04-block-cipher-modes.pdf}{lecture-04-bl
 \textbf{Unfamiliar chaining diagram; equations,\allowbreak{} parallelism and malleability · 20 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=7}{root question PDF,\allowbreak{} page 7}. Sitting date: 06 September 2025.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=7}{root question PDF,\allowbreak{} page 7}. Sitting date: 06 September 2025. Printed Section B.
 
 
 
@@ -1037,7 +1037,7 @@ The attacker needs the old plaintext blocks and desired targets,\allowbreak{} no
 \textbf{ECB/\allowbreak{}CBC/\allowbreak{}CTR comparison · 12 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=12}{root question PDF,\allowbreak{} page 12}. Sitting date: 18 April 2024.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=12}{root question PDF,\allowbreak{} page 12}. Sitting date: 18 April 2024. Printed Section B.
 
 
 
@@ -1099,7 +1099,7 @@ For CBC,\allowbreak{} the IV should be unpredictable at encryption time in the u
 \textbf{Identify ECB-style long-message weakness and replace the mode · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=15}{root question PDF,\allowbreak{} page 15}. Sitting date: 30 October 2023.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=15}{root question PDF,\allowbreak{} page 15}. Sitting date: 30 October 2023. Printed Section A.
 
 
 
@@ -1138,7 +1138,7 @@ Replace ECB with an appropriate randomized/\allowbreak{}nonce-based mode such as
 \textbf{Inserted ciphertext bit and CBC synchronization · 3 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=27}{root question PDF,\allowbreak{} page 27}. Sitting date: 24 October 2019.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=27}{root question PDF,\allowbreak{} page 27}. Sitting date: 24 October 2019. Printed Section B.
 
 
 
@@ -1184,7 +1184,7 @@ Primary source: \href{../slides/lecture-05-hashes-and-macs.pdf}{lecture-05-hashe
 \textbf{Encrypt-then-MAC versus MAC-then-encrypt · 5 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=9}{root question PDF,\allowbreak{} page 9}. Sitting date: 06 September 2025.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=9}{root question PDF,\allowbreak{} page 9}. Sitting date: 06 September 2025. Printed Section B.
 
 
 
@@ -1223,7 +1223,7 @@ Authenticate the IV/\allowbreak{}nonce and relevant metadata as well as the ciph
 \textbf{Analyze encryption plus hash,\allowbreak{} plaintext MAC,\allowbreak{} or ciphertext MAC · 12 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=12}{root question PDF,\allowbreak{} page 12}. Sitting date: 18 April 2024.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=12}{root question PDF,\allowbreak{} page 12}. Sitting date: 18 April 2024. Printed Section B.
 
 
 
@@ -1271,7 +1271,7 @@ Schemes 2 and 3 do not automatically reject a previously valid packet replay. Ad
 \textbf{Integrity tags in a file header; hash versus MAC; writable versus read-only storage · 15 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=14}{root question PDF,\allowbreak{} page 14}. Sitting date: 18 April 2024.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=14}{root question PDF,\allowbreak{} page 14}. Sitting date: 18 April 2024. Printed Section B.
 
 
 
@@ -1311,7 +1311,7 @@ Assume the attacker may alter writable file contents and header fields,\allowbre
 \textbf{Applications of hashing in authentication,\allowbreak{} confidentiality and signatures · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=15}{root question PDF,\allowbreak{} page 15}. Sitting date: 30 October 2023.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=15}{root question PDF,\allowbreak{} page 15}. Sitting date: 30 October 2023. Printed Section A.
 
 
 
@@ -1360,7 +1360,7 @@ HKDF’s extract/\allowbreak{}expand interface is specified in \href{https://www
 \textbf{Evaluate XOR of fixed-size message blocks as a hash · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=16}{root question PDF,\allowbreak{} page 16}. Sitting date: 30 October 2023.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=16}{root question PDF,\allowbreak{} page 16}. Sitting date: 30 October 2023. Printed Section A.
 
 
 
@@ -1406,7 +1406,7 @@ For \(h(M)=M_1\oplus\cdots\oplus M_\ell\),\allowbreak{} output is 160 bits and e
 \textbf{HMAC construction · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=16}{root question PDF,\allowbreak{} page 16}. Sitting date: 30 October 2023.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=16}{root question PDF,\allowbreak{} page 16}. Sitting date: 30 October 2023. Printed Section A.
 
 
 
@@ -1452,7 +1452,7 @@ The receiver recomputes T with the shared secret and compares tags using a const
 \textbf{Birthday bound for a b-bit hash · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=21}{root question PDF,\allowbreak{} page 21}. Sitting date: 25 September 2022.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=21}{root question PDF,\allowbreak{} page 21}. Sitting date: 25 September 2022. Printed Section B.
 
 
 
@@ -1496,7 +1496,7 @@ At 50\% probability,\allowbreak{} solve q(q−1)/\allowbreak{}(2N)≈ln 2,\allow
 \textbf{Weak/\allowbreak{}strong collision resistance; toy hash; Merkle–Damgård · 21 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=24}{root question PDF,\allowbreak{} page 24}. Sitting date: 07 September 2021.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=24}{root question PDF,\allowbreak{} page 24}. Sitting date: 07 September 2021. Printed Section B.
 
 
 
@@ -1568,7 +1568,7 @@ Primary source: \href{../slides/lecture-06-prngs-and-diffie-hellman.pdf}{lecture
 \textbf{Unauthenticated Diffie–Hellman MITM; defense without a trusted third party · 15 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=8}{root question PDF,\allowbreak{} page 8}. Sitting date: 06 September 2025.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=8}{root question PDF,\allowbreak{} page 8}. Sitting date: 06 September 2025. Printed Section B.
 
 
 
@@ -1617,7 +1617,7 @@ Simply signing with a public key attached to the same unauthenticated message do
 \textbf{Authenticate Diffie–Hellman with RSA signatures · 15 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=13}{root question PDF,\allowbreak{} page 13}. Sitting date: 18 April 2024.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=13}{root question PDF,\allowbreak{} page 13}. Sitting date: 18 April 2024. Printed Section B.
 
 
 
@@ -1669,7 +1669,7 @@ Mallory cannot change a share or identity without invalidating a signature. Repl
 \textbf{HMAC-DRBG generation,\allowbreak{} security and rollback resistance · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=13}{root question PDF,\allowbreak{} page 13}. Sitting date: 18 April 2024.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=13}{root question PDF,\allowbreak{} page 13}. Sitting date: 18 April 2024. Printed Section B.
 
 
 
@@ -1727,7 +1727,7 @@ This does not imply that state compromise cannot predict future output. Without 
 \textbf{Compute an elliptic-curve point group · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=15}{root question PDF,\allowbreak{} page 15}. Sitting date: 30 October 2023.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=15}{root question PDF,\allowbreak{} page 15}. Sitting date: 30 October 2023. Printed Section A.
 
 
 
@@ -1801,7 +1801,7 @@ For distinct points,\allowbreak{} λ=\allowbreak{}(y2−y1)/\allowbreak{}(x2−x
 \textbf{Numerical Diffie–Hellman exchange · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=15}{root question PDF,\allowbreak{} page 15}. Sitting date: 30 October 2023.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=15}{root question PDF,\allowbreak{} page 15}. Sitting date: 30 October 2023. Printed Section A.
 
 
 
@@ -1858,7 +1858,7 @@ For the shared-secret computation,\allowbreak{} powers of 248 at exponents 1,\al
 \textbf{Diffie–Hellman steps and active MITM · 15 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=24}{root question PDF,\allowbreak{} page 24}. Sitting date: 07 September 2021.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=24}{root question PDF,\allowbreak{} page 24}. Sitting date: 07 September 2021. Printed Section B.
 
 
 
@@ -1908,7 +1908,7 @@ Primary source: \href{../slides/lecture-07-public-key-encryption-and-signatures.
 \textbf{Numerical ElGamal; IND-CPA and non-malleability · 15 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=9}{root question PDF,\allowbreak{} page 9}. Sitting date: 06 September 2025.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=9}{root question PDF,\allowbreak{} page 9}. Sitting date: 06 September 2025. Printed Section B.
 
 
 
@@ -1966,7 +1966,7 @@ Choose challenge messages M0=\allowbreak{}1 and M1=\allowbreak{}3,\allowbreak{} 
 \textbf{RSA correctness proof · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=9}{root question PDF,\allowbreak{} page 9}. Sitting date: 06 September 2025.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=9}{root question PDF,\allowbreak{} page 9}. Sitting date: 06 September 2025. Printed Section B.
 
 
 
@@ -2010,7 +2010,7 @@ The identical argument modulo q gives \(M^{ed}\)≡M mod q,\allowbreak{} includi
 \textbf{RSA signing/\allowbreak{}verifying; security of separately sending ciphertext and signature · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=9}{root question PDF,\allowbreak{} page 9}. Sitting date: 06 September 2025.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=9}{root question PDF,\allowbreak{} page 9}. Sitting date: 06 September 2025. Printed Section B.
 
 
 
@@ -2062,7 +2062,7 @@ With the simplified RSA signature,\allowbreak{} the observer can also compute \(
 \textbf{TLS handshake authentication,\allowbreak{} directional keys and authenticated records · 15 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=6}{root question PDF,\allowbreak{} page 6}. Sitting date: 06 September 2025.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=6}{root question PDF,\allowbreak{} page 6}. Sitting date: 06 September 2025. Printed Section A.
 
 
 
@@ -2113,7 +2113,7 @@ The receiver verifies the expected number and rejects replay/\allowbreak{}out-of
 \textbf{Symmetric/\allowbreak{}public-key comparison; key roles in signing versus encryption · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=16}{root question PDF,\allowbreak{} page 16}. Sitting date: 30 October 2023.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=16}{root question PDF,\allowbreak{} page 16}. Sitting date: 30 October 2023. Printed Section A.
 
 
 
@@ -2161,7 +2161,7 @@ A MAC is also symmetric but does not encrypt. A signature is not a secret messag
 \textbf{ElGamal signature algorithm and reuse of secret k · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=20}{root question PDF,\allowbreak{} page 20}. Sitting date: 25 September 2022.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=20}{root question PDF,\allowbreak{} page 20}. Sitting date: 25 September 2022. Printed Section B.
 
 
 
@@ -2219,7 +2219,7 @@ Candidates modulo 22 are 7 and 18. k=\allowbreak{}18 is not coprime to 22 and al
 \textbf{Digital signatures and non-repudiation · 12 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=22}{root question PDF,\allowbreak{} page 22}. Sitting date: 07 September 2021.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=22}{root question PDF,\allowbreak{} page 22}. Sitting date: 07 September 2021. Printed Section A.
 
 
 
@@ -2270,7 +2270,7 @@ Hashing binds the signature to arbitrary-length content; signing an encoded cont
 \textbf{Euler totient/\allowbreak{}theorem; modular inverse · 8 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=24}{root question PDF,\allowbreak{} page 24}. Sitting date: 07 September 2021.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=24}{root question PDF,\allowbreak{} page 24}. Sitting date: 07 September 2021. Printed Section B.
 
 
 
@@ -2312,7 +2312,7 @@ If gcd(a,\allowbreak{}n)≠1,\allowbreak{} the inverse does not exist,\allowbrea
 \textbf{Modular equations and fast exponentiation · 12 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=24}{root question PDF,\allowbreak{} page 24}. Sitting date: 07 September 2021.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=24}{root question PDF,\allowbreak{} page 24}. Sitting date: 07 September 2021. Printed Section B.
 
 
 
@@ -2368,7 +2368,7 @@ Original: \href{../../CSE405-Security_Merged.pdf\#page=24}{root question PDF,\al
 \textbf{RSA validity,\allowbreak{} repeated totients and encryption · 15 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=24}{root question PDF,\allowbreak{} page 24}. Sitting date: 07 September 2021.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=24}{root question PDF,\allowbreak{} page 24}. Sitting date: 07 September 2021. Printed Section B.
 
 
 
@@ -2423,7 +2423,7 @@ A decryption check gives \(130^{23}\bmod187=3\).
 \textbf{ElGamal encryption proof; birthday attack on signatures · 20 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=24}{root question PDF,\allowbreak{} page 24}. Sitting date: 07 September 2021.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=24}{root question PDF,\allowbreak{} page 24}. Sitting date: 07 September 2021. Printed Section B.
 
 
 
@@ -2473,7 +2473,7 @@ For an ideal b-bit digest,\allowbreak{} two sets of roughly \(2^{b/2}\) variants
 \textbf{Risks of signing an apparently random string · 8 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=26}{root question PDF,\allowbreak{} page 26}. Sitting date: 24 October 2019.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=26}{root question PDF,\allowbreak{} page 26}. Sitting date: 24 October 2019. Printed Section A.
 
 
 
@@ -2521,7 +2521,7 @@ Primary source: \href{../slides/lecture-08-certificates-password-hashing-and-cas
 \textbf{Untrusted key bundled with its own signature; attacker positions · 15 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=2}{root question PDF,\allowbreak{} page 2}. Sitting date: 06 September 2025.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=2}{root question PDF,\allowbreak{} page 2}. Sitting date: 06 September 2025. Printed Section A.
 
 
 
@@ -2561,7 +2561,7 @@ Original: \href{../../CSE405-Security_Merged.pdf\#page=2}{root question PDF,\all
 \textbf{Brute-force throughput under a password-expiration policy · 12 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=11}{root question PDF,\allowbreak{} page 11}. Sitting date: 18 April 2024.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=11}{root question PDF,\allowbreak{} page 11}. Sitting date: 18 April 2024. Printed Section A.
 
 
 
@@ -2616,7 +2616,7 @@ For a uniform space of N candidates and no repeated guesses,\allowbreak{} succes
 \textbf{Self-signed SSL certificate and server authentication · 11 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=17}{root question PDF,\allowbreak{} page 17}. Sitting date: 30 October 2023.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=17}{root question PDF,\allowbreak{} page 17}. Sitting date: 30 October 2023. Printed Section B.
 
 
 
@@ -2650,7 +2650,7 @@ A normally validated certificate chain connects the server key/\allowbreak{}name
 \textbf{Public security questions and password-reset account takeover · 11 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=22}{root question PDF,\allowbreak{} page 22}. Sitting date: 07 September 2021.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=22}{root question PDF,\allowbreak{} page 22}. Sitting date: 07 September 2021. Printed Section A.
 
 
 
@@ -2684,7 +2684,7 @@ A stronger recovery design uses previously enrolled recovery channels/\allowbrea
 \textbf{Password-space size and average brute-force time · 12 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=22}{root question PDF,\allowbreak{} page 22}. Sitting date: 07 September 2021.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=22}{root question PDF,\allowbreak{} page 22}. Sitting date: 07 September 2021. Printed Section A.
 
 
 
@@ -2731,7 +2731,7 @@ The result is conditional on the paper’s full 128-character alphabet and unifo
 \textbf{Digital-certificate contents and CA role · 9 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=26}{root question PDF,\allowbreak{} page 26}. Sitting date: 24 October 2019.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=26}{root question PDF,\allowbreak{} page 26}. Sitting date: 24 October 2019. Printed Section A.
 
 
 
@@ -2781,7 +2781,7 @@ Primary source: \href{../slides/lecture-10-cookies-and-csrf.pdf}{lecture-10-cook
 \textbf{Cookie-send matrix · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=9}{root question PDF,\allowbreak{} page 9}. Sitting date: 06 September 2025.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=9}{root question PDF,\allowbreak{} page 9}. Sitting date: 06 September 2025. Printed Section B.
 
 
 
@@ -2828,7 +2828,7 @@ For (i)–(iii),\allowbreak{} Secure blocks C1/\allowbreak{}C3; none of the five
 \textbf{Limits of cookie policy · 11 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=12}{root question PDF,\allowbreak{} page 12}. Sitting date: 18 April 2024.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=12}{root question PDF,\allowbreak{} page 12}. Sitting date: 18 April 2024. Printed Section B.
 
 
 
@@ -2862,7 +2862,7 @@ Original: \href{../../CSE405-Security_Merged.pdf\#page=12}{root question PDF,\al
 \textbf{CSRF synchronizer token; refreshing only on POST · 15 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=13}{root question PDF,\allowbreak{} page 13}. Sitting date: 18 April 2024.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=13}{root question PDF,\allowbreak{} page 13}. Sitting date: 18 April 2024. Printed Section B.
 
 
 
@@ -2909,7 +2909,7 @@ Per-POST rotation still creates multi-tab/\allowbreak{}back-button races if the 
 \textbf{Authenticate UDP messages with a cookie/\allowbreak{}token; prevent replay · 15 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=19}{root question PDF,\allowbreak{} page 19}. Sitting date: 25 September 2022.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=19}{root question PDF,\allowbreak{} page 19}. Sitting date: 25 September 2022. Printed Section B.
 
 
 
@@ -2968,7 +2968,7 @@ A signed/\allowbreak{}self-authenticating cookie can reduce server state for the
 \textbf{CSRF plus stored XSS in a social-network friend request · 15 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=19}{root question PDF,\allowbreak{} page 19}. Sitting date: 25 September 2022.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=19}{root question PDF,\allowbreak{} page 19}. Sitting date: 25 September 2022. Printed Section B.
 
 
 
@@ -3033,7 +3033,7 @@ Defenses: CSRF tokens on profile changes; no state-changing GETs; contextual out
 \textbf{Cookie-send matrix · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=20}{root question PDF,\allowbreak{} page 20}. Sitting date: 25 September 2022.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=20}{root question PDF,\allowbreak{} page 20}. Sitting date: 25 September 2022. Printed Section B.
 
 
 
@@ -3083,7 +3083,7 @@ All cookies have the same name \texttt{file}. When two match,\allowbreak{} both 
 \textbf{Invalidate session cookies after password change · 15 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=21}{root question PDF,\allowbreak{} page 21}. Sitting date: 25 September 2022.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=21}{root question PDF,\allowbreak{} page 21}. Sitting date: 25 September 2022. Printed Section B.
 
 
 
@@ -3126,7 +3126,7 @@ Primary source: \href{../slides/lecture-11-xss-and-ui-attacks.pdf}{lecture-11-xs
 \textbf{Stored versus reflected XSS · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=10}{root question PDF,\allowbreak{} page 10}. Sitting date: 06 September 2025.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=10}{root question PDF,\allowbreak{} page 10}. Sitting date: 06 September 2025. Printed Section B.
 
 
 
@@ -3182,7 +3182,7 @@ Defend with contextual output encoding; use safe DOM APIs such as textContent fo
 \textbf{Stored versus reflected XSS · 7 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=13}{root question PDF,\allowbreak{} page 13}. Sitting date: 18 April 2024.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=13}{root question PDF,\allowbreak{} page 13}. Sitting date: 18 April 2024. Printed Section B.
 
 
 
@@ -3222,7 +3222,7 @@ Both exploit unsafe interpretation of input as code and execute in the browser u
 \textbf{SMS 2FA against phishing · 8 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=14}{root question PDF,\allowbreak{} page 14}. Sitting date: 18 April 2024.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=14}{root question PDF,\allowbreak{} page 14}. Sitting date: 18 April 2024. Printed Section B.
 
 
 
@@ -3263,7 +3263,7 @@ A stronger defense is an origin-bound authenticator such as WebAuthn used correc
 \textbf{Clickjacking with iframes; repeated-click redirection · 12 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=14}{root question PDF,\allowbreak{} page 14}. Sitting date: 18 April 2024.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=14}{root question PDF,\allowbreak{} page 14}. Sitting date: 18 April 2024. Printed Section B.
 
 
 
@@ -3317,7 +3317,7 @@ The anchors’ z-index values order the first two clicks; each has a transparent
 \textbf{Clickjacking versus phishing · 12 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=17}{root question PDF,\allowbreak{} page 17}. Sitting date: 30 October 2023.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=17}{root question PDF,\allowbreak{} page 17}. Sitting date: 30 October 2023. Printed Section B.
 
 
 
@@ -3363,7 +3363,7 @@ Useful defenses & Origin-bound authentication,\allowbreak{} accurate origin reco
 \textbf{Pharming versus phishing · 8 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=26}{root question PDF,\allowbreak{} page 26}. Sitting date: 24 October 2019.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=26}{root question PDF,\allowbreak{} page 26}. Sitting date: 24 October 2019. Printed Section A.
 
 
 
@@ -3412,7 +3412,7 @@ Proper TLS validation can reveal that the redirected endpoint lacks a valid cert
 \textbf{Stored XSS in a guest book; malicious page actions · 15 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=30}{root question PDF,\allowbreak{} page 30}. Sitting date: 24 October 2019.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=30}{root question PDF,\allowbreak{} page 30}. Sitting date: 24 October 2019. Printed Section B.
 
 
 
@@ -3463,6 +3463,43 @@ The examples demonstrate three distinct consequences: integrity of displayed con
 
 
 
+
+\clearpage
+\subsection{S74 · 2023–24 · Q3(a)}\label{s74}
+
+\textbf{Limits of HTTPS/\allowbreak{}firewall/\allowbreak{}NIDS protection against reflected XSS · 10 printed marks (mixed question)}
+
+
+Original: \href{../../CSE405-Security_Merged.pdf\#page=4}{root question PDF,\allowbreak{} page 4}. Sitting date: 06 September 2025. Printed Section A.
+
+
+
+\begin{quote}\small
+
+\textbf{Question summary:} For the HTTPS-only server farm protected by a firewall and NIDS,\allowbreak{} assess whether reflected XSS can always be prevented when the attacker is on path.
+
+
+
+\end{quote}
+
+\textbf{Sec B scope:} Only case (2),\allowbreak{} reflected XSS,\allowbreak{} is in Sec B scope. The other four network-defense cases are covered in Sec A. The printed 10 marks cover all five cases; no per-case mark allocation is given.
+
+
+\textbf{HTTPS plus a firewall/\allowbreak{}NIDS cannot always prevent reflected XSS.} The vulnerable application can copy attacker-controlled input into a response as executable browser content. TLS can then deliver that response faithfully to the victim; it does not make the response safe. The script executes with the vulnerable page's origin and can perform actions available to that origin.
+
+
+A network IDS outside TLS termination normally cannot inspect the encrypted HTTP payload. Inspection at or after termination improves visibility,\allowbreak{} but a generic filtering rule still does not guarantee correct interpretation of every application output context. A passive NIDS may only alert rather than block anything.
+
+
+The primary repair is \textbf{safe rendering at the application}: apply encoding appropriate to the HTML,\allowbreak{} attribute,\allowbreak{} URL or script context; use safe templating and DOM APIs; and avoid interpreting untrusted input as executable markup or script. If rich HTML is genuinely required,\allowbreak{} use a suitable sanitizer with an explicit policy. A restrictive Content Security Policy can reduce impact as an additional layer. Neither the same-origin policy nor transport encryption repairs an injection already executing in the trusted page's origin.
+
+
+
+\Needspace{4\baselineskip}
+{\color{ForestGreen}\textbf{Exam tip.} Explain the layer boundary: authenticated transport and packet filtering do not guarantee that the application's response is safe to execute.}
+
+
+
 \clearpage
 \section{Lecture 12 — SQL Injection and CAPTCHAs}
 
@@ -3476,7 +3513,7 @@ Primary source: \href{../slides/lecture-12-sql-injection-and-captchas.pdf}{lectu
 \textbf{Login bypass; prepared statements · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=10}{root question PDF,\allowbreak{} page 10}. Sitting date: 06 September 2025.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=10}{root question PDF,\allowbreak{} page 10}. Sitting date: 06 September 2025. Printed Section B.
 
 
 
@@ -3535,7 +3572,7 @@ The payload becomes a literal username string instead of changing the query. For
 \textbf{INSERT-query injection; bypass a cart quantity restriction · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=13}{root question PDF,\allowbreak{} page 13}. Sitting date: 18 April 2024.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=13}{root question PDF,\allowbreak{} page 13}. Sitting date: 18 April 2024. Printed Section B.
 
 
 
@@ -3598,7 +3635,7 @@ The illustration assumes a database supporting multi-row VALUES and \texttt{--} 
 \textbf{Single-statement SQL injection in a password-change form · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=19}{root question PDF,\allowbreak{} page 19}. Sitting date: 25 September 2022.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=19}{root question PDF,\allowbreak{} page 19}. Sitting date: 25 September 2022. Printed Section B.
 
 
 
@@ -3655,7 +3692,7 @@ The comment suppresses the intended WHERE restriction; every row is updated by t
 \textbf{Short notes; answer any three of four · 9 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=28}{root question PDF,\allowbreak{} page 28}. Sitting date: 24 October 2019.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=28}{root question PDF,\allowbreak{} page 28}. Sitting date: 24 October 2019. Printed Section B.
 
 
 
@@ -3695,7 +3732,7 @@ The paper asks any three short notes; all four are supplied here.
 \textbf{UPDATE injection to change password and salary · 5 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=29}{root question PDF,\allowbreak{} page 29}. Sitting date: 24 October 2019.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=29}{root question PDF,\allowbreak{} page 29}. Sitting date: 24 October 2019. Printed Section B.
 
 
 
@@ -3753,7 +3790,7 @@ The injected comma adds a second assignment,\allowbreak{} the injected WHERE tar
 \textbf{Rewrite vulnerable PHP using prepared statements · 10 marks}
 
 
-Original: \href{../../CSE405-Security_Merged.pdf\#page=30}{root question PDF,\allowbreak{} page 30}. Sitting date: 24 October 2019.
+Original: \href{../../CSE405-Security_Merged.pdf\#page=30}{root question PDF,\allowbreak{} page 30}. Sitting date: 24 October 2019. Printed Section B.
 
 
 

@@ -1,6 +1,6 @@
 # Sec B · Worked solutions
 
-All **73 gathered subquestions** have worked answers, including every option in the two “answer any…” questions.
+There are **74 worked entries**: 73 whole-question entries plus the reflected-XSS case of 2023–24 Q3(a). That mixed question’s network cases stay in Sec A; its printed 10 marks cover all five cases. Both printed sections of each yearly paper are checked by topic.
 
 - **[PDF](SOLUTIONS.pdf)** — printable guide with LaTeX equations, matrices, derivations and diagrams.
 - **[Markdown](SOLUTIONS.md)** — readable directly on GitHub, which renders the LaTeX math.

@@ -1,7 +1,7 @@
 """Generate an editable XeLaTeX document from the canonical Markdown guide."""
 from pathlib import Path
 from bs4 import BeautifulSoup,Tag,NavigableString
-import re,math
+import re,math,json
 SECTION=Path(__file__).resolve().parents[1]
 BASE=SECTION/'solutions'
 PREAMBLE=r'''\documentclass[11pt,a4paper]{article}
@@ -39,7 +39,7 @@ PREAMBLE=r'''\documentclass[11pt,a4paper]{article}
 \fancyfoot[C]{\thepage}
 \hypersetup{pdftitle={CSE 405 — Sec A Worked Final-Exam Solutions},pdfauthor={Sec A study guide},bookmarksopen=true}
 \title{\sffamily\bfseries CSE 405\\[4pt]Worked Final-Exam Solutions}
-\author{Sec A · 138 questions · six academic sessions}
+\author{Sec A · QUESTIONCOUNT worked entries · six academic sessions}
 \date{}
 \begin{document}
 \maketitle
@@ -136,6 +136,7 @@ def render(node):
 
 if __name__=='__main__':
     soup=BeautifulSoup((SECTION/'_build/render_body.html').read_text(),'html.parser')
-    text=PREAMBLE+''.join(render(node) for node in soup.children)+'\n\\end{document}\n'
+    preamble=PREAMBLE.replace('QUESTIONCOUNT',str(len(json.loads((BASE/'solutions_index.json').read_text()))))
+    text=preamble+''.join(render(node) for node in soup.children)+'\n\\end{document}\n'
     (BASE/'SOLUTIONS.tex').write_text(text)
     print('Wrote LaTeX source:',len(text),'characters;',text.count('\\label{a'),'solution labels')

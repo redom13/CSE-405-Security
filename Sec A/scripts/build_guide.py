@@ -1,18 +1,19 @@
 """Build the complete Sec A Markdown and standalone HTML worked guide."""
 from pathlib import Path
-import json,re,html,base64,ast,shutil
+import json,re,html,base64
 from urllib.parse import quote
 from bs4 import BeautifulSoup
 from catalog import ROOT,SECTION,DECKS,TOPICS
-from questions import questions,answers,new_questions
+from questions import questions,answers
 from math_markup import render_markdown,render_native_math
 BASE=SECTION/'solutions';BUILD=SECTION/'_build';BUILD.mkdir(exist_ok=True)
 count=len(questions)
+component_count=sum(q["scope"]=="sec_a_components" for q in questions)
 lines=['# CSE 405 · Sec A Worked Final-Exam Solutions','',
 '## How to use this guide','',
-f'**{count} complete answers across six academic sessions.** {len(new_questions)} system/network/general-security answers are newly developed here; {count-len(new_questions)} questions overlap the previously checked Sec B collection. Each printed question appears once in this guide, under its primary teaching deck; the topic index points to every relevant mixed question. Exam tips appear before the reasoning to keep them with the question when printing.','',
-'Question summaries are paraphrases, not official transcriptions or a marking scheme. Consult the linked physical paper page for original code/diagrams. Every indexed question has a worked answer, necessary assumptions, explanation and an exam tip. Related/extension flags identify tasks beyond the local slides rather than silently pretending they are fully taught.','',
-'**Notation and limits:** toy memory examples use the paper’s stated 32-bit conventions; actual compiler/ABI layouts can differ. Probabilities identify their assumptions. Hashes, MACs and signatures provide different guarantees. A network address is not an authenticated identity. Several “guaranteed attack” requests are under-specified; the answers explain the intended mechanism and the conditions needed for it.','',
+f'**{count} Sec A worked entries across six academic sessions:** {count-component_count} whole-question entries and {component_count} entries limited to Sec A components. Both printed sections of each yearly paper are checked; assignment is by the current topic split. The standalone crypto, number-theory, password-guessing/recovery and web-attack sets are excluded. Each entry appears once under its primary teaching deck, with links from every relevant Sec A topic. Exam tips precede the reasoning.','',
+'Question summaries are paraphrases, not official transcriptions or a marking scheme. Consult the linked physical paper page for original code/diagrams. Every indexed Sec A task has a worked answer, necessary assumptions, explanation and an exam tip. Mixed entries identify the omitted Sec B tasks and distinguish printed marks from marks for the retained components. Related/extension flags identify tasks beyond the local slides rather than silently pretending they are fully taught.','',
+'**Notation and limits:** toy memory examples use the paper’s stated 32-bit conventions; actual compiler/ABI layouts can differ. Probabilities identify their assumptions. A network address is not an authenticated identity. Several “guaranteed attack” requests are under-specified; the answers explain the intended mechanism and the conditions needed for it.','',
 'The PDF uses XeLaTeX typesetting; this HTML embeds native MathML and diagrams for offline reading in a browser supporting MathML. The Markdown is editable and renders dollar math on GitHub. All sources, analysis and build tools stay within the section layout.','',
 '## Navigation by slide deck and exact topic','']
 for d,(file,title,_,_) in DECKS.items():
@@ -36,9 +37,11 @@ for d,(file,title,_,_) in DECKS.items():
  lines += [f'## {title}','',f'Primary deck: [{file}](../slides/{quote(file)})','']
  for q in arr:
   key=q['session']+'|'+q['question'];sid=q['solution_id'];assert answers[key]
-  lines += [f'<a id="{sid.lower()}"></a>',f'### {sid} · {q["session"]} · Q{q["question"]}','',f'**{q["exact_skill"]} · {q["marks"]} marks**','',f'Original: [past-paper PDF p. {q["pdf_page"]}](../../CSE405-Security_Merged.pdf#page={q["pdf_page"]}). Sitting date: {q["sitting_date"]}.','',
+  marks_label='printed marks (mixed question)' if q['scope']=='sec_a_components' else 'marks'
+  lines += [f'<a id="{sid.lower()}"></a>',f'### {sid} · {q["session"]} · Q{q["question"]}','',f'**{q["exact_skill"]} · {q["marks"]} {marks_label}**','',f'Original: [past-paper PDF p. {q["pdf_page"]}](../../CSE405-Security_Merged.pdf#page={q["pdf_page"]}). Sitting date: {q["sitting_date"]}. Printed Section {q["printed_section"]}.','',
   '**Topics:** '+ '; '.join(TOPICS[t][0] for t in q['topics'])+'.','',
   '> **Question summary:** '+q['question_paraphrase'],'']
+  if q['scope_note']:lines+=['**Sec A scope:** '+q['scope_note'],'']
   if q['coverage']=='partial':lines+=['**Coverage:** related application/extension. '+q['coverage_note'],'']
   answer=answers[key]
   tips=re.findall(r'(?:^|\n\n)(\*\*Exam tip\.\*\*.*?)(?=\n\n|\Z)',answer,flags=re.S)
@@ -48,17 +51,10 @@ for d,(file,title,_,_) in DECKS.items():
   lines += [answer,'']
 lines+=['## Review checklist','',
 '- Protocol answers: label peers, message fields, authenticated identities, replay state and attacker position.','- Probability answers: define the population/conditioning, compute intermediate counts and check units.','- Memory answers: trace actual destination bounds, endianness, frame offsets and input restrictions; distinguish a control transfer from clean continuation.','- Permission answers: distinguish real/effective identity, pathname/object identity and revocation of delegated rights.','- Detection answers: discuss false positives, false negatives, attacker visibility and what the mechanism cannot observe.','',
-'## Sources and overlap','',
-'Local source page maps and exam-frequency evidence are in [the Sec A analysis](../analysis/FINAL_EXAM_TOPIC_ANALYSIS.md). The [Sec A syllabus](../analysis/SYLLABUS.md) records limitations and source errors. Matching crypto/web questions reuse checked Sec B answer text and vector diagrams; their complete bodies are included here. Six newly developed principle questions also appear in the updated Sec B guide, giving 60 shared questions overall. Sec A’s build reads those original answer sources from the same repository, so rebuild both sections together after editing shared answers.','',
+'## Sources and section scope','',
+'Local source page maps and exam-frequency evidence are in [the Sec A analysis](../analysis/FINAL_EXAM_TOPIC_ANALYSIS.md). The [Sec A syllabus](../analysis/SYLLABUS.md) defines the current topic boundary. This guide uses local Sec A answer sources and figures; it does not import Sec B answers. Older printed section labels are recorded only to locate questions, and never determine which current study guide owns a topic. Existing identifiers are preserved, so removed entries leave gaps in their numbering.','',
 'Primary technical references appear beside the answers that use them; these supplement the supplied course material rather than define a new course syllabus.','']
 md='\n'.join(lines);(BASE/'SOLUTIONS.md').write_text(md)
-# Refresh shared diagram copies when their Sec B sources change.
-for asset in set(re.findall(r'!\[[^\]]*\]\(([^)]+)\)',md)):
- source=ROOT/'Sec B/solutions'/asset
- if source.exists():
-  for suffix in [source.suffix,'.pdf','.png']:
-   candidate=source.with_suffix(suffix)
-   if candidate.exists():shutil.copy2(candidate,BASE/'assets'/candidate.name)
 body=render_markdown(md);(BUILD/'render_body.html').write_text(body)
 soup=BeautifulSoup(body,'html.parser')
 if not render_native_math(soup):raise RuntimeError('Pandoc native MathML conversion failed; refusing unreadable HTML math')
@@ -84,14 +80,14 @@ for h in list(soup.find_all('h3')):
   # Leave the next question's explicit anchor in place.
   if node is not h and getattr(node,'name',None)=='p' and node.find('a',id=re.compile(r'^a\d+$')):break
   sec.append(node);node=nxt
-# Reuse the established readable visual stylesheet without executing Sec B generation.
-module=ast.parse((ROOT/'Sec B/scripts/build_guide.py').read_text())
-css=next(ast.literal_eval(n.value) for n in module.body if isinstance(n,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='css' for t in n.targets))
+css=(SECTION/'scripts/guide.css').read_text()
 css+=' section.question{scroll-margin-top:20px} math{font-size:1.08em} .math-display math{margin:auto}'
 nav=''.join(f'<a href="#{q["solution_id"].lower()}">{q["solution_id"]} · {q["session"]} Q{q["question"]}<br>{html.escape(q["exact_skill"])}</a>' for q in questions)
 js="""const search=document.getElementById('search');function filter(){const s=search.value.toLowerCase();document.querySelectorAll('.question').forEach(q=>q.classList.toggle('hidden',!q.textContent.toLowerCase().includes(s)));}search.addEventListener('input',filter);document.addEventListener('click',e=>{if(e.target.closest('a[href^="#a"]')){search.value='';filter();}});"""
-page=f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sec A · {count} worked solutions</title><style>{css}</style></head><body><nav><h2>CSE 405 · Sec A</h2><p>{count} complete answers</p><input id="search" aria-label="Search solutions" placeholder="Search questions or answers"><button onclick="window.print()">Print / save PDF</button>{nav}</nav><main>{soup}</main><script>{js}</script></body></html>'
+page=f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sec A · {count} worked solutions</title><style>{css}</style></head><body><nav><h2>CSE 405 · Sec A</h2><p>{count} Sec A worked entries</p><input id="search" aria-label="Search solutions" placeholder="Search questions or answers"><button onclick="window.print()">Print / save PDF</button>{nav}</nav><main>{soup}</main><script>{js}</script></body></html>'
+# Keep embedded SVG line formatting clean in generated repository artifacts.
+page=re.sub(r'[ \t]+(?=\n)','',page)
 (BASE/'SOLUTIONS.html').write_text(page)
-index=[dict(solution_id=q['solution_id'],session=q['session'],question=q['question'],page_in_original=q['pdf_page'],topics=q['topics'],primary_deck=TOPICS[q['topics'][0]][1]) for q in questions]
+index=[dict(solution_id=q['solution_id'],session=q['session'],question=q['question'],page_in_original=q['pdf_page'],topics=q['topics'],primary_deck=TOPICS[q['topics'][0]][1],printed_section=q['printed_section'],scope=q['scope']) for q in questions]
 (BASE/'solutions_index.json').write_text(json.dumps(index,indent=2,ensure_ascii=False)+'\n')
 print(f'Sec A guide: {count} answers; {len(md.split())} words')

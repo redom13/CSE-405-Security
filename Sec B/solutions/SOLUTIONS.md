@@ -2,7 +2,7 @@
 
 ## How to use this guide
 
-**73 complete worked solutions · six academic sessions · all gathered questions.** Each question appears once with its original index label S01–S73. The topic/deck index also points to mixed questions taught partly elsewhere. The HTML has search, question navigation, scalable diagrams and typeset equations; the PDF is compiled from LaTeX for printing. The Markdown is editable.
+**74 worked entries · six academic sessions · 73 whole-question entries and one Sec B component of a mixed question.** Each question appears once with its original index label S01–S74. The topic/deck index also points to mixed questions taught partly elsewhere. The HTML has search, question navigation, scalable diagrams and typeset equations; the PDF is compiled from LaTeX for printing. The Markdown is editable.
 
 Question summaries are paraphrases. The root PDF remains the authority for wording, code and figures. The solution metadata links to its physical page. Each answer includes reasoning and an exam tip; assumptions and defects in printed questions are identified rather than silently repaired. These are independent worked solutions, not an official marking scheme.
 
@@ -10,7 +10,7 @@ Question summaries are paraphrases. The root PDF remains the authority for wordi
 
 **Four corrections to keep in mind:** Cookie 2 in 2020–21 Q7(b) is non-secure; the 2018–19 Hill key is not invertible modulo 26; the full-group ElGamal question needs a valid nonzero-message argument; a visible cookie or freshly transmitted plaintext MAC key cannot authenticate against an eavesdropper. Relevant solutions explain each point.
 
-Lecture 9 has no separate standalone question in the gathered index. Its URL/HTTP/origin foundations are used in the web solutions. The newly supplied Lecture 1 adds six principle/availability/TOCTOU questions (S68–S73) and gives an explicit source for the existing information-security CIA question. Other Sec A-only material remains in its own guide.
+Lecture 9 has no separate standalone question in the gathered index. Its URL/HTTP/origin foundations are used in the web solutions. The newly supplied Lecture 1 adds six principle/availability/TOCTOU questions (S68–S73) and gives an explicit source for the existing information-security CIA question. Other Sec A-only material remains in its own guide. S74 covers only the reflected-XSS case of 2023–24 Q3(a); the four network cases are in Sec A. Both printed exam sections are checked for current Sec B topics.
 
 ## Navigation by teaching source
 
@@ -53,7 +53,7 @@ Lecture 9 has no separate standalone question in the gathered index. Its URL/HTT
 
 **Lecture 11 — XSS and UI Attacks**
 
-[S01: 2023–24 Q5(a)](#s01); [S11: 2023–24 Q8(d)](#s11); [S16: 2022–23 Q5(c)](#s16); [S21: 2022–23 Q7(c)](#s21); [S23: 2022–23 Q8(b)](#s23); [S24: 2022–23 Q8(c)](#s24); [S38: 2021–22 Q7(b)](#s38); [S42: 2020–21 Q6(a)](#s42); [S60: 2018–19 Q4(b)](#s60); [S64: 2018–19 Q8(b)](#s64); [S67: 2018–19 Q12(a)](#s67)
+[S01: 2023–24 Q5(a)](#s01); [S11: 2023–24 Q8(d)](#s11); [S16: 2022–23 Q5(c)](#s16); [S21: 2022–23 Q7(c)](#s21); [S23: 2022–23 Q8(b)](#s23); [S24: 2022–23 Q8(c)](#s24); [S38: 2021–22 Q7(b)](#s38); [S42: 2020–21 Q6(a)](#s42); [S60: 2018–19 Q4(b)](#s60); [S64: 2018–19 Q8(b)](#s64); [S67: 2018–19 Q12(a)](#s67); [S74: 2023–24 Q3(a)](#s74)
 
 **Lecture 12 — SQL Injection and CAPTCHAs**
 
@@ -83,7 +83,7 @@ Primary source: [lecture-01-introduction-and-security-principles.pdf](<../slides
 
 **Attacks versus information-security CIA goals · 5 marks**
 
-Original: [root question PDF, page 15](../../CSE405-Security_Merged.pdf#page=15). Sitting date: 30 October 2023.
+Original: [root question PDF, page 15](../../CSE405-Security_Merged.pdf#page=15). Sitting date: 30 October 2023. Printed Section A.
 
 > **Question summary:** Categorize security attacks with respect to C.I.A. goals.
 
@@ -104,7 +104,7 @@ Passive eavesdropping primarily threatens confidentiality. Active modification/f
 
 **Match five scenarios to security principles · 10 marks**
 
-Original: [root question PDF, page 2](../../CSE405-Security_Merged.pdf#page=2). Sitting date: 06 September 2025.
+Original: [root question PDF, page 2](../../CSE405-Security_Merged.pdf#page=2). Sitting date: 06 September 2025. Printed Section A.
 
 > **Question summary:** Match principles to a valet key, bypassable laptop screen lock, irreversible water-damage sticker, bank recovery questions overridden by a representative, and encryption at rest and in transit.
 
@@ -125,7 +125,7 @@ Shannon's maxim means assuming the adversary knows the system; none of these sce
 
 **Least privilege versus separation; why record compromise? · 10 marks**
 
-Original: [root question PDF, page 11](../../CSE405-Security_Merged.pdf#page=11). Sitting date: 18 April 2024.
+Original: [root question PDF, page 11](../../CSE405-Security_Merged.pdf#page=11). Sitting date: 18 April 2024. Printed Section A.
 
 > **Question summary:** Differentiate least privilege and separation of privilege, and explain the importance of compromise recording with examples.
 
@@ -142,7 +142,7 @@ Original: [root question PDF, page 11](../../CSE405-Security_Merged.pdf#page=11)
 
 **Selective packet dropping against a competitor · 12 marks**
 
-Original: [root question PDF, page 18](../../CSE405-Security_Merged.pdf#page=18). Sitting date: 25 September 2022.
+Original: [root question PDF, page 18](../../CSE405-Security_Merged.pdf#page=18). Sitting date: 25 September 2022. Printed Section A.
 
 > **Question summary:** An ISP deliberately drops 25% of a competing provider’s VoIP packets traversing its routers. Identify the attack.
 
@@ -157,7 +157,7 @@ Packet loss produces gaps, jitter/retransmissions where applicable and poor call
 
 **Why compromise recording matters and which tools support it · 11 marks**
 
-Original: [root question PDF, page 18](../../CSE405-Security_Merged.pdf#page=18). Sitting date: 25 September 2022.
+Original: [root question PDF, page 18](../../CSE405-Security_Merged.pdf#page=18). Sitting date: 25 September 2022. Printed Section A.
 
 > **Question summary:** Explain the importance of compromise recording and name tools used for it.
 
@@ -174,7 +174,7 @@ Record reliable timestamps, actor/subject, action, target, result and source con
 
 **Mismatched boarding-pass and identity checks · 12 marks**
 
-Original: [root question PDF, page 18](../../CSE405-Security_Merged.pdf#page=18). Sitting date: 25 September 2022.
+Original: [root question PDF, page 18](../../CSE405-Security_Merged.pdf#page=18). Sitting date: 25 September 2022. Printed Section A.
 
 > **Question summary:** Explain how online-printable boarding passes permit a no-fly-list bypass in the described airport checks, and fix the weakness.
 
@@ -191,7 +191,7 @@ Authenticate the pass/barcode against the reservation system; bind it to the ver
 
 **Audit scanf, privileged file opening and a name-based access race · 15 marks**
 
-Original: [root question PDF, page 20](../../CSE405-Security_Merged.pdf#page=20). Sitting date: 25 September 2022.
+Original: [root question PDF, page 20](../../CSE405-Security_Merged.pdf#page=20). Sitting date: 25 September 2022. Printed Section B.
 
 > **Question summary:** Analyze attacks on the printed C program (code on p. 21): scanf into buffer[60], fopen(fn,"a+"), access(fn,W_OK), fwrite; state environmental assumptions.
 
@@ -216,7 +216,7 @@ Primary source: [lecture-02-intro-to-cryptography.pdf](<../slides/lecture-02-int
 
 **Short concepts; answer any three of five · 15 marks**
 
-Original: [root question PDF, page 7](../../CSE405-Security_Merged.pdf#page=7). Sitting date: 06 September 2025.
+Original: [root question PDF, page 7](../../CSE405-Security_Merged.pdf#page=7). Sitting date: 06 September 2025. Printed Section B.
 
 > **Question summary:** Briefly explain any three, with diagrams where appropriate: (i) the CIA properties of cryptography, (ii) confusion and diffusion, (iii) message authentication code, (iv) homograph phishing attack, (v) clickjacking.
 
@@ -241,7 +241,7 @@ Original: [root question PDF, page 7](../../CSE405-Security_Merged.pdf#page=7). 
 
 **Recover affine-cipher keys from two mappings · 20 marks**
 
-Original: [root question PDF, page 8](../../CSE405-Security_Merged.pdf#page=8). Sitting date: 06 September 2025.
+Original: [root question PDF, page 8](../../CSE405-Security_Merged.pdf#page=8). Sitting date: 06 September 2025. Printed Section B.
 
 > **Question summary:** The diagram implements T = P×K1 mod 26 and C = T+K2 mod 26, with K1 coprime to 26. Given B→E and E→P, set up and solve simultaneous congruences to determine K1 and K2.
 
@@ -266,7 +266,7 @@ $$
 
 **Hill encryption and decryption with a 3×3 key · 10 marks**
 
-Original: [root question PDF, page 15](../../CSE405-Security_Merged.pdf#page=15). Sitting date: 30 October 2023.
+Original: [root question PDF, page 15](../../CSE405-Security_Merged.pdf#page=15). Sitting date: 30 October 2023. Printed Section A.
 
 > **Question summary:** Given Hill-cipher key GYBNQKURP and plaintext ACT, demonstrate encryption and decryption to judge correctness.
 
@@ -303,7 +303,7 @@ This recovers ACT and demonstrates correctness for the example. The inverse is c
 
 **Caesar as symmetric encryption; composition of affine ciphers · 10 marks**
 
-Original: [root question PDF, page 15](../../CSE405-Security_Merged.pdf#page=15). Sitting date: 30 October 2023.
+Original: [root question PDF, page 15](../../CSE405-Security_Merged.pdf#page=15). Sitting date: 30 October 2023. Printed Section A.
 
 > **Question summary:** Why is Caesar a symmetric encryption algorithm? If you encrypt using one affine cipher and then a second affine cipher, both modulo 26, is there any advantage over one affine cipher? Derive the result.
 
@@ -326,7 +326,7 @@ For example, E1(x)=5x+8 and E2(y)=7y+3 compose to $35x+59\equiv9x+7\pmod{26}$. A
 
 **Break a Caesar-then-Hill construction · 15 marks**
 
-Original: [root question PDF, page 20](../../CSE405-Security_Merged.pdf#page=20). Sitting date: 25 September 2022.
+Original: [root question PDF, page 20](../../CSE405-Security_Merged.pdf#page=20). Sitting date: 25 September 2022. Printed Section B.
 
 > **Question summary:** Bob applies Caesar followed by Hill, calling it a CH network. He claims it meets Shannon confusion and diffusion because it is a substitution-permutation network. Alice says it is easy to break. Explain an attack.
 
@@ -355,7 +355,7 @@ After n+1 chosen blocks the attacker knows K and b, computes $K^{-1}$ and decryp
 
 **Hill-cipher numerical encryption · 12 marks**
 
-Original: [root question PDF, page 27](../../CSE405-Security_Merged.pdf#page=27). Sitting date: 24 October 2019.
+Original: [root question PDF, page 27](../../CSE405-Security_Merged.pdf#page=27). Sitting date: 24 October 2019. Printed Section B.
 
 > **Question summary:** Encrypt plaintext DITECTIVE using Hill cipher, block size m=3 and K=[[3,0,2],[2,0,2],[0,1,1]].
 
@@ -380,7 +380,7 @@ Primary source: [lecture-03-one-time-pads-and-block-ciphers.pdf](<../slides/lect
 
 **DES attack; meet-in-the-middle strength of fivefold DES · 10 marks**
 
-Original: [root question PDF, page 16](../../CSE405-Security_Merged.pdf#page=16). Sitting date: 30 October 2023.
+Original: [root question PDF, page 16](../../CSE405-Security_Merged.pdf#page=16). Sitting date: 30 October 2023. Printed Section A.
 
 > **Question summary:** Explain an attack on DES. A proposed 5DES alternates five DES encryptions/decryptions using independent keys and claims 280-bit strength, exceeding AES-256. Compute the effective key strength and assess the claim.
 
@@ -411,7 +411,7 @@ The 64-bit block size also remains unchanged, bringing block-collision/security-
 
 **Compare DES components with AES · 10 marks**
 
-Original: [root question PDF, page 16](../../CSE405-Security_Merged.pdf#page=16). Sitting date: 30 October 2023.
+Original: [root question PDF, page 16](../../CSE405-Security_Merged.pdf#page=16). Sitting date: 30 October 2023. Printed Section A.
 
 > **Question summary:** For each DES component, identify its AES counterpart or explain why none is needed: (i) XOR of subkey with the f-function input, (ii) XOR of f output with the left half, (iii) f itself, (iv) permutation P, (v) swapping block halves.
 
@@ -434,7 +434,7 @@ DES’s f need not be invertible because Feistel structure recovers the previous
 
 **OTP encryption/decryption; transposition as a Hill cipher · 14 marks**
 
-Original: [root question PDF, page 24](../../CSE405-Security_Merged.pdf#page=24). Sitting date: 07 September 2021.
+Original: [root question PDF, page 24](../../CSE405-Security_Merged.pdf#page=24). Sitting date: 07 September 2021. Printed Section B.
 
 > **Question summary:** Explain how the pad P is used directly for both encryption and decryption in a binary OTP. Define transposition cipher and explain why it is a special case of Hill cipher.
 
@@ -463,7 +463,7 @@ $\Pi^{-1}=\Pi^{\mathsf T}$, and $\det(\Pi)=\pm1$, always invertible modulo 26. T
 
 **Trace P-box and S-box diagrams · 8 marks**
 
-Original: [root question PDF, page 27](../../CSE405-Security_Merged.pdf#page=27). Sitting date: 24 October 2019.
+Original: [root question PDF, page 27](../../CSE405-Security_Merged.pdf#page=27). Sitting date: 24 October 2019. Printed Section B.
 
 > **Question summary:** For the supplied P-box, find the output for input bits designated top-to-bottom 01234567. For the supplied S-box, find the output sequence for successive input octal numbers 76543210.
 
@@ -506,7 +506,7 @@ Primary source: [lecture-04-block-cipher-modes.pdf](<../slides/lecture-04-block-
 
 **Unfamiliar chaining diagram; equations, parallelism and malleability · 20 marks**
 
-Original: [root question PDF, page 7](../../CSE405-Security_Merged.pdf#page=7). Sitting date: 06 September 2025.
+Original: [root question PDF, page 7](../../CSE405-Security_Merged.pdf#page=7). Sitting date: 06 September 2025. Printed Section B.
 
 > **Question summary:** For the supplied block-cipher diagram with IV1 and IV2, derive encryption/decryption equations for the first three blocks; draw the decryption diagram; determine which operations parallelize. Given two known plaintext/ciphertext pairs and intercepted IV1, IV2, C1, C2, modify the transmitted values so Bob obtains chosen P1′ and P2′ without learning the key.
 
@@ -559,7 +559,7 @@ The attacker needs the old plaintext blocks and desired targets, not K. Changing
 
 **ECB/CBC/CTR comparison · 12 marks**
 
-Original: [root question PDF, page 12](../../CSE405-Security_Merged.pdf#page=12). Sitting date: 18 April 2024.
+Original: [root question PDF, page 12](../../CSE405-Security_Merged.pdf#page=12). Sitting date: 18 April 2024. Printed Section B.
 
 > **Question summary:** Compare ECB, CBC and CTR, with diagrams, for (i) IND-CPA security, (ii) encryption/decryption parallelism and (iii) robustness to incorrect IV/nonce usage.
 
@@ -590,7 +590,7 @@ For CBC, the IV should be unpredictable at encryption time in the usual chosen-p
 
 **Identify ECB-style long-message weakness and replace the mode · 10 marks**
 
-Original: [root question PDF, page 15](../../CSE405-Security_Merged.pdf#page=15). Sitting date: 30 October 2023.
+Original: [root question PDF, page 15](../../CSE405-Security_Merged.pdf#page=15). Sitting date: 30 October 2023. Printed Section A.
 
 > **Question summary:** A cryptanalyst says the system is secure for short messages but vulnerable for long messages because of its mode of operation. Identify and describe the mode and explain how to overcome the problem.
 
@@ -611,7 +611,7 @@ $$
 
 **Inserted ciphertext bit and CBC synchronization · 3 marks**
 
-Original: [root question PDF, page 27](../../CSE405-Security_Merged.pdf#page=27). Sitting date: 24 October 2019.
+Original: [root question PDF, page 27](../../CSE405-Security_Merged.pdf#page=27). Sitting date: 24 October 2019. Printed Section B.
 
 > **Question summary:** A message is encrypted with DES-CBC. An extra 0 bit is inserted into the ciphertext stream after block C_i. How much plaintext is garbled?
 
@@ -637,7 +637,7 @@ Primary source: [lecture-05-hashes-and-macs.pdf](<../slides/lecture-05-hashes-an
 
 **Encrypt-then-MAC versus MAC-then-encrypt · 5 marks**
 
-Original: [root question PDF, page 9](../../CSE405-Security_Merged.pdf#page=9). Sitting date: 06 September 2025.
+Original: [root question PDF, page 9](../../CSE405-Security_Merged.pdf#page=9). Sitting date: 06 September 2025. Printed Section B.
 
 > **Question summary:** What is authenticated encryption? Which of MAC-then-encrypt and encrypt-then-MAC is preferable, and why?
 
@@ -658,7 +658,7 @@ Authenticate the IV/nonce and relevant metadata as well as the ciphertext; other
 
 **Analyze encryption plus hash, plaintext MAC, or ciphertext MAC · 12 marks**
 
-Original: [root question PDF, page 12](../../CSE405-Security_Merged.pdf#page=12). Sitting date: 18 April 2024.
+Original: [root question PDF, page 12](../../CSE405-Security_Merged.pdf#page=12). Sitting date: 18 April 2024. Printed Section B.
 
 > **Question summary:** Alice sends (1) Enc(K,m) with Hash(ciphertext), (2) Enc(K,m) with MAC(K,m), or (3) Enc(K,m) with MAC(K,ciphertext). Assume no harmful interactions from the shared key. For each, evaluate confidentiality against passive Eve and integrity against modifying MITM Mallory.
 
@@ -681,7 +681,7 @@ Schemes 2 and 3 do not automatically reject a previously valid packet replay. Ad
 
 **Integrity tags in a file header; hash versus MAC; writable versus read-only storage · 15 marks**
 
-Original: [root question PDF, page 14](../../CSE405-Security_Merged.pdf#page=14). Sitting date: 18 April 2024.
+Original: [root question PDF, page 14](../../CSE405-Security_Merged.pdf#page=14). Sitting date: 18 April 2024. Printed Section B.
 
 > **Question summary:** A file’s integrity tag is stored in its header and checked when opened. An attacker must not modify the file undetected. Compare (i) an unkeyed collision-resistant hash, (ii) a MAC under the owner’s secret key and (iii) the MAC scheme when the tag is in read-only memory. Decide whether each system is secure.
 
@@ -702,7 +702,7 @@ Assume the attacker may alter writable file contents and header fields, but not 
 
 **Applications of hashing in authentication, confidentiality and signatures · 10 marks**
 
-Original: [root question PDF, page 15](../../CSE405-Security_Merged.pdf#page=15). Sitting date: 30 October 2023.
+Original: [root question PDF, page 15](../../CSE405-Security_Merged.pdf#page=15). Sitting date: 30 October 2023. Printed Section A.
 
 > **Question summary:** Demonstrate uses of a hash function for authentication, confidentiality and digital signatures.
 
@@ -730,7 +730,7 @@ HKDF’s extract/expand interface is specified in [RFC 5869](https://www.rfc-edi
 
 **Evaluate XOR of fixed-size message blocks as a hash · 10 marks**
 
-Original: [root question PDF, page 16](../../CSE405-Security_Merged.pdf#page=16). Sitting date: 30 October 2023.
+Original: [root question PDF, page 16](../../CSE405-Security_Merged.pdf#page=16). Sitting date: 30 October 2023. Printed Section A.
 
 > **Question summary:** Explain the desired properties of a cryptographic hash. A message consists of l blocks M1,…,Ml of 160 bits and h(x)=M1 XOR … XOR Ml. Evaluate this function against those properties.
 
@@ -755,7 +755,7 @@ For $h(M)=M_1\oplus\cdots\oplus M_\ell$, output is 160 bits and evaluation is fa
 
 **HMAC construction · 10 marks**
 
-Original: [root question PDF, page 16](../../CSE405-Security_Merged.pdf#page=16). Sitting date: 30 October 2023.
+Original: [root question PDF, page 16](../../CSE405-Security_Merged.pdf#page=16). Sitting date: 30 October 2023. Printed Section A.
 
 > **Question summary:** Describe how a message authentication code is created by HMAC.
 
@@ -778,7 +778,7 @@ The receiver recomputes T with the shared secret and compares tags using a const
 
 **Birthday bound for a b-bit hash · 10 marks**
 
-Original: [root question PDF, page 21](../../CSE405-Security_Merged.pdf#page=21). Sitting date: 25 September 2022.
+Original: [root question PDF, page 21](../../CSE405-Security_Merged.pdf#page=21). Sitting date: 25 September 2022. Printed Section B.
 
 > **Question summary:** Prove that a b-bit hash function provides b/2-bit security.
 
@@ -803,7 +803,7 @@ At 50% probability, solve q(q−1)/(2N)≈ln 2, giving $q\approx\sqrt{2\ln2}\,2^
 
 **Weak/strong collision resistance; toy hash; Merkle–Damgård · 21 marks**
 
-Original: [root question PDF, page 24](../../CSE405-Security_Merged.pdf#page=24). Sitting date: 07 September 2021.
+Original: [root question PDF, page 24](../../CSE405-Security_Merged.pdf#page=24). Sitting date: 07 September 2021. Printed Section B.
 
 > **Question summary:** State ideal hash properties and distinguish weak and strong collision resistance. Show H(x)=(5x+11) mod 19 is not weakly collision resistant for H(4). Draw Merkle–Damgård and explain why its compression function needs strong collision resistance.
 
@@ -841,7 +841,7 @@ Primary source: [lecture-06-prngs-and-diffie-hellman.pdf](<../slides/lecture-06-
 
 **Unauthenticated Diffie–Hellman MITM; defense without a trusted third party · 15 marks**
 
-Original: [root question PDF, page 8](../../CSE405-Security_Merged.pdf#page=8). Sitting date: 06 September 2025.
+Original: [root question PDF, page 8](../../CSE405-Security_Merged.pdf#page=8). Sitting date: 06 September 2025. Printed Section B.
 
 > **Question summary:** Given the stated Diffie–Hellman protocol, act as Mallory when no trusted third parties can verify Alice or Bob. Explain and diagram a successful MITM attack, then briefly explain a defense.
 
@@ -866,7 +866,7 @@ Simply signing with a public key attached to the same unauthenticated message do
 
 **Authenticate Diffie–Hellman with RSA signatures · 15 marks**
 
-Original: [root question PDF, page 13](../../CSE405-Security_Merged.pdf#page=13). Sitting date: 18 April 2024.
+Original: [root question PDF, page 13](../../CSE405-Security_Merged.pdf#page=13). Sitting date: 18 April 2024. Printed Section B.
 
 > **Question summary:** Explain Diffie–Hellman and its MITM security flaw with figures. Modify the algorithm using RSA digital signatures to remove that flaw.
 
@@ -894,7 +894,7 @@ Mallory cannot change a share or identity without invalidating a signature. Repl
 
 **HMAC-DRBG generation, security and rollback resistance · 10 marks**
 
-Original: [root question PDF, page 13](../../CSE405-Security_Merged.pdf#page=13). Sitting date: 18 April 2024.
+Original: [root question PDF, page 13](../../CSE405-Security_Merged.pdf#page=13). Sitting date: 18 April 2024. Printed Section B.
 
 > **Question summary:** Describe how HMAC-DRBG generates pseudorandom numbers and why it is secure and rollback resistant, assuming secure HMAC.
 
@@ -932,7 +932,7 @@ This does not imply that state compromise cannot predict future output. Without 
 
 **Compute an elliptic-curve point group · 10 marks**
 
-Original: [root question PDF, page 15](../../CSE405-Security_Merged.pdf#page=15). Sitting date: 30 October 2023.
+Original: [root question PDF, page 15](../../CSE405-Security_Merged.pdf#page=15). Sitting date: 30 October 2023. Printed Section A.
 
 > **Question summary:** Explain elliptic-curve cryptographic applications. Find the group of points E11(1,6), with y²=x³+x+6 mod 11.
 
@@ -973,7 +973,7 @@ For distinct points, λ=(y2−y1)/(x2−x1) mod 11; for doubling λ=($3x1^{2}$+a
 
 **Numerical Diffie–Hellman exchange · 10 marks**
 
-Original: [root question PDF, page 15](../../CSE405-Security_Merged.pdf#page=15). Sitting date: 30 October 2023.
+Original: [root question PDF, page 15](../../CSE405-Security_Merged.pdf#page=15). Sitting date: 30 October 2023. Printed Section A.
 
 > **Question summary:** Explain Diffie–Hellman. Given p=353, primitive root g=3, and private exponents 97 and 233, calculate both public keys and the shared secret.
 
@@ -1002,7 +1002,7 @@ For the shared-secret computation, powers of 248 at exponents 1,2,4,8,16,32,64 a
 
 **Diffie–Hellman steps and active MITM · 15 marks**
 
-Original: [root question PDF, page 24](../../CSE405-Security_Merged.pdf#page=24). Sitting date: 07 September 2021.
+Original: [root question PDF, page 24](../../CSE405-Security_Merged.pdf#page=24). Sitting date: 07 September 2021. Printed Section B.
 
 > **Question summary:** Write the Diffie–Hellman key-exchange steps and show the MITM attack when an adversary can intercept and modify messages.
 
@@ -1027,7 +1027,7 @@ Primary source: [lecture-07-public-key-encryption-and-signatures.pdf](<../slides
 
 **Numerical ElGamal; IND-CPA and non-malleability · 15 marks**
 
-Original: [root question PDF, page 9](../../CSE405-Security_Merged.pdf#page=9). Sitting date: 06 September 2025.
+Original: [root question PDF, page 9](../../CSE405-Security_Merged.pdf#page=9). Sitting date: 06 September 2025. Printed Section B.
 
 > **Question summary:** For ElGamal with p=353, g=3, Bob’s private key b=233, Alice’s message M=123 and random r=97, compute Bob’s public key and the ciphertext, and show decryption step by step. Is the scheme IND-CPA secure and non-malleable? Justify.
 
@@ -1062,7 +1062,7 @@ Choose challenge messages M0=1 and M1=3, whose quadratic characters differ. The 
 
 **RSA correctness proof · 10 marks**
 
-Original: [root question PDF, page 9](../../CSE405-Security_Merged.pdf#page=9). Sitting date: 06 September 2025.
+Original: [root question PDF, page 9](../../CSE405-Security_Merged.pdf#page=9). Sitting date: 06 September 2025. Printed Section B.
 
 > **Question summary:** Prove mathematically that RSA decryption recovers the original message, using the necessary number-theory results.
 
@@ -1087,7 +1087,7 @@ $$
 
 **RSA signing/verifying; security of separately sending ciphertext and signature · 10 marks**
 
-Original: [root question PDF, page 9](../../CSE405-Security_Merged.pdf#page=9). Sitting date: 06 September 2025.
+Original: [root question PDF, page 9](../../CSE405-Security_Merged.pdf#page=9). Sitting date: 06 September 2025. Printed Section B.
 
 > **Question summary:** Define RSA signature creation and verification using Sign(d,M) and Verify(e,N,M,sig). Alice encrypts M with Bob’s RSA public key and signs M with her own private key. Can she securely send both ciphertext and signature together? Justify cryptographically.
 
@@ -1114,7 +1114,7 @@ With the simplified RSA signature, the observer can also compute $s^{e_A}=H(M)\p
 
 **TLS handshake authentication, directional keys and authenticated records · 15 marks**
 
-Original: [root question PDF, page 6](../../CSE405-Security_Merged.pdf#page=6). Sitting date: 06 September 2025.
+Original: [root question PDF, page 6](../../CSE405-Security_Merged.pdf#page=6). Sitting date: 06 September 2025. Printed Section A.
 
 > **Question summary:** For the supplied TLS handshake: (i) why can a MITM not exploit unencrypted/unauthenticated ClientHello and ServerHello, in both the DH and RSA cases? (ii) Why is using one shared encryption key and one shared integrity key for both directions a bad idea? (iii) After ChangeCipherSpec, what vulnerability remains in the simplified protocol, and how would you fix it?
 
@@ -1143,7 +1143,7 @@ The receiver verifies the expected number and rejects replay/out-of-order record
 
 **Symmetric/public-key comparison; key roles in signing versus encryption · 10 marks**
 
-Original: [root question PDF, page 16](../../CSE405-Security_Merged.pdf#page=16). Sitting date: 30 October 2023.
+Original: [root question PDF, page 16](../../CSE405-Security_Merged.pdf#page=16). Sitting date: 30 October 2023. Printed Section A.
 
 > **Question summary:** Compare symmetric and public-key cryptography. Explain how the roles of public and private keys in signatures differ from their roles in public-key encryption.
 
@@ -1167,7 +1167,7 @@ A MAC is also symmetric but does not encrypt. A signature is not a secret messag
 
 **ElGamal signature algorithm and reuse of secret k · 10 marks**
 
-Original: [root question PDF, page 20](../../CSE405-Security_Merged.pdf#page=20). Sitting date: 25 September 2022.
+Original: [root question PDF, page 20](../../CSE405-Security_Merged.pdf#page=20). Sitting date: 25 September 2022. Printed Section B.
 
 > **Question summary:** Explain the ElGamal signature scheme. Why must the same random k not be used for two signatures?
 
@@ -1202,7 +1202,7 @@ Candidates modulo 22 are 7 and 18. k=18 is not coprime to 22 and also fails the 
 
 **Digital signatures and non-repudiation · 12 marks**
 
-Original: [root question PDF, page 22](../../CSE405-Security_Merged.pdf#page=22). Sitting date: 07 September 2021.
+Original: [root question PDF, page 22](../../CSE405-Security_Merged.pdf#page=22). Sitting date: 07 September 2021. Printed Section A.
 
 > **Question summary:** Explain, with a figure, how digital signatures ensure non-repudiation.
 
@@ -1229,7 +1229,7 @@ Hashing binds the signature to arbitrary-length content; signing an encoded cont
 
 **Euler totient/theorem; modular inverse · 8 marks**
 
-Original: [root question PDF, page 24](../../CSE405-Security_Merged.pdf#page=24). Sitting date: 07 September 2021.
+Original: [root question PDF, page 24](../../CSE405-Security_Merged.pdf#page=24). Sitting date: 07 September 2021. Printed Section B.
 
 > **Question summary:** Define Euler’s totient function and Euler’s theorem, and explain computing a modular inverse using Euler’s theorem.
 
@@ -1252,7 +1252,7 @@ If gcd(a,n)≠1, the inverse does not exist, so the formula must not be applied.
 
 **Modular equations and fast exponentiation · 12 marks**
 
-Original: [root question PDF, page 24](../../CSE405-Security_Merged.pdf#page=24). Sitting date: 07 September 2021.
+Original: [root question PDF, page 24](../../CSE405-Security_Merged.pdf#page=24). Sitting date: 07 September 2021. Printed Section B.
 
 > **Question summary:** Solve (i) x^8 ≡ 9 (mod 13), (ii) x² ≡ 2 (mod 13), and compute 3^128 mod 7. A modular-exponentiation table modulo 13 is supplied.
 
@@ -1281,7 +1281,7 @@ $$
 
 **RSA validity, repeated totients and encryption · 15 marks**
 
-Original: [root question PDF, page 24](../../CSE405-Security_Merged.pdf#page=24). Sitting date: 07 September 2021.
+Original: [root question PDF, page 24](../../CSE405-Security_Merged.pdf#page=24). Sitting date: 07 September 2021. Printed Section B.
 
 > **Question summary:** System A: p=83, q=101, e=3, d=5467. System B: p=17, q=11, e=7, d=23. For both compute φ(n) and φ(φ(n)), and explain validity. For system B encrypt plaintext M=3.
 
@@ -1314,7 +1314,7 @@ A decryption check gives $130^{23}\bmod187=3$.
 
 **ElGamal encryption proof; birthday attack on signatures · 20 marks**
 
-Original: [root question PDF, page 24](../../CSE405-Security_Merged.pdf#page=24). Sitting date: 07 September 2021.
+Original: [root question PDF, page 24](../../CSE405-Security_Merged.pdf#page=24). Sitting date: 07 September 2021. Printed Section B.
 
 > **Question summary:** Describe ElGamal encryption/decryption and prove decryption correctness. Give an illustrative example showing that digital signatures can be vulnerable to a birthday attack.
 
@@ -1343,7 +1343,7 @@ For an ideal b-bit digest, two sets of roughly $2^{b/2}$ variants give a constan
 
 **Risks of signing an apparently random string · 8 marks**
 
-Original: [root question PDF, page 26](../../CSE405-Security_Merged.pdf#page=26). Sitting date: 24 October 2019.
+Original: [root question PDF, page 26](../../CSE405-Security_Merged.pdf#page=26). Sitting date: 24 October 2019. Printed Section A.
 
 > **Question summary:** Explain the risks if Bob agrees to sign a seemingly random string with his private key.
 
@@ -1370,7 +1370,7 @@ Primary source: [lecture-08-certificates-password-hashing-and-case-studies.pdf](
 
 **Untrusted key bundled with its own signature; attacker positions · 15 marks**
 
-Original: [root question PDF, page 2](../../CSE405-Security_Merged.pdf#page=2). Sitting date: 06 September 2025.
+Original: [root question PDF, page 2](../../CSE405-Security_Merged.pdf#page=2). Sitting date: 06 September 2025. Printed Section A.
 
 > **Question summary:** ARTBot broadcasts to learn CSBot’s phone number. CSBot replies with its number, public key, and a signature on the number. ARTBot verifies using that supplied key and caches the result. Explain how to poison the cached number as (i) an on-path attacker, (ii) a MITM attacker and (iii) an off-path attacker. Analyze a possible defense.
 
@@ -1391,7 +1391,7 @@ Original: [root question PDF, page 2](../../CSE405-Security_Merged.pdf#page=2). 
 
 **Brute-force throughput under a password-expiration policy · 12 marks**
 
-Original: [root question PDF, page 11](../../CSE405-Security_Merged.pdf#page=11). Sitting date: 18 April 2024.
+Original: [root question PDF, page 11](../../CSE405-Security_Merged.pdf#page=11). Sitting date: 18 April 2024. Printed Section A.
 
 > **Question summary:** A password policy requires uppercase, lowercase, numeric and special characters, minimum length 10, with monthly password changes. Estimate the minimum guesses per second needed to crack a credential, showing the calculations.
 
@@ -1424,7 +1424,7 @@ For a uniform space of N candidates and no repeated guesses, success after g gue
 
 **Self-signed SSL certificate and server authentication · 11 marks**
 
-Original: [root question PDF, page 17](../../CSE405-Security_Merged.pdf#page=17). Sitting date: 30 October 2023.
+Original: [root question PDF, page 17](../../CSE405-Security_Merged.pdf#page=17). Sitting date: 30 October 2023. Printed Section B.
 
 > **Question summary:** Why is buying from a shopping website that uses a self-signed SSL certificate a bad idea?
 
@@ -1441,7 +1441,7 @@ A normally validated certificate chain connects the server key/name to a pre-tru
 
 **Public security questions and password-reset account takeover · 11 marks**
 
-Original: [root question PDF, page 22](../../CSE405-Security_Merged.pdf#page=22). Sitting date: 07 September 2021.
+Original: [root question PDF, page 22](../../CSE405-Security_Merged.pdf#page=22). Sitting date: 07 September 2021. Printed Section A.
 
 > **Question summary:** Attackers reset Sarah Palin’s email password using publicly available personal information such as birthday, ZIP code and security-question answers. Identify the attack and evaluate the security of this password-reset feature.
 
@@ -1458,7 +1458,7 @@ A stronger recovery design uses previously enrolled recovery channels/codes, sho
 
 **Password-space size and average brute-force time · 12 marks**
 
-Original: [root question PDF, page 22](../../CSE405-Security_Merged.pdf#page=22). Sitting date: 07 September 2021.
+Original: [root question PDF, page 22](../../CSE405-Security_Merged.pdf#page=22). Sitting date: 07 September 2021. Printed Section A.
 
 > **Question summary:** How many 10-character passwords can be made from all 128 ASCII characters? If an attacker tests one candidate per microsecond, how long does guessing take on average?
 
@@ -1485,7 +1485,7 @@ The result is conditional on the paper’s full 128-character alphabet and unifo
 
 **Digital-certificate contents and CA role · 9 marks**
 
-Original: [root question PDF, page 26](../../CSE405-Security_Merged.pdf#page=26). Sitting date: 24 October 2019.
+Original: [root question PDF, page 26](../../CSE405-Security_Merged.pdf#page=26). Sitting date: 24 October 2019. Printed Section A.
 
 > **Question summary:** What key information is kept in a digital certificate? Explain the certification authority’s role with a figure.
 
@@ -1510,7 +1510,7 @@ Primary source: [lecture-10-cookies-and-csrf.pdf](<../slides/lecture-10-cookies-
 
 **Cookie-send matrix · 10 marks**
 
-Original: [root question PDF, page 9](../../CSE405-Security_Merged.pdf#page=9). Sitting date: 06 September 2025.
+Original: [root question PDF, page 9](../../CSE405-Security_Merged.pdf#page=9). Sitting date: 06 September 2025. Printed Section B.
 
 > **Question summary:** Three cookies are set by long.moodle.com: theme=dark, Domain=moodle.com, Path=/, Secure=true; auth=ok, Domain=long.moodle.com, Path=/test, Secure=false; file=secret, Domain=moodle.com, Path=/print, Secure=true. Fill the send/not-send matrix for (i) http://print.moodle.com/print, (ii) http://login.moodle.com/, (iii) http://moodle.com/test, (iv) https://moodle.com/print/test, (v) https://login.moodle.com/test/print.
 
@@ -1533,7 +1533,7 @@ For (i)–(iii), Secure blocks C1/C3; none of the five hosts is long.moodle.com 
 
 **Limits of cookie policy · 11 marks**
 
-Original: [root question PDF, page 12](../../CSE405-Security_Merged.pdf#page=12). Sitting date: 18 April 2024.
+Original: [root question PDF, page 12](../../CSE405-Security_Merged.pdf#page=12). Sitting date: 18 April 2024. Printed Section B.
 
 > **Question summary:** Analyze how effective cookie policies are at (i) preventing CSRF, (ii) preventing session hijacking through XSS and (iii) preserving confidentiality of stored cookies.
 
@@ -1550,7 +1550,7 @@ Original: [root question PDF, page 12](../../CSE405-Security_Merged.pdf#page=12)
 
 **CSRF synchronizer token; refreshing only on POST · 15 marks**
 
-Original: [root question PDF, page 13](../../CSE405-Security_Merged.pdf#page=13). Sitting date: 18 April 2024.
+Original: [root question PDF, page 13](../../CSE405-Security_Merged.pdf#page=13). Sitting date: 18 April 2024. Printed Section B.
 
 > **Question summary:** The server puts a random CSRF token in each page’s DOM/hidden form field, and accepts a request only with a valid cookie and POST token. Tokens are refreshed on POST. Explain protection without special browser support; evaluate refreshing only on POST instead of on both GET and POST.
 
@@ -1573,7 +1573,7 @@ Per-POST rotation still creates multi-tab/back-button races if the server stores
 
 **Authenticate UDP messages with a cookie/token; prevent replay · 15 marks**
 
-Original: [root question PDF, page 19](../../CSE405-Security_Merged.pdf#page=19). Sitting date: 25 September 2022.
+Original: [root question PDF, page 19](../../CSE405-Security_Merged.pdf#page=19). Sitting date: 25 September 2022. Printed Section B.
 
 > **Question summary:** Bob uses UDP for a streaming service because confidentiality is unnecessary and he cannot use TLS/HTTPS. He needs integrity so attackers cannot impersonate the sender or alter or replay messages. Explain how to achieve this using cookies.
 
@@ -1604,7 +1604,7 @@ A signed/self-authenticating cookie can reduce server state for the cookie’s i
 
 **CSRF plus stored XSS in a social-network friend request · 15 marks**
 
-Original: [root question PDF, page 19](../../CSE405-Security_Merged.pdf#page=19). Sitting date: 25 September 2022.
+Original: [root question PDF, page 19](../../CSE405-Security_Merged.pdf#page=19). Sitting date: 25 September 2022. Printed Section B.
 
 > **Question summary:** Trudy builds trudymalicious.com. On a visitor A’s arrival, make A send Trudy a friend request and change A’s homepage so anyone visiting it sends Trudy a friend request. No CSRF/XSS defenses exist. The supplied GET is http://www.networksocial.com/action/friends/add?friend=20. Explain the malicious site.
 
@@ -1642,7 +1642,7 @@ Defenses: CSRF tokens on profile changes; no state-changing GETs; contextual out
 
 **Cookie-send matrix · 10 marks**
 
-Original: [root question PDF, page 20](../../CSE405-Security_Merged.pdf#page=20). Sitting date: 25 September 2022.
+Original: [root question PDF, page 20](../../CSE405-Security_Merged.pdf#page=20). Sitting date: 25 September 2022. Printed Section B.
 
 > **Question summary:** Cookies set by docs.example.com: file=main, Domain=example.com, Path=/, Secure=true; file=test, Domain=docs.example.com, Path=/test, Secure=false; file=print, Domain=example.com, Path=/print, Secure=true. Determine which are sent to (i) http://print.example.com/print, (ii) https://docs.example.com/, (iii) http://example.com/test, (iv) https://example.com/print/test, (v) https://docs.example.com/test/print.
 
@@ -1667,7 +1667,7 @@ All cookies have the same name `file`. When two match, both values may be transm
 
 **Invalidate session cookies after password change · 15 marks**
 
-Original: [root question PDF, page 21](../../CSE405-Security_Merged.pdf#page=21). Sitting date: 25 September 2022.
+Original: [root question PDF, page 21](../../CSE405-Security_Merged.pdf#page=21). Sitting date: 25 September 2022. Printed Section B.
 
 > **Question summary:** Bob’s authentication cookie expires after one year. Changing a password only updates the database. Explain Alice’s advice that resetting the password must also reset the authentication cookie.
 
@@ -1690,7 +1690,7 @@ Primary source: [lecture-11-xss-and-ui-attacks.pdf](<../slides/lecture-11-xss-an
 
 **Stored versus reflected XSS · 10 marks**
 
-Original: [root question PDF, page 10](../../CSE405-Security_Merged.pdf#page=10). Sitting date: 06 September 2025.
+Original: [root question PDF, page 10](../../CSE405-Security_Merged.pdf#page=10). Sitting date: 06 September 2025. Printed Section B.
 
 > **Question summary:** Define XSS and explain the difference between stored and reflected XSS using diagrams.
 
@@ -1716,7 +1716,7 @@ Defend with contextual output encoding; use safe DOM APIs such as textContent fo
 
 **Stored versus reflected XSS · 7 marks**
 
-Original: [root question PDF, page 13](../../CSE405-Security_Merged.pdf#page=13). Sitting date: 18 April 2024.
+Original: [root question PDF, page 13](../../CSE405-Security_Merged.pdf#page=13). Sitting date: 18 April 2024. Printed Section B.
 
 > **Question summary:** Briefly explain how reflected XSS differs from stored XSS.
 
@@ -1738,7 +1738,7 @@ Both exploit unsafe interpretation of input as code and execute in the browser u
 
 **SMS 2FA against phishing · 8 marks**
 
-Original: [root question PDF, page 14](../../CSE405-Security_Merged.pdf#page=14). Sitting date: 18 April 2024.
+Original: [root question PDF, page 14](../../CSE405-Security_Merged.pdf#page=14). Sitting date: 18 April 2024. Printed Section B.
 
 > **Question summary:** Is SMS-based two-factor authentication an effective defense against phishing? Justify.
 
@@ -1757,7 +1757,7 @@ A stronger defense is an origin-bound authenticator such as WebAuthn used correc
 
 **Clickjacking with iframes; repeated-click redirection · 12 marks**
 
-Original: [root question PDF, page 14](../../CSE405-Security_Merged.pdf#page=14). Sitting date: 18 April 2024.
+Original: [root question PDF, page 14](../../CSE405-Security_Merged.pdf#page=14). Sitting date: 18 April 2024. Printed Section B.
 
 > **Question summary:** Describe clickjacking in two cases: (i) overlay a fake free-subscription button on an iframe advertisement so a visitor unknowingly clicks a paid buy button; (ii) an embedded public-exam result form whose first click goes to Twitter, second to Facebook, and third finally fetches the result.
 
@@ -1787,7 +1787,7 @@ The anchors’ z-index values order the first two clicks; each has a transparent
 
 **Clickjacking versus phishing · 12 marks**
 
-Original: [root question PDF, page 17](../../CSE405-Security_Merged.pdf#page=17). Sitting date: 30 October 2023.
+Original: [root question PDF, page 17](../../CSE405-Security_Merged.pdf#page=17). Sitting date: 30 October 2023. Printed Section B.
 
 > **Question summary:** Differentiate clickjacking and phishing with examples.
 
@@ -1809,7 +1809,7 @@ Original: [root question PDF, page 17](../../CSE405-Security_Merged.pdf#page=17)
 
 **Pharming versus phishing · 8 marks**
 
-Original: [root question PDF, page 26](../../CSE405-Security_Merged.pdf#page=26). Sitting date: 24 October 2019.
+Original: [root question PDF, page 26](../../CSE405-Security_Merged.pdf#page=26). Sitting date: 24 October 2019. Printed Section A.
 
 > **Question summary:** Distinguish pharming and phishing, with examples.
 
@@ -1833,7 +1833,7 @@ Proper TLS validation can reveal that the redirected endpoint lacks a valid cert
 
 **Stored XSS in a guest book; malicious page actions · 15 marks**
 
-Original: [root question PDF, page 30](../../CSE405-Security_Merged.pdf#page=30). Sitting date: 24 October 2019.
+Original: [root question PDF, page 30](../../CSE405-Security_Merged.pdf#page=30). Sitting date: 24 October 2019. Printed Section B.
 
 > **Question summary:** As Sammy (id=40), write a script in the guest-book Message field to demonstrate XSS damage. The first paragraph has id p1 and the friend-add action for user id 100 is http://vulnerable.com/action/friend/add?id=100.
 
@@ -1866,6 +1866,25 @@ The examples demonstrate three distinct consequences: integrity of displayed con
 
 **Exam tip.** Identify the victim as each visitor, not the attacker who submitted the entry, and use Sammy’s id rather than copying the endpoint’s example id unchanged.
 
+<a id="s74"></a>
+### S74 · 2023–24 · Q3(a)
+
+**Limits of HTTPS/firewall/NIDS protection against reflected XSS · 10 printed marks (mixed question)**
+
+Original: [root question PDF, page 4](../../CSE405-Security_Merged.pdf#page=4). Sitting date: 06 September 2025. Printed Section A.
+
+> **Question summary:** For the HTTPS-only server farm protected by a firewall and NIDS, assess whether reflected XSS can always be prevented when the attacker is on path.
+
+**Sec B scope:** Only case (2), reflected XSS, is in Sec B scope. The other four network-defense cases are covered in Sec A. The printed 10 marks cover all five cases; no per-case mark allocation is given.
+
+**HTTPS plus a firewall/NIDS cannot always prevent reflected XSS.** The vulnerable application can copy attacker-controlled input into a response as executable browser content. TLS can then deliver that response faithfully to the victim; it does not make the response safe. The script executes with the vulnerable page's origin and can perform actions available to that origin.
+
+A network IDS outside TLS termination normally cannot inspect the encrypted HTTP payload. Inspection at or after termination improves visibility, but a generic filtering rule still does not guarantee correct interpretation of every application output context. A passive NIDS may only alert rather than block anything.
+
+The primary repair is **safe rendering at the application**: apply encoding appropriate to the HTML, attribute, URL or script context; use safe templating and DOM APIs; and avoid interpreting untrusted input as executable markup or script. If rich HTML is genuinely required, use a suitable sanitizer with an explicit policy. A restrictive Content Security Policy can reduce impact as an additional layer. Neither the same-origin policy nor transport encryption repairs an injection already executing in the trusted page's origin.
+
+**Exam tip.** Explain the layer boundary: authenticated transport and packet filtering do not guarantee that the application's response is safe to execute.
+
 ## Lecture 12 — SQL Injection and CAPTCHAs
 
 Primary source: [lecture-12-sql-injection-and-captchas.pdf](<../slides/lecture-12-sql-injection-and-captchas.pdf>)
@@ -1875,7 +1894,7 @@ Primary source: [lecture-12-sql-injection-and-captchas.pdf](<../slides/lecture-1
 
 **Login bypass; prepared statements · 10 marks**
 
-Original: [root question PDF, page 10](../../CSE405-Security_Merged.pdf#page=10). Sitting date: 06 September 2025.
+Original: [root question PDF, page 10](../../CSE405-Security_Merged.pdf#page=10). Sitting date: 06 September 2025. Printed Section B.
 
 > **Question summary:** The backend concatenates username and password into SELECT * FROM users WHERE username=... AND password=.... The table includes Alice with password password123. Determine whether SQL injection is possible; give concrete login inputs to log in as Alice without her password; explain how prepared statements prevent it.
 
@@ -1912,7 +1931,7 @@ The payload becomes a literal username string instead of changing the query. For
 
 **INSERT-query injection; bypass a cart quantity restriction · 10 marks**
 
-Original: [root question PDF, page 13](../../CSE405-Security_Merged.pdf#page=13). Sitting date: 18 April 2024.
+Original: [root question PDF, page 13](../../CSE405-Security_Merged.pdf#page=13). Sitting date: 18 April 2024. Printed Section B.
 
 > **Question summary:** WorstBUY executes a formatted INSERT INTO cart(session,item) statement for each POST request. Alice cannot add more than three items through the website. Construct a POST request that inserts 100 pens, then give a preventive measure against SQL injection.
 
@@ -1952,7 +1971,7 @@ The illustration assumes a database supporting multi-row VALUES and `-- ` commen
 
 **Single-statement SQL injection in a password-change form · 10 marks**
 
-Original: [root question PDF, page 19](../../CSE405-Security_Merged.pdf#page=19). Sitting date: 25 September 2022.
+Original: [root question PDF, page 19](../../CSE405-Security_Merged.pdf#page=19). Sitting date: 25 September 2022. Printed Section B.
 
 > **Question summary:** A C++ web server allows only one SQL statement per database call. Show how SQL injection in the displayed old-password/new-password login form can still change everyone’s password.
 
@@ -1987,7 +2006,7 @@ The comment suppresses the intended WHERE restriction; every row is updated by t
 
 **Short notes; answer any three of four · 9 marks**
 
-Original: [root question PDF, page 28](../../CSE405-Security_Merged.pdf#page=28). Sitting date: 24 October 2019.
+Original: [root question PDF, page 28](../../CSE405-Security_Merged.pdf#page=28). Sitting date: 24 October 2019. Printed Section B.
 
 > **Question summary:** Write short notes on any three: (i) Faraday cage, (ii) blind SQL injection, (iii) impersonation token, (iv) homograph attack.
 
@@ -2008,7 +2027,7 @@ The paper asks any three short notes; all four are supplied here.
 
 **UPDATE injection to change password and salary · 5 marks**
 
-Original: [root question PDF, page 29](../../CSE405-Security_Merged.pdf#page=29). Sitting date: 24 October 2019.
+Original: [root question PDF, page 29](../../CSE405-Security_Merged.pdf#page=29). Sitting date: 24 October 2019. Printed Section B.
 
 > **Question summary:** Use the displayed employee-password-change form and PHP code to set employee EID100’s password to you_are_hacked and salary to 10$, without knowing the old password.
 
@@ -2045,7 +2064,7 @@ The injected comma adds a second assignment, the injected WHERE targets EID100, 
 
 **Rewrite vulnerable PHP using prepared statements · 10 marks**
 
-Original: [root question PDF, page 30](../../CSE405-Security_Merged.pdf#page=30). Sitting date: 24 October 2019.
+Original: [root question PDF, page 30](../../CSE405-Security_Merged.pdf#page=30). Sitting date: 24 October 2019. Printed Section B.
 
 > **Question summary:** Change changepasswd.php to use a prepared statement so the SQL injection in Q11(a) is prevented.
 

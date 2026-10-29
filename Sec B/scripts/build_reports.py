@@ -136,6 +136,13 @@ add('2020–21','1(c)',18,11,'principles','Why compromise recording matters and 
 add('2020–21','2(b)',18,12,'principles','Mismatched boarding-pass and identity checks','Explain how online-printable boarding passes permit a no-fly-list bypass in the described airport checks, and fix the weakness.','partial','An application of complete mediation/authentication; the exact airport workflow is in the paper.')
 add('2020–21','8(a)',20,15,'principles','Audit scanf, privileged file opening and a name-based access race','Analyze attacks on the printed C program (code on p. 21): scanf into buffer[60], fopen(fn,"a+"), access(fn,W_OK), fwrite; state environmental assumptions.','partial','Lecture 1 pp. 47–49 supplies complete mediation/TOCTOU; buffer-overflow and Unix setuid details require Sec A. Full mixed answer retained.')
 
+# Mixed question: only its explicit web-security case belongs to current Sec B.
+add('2023–24','3(a)',4,10,'xss','Limits of HTTPS/firewall/NIDS protection against reflected XSS',
+    'For the HTTPS-only server farm protected by a firewall and NIDS, assess whether reflected XSS can always be prevented when the attacker is on path.',
+    'direct','Only case (2), reflected XSS, is in Sec B scope. The other four network-defense cases are covered in Sec A. The printed 10 marks cover all five cases; no per-case mark allocation is given.')
+qs[-1]['scope']='sec_b_component'
+qs[-1]['scope_note']=qs[-1]['coverage_note']
+
 # Topics asked in older papers but not taught adequately by the supplied Sec B files.
 gaps=[
  ('2023–24','1(a), 2(b)', '1, 3','Buffer-overflow payloads and defenses'),
@@ -149,12 +156,24 @@ gaps=[
  ('2018–19','1(b)–(c), 2, 3, 4(a), 4(c)–(d)','26','IPsec, malware, rootkits, network attacks, botnets, DNS poisoning and intrusion detection'),
  ('2018–19','6(b), 7, 8(a), 8(b)(i), 9, 10, 13','27–31','Physical locks, biometrics, Faraday cage, format-string/stack exploits and quantum key distribution'),
 ]
+# Printed location is recorded for audit, never used to select the current section.
+for item in qs:
+ item.setdefault('scope','sec_b')
+ item.setdefault('scope_note','')
+ item['printed_section']='A' if int(item['question'].split('(')[0])<=4 else 'B'
+section_audit=[]
+for year in exams:
+ arr=[item for item in qs if item['session']==year]
+ na=sum(item['printed_section']=='A' for item in arr)
+ section_audit.append(dict(session=year,printed_A=na,printed_B=len(arr)-na,total=len(arr)))
+with (OUT/'EXAM_SECTION_AUDIT.csv').open('w',newline='') as f:
+ writer=csv.DictWriter(f,fieldnames=['session','printed_A','printed_B','total']);writer.writeheader();writer.writerows(section_audit)
 (OUT/'question_index.json').write_text(json.dumps(qs,indent=2,ensure_ascii=False)+'\n')
 with (OUT/'question_index.csv').open('w',newline='') as f:
  writer=csv.DictWriter(f,fieldnames=list(qs[0]));writer.writeheader()
  for q in qs:writer.writerow({**q,'topics':'; '.join(q['topics'])})
 
-def refs(q):return f"**{q['session']} · Q{q['question']} · {q['marks']} marks** · "+link('CSE405-Security_Merged.pdf',q['pdf_page'],f"root PDF p. {q['pdf_page']}")
+def refs(q):return f"**{q['session']} · Q{q['question']} · {q['marks']} marks** · printed Section {q['printed_section']} · "+link('CSE405-Security_Merged.pdf',q['pdf_page'],f"root PDF p. {q['pdf_page']}")
 def questionblock(q):
  lines=[f"- {refs(q)}",f"  - **Task:** {q['exact_skill']}.",f"  - {q['question_paraphrase']}"]
  if q['coverage_note']:lines.append(f"  - **Coverage note:** {q['coverage_note']}")
@@ -174,10 +193,14 @@ report=['# Final exam topic analysis — all supplied Sec B material','',
 '## Scope and how the counts work','',
 'This report maps questions in the root past-paper PDF to the actual contents of Lectures 1–12 and the handwritten Sec B notes, including the former CT 4 material. The existing CT4 revision guide is supplementary; its frequency table is not treated as the source of truth.','',
 '**Question text below is a faithful paraphrase, not a verbatim transcription.** Open the linked paper page for exact wording, code, figures and layout. Page numbers are physical PDF pages, starting at 1. Academic sessions label questions; sitting years are shown separately.','',
-'**Counting unit:** one printed lettered subquestion, e.g. Q7(c). Its internal tasks remain together. A mixed question can count once under each topic it explicitly examines, but only once in a given deck total. Therefore topic totals and deck totals cannot be added to get a number of distinct questions. Optional short-note/concept choices are included and clearly identified. Marks shown belong to the whole subquestion; they are not marks attributable to every linked topic.','',
-'**Attribution:** use the deck that teaches the topic, not decks that merely repeat it in a recap. Questions requiring applications beyond the slides are marked by coverage notes. Unrelated system/network-security questions are not ranked as if they were taught by these Sec B files.','',
+'**Counting unit:** one printed lettered subquestion, e.g. Q7(c). Internal tasks remain together unless explicitly split by the current section boundary. The reflected-XSS case in 2023–24 Q3(a) counts once here; its four network cases are in Sec A. A mixed question can count once under each topic it explicitly examines, but only once in a given deck total. Therefore topic totals and deck totals cannot be added to get a number of distinct questions. Optional short-note/concept choices are included and clearly identified. Marks shown belong to the whole subquestion; they are not marks attributable to every linked topic.','',
+'**Attribution:** both printed sections are checked each year. Use the deck that teaches the topic, not decks that merely repeat it in a recap. Questions requiring applications beyond the slides are marked by coverage notes. Unrelated system/network-security questions are not ranked as if they were taught by these Sec B files.','',
 '| Academic session | Sitting date printed on paper | Root PDF pages |','|---|---|---|']
 for y,(date,a,b) in exams.items():report.append(f'| {y} | {date} | {a}–{b} |')
+report += ['', '## Both printed sections checked in every year', '',
+'Questions are assigned by current Sec B topics, regardless of whether an older paper printed them under Section A or Section B. These locations are recorded for traceability and do not filter the question set.', '',
+'| Academic session | Sec B topics in printed A | Sec B topics in printed B | Total |','|---|---:|---:|---:|']
+for row in section_audit:report.append(f"| {row['session']} | {row['printed_A']} | {row['printed_B']} | {row['total']} |")
 report += ['',f'**Mapped question index:** {len(qs)} distinct lettered subquestions; machine-readable versions: [CSV](question_index.csv) and [JSON](question_index.json).','',
 '## Topics ranked by question frequency','',ranktable(),'',
 'Frequency measures what was asked in these six papers. It does not establish future exam probability. Paper coverage helps distinguish repeated yearly appearances from several questions concentrated in one paper.','',

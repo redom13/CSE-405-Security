@@ -747,5 +747,15 @@
       "principles"
     ],
     "primary_deck": "L1"
+  },
+  {
+    "solution_id": "S74",
+    "session": "2023–24",
+    "question": "3(a)",
+    "page_in_original": 4,
+    "topics": [
+      "xss"
+    ],
+    "primary_deck": "L11"
   }
 ]
